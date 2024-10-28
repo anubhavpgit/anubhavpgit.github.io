@@ -12,7 +12,7 @@ showdate: true
 
 ###### October
 
-Haloween is here. Fall is beautiful, here is NY. The leaves are changing colors, and the weather is getting colder. I am getting used to the cold, and the commute, and the assignments. The assignments are getting tougher, and my will to study is wearing out. October turned out to be a month of learning and growth. I’m back on Leetcode, trying to stay consistent and disciplined. I started cooking daily, changed my lifestyle—eating healthier and working out—and managed to lose 5 kg in a month.
+Haloween is here. Fall is beautiful in NY. The leaves are changing colors, and the weather is getting colder. Sunny days look lovely, and I just want to stay in the sun all day. I am getting used to the cold, the commute, and the assignments. The assignments are getting tougher, and my will to study is wearing out, slowly. October turned out to be a month of learning and immense growth. I'm back on the Leetcode grind, polishing up my coding, trying to stay consistent and disciplined. I started cooking daily, changed my lifestyle—eating healthier and working out—and managed to lose 5 kg in a month.
 
 For the hacktober fest, I wanted to take up these projects:
 
