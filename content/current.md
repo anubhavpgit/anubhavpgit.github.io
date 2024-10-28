@@ -30,7 +30,7 @@ I saw what makes customers want to spend, what makes them ick, and what they're 
 
 Carrier providers have this excellent strategy of bundling services. They offer you the latest iPhone for free (atleast they make it seem like that xD) if you are open to signing uo for a contract. Now, the best part is that they know how to profit out of this deal. They will somehow make a way to make you pay for that. You won't notice. And that's fine, really. If you're paying what you were told, and getting a free phone, you're happy. The CAPEX is high, but the LTV is higher. I loved the customer aquisition strategy, and the way they managed to upsell and cross-sell.
 
-All of this gave me insanse insights into what it takes to run a tech startup and build a better product, especially when it comes to the differences between business and consumer products and how to sell them. It unlocked new definations of understanding of profitability and what it means to build a sustainable business. I'm still uncertain about how well these lessons will translate to tech, but I'm excited to try them out.
+All of this gave me insanse insights into what it takes to run a business, differences in consumer and business products, and how to sell them. It unlocked new definations of understanding of profitability and what it means to build a sustainable business. I'm still uncertain about how well these lessons will translate to tech, but I'm excited to try them out.
 
 ###### September
 
