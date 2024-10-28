@@ -10,6 +10,28 @@ showdate: true
 
 <span class="update-date-time"></span>
 
+###### October
+
+Haloween is here. Fall is beautiful, here is NY. The leaves are changing colors, and the weather is getting colder. I am getting used to the cold, and the commute, and the assignments. The assignments are getting tougher, and my will to study is wearing out. October turned out to be a month of learning and growth. I’m back on Leetcode, trying to stay consistent and disciplined. I started cooking daily, changed my lifestyle—eating healthier and working out—and managed to lose 5 kg in a month.
+
+For the hacktober fest, I wanted to take up these projects:
+
+- Ferry(https://lnkd.in/gRZ6i979): A simple C/C++ cross-compiler for RISC-V, written in Rust. The aim here is to learn more about compilers, working of CPUs, computer systems architecture, making it a great project to get started with if you're keen to learn about low-level 
+
+  Usually, folks reaching out to me look out for Python and JavaScript projects, and most contributors gravitate towards these high level languages, but I implore you explore Rust. It offers a new programming paradigm, especially in terms of memory and type safety, areas where Python and JavaScript typically fall short.
+
+- Yatch(https://lnkd.in/gE5FyPys): a machine code interpreter for RISC-V in Python/C++.
+
+The academic pressure was so huge that I had zero time to take out from my schedule to work on any of these. I was heavily occupied with assignments, Leetcode practice, and staying on top of my fitness goals. My aim is to wrap up these projects by the first week of November.
+
+October’s highlight? Spending time with my cousin, a serial entrepreneur with multiple outlets of a popular mobile carrier provider here in Manhattan. Half the month was a crash course in consumer business as I watched him engage customers, close sales, and manage operations. I learned more about sales and customer service than any book or course could teach.
+
+I saw what makes customers want to spend, what makes them ick, and what they’re usually willing to pay. I got to learn smooth communication and realized that empathy sells. Upselling is a real art; getting someone to buy a $100 product for $300 takes skill. People here don’t usually question prices; they just pay what they’re quoted. Here's the thing about the US: people are willing to pay for convenience. They don’t mind paying extra for a service that makes their life easier. Infact, they want to pay more for the latest iPhone, the fastest internet. India is entirely different; people there are more price-sensitive. They want the best deal, the best price, and they’re willing to haggle for it. 
+
+Carrier providers have this excellent strategy of bundling services. They offer you the latest iPhone for free (atleast they make it seem like that xD) if you are open to signing uo for a contract. Now, the best part is that they know how to profit out of this deal. They will somehow make a way to make you pay for that. You won't notice. And that's fine, really. If you're paying what you were told, and getting a free phone, you're happy. The CAPEX is high, but the LTV is higher. I loved the customer aquisition strategy, and the way they managed to upsell and cross-sell.
+
+All of these combined gave me insane insights on how to run my own tech startup, and build a better product, insights on business vs consumer products, and how to sell them. It unlocked new definitions of profitablity, and how to build a sustainable business. I am still very unsure if this could be applied to tech, but I am excited to try it out.
+
 ###### September
 
 Settling in here, in New York City, has been fun and growthful. The worst part of staying away from India is not having access to a myriad of cheap labor. I have to do everything myself now. I must cook, clean, do laundry, commute using public transport, and manage my finances until I find some form of employment.
