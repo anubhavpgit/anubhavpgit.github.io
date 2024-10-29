@@ -1,10 +1,10 @@
 ---
-title: 'iPhone 16 Pro Max on the house'
+title: 'iPhone Season in the US'
 date: "30-10-2024"
 description: "A short insight into how a carrier provider is giving away free iPhones"
 tag: "business"
 draft: false
-index: false
+
 ---
 
 This October, I hung our with my cousin, a serial entrepreneur who runs multiple franchises of a popular network provider. This was an amazing, tiring expeirence for me. 
