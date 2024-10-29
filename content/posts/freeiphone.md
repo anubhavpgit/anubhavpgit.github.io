@@ -4,7 +4,6 @@ date: "30-10-2024"
 description: "A short insight into how a carrier provider is giving away free iPhones"
 tag: "business"
 draft: true
-index: true
 ---
 
 This October, I hung our with my cousin, a serial entrepreneur who runs multiple franchises of a popular carrier provider. I saw him working first-hand, selling new plans and devices to customers, and I was amazed at how their business model works. 

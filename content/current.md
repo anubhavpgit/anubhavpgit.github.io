@@ -30,7 +30,9 @@ I saw what makes customers want to spend, what makes them ick, and what they're 
 
 Here's the thing about the US: people are willing to pay for convenience. They don't mind paying extra for a service that makes their life easier. In fact, they want to pay more for the latest iPhone, which has the fastest internet. India is entirely different; people there are more price-sensitive. They want the best deal and the best price, and they're willing to haggle for it. 
 
-I have written a [detailed post](/blog/freeiphone.html) on how they work, and all of these experiences gave me insane insights into what it takes to run a business, the differences between consumer and business products, and how to sell them. I'm still uncertain about how well these lessons will translate to tech, but I'm excited to try them out.
+Here is a better understanding of this business model works: [iPhone on the house](/blog/freeiphone.html)
+
+This has gave me insane insights into what it takes to run a consumer business, and how to sell. I'm still uncertain about how well these lessons will translate to tech, but I'm excited to try them out.
 
 ###### September
 
