@@ -421,12 +421,9 @@ td:first-child:hover~td {
 } */
 
 @media only screen and (max-width: 768px) {
+	
 	html {
 		margin-left: 1rem;
 		margin-right: 1rem;
-	}
-
-	#main ul li {
-		flex-flow: column nowrap;
 	}
 }
