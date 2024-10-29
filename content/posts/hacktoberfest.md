@@ -3,8 +3,7 @@ title: "Docking Compilers at Hacktoberfest'24"
 date: "01-10-2024"
 description: "Compilers and interpreters for C/C++ and machine code for RISC-V at Hacktoberfest, a month-long celebration of open source software."
 tag: "tech"
-index: true
-draft: false
+draft: true
 ---
 Hacktoberfest is a fantastic opportunity to dive into the world of open source, make meaningful contributions, and sharpen your dev skills. This year, I'm most excited about these two projects:
 
