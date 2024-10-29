@@ -28,7 +28,7 @@ October's highlight? Spending time with my cousin, a serial entrepreneur with mu
 
 I saw what makes customers want to spend, what makes them ick, and what they're usually willing to pay. Confidence is essential. If they have a sniff that they are being charged extra, you're done. You need smooth communication skills. I also realized how empathy can drive sales, and that upselling is a skill. Selling a $300 item for something valued at $100 requires finesse. People here often don't negotiate; they prefer to pay for convenience and quality without haggling. India is different ballgame. People there are more price-sensitive. Network providers cannot take the same approach in India as they do here. 
 
-Here's the thing about the US: people are willing to pay for convenience. They don't mind paying extra for a service that makes their life easier. In fact, they want to pay more for the latest iPhone, which has the fastest internet. India is entirely different; people there are more price-sensitive. They want the best deal and the best price, and they're willing to haggle for it. 
+Here's the thing about the US: people are willing to pay for convenience. They don't mind paying extra for a service that makes their life easier. In fact, they want to pay more for the latest iPhone, which has the best cameras, the best display, and the all the new AI features, etc. India is entirely different; people there are more price-sensitive. They want the best deal and the best price, and they're willing to haggle for it. 
 
 Here is a better understanding of this business model works: [iPhone on the house](/blog/freeiphone.html)
 
