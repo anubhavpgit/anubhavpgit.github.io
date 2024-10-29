@@ -25,4 +25,4 @@ options = { weekday = "long", month = "long", day = "numeric" }
 
 
 [indexes]
-tags = { tech = 0, life = 1, journal = 2 }
+tags = { tech = 0, life = 1, journal = 2, business = 3 }

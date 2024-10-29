@@ -3,7 +3,7 @@ title: "The Parakeet King"
 date: "30-05-2024"
 description: "A story about a king who lost his kingdom and found a friend."
 draft: false
-tag: "life"
+tag: "life, philosophy"
 ---
 
 I recently wrote about [battling anxiety and depression](https://anubhavp.dev/blog/lifeandtheuniverse.html). After four months, writing about something uncomfortable yet close to my heart seems partly easier now. My last article helped me engage with an audience going through something similar. It's remarkable how much we can uncover about each other's inner worlds simply by communicating.

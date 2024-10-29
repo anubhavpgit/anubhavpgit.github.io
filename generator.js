@@ -274,18 +274,18 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
 
 const buildBlogIndex = (blogs, path) => {
   const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
     "May",
     "June",
     "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
 
   const sortedBlogs = Array.from(blogs.entries()).sort((a, b) => {
@@ -296,47 +296,87 @@ const buildBlogIndex = (blogs, path) => {
       new Date(yearB, monthB - 1, dayB) - new Date(yearA, monthA - 1, dayA)
     );
   });
-  let tagMap = new Map();
+
+  let allTags = new Set();
+
+  let postsHTML = '';
 
   sortedBlogs.forEach(([key, value]) => {
     const [day, month, year] = value.date.split("-");
-    const displayDate = `${monthNames[parseInt(month) - 1]} '${year.slice(-2)}`;
-    const listItem = `<li class="flex justify-between pb1"> 
-                        <a href="./${key}.html" class="link">${value.title}</a> ${displayDate}
-                      </li>`;
+    const displayDate = `${monthNames[parseInt(month) - 1]} ${year.slice(-2)}`;
 
-    if (tagMap.has(value.tag)) {
-      tagMap.set(value.tag, tagMap.get(value.tag) + listItem);
-    } else {
-      tagMap.set(value.tag, listItem);
-    }
+    // Handle multiple tags per post
+    const tags = value.tag.split(',').map(t => t.trim());
+    tags.forEach(tag => allTags.add(tag));
+    const tagsHTML = tags.map(tag => `<span style="font-size: 0.8em;">#${tag}</span>`).join(',');
+
+    const listItem = `<li class="flex justify-between pb1" data-tags="${tags.join(' ')}"> 
+    <a href="./${key}.html" class="link">${value.title}</a>${displayDate}
+    </li>`;
+
+    postsHTML += listItem;
   });
+
+  // Generate tag selection UI
+  const tagArray = Array.from(allTags).sort();
+  const tagSelectionHTML = `
+    <div id="tag-selection" style="margin-bottom: 20px;">
+      <span data-tag="all" style="cursor: pointer; margin-right: 10px; font-weight: bold;">#all</span>
+      ${tagArray.map(tag => `<span data-tag="${tag}" style="cursor: pointer; margin-right: 10px;">#${tag}</span>`).join(' ')}
+    </div>
+  `;
+
+  // Build the final HTML with tags at the top and posts below
+  let generatedHTML = `
+    ${tagSelectionHTML}
+    <ul id="posts-list" style="padding-left: 0px;">
+      ${postsHTML}
+    </ul>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const tagSelectors = document.querySelectorAll('#tag-selection span');
+        const posts = document.querySelectorAll('#posts-list li');
+
+        tagSelectors.forEach(function(tagSelector) {
+          tagSelector.addEventListener('click', function() {
+            const selectedTag = this.getAttribute('data-tag');
+
+            // Update the styling of tag selectors
+            tagSelectors.forEach(ts => ts.style.fontWeight = 'normal');
+            this.style.fontWeight = 'bold';
+
+            if (selectedTag === 'all') {
+              posts.forEach(function(post) {
+                post.style.display = '';
+              });
+            } else {
+              posts.forEach(function(post) {
+                const postTags = post.getAttribute('data-tags').split(' ');
+                if (postTags.includes(selectedTag)) {
+                  post.style.display = '';
+                } else {
+                  post.style.display = 'none';
+                }
+              });
+            }
+          });
+        });
+      });
+    </script>
+  `;
 
   // Get index from path
   const indexFile = path + "/index.html";
 
-  const sortedKeys = Object.keys(config.indexes.tags).sort(
-    (a, b) => config.indexes.tags[a] - config.indexes.tags[b]
-  );
-
-  // Replace the id with the indexHTML
+  // Read the existing index file content
   const indexFileContent = fs.readFileSync(indexFile, "utf8");
-  let generatedHTML = '<div id="tableofindex">';
-  sortedKeys.forEach((key) => {
-    if (tagMap.has(key)) {
-      generatedHTML += `
-    <p>
-      <code>#${key}</code>
-      ${tagMap.get(key)}
-    </p>`;
-    }
-  });
-  generatedHTML += "</div>";
 
+  // Replace the placeholder in the index file with the generated HTML
   const replacedIndex = indexFileContent.replace(
     '<h2 id="posts" tabindex="-1">Posts</h2>',
     generatedHTML
   );
+  // Write the updated content back to the index file
   fs.writeFileSync(indexFile, replacedIndex);
 };
 /**
