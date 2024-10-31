@@ -1,6 +1,6 @@
 ---
 title: Sisyphus
-date: 06-10-2024
+date: 31-10-2024
 description: "A journey through whims of fate and lucid memories. Growing up, old and looking for the purpose of life."
 draft: true
 tag: "life, philosophy, journal"
@@ -103,7 +103,7 @@ However, our time in Jajpur was brief. The rural setting, while peaceful, presen
 
 ### Cuttack: Moving to a "city"
 
-### Jamshedpur: Our longest oddyssey yet
+<!-- ### Jamshedpur: Our longest oddyssey yet -->
 
 <!-- Packed, yet again, I foundmyself in Jamshedpur. Life in Jamshedpur was of a time of absolute growth and transformation. I was in the sixth grade now. We were used to this by now, the constant moving and rebuilding. The cycle of life, the journey of Sisyphus, was a part of our existence. 
 

@@ -19,7 +19,7 @@ Diwali is usally spent in phases. The first phase is when Diwali hasn't begun, b
 
 Two months later, in December, we look back at the memories we've made, surprised at how quickly another year has gone by. I still sometimes do not fully understand as to how have I managed to get by, through this year.
 
-It's hard not being at home. New York is lovely, feels just like home, but it's not.
+It's hard not being at home. New York is lovely, feels just like home, but it's not. To you, alone, in a different place, not being able to come home in Diwali, I wish it gets better. Happy Diwali, everyone!
 
 ###### October
 
