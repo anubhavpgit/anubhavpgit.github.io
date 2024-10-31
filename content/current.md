@@ -10,9 +10,20 @@ showdate: true
 
 <span class="update-date-time"></span>
 
+
+###### November
+
+November ushers in the festive season, especially in India, where the celebrations typically begin in September- October. With Ganesh Puja, Navratri, Durga Puja, and Dussehra leading up to Diwali in November.
+
+Diwali is usally spent in phases. The first phase is when Diwali hasn't begun, but the sale of crackers have started, and we cannot wait and get a bunch. We spend the next two days bursting crackers, and the challenge is to save enough to celebrate properly on the main Diwali Day. The Diwali Day is filled with love, laughter and happiness. New clothes, sweets, and family get togethers are musts. The next day is spent visiting friends and family, playing cards. Now that I am not home, I feel that I am old enough to be let in the room that elders lock because they drink and gamble. I miss the fun, the laughter, the food, and the love.
+
+Two months later, in December, we look back at the memories we've made, surprised at how quickly another year has gone by. I still sometimes do not fully understand as to how have I managed to get by, through this year.
+
+It's hard not being at home. New York is lovely, feels just like home, but it's not.
+
 ###### October
 
-Halloween is here, and fall in NYC is as beautiful as ever. The leaves are turning vibrant colors, and the days are getting cooler. Sunny days are perfect—I just want to stay outside and soak it all in. I'm adapting to the colder weather, the daily commute, and the steady stream of assignments. The workload is getting tougher, and my motivation is wearing thin. October has been full of learning and growth. I'm back to grinding on Leetcode, polishing my skills and trying to stay consistent. I've started cooking daily, adjusted my lifestyle, focused on eating healthier, and even lost 5 kg in a month through consistent workouts.
+Halloween is here, and fall in NYC is as beautiful as ever. The leaves are changing colors, and the days are getting cooler. Sunny days are the best. I'm adapting to the colder weather, the daily commute, and the steady stream of assignments. The workload is getting tougher, and my motivation to study is wearing thin. October has been full of learning and growth. I'm back to grinding on Leetcode, polishing my skills and trying to stay consistent. I've started cooking daily, adjusted my lifestyle, focused on eating healthier, and even lost 5 kg in a month through consistent workouts.
 
 For the hacktober fest, I wanted to take up these projects:
 
