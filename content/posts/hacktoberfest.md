@@ -73,47 +73,43 @@ The process of executing instructions is divided into five stages:
 The main code runs in a loop, it keeps processing instructions until either it encounters a `HALT` instruction or reaches the end of the program. The interpreter has two main "pipelines" for executing instructions:
 
 1. Single Stage Pipeline: One instruction is executed at a time. The interpreter fetches the instruction, decodes it, executes it, accesses memory, and writes back the result in a single cycle, repeats the process for the next instruction. 
- Example: (instruction in memory)
-    ```txt
- 00000000
- 00000000
- 00000000
- 10000011
-    ```
 
- (data in memory)
-    ```txt
- 01010101
- 01010101
- 01010101
- 01010101
-    ```
+Example:
+(instruction in memory)
+```bash
+00000000 00000000 00000000 10000011
+```
 
- This instruction translates to `lb x1, 0(x0)` in RISC-V assembly. It loads a byte from memory into register `x1`. 
+(data in memory)
+```bash
+01010101 01010101 01010101 01010101
+```
 
-    - **Instruction Fetch (IF)**: The interpreter fetches the instruction from memory. A program counter (PC) keeps track of the current instruction. An instruction in RISC-V is 32 bits long. Yatch stores the instructions in memory as an array of 8-bit integers.
+This instruction translates to `lb x1, 0(x0)` in RISC-V assembly. It loads a byte from memory into register `x1`. 
+
+  - **Instruction Fetch (IF)**: The interpreter fetches the instruction from memory. A program counter (PC) keeps track of the current instruction. An instruction in RISC-V is 32 bits long. Yatch stores the instructions in memory as an array of 8-bit integers.
     ```cpp
     while (getline(imem, line)){
-     IMem[i] = bitset<8>(line);
-     i++;
-        }
+        IMem[i] = bitset<8>(line);
+        i++;
+    }
     ....
     bitset<32> instruction;
     for (int i = 0; i < 4; ++i){
-     instruction <<= 8; // Shift left by 8 bits to make room for the next byte
-     instruction |= bitset<32>(IMem[address + i].to_ulong()); // Combine the next byte
-     // 00000000 00000000 00000000 10000011
+    instruction <<= 8; // Shift left by 8 bits to make room for the next byte
+    instruction |= bitset<32>(IMem[address + i].to_ulong()); // Combine the next byte
+    // 00000000 00000000 00000000 10000011
     }
 
     return instruction;
     ....
     ```
     
- The reason why Yatch stores instructions in memory as an array of 8-bit integers and not 32-bit integers is that the instructions are read from a file, and each line in the file is 8-bits long. However, future implementations might change this.
+The reason why Yatch stores instructions in memory as an array of 8-bit integers and not 32-bit integers is that the instructions are read from a file, and each line in the file is 8-bits long. However, future implementations might change this.
     
- The program counter (PC) increases by 4 bytes (32 bits) after each instruction.
+The program counter (PC) increases by 4 bytes (32 bits) after each instruction.
 
-    - **Instruction Decode (ID)**: The instruction is decoded and the opcode and operands are extracted. Now, based on the opcode, the interpreter knows which instruction to execute.
+  - **Instruction Decode (ID)**: The instruction is decoded and the opcode and operands are extracted. Now, based on the opcode, the  interpreter knows which instruction to execute.
     - Opcode (bits 0-6): 0000011 - This is a Load instruction.
     - Funct3 (bits 12-14): 000 - Specifies the type of load, which is LB (Load Byte).
     - Destination Register (rd) (bits 7-11): 00001 - Register x1.
@@ -121,7 +117,7 @@ The main code runs in a loop, it keeps processing instructions until either it e
     - Immediate (bits 20-31): 000000000000 - Immediate value 0.  
     <br>
 
-    - **Execution (EX)**: Straightforward. The instruction is executed according to the specific case. For the `lb` instruction, the interpreter reads the byte from memory and stores it in the destination register.
+  - **Execution (EX)**: Straightforward. The instruction is executed according to the specific case. For the `lb` instruction, the interpreter reads the byte from memory and stores it in the destination register.
 
     ```cpp
     switch (opcode){
@@ -144,7 +140,7 @@ The main code runs in a loop, it keeps processing instructions until either it e
     }
     ```
 
-    - **Memory Access (MEM)**: The interpreter reads the byte from memory and stores it in the destination register. Yatch reads the memory from a file and uses an 8-bit array to store the memory. Once all the instructions are executed, the memory is written back to a file. It further uses specific functions to read specific memory locations.
+  - **Memory Access (MEM)**: The interpreter reads the byte from memory and stores it in the destination register. Yatch reads the memory from a file and uses an 8-bit array to store the memory. Once all the instructions are executed, the memory is written back to a file. It further uses specific functions to read specific memory locations.
 
     ```cpp
     while (getline(dmem, line)){
@@ -162,12 +158,12 @@ The main code runs in a loop, it keeps processing instructions until either it e
     }
     ```
 
- The opcode in the example is **0000011**, I type the instruction, which corresponds to the `load` instruction. Funct3 is **000**, corresponding to the `lb` instruction. The `lb` instruction **loads a byte** from memory into a register. Similarly, a different funct3, for ex. *010* would correspond to the `lw` instruction, which loads a word from memory into a register. The primary step is to switch on the opcode and execute the corresponding instruction.
+  The opcode in the example is **0000011**, I type the instruction, which corresponds to the `load` instruction. Funct3 is **000**, corresponding to the `lb` instruction. The `lb` instruction **loads a byte** from memory into a register. Similarly, a different funct3, for ex. *010* would correspond to the `lw` instruction, which loads a word from memory into a register. The primary step is to switch on the opcode and execute the corresponding instruction.
 
 
- Memory is handled using registers. Yatch uses a 32-bit vector to store 32 registers. The registers are read and written depending on the instruction. The memory is stored in an array of 8-bit integers. The instruction loads a byte from memory at the address calculated by adding the immediate offset 0 to the value in register x0 (always 0 as x0 is hardwired to 0 in RISC-V). The data in the 0th memory location(01010101) is read and stored in the destination register. 
+  Memory is handled using registers. Yatch uses a 32-bit vector to store 32 registers. The registers are read and written depending on the instruction. The memory is stored in an array of 8-bit integers. The instruction loads a byte from memory at the address calculated by adding the immediate offset 0 to the value in register x0 (always 0 as x0 is hardwired to 0 in RISC-V). The data in the 0th memory location(01010101) is read and stored in the destination register. 
 
-    - **Write Back (WB)**: The result of the operation is written back to the register file.
+  - **Write Back (WB)**: The result of the operation is written back to the register file.
 
     ```cpp
     Registers. resize(32); // 32 registers in total, each 32 bits wide
