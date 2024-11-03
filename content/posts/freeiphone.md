@@ -10,7 +10,7 @@ This October, I hung out with my cousin, a serial entrepreneur who runs multiple
 
 Carrier providers have this excellent strategy of bundling services to make customers stick with them for a long time. The network availability and the data speed are all the same for most carriers, but the challenge in these markets is to acquire and retain customers. They have multiple strategies to do this. They often have a subsidized prepaid mobile network company offering plans cheaper than the primary company's prepaid and postpaid plans but with network deprioritization. Most international students and tourists opt for this plan. T-Mobile owns [Mint Mobile](https://www.mintmobile.com/) ( It's partly owned by Deadpool. No kidding.) and [Metro PCS](https://www.metrobyt-mobile.com/). [Boost](https://www.boostmobile.com/) uses AT&T's network. Verizon owns [Visible](https://www.visible.com/). To reduce costs on postpaid plans, they offer bundling services like Netflix, Disney+, Max and other streaming services at a lower cost. They also offer Apple One, Google One, and Amazon Prime subscriptions, with insurance and whatnot.
 
-One of their excellent strategies is how they offer you the latest iPhone for almost free (at least they make it seem like that xD) if you are open to signing up for a contract. Now, the best part is that they know how to profit from this deal. They will somehow find a way to make you pay for that, and you won't notice. And that's fine because you're paying what you were told and getting the latest iPhone for free the same month it was launched. You're happy. The CAPEX is high, but the LTV is higher. I loved the customer acquisition strategy and the way they managed to upsell and cross-sell.
+One of their excellent strategies is offering you the latest iPhone for almost free (at least they make it seem like that, xD) if you are open to signing up for a contract. Now, the best part is that they know how to profit from this deal. They will somehow find a way to make you pay for that, and you won't notice. And that's fine because you're paying what you were told and getting the latest iPhone for free the same month it was launched. You're happy. The CAPEX is high, but the LTV is higher. I loved the customer acquisition strategy and the way they managed to upsell and cross-sell.
 
 ### The Strategy
 
@@ -30,51 +30,41 @@ To understand why this strategy works, let's break it down into a few key compon
 
 This model shows the incredible profit margins achieved through scale. Each customer pays a premium, and the more lines or add-ons they include, the higher the LTV per account. By the time all incentives and promotions are factored in, the carriers are making substantial returns on these seemingly generous offers. The EBITDA margins come in at around 35–42%.
 
-For Q3, 2024, Verizon reported an EBITDA of approximately $12.3 billion. AT&T recorded an EBITDA of about $10.8 billion, and T-Mobile had an EBITDA of around $7.22 billion.
+For Q3, 2024, Verizon reported an EBITDA of approximately $12.3 billion. AT&T recorded an EBITDA of about $10.8 billion, and T-Mobile had an EBITDA of around $7.22 billion.[^1]
+
+[^1]: [Investor's Business Daily: Telecom Stocks: AT&T Stock, Verizon Stock, T-Mobile Stock 2024](https://www.investors.com/news/technology/telecom-stocks-att-stock-verizon-stock-tmobile-stock-2024/#:~:text=AT&T%20Stock:%20Q3%20Earnings%20Seen,are%20the%20highest%20spending%20customers.)
 
 ### History
 
 Case studies of Verizon show that the strategy has been working for them.
 
-Verizon is the oldest carrier in the US, and it has the most customers. Customers have accounts spanning more than three decades. It has been around since before 2000 and has a rich history. It is more than getting a phone and a plan now. Verizon has now become a status symbol, and people are willing to pay a premium for its services. It has the best coverage and the fastest data speeds.
+Established as the oldest carrier in the United States, Verizon has built an extensive customer base with accounts spanning decades. With origins tracing back to before 2000, its historical presence has cemented it as a household name synonymous with reliability and quality. It is more than getting a phone and a plan now. Verizon has now become a status symbol, and people are willing to pay a premium for its services- the best coverage and the fastest data speeds.
 
-History plays a significant role in the customer's decision to choose a carrier. A 20-30-year-old customer with an account in Verizon would not want to switch to other carriers. It is a comfort zone now. Verizon offer loyalty discounts and offers with these accounts, to try and make sure that they don't leave. Old customers often have family accounts with multiple lines, multiple devices, and multiple add-ons. Not only that, but they also have home internet and TV services bundled with their mobile plans. The LTV/CAC ratio for these accounts is around 6-7. The profit margins are insane.
+The historical aspect of a brand can significantly influence customer loyalty, a fact that Verizon capitalizes on effectively. A 20-30-year-old customer with an account in Verizon would not want to switch to other carriers. They are in a comfort zone now. To bolster this loyalty, Verizon offers targeted incentives such as loyalty discounts and exclusive offers like offering a phone for less than what it does offer to others, ensuring that long-term customers feel valued and are less inclined to switch. 
+
+These long-term customers often hold family accounts including multiple lines, devices, and additional services. Verizon strategically integrates home internet and TV services as part of comprehensive bundles, further strengthening the stickiness of its offerings. Such bundles create higher LTV. The LTV/CAC ratio for these accounts is around 6-7. The profit margins from these clients are insane.
 
 ### Potential Downsides
 
 As with any business model, there are potential downsides to this strategy:
 
 - **Churn Rate**: Customers might leave after the contract term, especially if they find a better deal elsewhere. The carriers have to keep innovating to retain customers and attract new ones. This led to two strategies:
-- unlocking phones, so that the customer does not feel locked up
-- yearly upgrades, get the latest phone as soon as it is launched, and trade in the old one, without any additional cost. 
+     - **Phone Unlocking**: Ensuring that customers feel free and not restricted by contracts.
+     - **Yearly Upgrades**: Allowing customers to upgrade to the latest phone as soon as it is launched, trading in their old device at no additional cost.
+    <br>
 
- Carriers like AT&T and T-Mobile still know how to retain customers. Unlike Verizon, they do not "unlock" the phone until the period of the contract is over. Verizon, being the largest carrier, has the most customers, but also the highest churn rate. With the rich history and status symbol that it has become, it cannot afford to be seen as a petty carrier locking phones.
+ Competitors like AT&T and T-Mobile have refined customer retention strategies that differ from Verizon’s. Unlike Verizon, AT&T and T-Mobile do not unlock phones until the contract period is completed. Despite Verizon’s large customer base, it also has one of the highest churn rates. Given its legacy and status, Verizon cannot afford to appear as a carrier that enforces restrictive practices like phone-locking.
 
-- **CAPEX**: The initial investment in devices is high, and the carriers have to ensure they can recoup these costs over the contract term. They also have to manage inventory and ensure they have the latest devices in stock.
+- **Capital Expenditure (CAPEX)**: The initial investment in devices is significant. Carriers must ensure they recoup these costs over the duration of customer contracts. Additionally, they must manage inventory efficiently to keep the latest devices in stock, adding to the complexity of operations.
 
-- **Customer Service**: The biggest challenge is customer service. With millions of customers, carriers strive to provide excellent customer service to retain customers. This includes handling complaints, technical issues, and billing queries. Most testimonials on the internet are about how bad the customer service is.
+- **Customer Service**: The biggest challenge is customer service. With millions of customers, carriers strive to provide excellent customer service to retain customers. This includes handling complaints, technical issues, and billing queries. Most testimonials on the internet are about how bad the customer service is. People often complain about how they were charged for services they did not use, or how they were charged for services they did not know they were using. The carriers have to ensure they are transparent about their pricing and terms. A significant portion of their business is getting customers to pay for services and stuff that they probably are never going to use or need, like insurance, a hotspot, an international roaming plan, etc.
 
- People often complain about how they were charged for services they did not use, or how they were charged for services they did not know they were using. The carriers have to ensure they are transparent about their pricing and terms. More than 20% of their business is getting customers to pay for services and stuff that they probably are never going to use or need, like insurance, a hotspot, and an international roaming plan, etc.
-
-- **Regulatory Compliance**: Carriers have to comply with various regulations, including data protection laws, consumer rights, and fair competition laws. They also have to ensure they are transparent about their pricing and terms.
-
-- **Restocking Fees and Re-selling Issues**: If you decide to return the phone, you will have to pay a restocking fee. This is how they try to convince you to keep the phone and stay with them for the entire contract term.
-
- At the time of writing this article, the restocking fee for Verizon is $50, and if you still decide to return the phone within a month, you will have to pay the restocking fee. Verizon cannot sell the phone as new, so they will have to sell it as refurbished. They would have to let the phone go for less and would not stand to make the same profit as they would have in the original deal.
+- **Restocking Fees and Re-selling Issues**: If a customer decides to return a phone, they must pay a restocking fee, which is often seen as a deterrent to returns. As of the time of writing, Verizon’s restocking fee is $50. If a phone is returned within a month, the carrier has to sell it as a refurbished device, reducing potential profit margins compared to new sales.
 
 ### The competition
 
-The telecom industry is extremely competitive, with new players entering the market regularly. Carriers have to stay ahead of the competition by offering innovative services and attractive deals. Each carrier tries to up its game by offering better deals and services. Among the big three, AT&T, Verizon, and T-Mobile, Verizon is the most expensive but offers the best coverage. AT&T is the second most expensive but offers the best customer service. T-Mobile is the cheapest but offers the best perks. T-Mobile offers free international roaming, AT&T offers free HBO Max, and Verizon is offering the entire iPhone 15 series for free on a new line. After the launch of the iPhone 16 series, the iPhone 15 series would cost them a lot less in bulk, and they would still be able to charge the same amount for the plan.
-
-T-Mobile, on the other hand, is neck-to-neck with Verizon. The merger with Sprint enabled them to acquire the largest number of customers in Q3 2024. T-Mobile is cheaper, has better customer service, and offers free international roaming. It is also the only carrier that offers a free Netflix subscription with its plans.[^1]
-
-T-Mobile is best for customers who value 5G coverage and speeds and who want multiple perks already included with their plan price.
-Verizon is a better option for customers who need reliable coverage everywhere, especially in rural areas, and those who don't necessarily need extra perks but value plan customization; each member can choose a different plan. T-Mobile holds a lot of appeal for customers who use streaming services like Apple TV+ or Netflix. Several of its plans include free access to those or other streaming services, so you can end up saving significant money overall if you’re currently subscribed to them.[^2][^3]
+The telecom industry is fiercely competitive, with new players regularly entering the market. To maintain their position, carriers must continuously offer innovative services and competitive deals. Among the top three—Verizon, AT&T, and T-Mobile—Verizon stands as the most expensive provider but offers the best network coverage. AT&T follows as the second most costly carrier, known for its superior customer service. T-Mobile is the most affordable of the three and attracts customers with an array of perks. All of them provide the latest devices at competitive prices, with Verizon leading in terms of the number of devices offered. For instance, T-Mobile includes free international roaming in its plans, while AT&T offers free HBO Max, and Verizon provides the entire iPhone 15 series at no extra cost with a new line. After the launch of the iPhone 16 series, Verizon can acquire the iPhone 15 series at a reduced bulk cost while maintaining plan prices.
 
 ### What's Next?
 
 All of these experiences gave me insane insights into what it takes to run a business, the differences between consumer and business products, and how to sell them. I'm still uncertain about how well these lessons will translate to tech, but I'm excited to try them out.
-
-[^1]: [T-Mobile's Q3 2024 Earnings Call](https://www.t-mobile.com/news/business/t-mobile-q3-2024-earnings)
-[^2]: [Verizon vs. T-Mobile](https://www.usnews.com/360-reviews/services/cell-phone-plans/tmobile-vs-att)
-[^3]: [AT&T vs Verizon](https://www.usnews.com/360-reviews/services/cell-phone-plans/att-vs-verizon)

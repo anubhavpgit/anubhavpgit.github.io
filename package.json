@@ -30,6 +30,7 @@
     "license": "ISC",
     "dependencies": {
         "markdown-it-checkbox": "^1.1.0",
+        "markdown-it-footnote": "^4.0.0",
         "toml": "^3.0.0"
     }
 }
