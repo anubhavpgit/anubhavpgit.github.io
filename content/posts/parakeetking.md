@@ -1,6 +1,6 @@
 ---
 title: "The Parakeet King"
-date: "30-07-2024"
+date: "01-06-2024"
 description: "A story about a king who lost his kingdom and found a friend."
 draft: false
 tag: "life, philosophy"
