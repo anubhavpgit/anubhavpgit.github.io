@@ -13,9 +13,11 @@ showdate: true
 
 ###### November
 
-November ushers in the festive season, especially in India, where the celebrations typically begin in September- October. With Ganesh Puja, Navratri, Durga Puja, and Dussehra leading up to Diwali in November.
+November ushers in the festive season in India, where the celebrations typically begin in September- October. With Ganesh Puja, Navratri, Durga Puja, and Dussehra leading up to Diwali in November.
 
-Diwali is usally spent in phases. The first phase is when Diwali hasn't begun, but the sale of crackers have started, and we cannot wait and get a bunch. We spend the next two days bursting crackers, and the challenge is to save enough to celebrate properly on the main Diwali Day. The Diwali Day is filled with love, laughter and happiness. New clothes, sweets, and family get togethers are musts. The next day is spent visiting friends and family, playing cards. Now that I am not home, I feel that I am old enough to be let in the room that elders lock because they drink and gamble. I miss the fun, the laughter, the food, and the love.
+Diwali is usally spent in phases. The first phase is when Diwali hasn't begun, but the sale of crackers have started, and we cannot wait and get a bunch. We spend the next two days bursting crackers, and the challenge is to save enough to celebrate properly on the main Diwali Day. The Diwali Day is filled with love, laughter and happiness. New clothes, sweets, and family get togethers are musts. The next day is spent visiting friends, bursting crackers together and with family, playing cards. Now that I am not home, I feel that I am old enough to be let into the room that elders lock because they drink and gamble. I miss the fun, the laughter, the food, and the love.
+
+Dealing with post Diwali blues is morbid. The house is a mess, the lights are off, the sweets are over, and the crackers are burnt. The house is empty, and the silence is deafening. The only thing that remains is the memories of the fun we had, and the love we shared.
 
 Two months later, in December, we look back at the memories we've made, surprised at how quickly another year has gone by. I still sometimes do not fully understand as to how have I managed to get by, through this year.
 
