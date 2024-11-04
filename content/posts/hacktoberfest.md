@@ -5,19 +5,9 @@ description: "Compilers and interpreters for C/C++ and machine code for RISC-V a
 tag: "tech"
 draft: false
 ---
-Hacktoberfest is a fantastic opportunity to dive into the world of open source, make meaningful contributions, and sharpen your dev skills. This year, I'm most excited about these two projects:
+Hacktoberfest is a fantastic opportunity to dive into the world of open source, make meaningful contributions, and sharpen your dev skills. This year, I'm most excited about [Yatch](#current-yatch): a machine code interpreter for RISC-V written in C++. It's a great way to learn about machine code, and how CPUs execute instructions.
 
-1. [Ferry](#current-ferry): A simple C/C++ cross-compiler for RISC-V, written in Rust.
-
- The aim here is to learn more about compilers, the workings of CPUs, and computer systems architecture. This a great project to get started with if you're keen to learn about low-level programming. I'd love to collaborate with others who share similar interests. 
-
-Usually, folks reaching out to me look out for Python and JavaScript projects, and most contributors gravitate towards these high-level languages, but I encourage you to explore Rust. It offers a new programming paradigm, especially in terms of memory and type safety, areas where Python and JavaScript typically fall short.
-
-For those uncomfortable with Rust, I've also thought of a lighter alternative called. 
-
-2. [Yatch](#current-yatch): a machine code interpreter for RISC-V written in C++. 
-
- This project is a bit more beginner-friendly, and you can get started with it even if you're not familiar with Rust. It's a great way to learn about machine code, and how CPUs execute instructions.
+The aim here is to learn more about compilers, the workings of CPUs, and computer systems architecture. This a great project to get started with if you're keen to learn about low-level programming. I'd love to collaborate with others who share similar interests. 
 
 ### RISC-V ISA 
 
