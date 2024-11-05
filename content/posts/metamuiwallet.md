@@ -2,7 +2,7 @@
 title:  'Decentralization in MetaMUI Wallet'
 date:  "31-08-2022"
 description: "A case study on how MetaMUI wallet claims to be decentralized and how it actully works."
-tag: "tech"
+tag: "#tech"
 ---
 
 I am working with [Squbix Digital](https://squbix.com/) to build a decentralized, secure and scalable solution using blockchain technology for [Sovereign Wallet](https://swnglobal.com/). The solution is to build a platform to exchange digital assets such as cryptocurrencies and digital currencies across a country/ organization and a cross-border payments system. Here is the [metamui whitepaper](https://sovereignwallet-network.github.io/whitepaper/MetaMUI-Blockchain-White-Paper.pdf) and here are some of the things that I couldn't digest well.

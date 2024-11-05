@@ -3,7 +3,7 @@ title: 'Software Enginerering 101'
 date: "01-05-2024"
 description: "This is how I would go about teaching software engineering if I were to teach it; a comprehensive guide to getting started with software engineering."
 draft: false
-tag: "tech"
+tag: "#tech"
 ---
 
 I was offered to start an interesting venture: to curate a course for software engineering and to build a platform that aims at sharing my experience of getting into software engineering. Tons of platforms provide the same, but none of them are as comprehensive as I would like them to be. While fundamentally I want to impart knowledge for free, I also do not have enough time to make sit with everybody and teach them. Hence, this idea of crafting a self-sustaining curriculum capable of imparting software engineering skills to anyone keen on learning seemed apt.

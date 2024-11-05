@@ -4,7 +4,7 @@ date: "01-05-2024"
 description: "Things to consider while building a system"
 draft: false
 index: false
-tag: "tech"
+tag: "#tech"
 ---
 
 Considering scalability, fault tolerance, security, and monitoring, you could broadly think about the following:

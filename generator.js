@@ -69,7 +69,7 @@ const readFile = (filename) => {
 const templatize = (template, data) => {
   let result = template;
   for (let key in data) {
-    if (data[key] !== undefined) {
+    if (data[key]) {
       result = result.replace(
         new RegExp(`<!-- ${key.toUpperCase()} -->`, "g"),
         data[key]
@@ -145,7 +145,7 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
     mdToPdf({ path: filename }, { dest: outpdfname });
   }
 
-  if (file.data.index !== false) {
+  if (file.data.index!=false) {
     blogs.set(filename.split("/").slice(-1).join("/").slice(0, -3), {
       title: file.data.title,
       date: file.data.date,
@@ -159,6 +159,7 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
     content: file.html,
     author: file.data.author,
     description: file.data.description,
+    tags: file.data.tag,
   });
   if (file.data.showupdatedate == true) {
     // Create a hash of the content of the file
@@ -322,7 +323,7 @@ const buildBlogIndex = (blogs, path) => {
   const tagSelectionHTML = `
     <div id="tag-selection" style="margin-bottom: 20px;">
       <span data-tag="all" style="cursor: pointer; margin-right: 10px; font-weight: bold;">#all</span>
-      ${tagArray.map(tag => `<span data-tag="${tag}" style="cursor: pointer; margin-right: 10px;">#${tag}</span>`).join(' ')}
+      ${tagArray.map(tag => `<span data-tag="${tag}" style="cursor: pointer; margin-right: 10px;">${tag}</span>`).join(' ')}
     </div>
   `;
 

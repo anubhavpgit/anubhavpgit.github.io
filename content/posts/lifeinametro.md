@@ -2,7 +2,7 @@
 title: "The tech-slave city"
 date: "08-07-2023"
 description: A futile attempt to survive in Bangalore's Urban Jungle
-tag: "life, journal"
+tag: "#life, #journal"
 ShowBreadCrumbs: true 
 ---
 <style>

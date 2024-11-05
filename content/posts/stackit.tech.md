@@ -2,7 +2,7 @@
 title: "StackIt-tech"
 date: "2023-06-11"
 description: The tech behind the spreadsheet monster.
-tags: ["startup life", "Bangalore"]
+tag: "#startupLife, #Bangalore"
 ShowBreadCrumbs: true 
 draft: true
 ---

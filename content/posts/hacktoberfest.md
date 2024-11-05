@@ -2,7 +2,7 @@
 title: "Docking Compilers at Hacktoberfest'24"
 date: "02-11-2024"
 description: "Compilers and interpreters for C/C++ and machine code for RISC-V at Hacktoberfest, a month-long celebration of open source software."
-tag: "tech"
+tag: "#tech"
 draft: false
 ---
 Hacktoberfest is a fantastic opportunity to dive into the world of open source, make meaningful contributions, and sharpen your dev skills. This year, I'm most excited about [Yatch](#current-yatch): a machine code interpreter for RISC-V written in C++. It's a great way to learn about machine code, and how CPUs execute instructions.

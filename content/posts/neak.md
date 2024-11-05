@@ -2,7 +2,7 @@
 title: 'Neak: Natural Language --> SQL'
 date: "10-12-2023"
 description: "Neak is a natural language to SQL engine that uses the RAG pipeline to generate SQL queries from natural language questions."
-tag: "tech"
+tag: "#tech"
 ---
 
 In the realm of AI, it is evident that for those without technical expertise, the desire to steer away from coding or constructing intricate queries has intensified. The advent of large language models has conditioned us to prioritize results. We do not want to do the manual labor of writing code or queries. Instead, we now tend to present a cluster of questions, offer contextual details, and allow GPT and similar tools to handle the rest. From writing a letter to building scalable applications, LLMs like Chat-GPT, Bard, Llama etc. have become the go-to tools for all our needs. The most complex of tasks, such as writing code or constructing queries have become a breeze. 

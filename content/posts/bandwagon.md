@@ -2,7 +2,7 @@
 title: "The Bandwagon Effect"
 date: "15-03-2024"
 description: "Moving away from Software Engineering"
-tag: "life"
+tag: "#life"
 index: false
 ---
 

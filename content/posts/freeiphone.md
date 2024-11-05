@@ -2,7 +2,7 @@
 title: 'iPhone Season in the US'
 date: "30-10-2024"
 description: "A short insight into how a carrier provider is giving away free iPhones"
-tag: "business"
+tag: "#business"
 draft: false
 ---
 

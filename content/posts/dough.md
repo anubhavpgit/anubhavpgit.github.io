@@ -2,7 +2,7 @@
 title: 'Dough - A Rich Presentation Tool'
 date: "31-01-2024"
 description: "A rich presentation tool built in Rust that uses markdown for content generation."
-tag: "tech"
+tag: "#tech"
 ---
 Imagine a presentation tool that seamlessly blends simplicity with power. Welcome to Dough – your new favorite presentation companion. Say goodbye to clunky interfaces and hello to a tool that's as intuitive as it is efficient.
 

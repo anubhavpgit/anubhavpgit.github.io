@@ -3,7 +3,7 @@ title: Conway's Game of Life
 date: 5-11-2024
 description: Understanding and implementing Conway's Game of Life using simple rules that mimic real-life population dynamics.
 draft: true
-tag: "tech, game, theory"
+tag: "#tech, #game"
 ---
 <script type="module" src="/assets/js/gameoflife/index.js" ></script>
 
@@ -18,10 +18,10 @@ A few rules govern the evolution of the game are as follows:
 
 1. Any live cell with fewer than two live neighbours dies, as if by underpopulation.
 
-<div class="container" style="text-align: center;">
+<div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
 	<canvas id="lessthantwo"  style="border: 1px solid black;"	>
 	</canvas>
-    <span style="padding: 10px; padding-bottom: 50px;">
+    <span style="padding: 10px; color: black !important;">
     -->
     </span>
     <canvas id="lessthantwodead"  style="border: 1px solid black;"	>
@@ -31,10 +31,10 @@ A few rules govern the evolution of the game are as follows:
 
 2. Any live cell with two or three live neighbours lives on to the next generation.
 
-<div class="container" style="text-align: center;">
+<div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
 	<canvas id="twoorthree"  style="border: 1px solid black;"	>
 	</canvas>
-    <span style="padding: 10px; padding-bottom: 50px;">
+    <span style="padding: 10px; color: black !important;">
         -->
     </span>
     <canvas id="twoorthreelive"  style="border: 1px solid black;"	>
@@ -43,10 +43,10 @@ A few rules govern the evolution of the game are as follows:
 
 3. Any live cell with more than three live neighbours dies, as if by overpopulation.
 
-<div class="container" style="text-align: center;">
+<div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
 	<canvas id="morethanthree"  style="border: 1px solid black;"	>
 	</canvas>
-    <span style="padding: 10px; padding-bottom: 50px;">
+    <span style="padding: 10px; color: black !important;">
     -->
     </span>
     <canvas id="morethanthreedead"  style="border: 1px solid black;"	>
@@ -55,19 +55,24 @@ A few rules govern the evolution of the game are as follows:
 
 4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
-<div class="container" style="text-align: center;">
+<div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
 	<canvas id="three"  style="border: 1px solid black;">
 	</canvas>
-    <span style="padding: 10px; padding-bottom: 50px;">
+    <span style="padding: 10px; color: black !important;">
     -->
     </span>
     <canvas id="threelive"  style="border: 1px solid black;">
     </canvas>
 
 </div>
-
-
+<br>
 The game is played on a two-dimensional grid of cells, each of which can be in one of two states: alive or dead. The game proceeds in discrete steps, with each step representing a generation of cells. At each step, the game applies the rules to each cell in the grid simultaneously, updating the grid to reflect the new state of each cell based on its current state and the states of its neighbors.
 
+The aim is to observe how the configuration of cells evolves over time, leading to various patterns and structures.
 
-## The Game of Life 
+## The Game of Life in Action
+
+<canvas id="game"  style="border: 1px solid black;">
+</canvas>
+
+The Game of Life serves as a fascinating model of how complexity can arise from simplicity, providing insight into topics such as self-organization, emergence, and cellular automata theory.

@@ -4,7 +4,7 @@ date: "01-05-2024"
 description: "A short, concise guide to starting with Data Structures and Algorithms in c++"
 draft: false
 index: false
-tag: "tech"
+tag: "#tech"
 ---
 
 Before starting with this, I wanted to ensure that if at any point you feel that you're not able to understand or grasp what is written on this page, that is **totally understandable**. These concepts are better understood when practised, not theoretically. So, if you're not able to understand something, don't worry, we'll be coding using these in the next few days, and you'll get a hang of it.
