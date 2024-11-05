@@ -153,14 +153,14 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
     });
   }
 
-  const templatized = templatize(template, {
+  let templatized = templatize(template, {
     date: file.data.date,
     title: file.data.title,
     content: file.html,
     author: file.data.author,
     description: file.data.description,
   });
-  if (file.data.showdate == true) {
+  if (file.data.showupdatedate == true) {
     // Create a hash of the content of the file
     const hash = crypto.createHash("md5").update(file.html).digest("hex");
     let key = filename.split("/").slice(-1).join("/").slice(0, -3);
@@ -172,7 +172,8 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
     };
     const formattedDate = date.toLocaleDateString("en-US", options);
     const datetimeSpan = `<span class="datetime" id="datetime">${formattedDate}</span>`;
-    if (hashes[key] === undefined) {
+
+    if (hashes[key] === undefined || hashes[key] === null || hashes[key] != hash) {
       hashes[key] = {
         hash: hash,
         date: formattedDate,
@@ -182,15 +183,10 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
         /(<span class="update-date-time">)(<\/span>)/,
         `$1${datetimeSpan}$2`
       );
-    } else if (hashes[key].hash !== hash) {
-      hashes[key] = {
-        hash: hash,
-        date: formattedDate,
-      };
-      // Use regex to find the div and replace it with the updated content
+    }else{
       templatized = templatized.replace(
         /(<span class="update-date-time">)(<\/span>)/,
-        `$1${datetimeSpan}$2`
+        `$1${hashes[key].date}$2`
       );
     }
   }
@@ -222,7 +218,7 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
     mdToPdf({ path: filename }, { dest: outpdfname });
   }
 
-  if (file.data.showdate == true) {
+  if (file.data.showupdatedate== true) {
     // Create a hash of the content of the file
     const hash = crypto.createHash("md5").update(file.html).digest("hex");
     let key = filename.split("/").slice(-1).join("/").slice(0, -3);
@@ -234,17 +230,7 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
     };
     const formattedDate = date.toLocaleDateString("en-US", options);
     const datetimeSpan = `<span class="datetime" id="datetime">${formattedDate}</span>`;
-    if (hashes[key] === undefined) {
-      hashes[key] = {
-        hash: hash,
-        date: formattedDate,
-      };
-      // Use regex to find the div and replace it with the updated content
-      templatized = templatized.replace(
-        /(<span class="update-date-time">)(<\/span>)/,
-        `$1${datetimeSpan}$2`
-      );
-    } else if (hashes[key].hash !== hash) {
+    if (hashes[key] === undefined || hashes[key] === null || hashes[key] != hash) {
       hashes[key] = {
         hash: hash,
         date: formattedDate,
@@ -308,15 +294,27 @@ const buildBlogIndex = (blogs, path) => {
     const displayDate = `${monthNames[parseInt(month) - 1]} ${year.slice(-2)}`;
 
     // Handle multiple tags per post
-    const tags = value.tag.split(',').map(t => t.trim());
-    tags.forEach(tag => allTags.add(tag));
-    const tagsHTML = tags.map(tag => `<span style="font-size: 0.8em;">#${tag}</span>`).join(',');
+    try {
+      if (value.tag) {
+        const tags = value.tag.split(',').map(t => t.trim());
+        tags.forEach(tag => allTags.add(tag));
+        const tagsHTML = tags.map(tag => `<span style="font-size: 0.8em;">#${tag}</span>`).join(',');
 
-    const listItem = `<li class="flex justify-between pb1" data-tags="${tags.join(' ')}"> 
-    <a href="./${key}.html" class="link">${value.title}</a>${displayDate}
-    </li>`;
+        const listItem = `<li class="flex justify-between pb1" data-tags="${tags.join(' ')}"> 
+      <a href="./${key}.html" class="link">${value.title}</a>${displayDate}
+      </li>`;
 
-    postsHTML += listItem;
+        postsHTML += listItem;
+      } else {
+        const listItem = `<li class="flex justify-between pb1" data-tags=""> 
+        <a href="./${key}.html" class="link">${value.title}</a>${displayDate}
+        </li>`;
+
+        postsHTML += listItem;
+      }
+    } catch (error) {
+      console.error(`Error processing post: ${key}`);
+    }
   });
 
   // Generate tag selection UI
