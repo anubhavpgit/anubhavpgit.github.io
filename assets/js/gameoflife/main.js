@@ -1,3 +1,5 @@
+import { initState, pauseState, resetState, updateSpeedOfState, playGame } from './game.js';
+
 const lessThanTwoGrid = [
     [1, 0, 0, 0, 0],
     [1, 1, 1, 0, 0],
@@ -63,13 +65,11 @@ const threeLiveGrid = [
 ];
 
 // all zeros
-let gameOfLife = Array.from({ length:10 }, () => Array.from({ length: 10 }, () => 0));
+let gameOfLife = Array.from({ length: 10 }, () => Array.from({ length: 10 }, () => 0));
 
 // replace the canvas with the grid
 function drawGrid(grid, cellSize, canvas) {
     const ctx = canvas.getContext("2d");
-
-
     canvas.width = grid[0].length * cellSize;
     canvas.height = grid.length * cellSize;
 
@@ -90,6 +90,7 @@ function drawGrid(grid, cellSize, canvas) {
         });
     });
 }
+
 const lessThanTwoCanvas = document.getElementById("lessthantwo");
 const lessThanTwoDeadCanvas = document.getElementById("lessthantwodead");
 
@@ -114,7 +115,6 @@ drawGrid(moreThanThreeDeadGrid, 20, moreThanThreeDeadCanvas);
 drawGrid(threeGrid, 20, deadThreeCanvas);
 drawGrid(threeLiveGrid, 20, deadThreeLiveCanvas);
 
-
 let gameSpeed = 0;
 
 const speedSlider = document.getElementById("speed-slider");
@@ -123,29 +123,90 @@ const startStopButton = document.getElementById("start-stop");
 const resetButton = document.getElementById("reset");
 const timeSpan = document.getElementById("time");
 const populationSpan = document.getElementById("population");
+let paused = true;
 
 const gameCanvas = document.getElementById("game-of-life");
 drawGrid(gameOfLife, 40, gameCanvas);
-// calculate the height and width of the canvas
-const gameHeight = gameCanvas.height;
-const gameWidth = gameCanvas.width;
 
+//initialize game state
+let state = initState(gameOfLife, speedSlider.value, 40);
+const gameHeight = gameCanvas.height;
+let isMouseDown = false;
+
+gameCanvas.onmousemove = function (event) {
+    const cellSize = state.config.cellSize;
+    const x = Math.floor(event.offsetX / cellSize);
+    const y = Math.floor(event.offsetY / cellSize);
+
+    if (x >= 0 && x < state.config.cols && y >= 0 && y < state.config.rows) {
+        // Clear the canvas
+        const ctx = gameCanvas.getContext("2d");
+        ctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+
+        // Redraw the grid
+        drawGrid(state.grid, cellSize, gameCanvas);
+
+        // Highlight the hovered cell
+        ctx.fillStyle = "darkgreen";
+        ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+
+        // Redraw the grid lines over the highlighted cell
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 1;
+        ctx.strokeRect(x * cellSize, y * cellSize, cellSize, cellSize);
+    }
+};
+
+gameCanvas.onmousedown = function (event) {
+    isMouseDown = true;
+    const cellSize = state.config.cellSize;
+    const x = Math.floor(event.offsetX / cellSize);
+    const y = Math.floor(event.offsetY / cellSize);
+
+    if (x >= 0 && x < state.config.cols && y >= 0 && y < state.config.rows) {
+        state.grid[y][x] = 1;
+        drawGrid(state.grid, cellSize, gameCanvas);
+    }
+};
+
+gameCanvas.onmouseup = function () {
+    isMouseDown = false;
+};
 
 gridSlider.oninput = function () {
-    const heightInCells = 40*10; //cell size * number of cells in a row
-    const sliderValue = parseInt(gridSlider.value);
+    if (paused) {
+        const heightInCells = 40 * 10; //cell size * number of cells in a row
+        const sliderValue = parseInt(gridSlider.value);
 
-    const newCellSize = heightInCells/ sliderValue;
-    const newRows = Math.floor(gameHeight / newCellSize);
-    const newColumns = newRows;
+        const newCellSize = heightInCells / sliderValue;
+        const newRows = Math.floor(gameHeight / newCellSize);
+        const newColumns = newRows;
 
-    const newGameGrid = Array.from({ length: newRows }, () => Array.from({ length: newColumns }, () => 0));
-    gameOfLife = newGameGrid;
-    drawGrid(gameOfLife, newCellSize, gameCanvas);
+        const newGameGrid = Array.from({ length: newRows }, () => Array.from({ length: newColumns }, () => 0));
+        gameOfLife = newGameGrid;
+        drawGrid(gameOfLife, newCellSize, gameCanvas);
+    } else {
+        pauseState(state);
+        throw new Error("Cannot change grid size while game is running");
+    }
 };
 
 speedSlider.oninput = function () {
     gameSpeed = parseInt(speedSlider.value);
+    updateSpeedOfState(state, gameSpeed);
 }
 
+resetButton.onclick = function () {
+    paused = true;
+    let resetGrid = Array.from({ length: 10 }, () => Array.from({ length: 10 }, () => 0));
+    state = resetState(state, state.config, resetGrid);
+    gameOfLife = state.grid;
+    drawGrid(gameOfLife, 40, gameCanvas);
+};
 
+startStopButton.onclick = function () {
+    paused = !paused;
+    if (!paused) {
+        playGame(state);
+    }
+}

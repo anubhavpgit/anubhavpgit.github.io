@@ -7,7 +7,7 @@ tag: "#tech, #game"
 ---
 <script type="module" src="/assets/js/gameoflife/main.js" ></script>
 
-Cellular automata (CA) are computational systems that are used to model complex systems and nonlinear dynamics. They are made up of simple, identical units, called cells, that evolve in parallel at discrete time steps. The state of each cell is determined by the states of its neighboring cells, and the cells update their states based on a set of rules. Cellular automata have been used to study a wide range of phenomena, including biological systems, physical processes, and social dynamics.
+Cellular automata are computational systems that are used to model complex systems and nonlinear dynamics. They are made up of simple, identical units, called cells, that evolve in parallel at discrete time steps. The state of each cell is determined by the states of its neighboring cells, and the cells update their states based on a set of rules. Cellular automata have been used to study a wide range of phenomena, including biological systems, physical processes, and social dynamics.
 
 One of the most fascinating aspects of cellular automata is their ability to exhibit complex and unpredictable behavior from simple rules. Conway's Game of Life is a simple cellular automaton devised by the British mathematician John Horton Conway in 1970. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves.
 
@@ -88,7 +88,7 @@ The aim is to observe how the configuration of cells evolves over time, leading 
 
 <div class="container" style="display: flex; align-items: center; justify-content: start; margin-top: 20px;">
     <label for="speed" style="margin-right: 10px;">Progress </label>
-    <input type="range" id="speed-slider" name="speed" min="1" max="10" value="5">
+    <input type="range" id="speed-slider" name="speed" min="10" max="1000" value="100">
 </div>
 
 
@@ -103,3 +103,10 @@ To start, design your intial configuration by clicking on the cells to toggle th
 The speed of the game can be adjusted by changing the `speed` slider. The game will evolve at a faster pace as the slider is moved to the right. The `grid` slider can be used to adjust the size of the grid, allowing for larger or smaller configurations.
 
 The Game of Life serves as a fascinating model of how complexity can arise from simplicity, providing insight into topics such as self-organization, emergence, and cellular automata theory.
+
+
+## Fromal Automata Theory
+
+<!-- The Game of Life is a classic example of a cellular automaton,  -->
+
+The Game of Life has been shown to be Turing complete, meaning it can simulate any computation that a Turing machine can perform, given the right initial conditions. This means it shares a theoretical connection with formal automata and can be thought of as a computational system.
