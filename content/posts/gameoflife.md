@@ -1,12 +1,11 @@
 ---
 title: Conway's Game of Life
-date: 5-11-2024
+date: 1-12-2024
 description: Understanding and implementing Conway's Game of Life using simple rules that mimic real-life population dynamics.
 draft: true
 tag: "#tech, #game"
 ---
-<script type="module" src="/assets/js/gameoflife/index.js" ></script>
-
+<script type="module" src="/assets/js/gameoflife/main.js" ></script>
 
 Cellular automata (CA) are computational systems that are used to model complex systems and nonlinear dynamics. They are made up of simple, identical units, called cells, that evolve in parallel at discrete time steps. The state of each cell is determined by the states of its neighboring cells, and the cells update their states based on a set of rules. Cellular automata have been used to study a wide range of phenomena, including biological systems, physical processes, and social dynamics.
 
@@ -63,16 +62,44 @@ A few rules govern the evolution of the game are as follows:
     </span>
     <canvas id="threelive"  style="border: 1px solid black;">
     </canvas>
-
 </div>
 <br>
+
 The game is played on a two-dimensional grid of cells, each of which can be in one of two states: alive or dead. The game proceeds in discrete steps, with each step representing a generation of cells. At each step, the game applies the rules to each cell in the grid simultaneously, updating the grid to reflect the new state of each cell based on its current state and the states of its neighbors.
 
 The aim is to observe how the configuration of cells evolves over time, leading to various patterns and structures.
 
 ## The Game of Life in Action
 
-<canvas id="game"  style="border: 1px solid black;">
+<div style="text-align: right; width: 100%;">
+    <button id="reset">Reset</button>
+</div>
+
+<div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
+<canvas id="game-of-life"  style="border: 1px solid black;">
 </canvas>
+</div>
+<div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 20px;">
+    <input type="range" id="grid-slider" name="speed" min="1" max="10" value="5">
+    <label for="speed" style="margin-top: 10px;">Zoom</label>
+    <span id="time" style="margin-top: 10px;"></span>
+    <span id="population" style="margin-top: 10px;"></span>
+</div>
+
+<div class="container" style="display: flex; align-items: center; justify-content: start; margin-top: 20px;">
+    <label for="speed" style="margin-right: 10px;">Progress </label>
+    <input type="range" id="speed-slider" name="speed" min="1" max="10" value="5">
+</div>
+
+
+<br>
+<div>
+    <button id="start-stop" style="margin-right: 10px;">Start/Stop</button>
+</div>
+<br>
+
+To start, design your intial configuration by clicking on the cells to toggle their state. Once you're ready, click the "Start/Stop" button to watch the game evolve. You can pause the game at any time by clicking the "Stop" button, and clear the grid by clicking the "Clear" button.
+
+The speed of the game can be adjusted by changing the `speed` slider. The game will evolve at a faster pace as the slider is moved to the right. The `grid` slider can be used to adjust the size of the grid, allowing for larger or smaller configurations.
 
 The Game of Life serves as a fascinating model of how complexity can arise from simplicity, providing insight into topics such as self-organization, emergence, and cellular automata theory.
