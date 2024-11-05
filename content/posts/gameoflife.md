@@ -80,7 +80,7 @@ The aim is to observe how the configuration of cells evolves over time, leading 
 </canvas>
 </div>
 <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 20px;">
-    <input type="range" id="grid-slider" name="speed" min="1" max="10" value="5">
+    <input type="range" id="grid-slider" name="speed" min="5" max="15" value="10">
     <label for="speed" style="margin-top: 10px;">Zoom</label>
     <span id="time" style="margin-top: 10px;"></span>
     <span id="population" style="margin-top: 10px;"></span>
@@ -88,7 +88,7 @@ The aim is to observe how the configuration of cells evolves over time, leading 
 
 <div class="container" style="display: flex; align-items: center; justify-content: start; margin-top: 20px;">
     <label for="speed" style="margin-right: 10px;">Progress </label>
-    <input type="range" id="speed-slider" name="speed" min="10" max="1000" value="100">
+    <input type="range" id="speed-slider" name="speed" min="0" max="1000" value="500">
 </div>
 
 
