@@ -1,6 +1,6 @@
 ---
 title: Sisyphus
-date: 31-10-2024
+date: 31-12-2024
 description: "A journey through whims of fate and lucid memories. Growing up, old and looking for the purpose of life."
 draft: true
 tag: "#life, #philosophy, #journal"
@@ -72,9 +72,11 @@ The boulder was yet to roll down, and a new hill was yet to be scaled. The memor
 
 ### Asansol: The New Beginning
 
-In 2007, I found myself packed with bags, my mother and distant cousin uncles, in Asansol, yet again starting from the bottom of a different hill, a new boulder this time.
+Writing about Asansol is not easy. Asansol is one of the most amazing times of my life, primaryly because of the friends I got to make there. In 2007, I found myself packed with bags, my mother and distant cousin uncles, in Asansol, yet again starting from the bottom of a different hill, a new boulder this time. 
 
 My father was busy with tours. His job demanded a lot of tours. This eternal movement in my fate, my Sisyphean journey was due to the fact that my father's job required him to move every two and a half years. Looking back, it was difficult, the constant moving and rebuilding lives in different cities. 
+
+We lived in office quarters, and my house number bas B2/2. The colony was huge, so huge that I still don't know where it ends. The colony was a world of its own, with its own rules and customs. It was a mix of people from different backgrounds and cultures, mostly from the Central East- West Bengal, Jharkhand, Bihar, and Odisha: a mix of languages, traditions, and beliefs, a place where the world came together in a harmonious blend of diversity.
 
 *...to be continued*
 
