@@ -105,7 +105,7 @@ The speed of the game can be adjusted by changing the `speed` slider. The game w
 The Game of Life serves as a fascinating model of how complexity can arise from simplicity, providing insight into topics such as self-organization, emergence, and cellular automata theory.
 
 
-## Formal Languages & Automata Theory
+## A Turing Complete Machine
 
 Formal languages and automata theory is a fundamental area of computer science that deals with the abstract machines (automata) and the computational problems that can be solved using these machines. It provides the theoretical underpinnings for designing compilers, interpreters, and for understanding the limits of what computers can compute.
 
