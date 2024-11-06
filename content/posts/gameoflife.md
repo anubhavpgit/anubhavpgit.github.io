@@ -2,7 +2,7 @@
 title: Conway's Game of Life
 date: 1-12-2024
 description: Understanding and implementing Conway's Game of Life using simple rules that mimic real-life population dynamics.
-draft: true
+draft: false
 tag: "#tech, #game"
 ---
 <script type="module" src="/assets/js/gameoflife/main.js" ></script>
@@ -67,11 +67,9 @@ A few rules govern the evolution of the game are as follows:
 
 The game is played on a two-dimensional grid of cells, each of which can be in one of two states: alive or dead. The game proceeds in discrete steps, with each step representing a generation of cells. At each step, the game applies the rules to each cell in the grid simultaneously, updating the grid to reflect the new state of each cell based on its current state and the states of its neighbors.
 
-The aim is to observe how the configuration of cells evolves over time, leading to various patterns and structures.
-
 ## The Game of Life in Action
 
-<div style="text-align: right; width: 100%;">
+<div style="text-align: start; width: 100%;">
     <button id="reset">Reset</button>
 </div>
 
@@ -81,22 +79,24 @@ The aim is to observe how the configuration of cells evolves over time, leading 
 </div>
 <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 20px;">
     <input type="range" id="grid-slider" name="speed" min="5" max="15" value="10">
-    <label for="speed" style="margin-top: 10px;">Zoom</label>
+    <label for="speed" style="margin-top: 10px;">Grid</label>
     <span id="time" style="margin-top: 10px;"></span>
     <span id="population" style="margin-top: 10px;"></span>
 </div>
 
 <div class="container" style="display: flex; align-items: center; justify-content: start; margin-top: 20px;">
-    <label for="speed" style="margin-right: 10px;">Progress </label>
-    <input type="range" id="speed-slider" name="speed" min="0" max="1000" value="500">
+    <label for="speed" style="margin-right: 10px;">Speed </label>
+    <input type="range" id="speed-slider" name="speed" min="1" max="10" value="1">
 </div>
 
 
 <br>
 <div>
-    <button id="start-stop" style="margin-right: 10px;">Start/Stop</button>
+    <button id="start-stop" style="margin-right: 10px;">Start</button>
 </div>
 <br>
+
+**Generations**: <span id="generation">0</span>
 
 To start, design your intial configuration by clicking on the cells to toggle their state. Once you're ready, click the "Start/Stop" button to watch the game evolve. You can pause the game at any time by clicking the "Stop" button, and clear the grid by clicking the "Clear" button.
 
@@ -105,8 +105,15 @@ The speed of the game can be adjusted by changing the `speed` slider. The game w
 The Game of Life serves as a fascinating model of how complexity can arise from simplicity, providing insight into topics such as self-organization, emergence, and cellular automata theory.
 
 
-## Fromal Automata Theory
+## Formal Languages & Automata Theory
 
-<!-- The Game of Life is a classic example of a cellular automaton,  -->
+Formal languages and automata theory is a fundamental area of computer science that deals with the abstract machines (automata) and the computational problems that can be solved using these machines. It provides the theoretical underpinnings for designing compilers, interpreters, and for understanding the limits of what computers can compute.
 
-The Game of Life has been shown to be Turing complete, meaning it can simulate any computation that a Turing machine can perform, given the right initial conditions. This means it shares a theoretical connection with formal automata and can be thought of as a computational system.
+John Conway's Game of Life is fascinating example of a cellular automaton, with infinite possibilities for configurations and patterns. It has been studied extensively by computer scientists, mathematicians, and physicists, and has been used to explore a wide range of topics, including complexity theory, artificial life, and emergent behavior.
+
+The Game of Life has been shown to be Turing complete, meaning it can simulate any computation that a Turing machine can perform, given the right initial conditions. This means it shares a theoretical connection with formal automata and can be thought of as a computational system. Research indicates that certain configurations in the Game of Life can be used to simulate logic gates, memory, and other components of a computer, demonstrating its computational universality and can perform universal computation, making it a fascinating area of study for computer scientists and mathematicians alike.
+
+*If you choose carefully enough, you can make a entire computer inside the game, powered entirely by little things running around based only on those same simple rules of what lives and what dies in the next generation. An entire computer that could, in theory, perform any calculation that your computer could. It's an interesting mathematical diversion depicting Turing-completeness, the chaos that arises from simple rules, and it just looks pretty.*" 
+- Reddit
+
+Also, someone built a [Game of Life inside a computer built on top of THE GAME OF LIFE!!](https://www.youtube.com/watch?v=xP5-iIeKXE8)

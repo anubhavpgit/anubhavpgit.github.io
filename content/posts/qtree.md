@@ -226,6 +226,4 @@ function initMouseCanvas(img){
 
 So, what's the point of all this? Well, we can use a quadtree to compress and decompress images when the mouse hovers over a specific area of the canvas. It's like a secret code that unlocks a hidden image!
 
-If you want to explore more, check out the slider and the entire source code on [GitHub](http://github.com/cbrtl/qd-compression). And don't hesitate to ask us any questions or give suggestions. We're always happy to chat on GitHub!
-
 *Ref: [Wikipedia](https://en.wikipedia.org/wiki/Quadtree)*

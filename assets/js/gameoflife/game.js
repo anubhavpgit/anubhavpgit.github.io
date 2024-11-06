@@ -1,29 +1,11 @@
-export const ActionTypes = {
-  // Types of actions that can be performed on the game state
-  INIT: "INIT",
-  PAUSE: "PAUSE",
-  PLAY: "PLAY",
-  RESET: "RESET",
-};
+// game.js
 
-export const Config = {
-  // Configuration of the game
-  rows: 0,
-  cols: 0,
-  cellSize: 0,
-  speed: 0,
-};
+import { countNeighbors } from "./helper.js";
 
-export const State = {
-  // Initial state of the game
-  generation: 0,
-  config: Config,
-  grid: [[]],
-};
+const generationElement = document.getElementById("generation");
+const timeElapsedElement = document.getElementById("time-elapsed");
 
-function initState(grid, speed, cellSize) {
-  // Initialize the game state
-  // build the config object
+export function initState(grid, speed, cellSize) {
   const initConfig = {
     rows: grid.length,
     cols: grid[0].length,
@@ -34,78 +16,75 @@ function initState(grid, speed, cellSize) {
     generation: 0,
     config: initConfig,
     grid: grid,
+    paused: true,
   };
   return state;
 }
 
-function pauseState(state) {
-  // Pause the game
-  state.config.speed = 0;
+export function pauseState(state) {
+  state.paused = true;
   return state;
 }
 
-function updateState(state, grid, config) {
+export function updateState(state, grid, config) {
   state.config = config;
   state.grid = grid;
   return state;
 }
 
-function resetState(state, config, resetGrid) {
-  // Reset the game
+export function resetState(state, config, resetGrid) {
   state.generation = 0;
   state.grid = resetGrid;
   state.config = config;
+  state.paused = true;
   return state;
 }
 
-function checkNeighbors(state, row, col) {
-  // Check the neighbors of a cell
-  const { rows, cols } = state.config;
-  const neighbors = [];
-  for (let i = -1; i < 2; i++) {
-    for (let j = -1; j < 2; j++) {
-      if (i === 0 && j === 0) {
-        continue;
-      }
-      const r = (row + i + rows) % rows;
-      const c = (col + j + cols) % cols;
-      neighbors.push(state.grid[r][c]);
-    }
-  }
-  return neighbors; // returns an array of the neighbors of the cell
-}
-
-function sleep(ms) {
+export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function playGame(state) {
-  while (state.config.speed > 0) {
-    await sleep(1000 / state.config.speed);
-    console.log("Playing game...", state.config.speed);
-    const { rows, cols } = state.config;
-    const newGrid = Array.from({ length: rows }, () => Array(cols).fill(0));
-    for (let i = 0; i < rows; i++) {
-      for (let j = 0; j < cols; j++) {
-        const neighbors = checkNeighbors(state, i, j);
-        const liveNeighbors = neighbors.reduce((acc, curr) => acc + curr, 0);
-        if (state.grid[i][j] === 1) {
-          if (liveNeighbors < 2 || liveNeighbors > 3) {
-            newGrid[i][j] = 0; // Cell dies
+export async function playGame(state, drawGrid, gameCanvas) {
+  const { rows, cols } = state.config;
+  console.log("playGame called");
+  async function gameLoop() {
+    if (!state.paused) {
+      const newGrid = Array.from({ length: rows }, () => Array(cols).fill(0));
+
+      for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+          const neighbors = countNeighbors(state.grid, i, j);
+          if (state.grid[i][j] === 1) {
+            // Any live cell with two or three live neighbors survives.
+            if (neighbors === 2 || neighbors === 3) {
+              newGrid[i][j] = 1;
+            } else {
+              // All other live cells die in the next generation.
+              newGrid[i][j] = 0;
+            }
           } else {
-            newGrid[i][j] = 1; // Cell stays alive
-          }
-        } else {
-          if (liveNeighbors === 3) {
-            newGrid[i][j] = 1; // Cell becomes alive
+            // Any dead cell with three live neighbors becomes a live cell.
+            if (neighbors === 3) {
+              newGrid[i][j] = 1;
+            } else {
+              newGrid[i][j] = 0;
+            }
           }
         }
       }
-    }
-    state.grid = newGrid;
-    state.generation++;
-  }
-}
 
-// Export functions if they are intended to be used in other modules
-export { initState, pauseState, resetState, updateState, playGame };
+      state.grid = newGrid;
+      console.log("playing");
+      drawGrid(state.grid, state.config.cellSize, gameCanvas);
+      state.generation++;
+
+      console.log("speed", state.config.speed);
+
+      await sleep(1000 / state.config.speed);
+      generationElement.textContent = state.generation;
+      gameLoop();
+    }
+  }
+
+  gameLoop();
+}
