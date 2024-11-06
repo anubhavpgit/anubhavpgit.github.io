@@ -5,7 +5,7 @@ import {
   playGame,
   updateState,
 } from "./game.js";
-import { mapOldGridToNewGrid } from "./helper.js";
+import { mapOldGridToNewGrid, additionPattern, andGatePattern, memoryCellPattern, controlUnitPattern } from "./helper.js";
 
 const lessThanTwoGrid = [
   [1, 0, 0, 0, 0],
@@ -71,6 +71,29 @@ const threeLiveGrid = [
   [0, 0, 0, 0, 0],
 ];
 
+const lessThanTwoCanvas = document.getElementById("lessthantwo");
+const lessThanTwoDeadCanvas = document.getElementById("lessthantwodead");
+
+const twoOrThreeCanvas = document.getElementById("twoorthree");
+const twoOrThreeLiveCanvas = document.getElementById("twoorthreelive");
+
+const moreThanThreeCanvas = document.getElementById("morethanthree");
+const moreThanThreeDeadCanvas = document.getElementById("morethanthreedead");
+
+const deadThreeCanvas = document.getElementById("three");
+const deadThreeLiveCanvas = document.getElementById("threelive");
+
+const aluAddition = document.getElementById("alu-addition");
+const aluAnd = document.getElementById("alu-andgate");
+const memoryCell = document.getElementById("memory-cell");
+const controlUnit = document.getElementById("control-unit");
+
+let addState = initState(additionPattern, 1, 20);
+let andState = initState(andGatePattern, 1, 20);
+let memoryState = initState(memoryCellPattern, 1, 20);
+let controlState = initState(controlUnitPattern, 1, 20);
+
+
 let gameOfLife = Array.from({ length: 10 }, () =>
   Array.from({ length: 10 }, () => 0)
 );
@@ -98,17 +121,11 @@ function drawGrid(grid, cellSize, canvas) {
   });
 }
 
-const lessThanTwoCanvas = document.getElementById("lessthantwo");
-const lessThanTwoDeadCanvas = document.getElementById("lessthantwodead");
 
-const twoOrThreeCanvas = document.getElementById("twoorthree");
-const twoOrThreeLiveCanvas = document.getElementById("twoorthreelive");
-
-const moreThanThreeCanvas = document.getElementById("morethanthree");
-const moreThanThreeDeadCanvas = document.getElementById("morethanthreedead");
-
-const deadThreeCanvas = document.getElementById("three");
-const deadThreeLiveCanvas = document.getElementById("threelive");
+drawGrid(addState.grid, addState.config.cellSize, aluAddition);
+drawGrid(andState.grid, andState.config.cellSize, aluAnd);
+drawGrid(memoryState.grid, memoryState.config.cellSize, memoryCell);
+drawGrid(controlState.grid, controlState.config.cellSize, controlUnit);
 
 drawGrid(lessThanTwoGrid, 20, lessThanTwoCanvas);
 drawGrid(lessThanTwoDeadGrid, 20, lessThanTwoDeadCanvas);
@@ -203,7 +220,6 @@ resetButton.onclick = function () {
   state = resetState(state, state.config, resetGrid);
   drawGrid(state.grid, state.config.cellSize, gameCanvas);
   generationSpan.textContent = "0";
-  timeElapsedSpan.textContent = "0s";
 };
 
 startStopButton.onclick = function () {
@@ -215,3 +231,67 @@ startStopButton.onclick = function () {
     startStopButton.textContent = "Start";
   }
 };
+
+aluAddition.addEventListener("mousemove", function (_event) {
+  aluAddition.style.cursor = "pointer";
+});
+
+aluAnd.addEventListener("mousemove", function (_event) {
+  aluAnd.style.cursor = "pointer";
+});
+
+memoryCell.addEventListener("mousemove", function (_event) {
+  memoryCell.style.cursor = "pointer";
+});
+
+controlUnit.addEventListener("mousemove", function (_event) {
+  controlUnit.style.cursor = "pointer";
+});
+
+
+aluAddition.onclick = function () {
+  addState.paused = !addState.paused;
+  if(!addState.paused) {
+    if(addState.generation > 10) {
+      addState = resetState(addState, addState.config, additionPattern);
+      drawGrid(addState.grid, addState.config.cellSize, aluAddition);
+    }
+    playGame(addState, drawGrid, aluAddition);
+  }
+}
+
+aluAnd.onclick = function () {
+  andState.paused = !andState.paused;
+  if(!andState.paused) {
+    if(andState.generation > 10) {
+      andState = resetState(andState, andState.config, andGatePattern);
+      drawGrid(andState.grid, andState.config.cellSize, aluAnd);
+    }
+    playGame(andState, drawGrid, aluAnd);
+  }
+}
+
+memoryCell.onclick = function () {
+  memoryState.paused = !memoryState.paused;
+  if(!memoryState.paused) {
+    if(memoryState.generation > 10) {
+      memoryState = resetState(memoryState, memoryState.config, memoryCellPattern);
+      drawGrid(memoryState.grid, memoryState.config.cellSize, memoryCell);
+    }
+    playGame(memoryState, drawGrid, memoryCell);
+  }
+}
+
+controlUnit.onclick = function () {
+  controlState.paused = !controlState.paused;
+  if(!controlState.paused) {
+    if(controlState.generation > 10) {
+      controlState = resetState(controlState, controlState.config, controlUnitPattern);
+      drawGrid(controlState.grid, controlState.config.cellSize, controlUnit);
+    }
+    playGame(controlState, drawGrid, controlUnit);
+  }
+}
+
+
+

@@ -112,7 +112,60 @@ John Conway's Game of Life is fascinating example of a cellular automaton, with 
 
 The Game of Life has been shown to be Turing complete, meaning it can simulate any computation that a Turing machine can perform, given the right initial conditions. This means it shares a theoretical connection with formal automata and can be thought of as a computational system. Research indicates that certain configurations in the Game of Life can be used to simulate logic gates, memory, and other components of a computer, demonstrating its computational universality and can perform universal computation, making it a fascinating area of study for computer scientists and mathematicians alike.
 
-*If you choose carefully enough, you can make a entire computer inside the game, powered entirely by little things running around based only on those same simple rules of what lives and what dies in the next generation. An entire computer that could, in theory, perform any calculation that your computer could. It's an interesting mathematical diversion depicting Turing-completeness, the chaos that arises from simple rules, and it just looks pretty.*" 
-- Reddit
+### Building A CPU in the Game of Life
+
+A CPU essentially is built on top of three fundamental units:
+1. ALU (Arithmetic Logic Unit)
+2. Memory
+3. Control Unit
+
+The **ALU** is the heart of the CPU, responsible for performing arithmetic and logical operations on data. It consists of a number of logic gates that can perform operations such as addition, subtraction, AND, OR, and NOT. The ALU takes two inputs and produces an output based on the operation specified by the control unit. Examples on how the ALU looks like:
+
+<div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
+    <div style="margin: 10px;">
+        <canvas id="alu-addition" style="border: 1px solid black;"></canvas>
+        <div>Adder Circuit</div>
+    </div>
+    <div style="margin: 10px;">
+        <canvas id="alu-andgate" style="border: 1px solid black;"></canvas>
+        <div>AND Gate</div>
+    </div>
+</div>
+
+For addition, you can set up a glider collision that represents the addition of two binary values.
+
+An AND gate can be created by positioning still-life patterns (static configurations that do not change) to manipulate gliders. If both inputs are "1" (represented by gliders arriving at the same time), they will interact to produce an output.
+
+**Memory Unit** stores data and instructions that are currently being executed by the CPU. It consists of registers, cache, and main memory. The memory unit is responsible for storing and retrieving data from memory locations, and it plays a crucial role in the operation of the CPU.
+
+<div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
+    <div style="margin: 10px;">
+        <canvas id="memory-cell" style="border: 1px solid black;"></canvas>
+        <div>Memory Cell(1 block)</div>
+    </div>
+</div>
+
+Memory can be represented by stable patterns that remain constant unless disturbed by an external glider or oscillator. Stable patterns like blocks act as "bits" that can be toggled on or off by gliders, representing data storage.
+
+The control unit manages the CPU’s operations by directing data between the ALU, memory, and I/O devices. It fetches and decodes instructions, then signals the ALU and memory to execute.
+
+<div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
+    <div style="margin: 10px;">
+        <canvas id="control-unit" style="border: 1px solid black;"></canvas>
+        <div>Control Unit</div>
+    </div>
+</div>
+
+The control unit can be represented by glider guns that emit gliders at fixed intervals, simulating clock pulses. These pulses can control the timing of operations.
+
+## Next
+
+While it is theoretically possible to build a computer within the Game of Life, it is painstakingly complex but fun! It requires a deeper understanding of logic gates, instruction sets, implementing memory, and control units. The Game of Life serves as a fascinating model of how complexity can arise from simplicity, providing insight into topics such as self-organization, emergence, and cellular automata theory.
+
+[Here's an actual CPU built in the Game of Life by Nicholas Carlini](https://nicholas.carlini.com/writing/2021/unlimited-register-machine-game-of-life.html). In this series of posts, he tries to explain how he built digital logic gates, multiplexers, and registers in the Game of Life. I would love t do this someday when NYU is not down my throat threatening to kick me out for not doing my assignments.
+
+*If you choose carefully enough, you can make a entire computer inside the game, powered entirely by little things running around based only on those same simple rules of what lives and what dies in the next generation. An entire computer that could, in theory, perform any calculation that your computer could. It's an interesting mathematical diversion depicting Turing-completeness, the chaos that arises from simple rules, and it just looks pretty.*"  
+
+\- Reddit
 
 Also, someone built a [Game of Life inside a computer built on top of THE GAME OF LIFE!!](https://www.youtube.com/watch?v=xP5-iIeKXE8)
