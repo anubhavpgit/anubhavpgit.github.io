@@ -96,10 +96,10 @@ This instruction translates to `lb x1, 0(x0)` in RISC-V assembly. It loads a byt
     return instruction;
     ....
     ```
+   
+      The reason why Yatch stores instructions in memory as an array of 8-bit integers and not 32-bit integers is that the instructions are read from a file, and each line in the file is 8-bits long. However, future implementations might change this.
     
- The reason why Yatch stores instructions in memory as an array of 8-bit integers and not 32-bit integers is that the instructions are read from a file, and each line in the file is 8-bits long. However, future implementations might change this.
-    
- The program counter (PC) increases by 4 bytes (32 bits) after each instruction.
+      The program counter (PC) increases by 4 bytes (32 bits) after each instruction.
 
   - **Instruction Decode (ID)**: The instruction is decoded and the opcode and operands are extracted. Now, based on the opcode, the interpreter knows which instruction to execute.
     - Opcode (bits 0-6): 0000011 - This is a Load instruction.
@@ -150,9 +150,9 @@ This instruction translates to `lb x1, 0(x0)` in RISC-V assembly. It loads a byt
     }
     ```
 
- The opcode in the example is **0000011**, I type the instruction, corresponding to the `load` instruction. Funct3 is **000**, corresponding to the `lb` instruction. The `lb` instruction **loads a byte** from memory into a register. Similarly, a different funct3, for ex. *010* would correspond to the `lw` instruction, which loads a word from memory into a register. The primary step is to switch on the opcode and execute the corresponding instruction.
+      The opcode in the example is **0000011**, I type the instruction, corresponding to the `load` instruction. Funct3 is **000**, corresponding to the `lb` instruction. The `lb` instruction **loads a byte** from memory into a register. Similarly, a different funct3, for ex. *010* would correspond to the `lw` instruction, which loads a word from memory into a register. The primary step is to switch on the opcode and execute the corresponding instruction.
 
- Memory is handled using registers. Yatch uses a 32-bit vector to store 32 registers. The instruction loads a byte from memory at the address calculated by adding the immediate offset 0 to the value in register x0 (0). The data in the 0th memory location(01010101) is read and stored in the destination register. 
+      Memory is handled using registers. Yatch uses a 32-bit vector to store 32 registers. The instruction loads a byte from memory at the address calculated by adding the immediate offset 0 to the value in register x0 (0). The data in the 0th memory location(01010101) is read and stored in the destination register. 
 
   - **Write Back (WB)**: The result of the operation is written back to the register file.
 
@@ -172,7 +172,7 @@ This instruction translates to `lb x1, 0(x0)` in RISC-V assembly. It loads a byt
         else throw runtime_error("Cannot write to register x0.");   
     }
     ```
- Once all the instructions are executed, the memory is written back to a file.
+      Once all the instructions are executed, the memory is written back to a file.
 
 This entire journey is completed in a single cycle. This serves as a good simulator for understanding how CPUs execute instructions, but the real-world compute requires a more complex pipeline, parallel processing; and multiple instructions executed simultaneously.
 
@@ -189,20 +189,21 @@ There are three situations in which a data hazard can occur:
   - read after write (RAW), a true dependency: A read after write (RAW) data hazard refers to a situation where an instruction refers to a result that has not yet been calculated or retrieved. This can occur because even though an instruction is executed after a prior instruction, the prior instruction has been processed only partly through the pipeline. For example:
 
     ```md
- i1. **R2** <- R5 + R8
- i2. R4 <- **R2** + R8
+      i1. **R2** <- R5 + R8
+      i2. R4 <- **R2** + R8
     ```
   - write after read (WAR), an anti-dependency: A write after read (WAR) data hazard refers to a situation where an instruction writes to a register that another instruction reads from. This can occur because the instruction that writes to the register is executed before the instruction that reads from the register. For example:
 
     ```md
- i1. R4 <- **R2** + R8
- i2. **R2** <- R5 + R8
+      i1. R4 <- **R2** + R8
+      i2. **R2** <- R5 + R8
     ```
 
   - write after write (WAW), an output dependency: A write after write (WAW) data hazard may occur in a concurrent execution environment. It refers to a situation where two instructions are written to the same register. For example:
+
     ```md
- i1. **R5** <- R4 + R7
- i2. **R5** <- R1 + R3
+      i1. **R5** <- R4 + R7
+      i2. **R5** <- R1 + R3
     ```
 
 Other kinds of hazards are:
@@ -249,7 +250,7 @@ Other kinds of hazards are:
       }
     }
     ```
- In the first step, this stage is set as a NOP. In the subsequent steps, the IF stage fetches the instruction from memory and sets the PC to the next instruction. Once the instruction is fetched, the ID stage decodes the instruction and extracts the opcode and operands. The EX stage executes the instruction, and the MEM stage reads or writes data to memory. Finally, the WB stage writes the result back to the register file. The loop continues until the end of the program. (All the stages are NOP)
+   In the first step, this stage is set as a NOP. In the subsequent steps, the IF stage fetches the instruction from memory and sets the PC to the next instruction. Once the instruction is fetched, the ID stage decodes the instruction and extracts the opcode and operands. The EX stage executes the instruction, and the MEM stage reads or writes data to memory. Finally, the WB stage writes the result back to the register file. The loop continues until the end of the program. (All the stages are NOP)
 
 - **MEM**: Memory Access: Reads or writes data to memory.
 
@@ -274,11 +275,11 @@ Other kinds of hazards are:
    nextState.WB.nop = true; // If MEM stage is nop, so WB stage is also nop
     ```
 
- In the example, the instruction is a **load** instruction, so the MEM stage reads data from memory. The data is then passed to the WB stage. The MEM stage also checks if the instruction is a load or store instruction and reads or writes data to memory accordingly. Here,
+   In the example, the instruction is a **load** instruction, so the MEM stage reads data from memory. The data is then passed to the WB stage. The MEM stage also checks if the instruction is a load or store instruction and reads or writes data to memory accordingly. Here,
     ```cpp
     bitset<32> memData = ext_dmem.readByte(address); // Read a byte from memory
     ```
- The ALU result is the address of the memory location to read from. The data is then passed on from the ID stage.
+   The ALU result is the address of the memory location to read from. The data is then passed on from the ID stage.
 
 - **EX**: Execution: Executes the instruction. The instruction, decoded in the ID stage, is executed here.
 
@@ -309,10 +310,11 @@ Other kinds of hazards are:
      .....
     ```
 
- The ALU result is calculated based on the opcode and funct3 fields. The result is then passed on to the MEM stage. Our example instruction is a load instruction, so the ALU result is the address of the memory location to read from. The data is then passed on from the ID stage.
-    ```cpp
-    ALUresult = bitset<32>(operand1.to_ulong() + operand2.to_ulong()); // calculates the address to read from
-    ```
+   The ALU result is calculated based on the opcode and funct3 fields. The result is then passed on to the MEM stage. Our example instruction is a load instruction, so the ALU result is the address of the memory location to read from. The data is then passed on from the ID stage.
+
+   ```cpp
+   ALUresult = bitset<32>(operand1.to_ulong() + operand2.to_ulong()); // calculates the address to read from
+   ```
 
 - **ID**: Instruction Decode: Decodes the instruction and extracts the opcode and operands.
 
@@ -359,7 +361,7 @@ Other kinds of hazards are:
      .....
     ```
 
- In the example, the instruction is a load instruction, so the ID stage decodes the instruction and extracts the opcode and operands. The ID stage also checks for hazards with the EX stage. If a hazard is detected, the ID stage stalls and waits for the EX stage to finish the operation before reading the value. The ID stage then prepares the data for the EX stage and sets the control signals based on the opcode.
+   In the example, the instruction is a load instruction, so the ID stage decodes the instruction and extracts the opcode and operands. The ID stage also checks for hazards with the EX stage. If a hazard is detected, the ID stage stalls and waits for the EX stage to finish the operation before reading the value. The ID stage then prepares the data for the EX stage and sets the control signals based on the opcode.
 
 - **IF**: Instruction Fetch: Fetches the instruction from memory.
 
@@ -378,7 +380,7 @@ Other kinds of hazards are:
    nextState.ID.nop = true; // IF stage is nop, so ID stage is also nop
     ```
 
- The IF stage fetches the instruction from memory and sets the PC to the next instruction. The instruction is then passed on to the ID stage. The PC is updated to fetch the next instruction.
+   The IF stage fetches the instruction from memory and sets the PC to the next instruction. The instruction is then passed on to the ID stage. The PC is updated to fetch the next instruction.
 
 
 ### Conclusion
