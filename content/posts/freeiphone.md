@@ -53,7 +53,7 @@ As with any business model, there are potential downsides to this strategy:
      - **Yearly Upgrades**: Allowing customers to upgrade to the latest phone as soon as it is launched, trading in their old device at no additional cost.
     <br>
 
- Competitors like AT&T and T-Mobile have refined customer retention strategies that differ from Verizon’s. Unlike Verizon, AT&T and T-Mobile do not unlock phones until the contract period is completed. Despite Verizon’s large customer base, it also has one of the highest churn rates. Given its legacy and status, Verizon cannot afford to appear as a carrier that enforces restrictive practices like phone-locking.
+   Competitors like AT&T and T-Mobile have refined customer retention strategies that differ from Verizon’s. Unlike Verizon, AT&T and T-Mobile do not unlock phones until the contract period is completed. Despite Verizon’s large customer base, it also has one of the highest churn rates. Given its legacy and status, Verizon cannot afford to appear as a carrier that enforces restrictive practices like phone-locking.
 
 - **Capital Expenditure (CAPEX)**: The initial investment in devices is significant. Carriers must ensure they recoup these costs over the duration of customer contracts. Additionally, they must manage inventory efficiently to keep the latest devices in stock, adding to the complexity of operations.
 
