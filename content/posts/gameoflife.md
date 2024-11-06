@@ -1,6 +1,6 @@
 ---
 title: Conway's Game of Life
-date: 1-12-2024
+date: 5-11-2024
 description: Understanding and implementing Conway's Game of Life using simple rules that mimic real-life population dynamics.
 draft: false
 tag: "#tech, #game"
@@ -72,7 +72,7 @@ The game is played on a two-dimensional grid of cells, each of which can be in o
 <div style="text-align: start; width: 100%;">
     <button id="reset">Reset</button>
 </div>
-
+<br>
 <div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
 <canvas id="game-of-life"  style="border: 1px solid black;">
 </canvas>
@@ -88,7 +88,6 @@ The game is played on a two-dimensional grid of cells, each of which can be in o
     <label for="speed" style="margin-right: 10px;">Speed </label>
     <input type="range" id="speed-slider" name="speed" min="1" max="10" value="1">
 </div>
-
 
 <br>
 <div>
