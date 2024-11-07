@@ -154,6 +154,7 @@ const startStopButton = document.getElementById("start-stop");
 const resetButton = document.getElementById("reset");
 
 gameCanvas.addEventListener("mousemove", function (event) {
+  gameCanvas.style.cursor = "pointer";
   if (!state.paused) return;
 
   const cellSize = state.config.cellSize;
