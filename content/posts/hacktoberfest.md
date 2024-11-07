@@ -40,7 +40,7 @@ Instruction Formats:
 
 [Yatch](https://github.com/fuzzymfx/yatch.git) is a machine code interpreter for RISC-V written in C++. It is a simpler interpretation of how RISC-V CPUs execute instructions.
 
-The current implementation follows a single-stage pipeline and supports RV32I instructions. The process for all the other Instruction Types will be similar and will be implemented in the future.
+The current implementation follows a five-stage pipeline and supports RV32I instructions. The implementation for other instruction sets is in progress. The interpreter reads machine code from a file, executes the instructions, and writes the results back to a file.
 
 To get started with Yatch, you need a C++ compiler. You can use `g++` or `clang++` to compile the code. 
 
@@ -61,6 +61,8 @@ The process of executing instructions is divided into five stages:
 - WB: Write Back
 
 The main code runs in a loop, it keeps processing instructions until either it encounters a `HALT` instruction or reaches the end of the program. The interpreter has two main "pipelines" for executing instructions:
+
+*This stage is used for a simple interpretation of how CPUs execute instructions, and is not **actively** used in the current implementation. The code is still present, but it is commented out. It helps understand the basic principles and builds a foundation for the more complex pipeline.*
 
 #### 1. Single Stage Pipeline:
 
