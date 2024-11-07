@@ -15,9 +15,7 @@ showupdatedate: true
 
 I finally built that 32-bit machine code simulator for RISCV in C++, [Yatch](https://anubhavp.dev/blog/hacktoberfest.html) which I was supposed to, for Hacktoberfest. It took me a longer time due to my mid semesters in between. It supports a realistic five-stage pipeline for processing multiple instructions concurrently with measures for avoiding control and data hazards. It is currently capable of executing RV32I instructions, and I am planning to extend it to support RV32M, RV32A, and RV32F instructions. The project is still in its early stages, and I am looking for contributors. If you are interested in contributing, feel free to reach out to me.
 
-Researching more on designing compilers and automata, I came across Conway's Game of Life. It's fascinating 0 player cellular automaton that follows simple rules to create complex patterns, and is turing complete. Here's my implementation of the Game of Life: [Conway's Game of Life](https://anubhavp.dev/blog/gameoflife.html). It's exciting to see how four rules is capable of creating such complex patterns, such that you can actually build a computer using it.
-
----
+Researching more on designing compilers and automata theory, I came across Conway's Game of Life. It's a fascinating 0 player cellular automaton that follows simple rules to create complex patterns, and is turing complete. Here's my implementation of the Game of Life: [Conway's Game of Life](https://anubhavp.dev/blog/gameoflife.html). It's exciting to see how four rules is capable of creating such complex patterns, such that you can actually build a computer using it.
 
 November ushers in the festive season in India, where the celebrations typically begin in September- October. With Ganesh Puja, Navratri, Durga Puja, and Dussehra leading up to Diwali in November.
 
