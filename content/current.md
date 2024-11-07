@@ -178,7 +178,7 @@ A sneak peek into Hoid:
 - search engine
 - bookmarks, and TL;DR, summarization
 
-Meanwhile, I am exploring esoteric programming languages and also planning to build a distributed file system<a name="distributed-file-system"></a>in Rust.
+Meanwhile, I am exploring functional programming languages and also planning to build a distributed file system<a name="distributed-file-system"></a>in Rust.
 
 ###### Jan
 
