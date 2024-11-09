@@ -5,6 +5,9 @@ description: "Compilers and interpreters for C/C++ and machine code for RISC-V a
 tag: "#tech"
 draft: false
 ---
+<script type="module" src="/assets/js/yatch/main.js"></script>
+<link rel="stylesheet" href="/assets/css/yatch/style.css">
+
 Hacktoberfest is a fantastic opportunity to dive into the world of open source, make meaningful contributions, and sharpen your dev skills. This year, I'm most excited about [Yatch](#current-yatch): a machine code interpreter for RISC-V written in C++. It's a great way to learn about machine code, and how CPUs execute instructions.
 
 The aim here is to learn more about compilers, the workings of CPUs, and computer systems architecture. This a great project to get started with if you're keen to learn about low-level programming. I'd love to collaborate with others who share similar interests. 
@@ -35,6 +38,17 @@ Instruction Formats:
 - **B**: Branch Operations
 - **U**: Upper Immediate Operations
 - **J**: Jump Operations
+
+<!-- 
+### Instruction encoder/decoder
+
+Before moving on to the implementation, here's a small tool that would aid in your understanding of instructions and their working. This enables you to encode/decode RISC-V instructions quickly and convert them to their corresponding assembly code or vice versa.
+
+<div class="container">
+  <input type="text" class="input-box" id="input-box" placeholder="Enter text here">
+  <i class="fas fa-gear" id="gear"></i>
+</div>
+<div id="result" class="result"></div> -->
 
 ## Yatch
 
