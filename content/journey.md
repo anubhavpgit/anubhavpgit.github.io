@@ -63,6 +63,9 @@ pdf: true
 
 ### Projects
 
+- [Barney](https://github.com/fuzzymfx/barney) - An efficient machine code instruction encoder/decoder for RISCV ARMv8 and x86 written in TS.
+- [Game of Life](https://anubhavp.dev/gameoflife/) - A **Conway's Game of Life** implementation in JavaScript, and building logic gates and multiplexers in the game.
+- [Yatch](github.com/fuzzymfx/yatch) - A five-stage RISCV machine code interpreter written in C++.
 - [Dough](https://github.com/fuzzymfx/dough) - A **cli presentation tool** written in Rust.
 - [Bee](https://github.com/fuzzymfx/b) - A **tiny bit torrent client** written in TypeScript. Built to work with the movie recommendation system and the movie rating prediction system.
 - [RESOC](https://github.com/fuzzymfx/resoc) - A FOSS **social platform** for accessing free academic resources with task management, a chat section, and an open contributions page.
@@ -91,6 +94,8 @@ pdf: true
 
 ### Activities
 
+- 
+- NYU Food Insecurity Group - 2024
 - Luma - Magic Ball: The AI Reveal - 2023 - [🔗](https://www.linkedin.com/feed/update/urn:li:activity:7128282363955998720/)
 - Luma - Magic Ball: OpenAI Dev Day - 2023 - [🔗](https://www.linkedin.com/feed/update/urn:li:activity:7128282363955998720/)
 - CS25 I Stanford Seminar - Transformers United 2023: Introduction to Transformers
