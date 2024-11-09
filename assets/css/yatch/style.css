@@ -10,6 +10,7 @@
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .input-box {
     border: none;
     outline: none;
@@ -17,10 +18,12 @@
     font-size: 16px;
     flex-grow: 1;
 }
+
 .gear-icon {
     cursor: pointer;
     margin-left: 10px;
 }
+
 .result {
     margin-top: 20px;
     font-size: 16px;

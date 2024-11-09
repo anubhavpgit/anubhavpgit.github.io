@@ -39,16 +39,17 @@ Instruction Formats:
 - **U**: Upper Immediate Operations
 - **J**: Jump Operations
 
-<!-- 
 ### Instruction encoder/decoder
 
 Before moving on to the implementation, here's a small tool that would aid in your understanding of instructions and their working. This enables you to encode/decode RISC-V instructions quickly and convert them to their corresponding assembly code or vice versa.
 
-<div class="container">
-  <input type="text" class="input-box" id="input-box" placeholder="Enter text here">
+(*Implementation in progress. The tool can currently decode instructions and convert show the opcode and other fields. The encoding feature is in progress.*)
+
+<div class="container" id="input-container">
+  <input type="text" class="input-box" id="input-box" placeholder="Instruction">
   <i class="fas fa-gear" id="gear"></i>
 </div>
-<div id="result" class="result"></div> -->
+<div id="result" class="result"></div>
 
 ## Yatch
 
