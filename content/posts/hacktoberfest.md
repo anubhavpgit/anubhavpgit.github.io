@@ -39,7 +39,7 @@ Current instruction Formats supported:
 - **U**: Upper Immediate Operations
 - **J**: Jump Operations
 
-### Instruction encoder/decoder
+### Instruction decoder
 
 Before moving on to the implementation, here's a small tool that would aid in your understanding of instructions and their working. This tool helps you to decode RISCV32I instructions quickly and convert them to their corresponding assembly code. (for example, `00000000000000000000000010000011` to `lb x1, 0(x0)`)
 
@@ -193,14 +193,13 @@ This entire journey is completed in a single cycle. This serves as a good simula
 
 #### 2. Five-Stage Pipeline: 
 
-The interpreter performs all the same actions in multiple, parallel stages. This is done to improve the performance of the CPU. A single program has millions of instructions, and executing them one by one would take a lot of time. This pipeline allows the CPU to execute multiple instructions simultaneously, improving the overall performance.
+A single program has millions of instructions, and executing them one by one would take a lot of time. This pipeline allows the CPU to execute multiple instructions simultaneously, improving the overall performance.
 
-The pipeline is divided into five stages: IF, ID, EX, MEM, and WB. Each stage is responsible for a specific action, and instructions are processed in parallel. The main loop calls these functions in reverse order, starting with the WB stage and ending with the IF stage.
+The pipeline is divided into five stages: IF, ID, EX, MEM, and WB. Each stage is responsible for a specific action. The main loop calls these functions in reverse order, starting with the WB stage and ending with the IF stage.
 
-The reverse order achieves to handle hazards. Data hazards occur when instructions that exhibit data dependence modify data in different stages of a pipeline. Ignoring potential data hazards can result in race conditions.  
+The reverse order achieves to handle hazards. There are three types of hazards: data hazards, structural hazards, and control hazards.
 
-There are three situations in which a data hazard can occur:
-
+- Data hazards occur when instructions that exhibit data dependence modify data in different stages of a pipeline. Ignoring potential data hazards can result in race conditions. Following are the types of data hazards:
   - read after write (RAW), a true dependency: A read after write (RAW) data hazard refers to a situation where an instruction refers to a result that has not yet been calculated or retrieved. This can occur because even though an instruction is executed after a prior instruction, the prior instruction has been processed only partly through the pipeline. For example:
 
     ```md
@@ -221,38 +220,37 @@ There are three situations in which a data hazard can occur:
       i2. **R5** <- R1 + R3
     ```
 
-Other kinds of hazards are:
 
-  - Structural hazards: A structural hazard occurs when two instructions need the same hardware resource at the same time. For example, two instructions need to access the memory at the same time.
-  - Control hazards: A control hazard occurs when the pipeline makes the wrong decision on a branch instruction. The pipeline must be flushed, and the correct instructions must be fetched.
+- Structural hazards: A structural hazard occurs when two instructions need the same hardware resource at the same time. For example, two instructions need to access the memory at the same time.
+- Control hazards: A control hazard occurs when the pipeline makes the wrong decision on a branch instruction. The pipeline must be flushed, and the correct instructions must be fetched.
 
- This pipeline is designed to handle control hazards and data hazards. The pipeline initializes the PC, and all the stages except the IF stage are set to NOP (no operation). The IF stage fetches the first instruction from memory and sets the PC to the next instruction.
+This pipeline is designed to handle control hazards and data hazards. The pipeline initializes the PC, and all the stages except the IF stage are set to NOP (no operation). The IF stage fetches the first instruction from memory and sets the PC to the next instruction.
 
  Example:
- (instruction in memory)
-    ```bash
-    00000000 00000000 00000000 10000011
-    ```
-
- (data in memory)
-    ```bash
-    01010101 01010101 01010101 01010101
-    ```
-  
-  
- The main loop calls these functions in reverse order, in the following sequence:
-
-  ```cpp
-  // Initialize pipeline stages to nop
-   state.IF.nop = false;
-   state.ID.nop = true;
-   state.EX.nop = true;
-   state.MEM.nop = true;
-   state.WB.nop = true;
-
-   // Initialize PC to 0
-   state.IF.PC = bitset<32>(0);
+(instruction in memory)
+  ```bash
+  00000000 00000000 00000000 10000011
   ```
+
+(data in memory)
+  ```bash
+  01010101 01010101 01010101 01010101
+  ```
+  
+  
+The main loop calls these functions in reverse order, in the following sequence:
+
+```cpp
+// Initialize pipeline stages to nop
+  state.IF.nop = false;
+  state.ID.nop = true;
+  state.EX.nop = true;
+  state.MEM.nop = true;
+  state.WB.nop = true;
+
+  // Initialize PC to 0
+  state.IF.PC = bitset<32>(0);
+```
 
 - **WB**: Write Back: Checks if the instruction has a destination register and writes the result back to the register file.
 
