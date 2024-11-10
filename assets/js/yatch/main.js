@@ -620,7 +620,8 @@ function handleGearClick() {
   } else if (/^\d+$/.test(input)) {
     instructionType = "Decimal";
   } else if (/^[a-zA-Z]+$/.test(input)) {
-    instructionType = "Assembly";
+    // instructionType = "Assembly";
+    instructionType = "Invalid";
   } else {
     instructionType = "Invalid";
   }
