@@ -16,7 +16,7 @@ The aim here is to learn more about compilers, the workings of CPUs, and compute
 
 RISC-V is an open-source instruction set architecture (ISA) based on established reduced instruction set computing (RISC) principles. Here is the ISA: [RISC-V IS Table](https://five-embeddev.com/riscv-user-isa-manual/Priv-v1.12/instr-table.html).
 
-The base ISA consists of approximately 40 instructions, and our project aims to implement most of them. These instructions are broadly classified into the following categories:
+The base ISA consists of approximately 40 instructions, and this project aims to implement most of them. Other instructions sets are extensions to the base ISA, and I might implement them in the future. Here are some of the extensions:
 
 - **RV32I**: Base Integer Instruction Set
 - **RV32M**: Integer Multiplication and Division
@@ -30,7 +30,7 @@ The base ISA consists of approximately 40 instructions, and our project aims to 
 - **RV32Zicsr**: Control and Status Register Instructions
 - **RV32Zifencei**: Instruction-Fetch Fence Instructions
 
-Instruction Formats:
+Current instruction Formats supported:
 
 - **R**: Register-Register Operations
 - **I**: Immediate Operations
@@ -41,9 +41,7 @@ Instruction Formats:
 
 ### Instruction encoder/decoder
 
-Before moving on to the implementation, here's a small tool that would aid in your understanding of instructions and their working. This enables you to encode/decode RISC-V instructions quickly and convert them to their corresponding assembly code or vice versa.
-
-(*Implementation in progress. The tool can currently decode instructions and convert show the opcode and other fields. The encoding feature is in progress.*)
+Before moving on to the implementation, here's a small tool that would aid in your understanding of instructions and their working. This tool helps you to decode RISCV32I instructions quickly and convert them to their corresponding assembly code.
 
 <div class="container" id="input-container">
   <input type="text" class="input-box" id="input-box" placeholder="Instruction">

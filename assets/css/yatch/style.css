@@ -29,3 +29,22 @@
     font-size: 16px;
     margin-bottom: 20px;
 }
+
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #ccc;
+    /* White text color */
+    padding: 8px 12px;
+    /* Adds some padding around the text */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 14px;
+    /* Adjust font size as needed */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    /* Optional shadow for depth */
+    z-index: 1000;
+
+    transition: opacity 0.2s ease;
+
+}
