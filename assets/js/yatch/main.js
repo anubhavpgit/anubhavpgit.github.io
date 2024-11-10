@@ -2,7 +2,7 @@ class Instruction {
   constructor(ass, instr, original = 0) {
     if (!ass) {
       this.binary = original;
-      this.decimal = instr;
+      this.decimal = instr[0];
       this.type = "binary";
       this.opcode = instr[0] & 0x7f; // Last 7 bits for opcode
       this.funct = (instr[0] >>> 7) & 0x3f; // 6 bits before opcode
@@ -144,7 +144,6 @@ class Instruction {
               break;
 
             case 0x03: // Load instructions
-              console.log(this.funct3);
               switch (this.funct3) {
                 case 0x0:
                   this.instructionType = "LB";
@@ -357,7 +356,130 @@ class Instruction {
   }
 
   getAssembly() {
-    return this.assembly;
+    // split the assembly string into an array of strings, split in spaces
+    const splitAssembly = this.assembly.split(" ");
+    let formattedAssembly = "";
+    let colorMap = {};
+    //color code the assembly string according to the instruction color codes
+
+    //in the case of a R-type instruction (ADD, SUB, SLL, SLT, SLTU, XOR, SRL, SRA, OR, AND)
+    switch (this.format) {
+      case "R":
+        // first element is the instruction type- relates to the opcode
+        // second element is the rd register
+        // third element is the rs1 register
+        // fourth element is the rs2 register
+        colorMap = {
+          1: "#A7C7E7",
+          2: "#FFD1BA",
+          3: "#E6E6FA",
+          4: "#C7F9CC",
+          5: "#FFD580",
+        };
+
+        for (let i = 0; i < splitAssembly.length; i++) {
+          formattedAssembly += `<span style="color: ${colorMap[i + 1]};">${
+            splitAssembly[i]
+          }</span> `;
+        }
+
+        return formattedAssembly;
+      case "I":
+        // first element is the instruction type- relates to the opcode
+        // second element is the rd register
+        // third element is the rs1 register
+        // fourth element is the immediate value
+
+        colorMap = {
+          1: "#A7C7E7",
+          2: "#FFD1BA",
+          3: "#E6E6FA",
+          4: "#FFD580",
+        };
+
+        for (let i = 0; i < splitAssembly.length; i++) {
+          formattedAssembly += `<span style="color: ${colorMap[i + 1]};">${
+            splitAssembly[i]
+          }</span> `;
+        }
+        return formattedAssembly;
+      case "S":
+        // first element is the instruction type- relates to the opcode
+        // second element is the rs2 register
+        // third element is the immediate value
+        // fourth element is the rs1 register
+
+        colorMap = {
+          1: "#A7C7E7",
+          2: "#C7F9CC",
+          3: "#FFD580",
+          4: "#E6E6FA",
+        };
+        for (let i = 0; i < splitAssembly.length; i++) {
+          formattedAssembly += `<span style="color: ${colorMap[i + 1]};">${
+            splitAssembly[i]
+          }</span> `;
+        }
+        return formattedAssembly;
+
+      case "B":
+        // first element is the instruction type- relates to the opcode
+        // second element is the rs1 register
+        // third element is the rs2 register
+        // fourth element is the immediate value
+
+        colorMap = {
+          1: "#A7C7E7",
+          2: "#E6E6FA",
+          3: "#C7F9CC",
+          4: "#FFD580",
+        };
+        for (let i = 0; i < splitAssembly.length; i++) {
+          formattedAssembly += `<span style="color: ${colorMap[i + 1]};">${
+            splitAssembly[i]
+          }</span> `;
+        }
+        return formattedAssembly;
+
+      case "U":
+        // first element is the instruction type- relates to the opcode
+        // second element is the rd register
+        // third element is the immediate value
+
+        colorMap = {
+          1: "#A7C7E7",
+          2: "#FFD1BA",
+          3: "#FFD580",
+        };
+
+        for (let i = 0; i < splitAssembly.length; i++) {
+          formattedAssembly += `<span style="color: ${colorMap[i + 1]};">${
+            splitAssembly[i]
+          }</span> `;
+        }
+        return formattedAssembly;
+
+      case "J":
+        // first element is the instruction type- relates to the opcode
+        // second element is the rd register
+        // third element is the immediate value
+
+        colorMap = {
+          1: "#A7C7E7",
+          2: "#FFD1BA",
+          3: "#FFD580",
+        };
+
+        for (let i = 0; i < splitAssembly.length; i++) {
+          formattedAssembly += `<span style="color: ${colorMap[i + 1]};">${
+            splitAssembly[i]
+          }</span> `;
+        }
+        return formattedAssembly;
+
+      default:
+        return this.assembly;
+    }
   }
 
   getDecimal() {
@@ -368,7 +490,7 @@ class Instruction {
     return this.binary;
   }
   getHex() {
-    return parseInt(this.decimal, 2).toString(16);
+    return "0x" + this.decimal.toString(16).padStart(8, "0"); // Padding to ensure 8 digits for 32-bit values
   }
 
   getFormat() {
@@ -664,11 +786,9 @@ const decodeBinaryInstruction = (instruction, resultDiv) => {
 
   resultDiv.innerHTML += `
     Assembly: ${instr.getAssembly()} <br>
-    Decimal: ${instr.getDecimal()} <br>
-    Binary: ${instr.getBinary()}<br>
     Hex: ${instr.getHex()} <br>
     Format: ${instr.getFormat()} Type <br>
     <br>
-    ${instr.colorCode(instruction)}
+    <b>${instr.colorCode(instruction)}</b>
   `;
 };

@@ -41,7 +41,7 @@ Current instruction Formats supported:
 
 ### Instruction encoder/decoder
 
-Before moving on to the implementation, here's a small tool that would aid in your understanding of instructions and their working. This tool helps you to decode RISCV32I instructions quickly and convert them to their corresponding assembly code.
+Before moving on to the implementation, here's a small tool that would aid in your understanding of instructions and their working. This tool helps you to decode RISCV32I instructions quickly and convert them to their corresponding assembly code. (for example, `00000000000000000000000010000011` to `lb x1, 0(x0)`)
 
 <div class="container" id="input-container">
   <input type="text" class="input-box" id="input-box" placeholder="Instruction">
