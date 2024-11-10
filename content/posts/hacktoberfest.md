@@ -16,28 +16,24 @@ The aim here is to learn more about compilers, the workings of CPUs, and compute
 
 RISC-V is an open-source instruction set architecture (ISA) based on established reduced instruction set computing (RISC) principles. Here is the ISA: [RISC-V IS Table](https://five-embeddev.com/riscv-user-isa-manual/Priv-v1.12/instr-table.html).
 
-The base ISA consists of approximately 40 instructions, and this project aims to implement most of them. Other instructions sets are extensions to the base ISA, and I might implement them in the future. Here are some of the extensions:
+The base ISA consists of approximately 40 instructions, and this project aims to implement most of them. Other instructions sets are extensions to the base ISA, and I might implement them in the future.
 
-- **RV32I**: Base Integer Instruction Set
-- **RV32M**: Integer Multiplication and Division
-- **RV32A**: Atomic Instructions
-- **RV32F**: Single-Precision Floating-Point
-- **RV32D**: Double-Precision Floating-Point
-- **RV32C**: Compressed Instructions
-- **RV32S**: Supervisor-Level Instructions
-- **RV32B**: Bit Manipulation Instructions
-- **RV32V**: Vector Extension
-- **RV32Zicsr**: Control and Status Register Instructions
-- **RV32Zifencei**: Instruction-Fetch Fence Instructions
+Here is a summary of the base ISA instructions:
 
-Current instruction Formats supported:
+- **Load/Store**: Load and store instructions to move data between memory and registers.
+- **Arithmetic/Logical**: Arithmetic and logical operations on registers.
+- **Control Transfer**: Branch and jump instructions to control program flow.
+- **Immediate**: Instructions that use an immediate value.
+- **System**: Instructions for system calls and other privileged operations.
 
-- **R**: Register-Register Operations
-- **I**: Immediate Operations
-- **S**: Store Operations
-- **B**: Branch Operations
-- **U**: Upper Immediate Operations
-- **J**: Jump Operations
+The instructions are divided into six categories based on their operation:
+
+- **R**: Register-Register Operations (ADD, SUB, AND, OR, XOR, etc.)
+- **I**: Immediate Operations (ADDI, SLTI, SLTIU, XORI, ORI, ANDI, etc.)
+- **S**: Store Operations (SW, SH, SB)
+- **B**: Branch Operations (BEQ, BNE, BLT, BGE, BLTU, BGEU)
+- **U**: Upper Immediate Operations (LUI, AUIPC)
+- **J**: Jump Operations (JAL, JALR)
 
 ### Instruction decoder
 
