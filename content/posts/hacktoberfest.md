@@ -12,9 +12,19 @@ Hacktoberfest is a fantastic opportunity to dive into the world of open source, 
 
 The aim here is to learn more about compilers, the workings of CPUs, and computer systems architecture. This a great project to get started with if you're keen to learn about low-level programming. I'd love to collaborate with others who share similar interests. 
 
+
+**TOC:**  
+  - [RISC-V ISA](#risc-v-isa)
+  - [Instruction decoder](#instruction-decoder)
+- [Yatch](#yatch)
+  - [Single Stage Pipeline](#1-single-stage-pipeline)
+  - [Five-Stage Pipeline](#2-five-stage-pipeline)
+
+
+
 ### RISC-V ISA 
 
-RISC-V is an open-source instruction set architecture (ISA) based on established reduced instruction set computing (RISC) principles. Here is the ISA: [RISC-V IS Table](https://five-embeddev.com/riscv-user-isa-manual/Priv-v1.12/instr-table.html).
+RISC-V is an open-source instruction set architecture (ISA) based on established reduced instruction set computing (RISC) principles. Here is the complete ISA: [RISC-V IS Table](https://five-embeddev.com/riscv-user-isa-manual/Priv-v1.12/instr-table.html).
 
 The base ISA consists of approximately 40 instructions, and this project aims to implement most of them. Other instructions sets are extensions to the base ISA, and I might implement them in the future.
 
@@ -34,6 +44,13 @@ The instructions are divided into six categories based on their operation:
 - **B**: Branch Operations (BEQ, BNE, BLT, BGE, BLTU, BGEU)
 - **U**: Upper Immediate Operations (LUI, AUIPC)
 - **J**: Jump Operations (JAL, JALR)
+
+A short summary of the RISC-V Card:
+
+![RISCV- RV32I](../assets/img/hacktoberfest/riscv.png)
+
+
+
 
 ### Instruction decoder
 
