@@ -790,5 +790,6 @@ const decodeBinaryInstruction = (instruction, resultDiv) => {
     Format: ${instr.getFormat()} Type <br>
     <br>
     <b>${instr.colorCode(instruction)}</b>
+    <br>
   `;
 };
