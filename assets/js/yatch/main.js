@@ -785,11 +785,13 @@ const decodeBinaryInstruction = (instruction, resultDiv) => {
   const instr = new Instruction(0, instrInBit, instruction);
 
   resultDiv.innerHTML += `
+    <b>${instr.colorCode(instruction)}</b>
+    <br>
     Assembly: ${instr.getAssembly()}<br>
     Hex: ${instr.getHex()} <br>
     Format: ${instr.getFormat()} Type <br>
+    -----------------------------------------
     <br>
-    <b>${instr.colorCode(instruction)}</b>
-    <br>
+
   `;
 };
