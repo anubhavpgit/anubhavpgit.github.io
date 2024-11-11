@@ -1,7 +1,7 @@
 ---
 title: "Docking Compilers at Hacktoberfest'24"
 date: "02-11-2024"
-description: "Compilers and interpreters for C/C++ and machine code for RISC-V at Hacktoberfest, a month-long celebration of open source software."
+description: "Compilers and interpreters for machine code in RISC-V at Hacktoberfest."
 tag: "#tech"
 draft: false
 ---
