@@ -54,7 +54,7 @@ A short summary of the RISC-V Card:
 
 ### Instruction decoder
 
-Before moving on to the implementation, here's a small tool that would aid in your understanding of instructions and their working. This tool helps you to decode RISCV32I instructions quickly and convert them to their corresponding assembly code. (for example, `00000000000000000000000010000011` to `lb x1, 0(x0)`)
+Before moving on to the implementation, here's a small tool that would aid in your understanding of instructions and their working. This tool helps you decode RISCV32I instructions and convert them to their corresponding assembly code. (for example, `00000000000000000000000010000011` to `lb x1, 0(x0)`)
 
 <div class="container" id="input-container">
   <input type="text" class="input-box" id="input-box" placeholder="Instruction">
