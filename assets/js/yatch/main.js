@@ -360,6 +360,7 @@ class Instruction {
     const splitAssembly = this.assembly.split(" ");
     let formattedAssembly = "";
     let colorMap = {};
+    let idMap = {};
     //color code the assembly string according to the instruction color codes
 
     //in the case of a R-type instruction (ADD, SUB, SLL, SLT, SLTU, XOR, SRL, SRA, OR, AND)
@@ -377,10 +378,17 @@ class Instruction {
           5: "#E6BC67",
         };
 
+        idMap = {
+          1: "opcode",
+          2: "rd",
+          3: "rs1",
+          4: "rs2",
+          5: "funct7",
+        };
+
         for (let i = 0; i < splitAssembly.length; i++) {
-          formattedAssembly += `<span style="color: ${colorMap[i + 1]};">${
-            splitAssembly[i]
-          }</span> `;
+          formattedAssembly += `<span id="${idMap[i + 1]}"
+           style="color: ${colorMap[i + 1]};">${splitAssembly[i]}</span> `;
         }
 
         return formattedAssembly;
@@ -397,10 +405,16 @@ class Instruction {
           4: "#E6BC67",
         };
 
+        idMap = {
+          1: "opcode",
+          2: "rd",
+          3: "rs1",
+          4: "imm",
+        };
+
         for (let i = 0; i < splitAssembly.length; i++) {
-          formattedAssembly += `<span style="color: ${colorMap[i + 1]};">${
-            splitAssembly[i]
-          }</span> `;
+          formattedAssembly += `<span id="${idMap[i + 1]}"
+           style="color: ${colorMap[i + 1]};">${splitAssembly[i]}</span> `;
         }
         return formattedAssembly;
       case "S":
@@ -415,10 +429,17 @@ class Instruction {
           3: "#E6BC67",
           4: "#B0B0C8",
         };
+
+        idMap = {
+          1: "opcode",
+          2: "rs2",
+          3: "imm",
+          4: "rs1",
+        };
+
         for (let i = 0; i < splitAssembly.length; i++) {
-          formattedAssembly += `<span style="color: ${colorMap[i + 1]};">${
-            splitAssembly[i]
-          }</span> `;
+          formattedAssembly += `<span id="${idMap[i + 1]}"
+           style="color: ${colorMap[i + 1]};">${splitAssembly[i]}</span> `;
         }
         return formattedAssembly;
 
@@ -434,10 +455,17 @@ class Instruction {
           3: "#A0D2A5",
           4: "#E6BC67",
         };
+
+        idMap = {
+          1: "opcode",
+          2: "rs1",
+          3: "rs2",
+          4: "imm",
+        };
+
         for (let i = 0; i < splitAssembly.length; i++) {
-          formattedAssembly += `<span style="color: ${colorMap[i + 1]};">${
-            splitAssembly[i]
-          }</span> `;
+          formattedAssembly += `<span id="${idMap[i + 1]}"
+           style="color: ${colorMap[i + 1]};">${splitAssembly[i]}</span> `;
         }
         return formattedAssembly;
 
@@ -452,10 +480,15 @@ class Instruction {
           3: "#E6BC67",
         };
 
+        idMap = {
+          1: "opcode",
+          2: "rd",
+          3: "imm",
+        };
+
         for (let i = 0; i < splitAssembly.length; i++) {
-          formattedAssembly += `<span style="color: ${colorMap[i + 1]};">${
-            splitAssembly[i]
-          }</span> `;
+          formattedAssembly += `<span id="${idMap[i + 1]}"
+           style="color: ${colorMap[i + 1]};">${splitAssembly[i]}</span> `;
         }
         return formattedAssembly;
 
@@ -470,10 +503,15 @@ class Instruction {
           3: "#E6BC67",
         };
 
+        idMap = {
+          1: "opcode",
+          2: "rd",
+          3: "imm",
+        };
+
         for (let i = 0; i < splitAssembly.length; i++) {
-          formattedAssembly += `<span style="color: ${colorMap[i + 1]};">${
-            splitAssembly[i]
-          }</span> `;
+          formattedAssembly += `<span id="${idMap[i + 1]}"
+          style="color: ${colorMap[i + 1]};">${splitAssembly[i]}</span> `;
         }
         return formattedAssembly;
 
@@ -501,32 +539,32 @@ class Instruction {
     return `
       <span id="funct7" style="color: #E6BC67;"
         onmouseover="showTooltip(event, 'funct7'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('funct7'); this.style.backgroundColor='';">
         ${instruction.slice(0, 7)}
       </span>
       <span id="rs2" style="color: #A0D2A5;"
         onmouseover="showTooltip(event, 'rs2'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('rs2'); this.style.backgroundColor='';">
         ${instruction.slice(7, 12)}
       </span>
       <span id="rs1" style="color: #B0B0C8;"
         onmouseover="showTooltip(event, 'rs1'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('rs1'); this.style.backgroundColor='';">
         ${instruction.slice(12, 17)}
       </span>
       <span id="funct3" style="color: #B5EAD7;"
         onmouseover="showTooltip(event, 'funct3'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('funct3'); this.style.backgroundColor='';">
         ${instruction.slice(17, 20)}
       </span>
       <span id="rd" style="color: #E6B8A1;"
         onmouseover="showTooltip(event, 'rd'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('rd'); this.style.backgroundColor='';">
         ${instruction.slice(20, 25)}
       </span>
       <span id="opcode" style="color: #8FB0D0;"
         onmouseover="showTooltip(event, 'opcode'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('opcode'); this.style.backgroundColor='';">
         ${instruction.slice(25, 32)}
       </span>
     `;
@@ -536,27 +574,27 @@ class Instruction {
     return `
       <span id="imm" style="color: #E6BC67;"
         onmouseover="showTooltip(event, 'imm'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('imm'); this.style.backgroundColor='';">
         ${instruction.slice(0, 12)}
       </span>
       <span id="rs1" style="color: #B0B0C8;"
         onmouseover="showTooltip(event, 'rs1'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('rs1'); this.style.backgroundColor='';">
         ${instruction.slice(12, 17)}
       </span>
       <span id="funct3" style="color: #B5EAD7;"
         onmouseover="showTooltip(event, 'funct3'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('funct3'); this.style.backgroundColor='';">
         ${instruction.slice(17, 20)}
       </span>
       <span id="rd" style="color: #E6B8A1;"
         onmouseover="showTooltip(event, 'rd'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('rd'); this.style.backgroundColor='';">
         ${instruction.slice(20, 25)}
       </span>
       <span id="opcode" style="color: #8FB0D0;"
         onmouseover="showTooltip(event, 'opcode'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('opcode'); this.style.backgroundColor='';">
         ${instruction.slice(25, 32)}
       </span>
     `;
@@ -567,31 +605,31 @@ class Instruction {
       <span id="imm" style="color: #E6BC67;"
         title="imm"
         onmouseover="showTooltip(event, 'imm'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('imm'); this.style.backgroundColor='';">
         ${instruction.slice(0, 7)}${instruction.slice(20, 25)}
       </span>
       <span id="rs2" style="color: #A0D2A5;"
         title="rs2"
         onmouseover="showTooltip(event, 'rs2'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('rs2'); this.style.backgroundColor='';">
         ${instruction.slice(7, 12)}
       </span>
       <span id="rs1" style="color: #B0B0C8;"
         title="rs1"
         onmouseover="showTooltip(event, 'rs1'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('rs1'); this.style.backgroundColor='';">
         ${instruction.slice(12, 17)}
       </span>
       <span id="funct3" style="color: #B5EAD7;"
         title="funct3"
         onmouseover="showTooltip(event, 'funct3'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('funct3'); this.style.backgroundColor='';">
         ${instruction.slice(17, 20)}
       </span>
       <span id="opcode" style="color: #8FB0D0;"
         title="opcode"
         onmouseover="showTooltip(event, 'opcode'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('opcode'); this.style.backgroundColor='';">
         ${instruction.slice(25, 32)}
       </span>
     `;
@@ -602,31 +640,31 @@ class Instruction {
       <span id="imm" style="color: #E6BC67;"
         title="imm"
         onmouseover="showTooltip(event, 'imm'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('imm'); this.style.backgroundColor='';">
         ${instruction.slice(0, 7)}${instruction.slice(20, 25)}
       </span>
       <span id="rs2" style="color: #A0D2A5;"
         title="rs2"
         onmouseover="showTooltip(event, 'rs2'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('rs2'); this.style.backgroundColor='';">
         ${instruction.slice(7, 12)}
       </span>
       <span id="rs1" style="color: #B0B0C8;"
         title="rs1"
         onmouseover="showTooltip(event, 'rs1'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('rs1'); this.style.backgroundColor='';">
         ${instruction.slice(12, 17)}
       </span>
       <span id="funct3" style="color: #B5EAD7;"
         title="funct3"
         onmouseover="showTooltip(event, 'funct3'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('funct3'); this.style.backgroundColor='';">
         ${instruction.slice(17, 20)}
       </span>
       <span id="opcode" style="color: #8FB0D0;"
         title="opcode"
         onmouseover="showTooltip(event, 'opcode'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('opcode'); this.style.backgroundColor='';">
         ${instruction.slice(25, 32)}
       </span>
     `;
@@ -637,19 +675,19 @@ class Instruction {
       <span id="imm" style="color: #E6BC67;"
         title="imm"
         onmouseover="showTooltip(event, 'imm'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('imm'); this.style.backgroundColor='';">
         ${instruction.slice(0, 20)}
       </span>
       <span id="rd" style="color: #E6B8A1;"
         title="rd"
         onmouseover="showTooltip(event, 'rd'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('rd'); this.style.backgroundColor='';">
         ${instruction.slice(20, 25)}
       </span>
       <span id="opcode" style="color: #8FB0D0;"
         title="opcode"
         onmouseover="showTooltip(event, 'opcode'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('opcode'); this.style.backgroundColor='';">
         ${instruction.slice(25, 32)}
       </span>
     `;
@@ -660,19 +698,19 @@ class Instruction {
       <span id="imm" style="color: #E6BC67;"
         title="imm"
         onmouseover="showTooltip(event, 'imm'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('imm'); this.style.backgroundColor='';">
         ${instruction.slice(0, 20)}
       </span>
       <span id="rd" style="color: #E6B8A1;"
         title="rd"
         onmouseover="showTooltip(event, 'rd'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('rd'); this.style.backgroundColor='';">
         ${instruction.slice(20, 25)}
       </span>
       <span id="opcode" style="color: #8FB0D0;"
         title="opcode"
         onmouseover="showTooltip(event, 'opcode'); this.style.backgroundColor='#FFFF99';"
-        onmouseout="hideTooltip(); this.style.backgroundColor='';">
+        onmouseout="hideTooltip('opcode'); this.style.backgroundColor='';">
         ${instruction.slice(25, 32)}
       </span>
     `;
@@ -714,15 +752,16 @@ function createTooltip() {
 
 const tooltip = createTooltip();
 
-window.showTooltip = function (event, text) {
+window.showTooltip = function (_event, text) {
   tooltip.textContent = text;
   tooltip.style.display = "block";
+  document.getElementById(text).style.backgroundColor = "#FFFF99";
 };
 
-window.hideTooltip = function () {
+window.hideTooltip = function (text) {
+  document.getElementById(text).style.backgroundColor = "";
   tooltip.style.display = "none";
 };
-
 // Move tooltip to follow the cursor position
 document.addEventListener("mousemove", (event) => {
   tooltip.style.left = `${event.pageX + 10}px`;
@@ -785,11 +824,11 @@ const decodeBinaryInstruction = (instruction, resultDiv) => {
   const instr = new Instruction(0, instrInBit, instruction);
 
   resultDiv.innerHTML += `
-    <b>${instr.colorCode(instruction)}</b>
     <br>
     Assembly: ${instr.getAssembly()}<br>
     Hex: ${instr.getHex()} <br>
     Format: ${instr.getFormat()} Type <br>
+    <b>${instr.colorCode(instruction)}</b><br>
     -----------------------------------------
     <br>
 
