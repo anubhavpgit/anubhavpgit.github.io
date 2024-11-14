@@ -94,7 +94,6 @@ pdf: true
 
 ### Activities
 
-- 
 - NYU Food Insecurity Group - 2024
 - Luma - Magic Ball: The AI Reveal - 2023 - [🔗](https://www.linkedin.com/feed/update/urn:li:activity:7128282363955998720/)
 - Luma - Magic Ball: OpenAI Dev Day - 2023 - [🔗](https://www.linkedin.com/feed/update/urn:li:activity:7128282363955998720/)
