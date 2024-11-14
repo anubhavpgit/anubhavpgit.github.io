@@ -1,6 +1,6 @@
 ---
 title: Conway's Game of Life
-date: 5-11-2024
+date: 01-12-2024
 description: Understanding and implementing Conway's Game of Life using simple rules that mimic real-life population dynamics.
 draft: false
 tag: "#tech, #game"
