@@ -121,7 +121,7 @@ A CPU essentially is built up of three main components:
 
 #### Arithmetic Logic Unit
 
-The **ALU** is the heart of the CPU, responsible for performing arithmetic and logical operations on data. It consists of a number of logic gates that can perform operations such as addition, subtraction, AND, OR, and NOT. It's more complicated than that. 
+The **ALU** is the heart of the CPU, responsible for performing arithmetic and logical operations on data. It consists of a number of logic gates that can perform operations such as addition, subtraction, AND, OR, and NOT. 
 
 <div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
     <div style="margin: 10px;">
@@ -134,19 +134,14 @@ The **ALU** is the heart of the CPU, responsible for performing arithmetic and l
     </div>
 </div>
 
-In addition, you can set up a glider collision that represents the addition of two binary values. A glider is a configuration of cells that moves diagonally across the grid, representing a "1". A "0" is represented by an empty cell.
-
-The gliders in this pattern are designed to approach each other from opposite directions. Each glider can be thought of as representing a binary input (either 0 or 1). When two gliders collide, they interact to produce an output, which can be interpreted as the sum of the two inputs. This collision represents the addition of two binary values, with the output glider moving in a different direction depending on the inputs.
+In addition, you can set up a glider collision that represents the addition of two binary values. The gliders in this pattern are designed to approach each other from opposite directions. Each glider can be thought of as representing a binary input (either 0 or 1). When two gliders collide, they interact to produce an output, which can be interpreted as the sum of the two inputs. This collision represents the addition of two binary values, with the output glider moving in a different direction depending on the inputs.
 
 - If only one glider is present (input 1 + 0 or 0 + 1), it moves through without a collision, representing a result of 1.
 - If two gliders collide (input 1 + 1), they create a predictable pattern that can represent the sum of these inputs, often leaving behind a specific "output" glider that can represent the result.
 
 Similarly, An AND gate can be created by positioning still-life patterns (static configurations that do not change) to manipulate gliders. If both inputs are "1" (represented by gliders arriving at the same time), they will interact to produce an output.
 
-Gliders are introduced from specific points, moving toward the interaction point in the middle of the grid. The interaction point is designed to produce an output glider if and only if both inputs are present, representing the logical AND operation.
-
 - If both gliders arrive at the interaction point simultaneously, they will interact in a way that produces a specific pattern, representing the output 1 for an AND operation.
-
 - If only one glider arrives, it will pass through or interact with other cells without producing the 1 pattern, representing an output of 0.
 
 #### Memory Unit

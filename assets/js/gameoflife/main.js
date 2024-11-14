@@ -46,7 +46,7 @@ let andState = initState(andGatePattern, 1, 20);
 let memoryState = initState(memoryCellPattern, 1, 20);
 let controlState = initState(controlUnitPattern, 1, 20);
 
-let gliderGunState = initState(gliderGunPattern, 20, 10);
+let gliderGunState = initState(gliderGunPattern, 20, 7);
 
 let gameOfLife = Array.from({ length: 10 }, () =>
   Array.from({ length: 10 }, () => 0)
