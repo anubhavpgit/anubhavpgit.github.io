@@ -44,7 +44,7 @@ export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export async function playGame(state, drawGrid, gameCanvas) {
+export async function playGame(state, drawGrid, gameCanvas, lineWidth = 1) {
   const { rows, cols } = state.config;
   console.log("playGame called");
   async function gameLoop() {
@@ -74,8 +74,7 @@ export async function playGame(state, drawGrid, gameCanvas) {
       }
 
       state.grid = newGrid;
-      console.log("playing");
-      drawGrid(state.grid, state.config.cellSize, gameCanvas);
+      drawGrid(state.grid, state.config.cellSize, gameCanvas, lineWidth);
       state.generation++;
 
       console.log("speed", state.config.speed);

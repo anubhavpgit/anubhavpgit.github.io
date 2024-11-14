@@ -119,6 +119,8 @@ A CPU essentially is built up of three main components:
 2. Memory
 3. Control Unit
 
+#### Arithmetic Logic Unit
+
 The **ALU** is the heart of the CPU, responsible for performing arithmetic and logical operations on data. It consists of a number of logic gates that can perform operations such as addition, subtraction, AND, OR, and NOT. It's more complicated than that. 
 
 <div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
@@ -134,29 +136,66 @@ The **ALU** is the heart of the CPU, responsible for performing arithmetic and l
 
 In addition, you can set up a glider collision that represents the addition of two binary values. A glider is a configuration of cells that moves diagonally across the grid, representing a "1". A "0" is represented by an empty cell.
 
+The gliders in this pattern are designed to approach each other from opposite directions. Each glider can be thought of as representing a binary input (either 0 or 1). When two gliders collide, they interact to produce an output, which can be interpreted as the sum of the two inputs. This collision represents the addition of two binary values, with the output glider moving in a different direction depending on the inputs.
+
+- If only one glider is present (input 1 + 0 or 0 + 1), it moves through without a collision, representing a result of 1.
+- If two gliders collide (input 1 + 1), they create a predictable pattern that can represent the sum of these inputs, often leaving behind a specific "output" glider that can represent the result.
+
 Similarly, An AND gate can be created by positioning still-life patterns (static configurations that do not change) to manipulate gliders. If both inputs are "1" (represented by gliders arriving at the same time), they will interact to produce an output.
+
+Gliders are introduced from specific points, moving toward the interaction point in the middle of the grid. The interaction point is designed to produce an output glider if and only if both inputs are present, representing the logical AND operation.
+
+- If both gliders arrive at the interaction point simultaneously, they will interact in a way that produces a specific pattern, representing the output 1 for an AND operation.
+
+- If only one glider arrives, it will pass through or interact with other cells without producing the 1 pattern, representing an output of 0.
+
+#### Memory Unit
 
 **Memory Unit** stores data and instructions that are currently being executed by the CPU. It consists of registers, cache, and main memory. The memory unit is responsible for storing and retrieving data from memory locations, and it plays a crucial role in the operation of the CPU.
 
+##### Blinker
+
 <div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
     <div style="margin: 10px;">
-        <canvas id="memory-cell" style="border: 1px solid black;"></canvas>
+        <canvas id="memory" style="border: 1px solid black;"></canvas>
         <div>Memory Cell(1 block)</div>
     </div>
 </div>
 
-Memory can be represented by stable patterns that remain constant unless disturbed by an external glider or oscillator. Stable patterns like blocks act as "bits" that can be toggled on or off by gliders, representing data storage.
+This configuration is a 3x3 blinker, which oscillates between two shapes in two generations. Its oscillation does not spread or decay, so it remains contained and stable in its oscillating state.
 
-The control unit manages the CPU’s operations by directing data between the ALU, memory, and I/O devices. It fetches and decodes instructions, then signals the ALU and memory to execute.
+Memory can be represented by stable patterns that remain constant unless disturbed by an external glider or oscillator. Stable patterns like blocks act as "bits" that can be toggled on or off by gliders, representing data storage. These two states can represent binary values (0 and 1) in a very simplistic way, with each state encoding one bit of information depending on its phase. This stability in position and periodic change makes it suitable for acting as a memory cell, as it reliably returns to a known state every two generations.
+
+Similarly, an external pattern could be designed to change or "write" to the memory cell, altering its oscillation phase to represent a different binary state.
+
+#### Control Unit
+
+The control unit manages the CPU's operations by directing data between the ALU, memory, and I/O devices. It fetches and decodes instructions, then signals the ALU and memory to execute.
 
 <div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
     <div style="margin: 10px;">
-        <canvas id="control-unit" style="border: 1px solid black;"></canvas>
+        <canvas id="control" style="border: 1px solid black;"></canvas>
         <div>Control Unit</div>
     </div>
 </div>
 
-The control unit can be represented by glider guns that emit gliders at fixed intervals, simulating clock pulses. These pulses can control the timing of operations.
+This pattern is designed to function as a control unit by leveraging the behavior of known oscillators and spaceships in the Game of Life to produce predictable and repeatable outcomes. The pattern includes configurations that will evolve into gliders, which are small patterns that move across the grid over successive generations. Gliders can be used to transmit information or interact with other patterns in the grid.
+
+##### Glider gun
+
+A glider gun is a configuration of cells that emits gliders at regular intervals. It can be used to create a clock signal that controls the timing of operations in the CPU.
+
+<div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
+    <div style="margin: 10px;">
+        <canvas id="glider" style="border: 0.2px solid black;"></canvas>
+        <div>Glider Gun</div>
+    </div>
+</div>
+
+
+A single block here can represent '1' and an empty cell can represent '0'. The glider gun emits gliders at regular intervals, which can be used to synchronize the operations of the CPU. 
+
+These inputs can be used to work with adders, logic gates, and memory cells to perform ALU operations, store data, and control the flow of information within the CPU. 
 
 ## Next
 

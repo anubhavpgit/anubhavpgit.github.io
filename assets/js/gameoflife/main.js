@@ -5,71 +5,22 @@ import {
   playGame,
   updateState,
 } from "./game.js";
-import { mapOldGridToNewGrid, additionPattern, andGatePattern, memoryCellPattern, controlUnitPattern } from "./helper.js";
-
-const lessThanTwoGrid = [
-  [1, 0, 0, 0, 0],
-  [1, 1, 1, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-];
-
-const lessThanTwoDeadGrid = [
-  [1, 0, 0, 0, 0],
-  [1, 1, -1, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-];
-
-const twoOrThreeGrid = [
-  [0, 0, 0, 0, 0],
-  [0, 1, 1, 0, 0],
-  [0, 1, 1, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-];
-
-const twoOrThreeLiveGrid = [
-  [0, 0, 0, 0, 0],
-  [0, 1, 1, 0, 0],
-  [0, 1, 1, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-];
-
-const moreThanThreeGrid = [
-  [0, 0, 0, 0, 0],
-  [0, 1, 1, 0, 0],
-  [0, 1, 1, 1, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-];
-
-const moreThanThreeDeadGrid = [
-  [0, 0, 0, 0, 0],
-  [0, 1, -1, 0, 0],
-  [0, 1, -1, 1, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-];
-
-const threeGrid = [
-  [0, 0, 0, 0, 0],
-  [0, 0, 1, 0, 0],
-  [0, 1, -1, 1, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-];
-
-const threeLiveGrid = [
-  [0, 0, 0, 0, 0],
-  [0, 0, 1, 0, 0],
-  [0, 1, 1, 1, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-];
+import {
+  mapOldGridToNewGrid,
+  additionPattern,
+  andGatePattern,
+  memoryCellPattern,
+  controlUnitPattern,
+  gliderGunPattern,
+  lessThanTwoGrid,
+  lessThanTwoDeadGrid,
+  twoOrThreeGrid,
+  twoOrThreeLiveGrid,
+  moreThanThreeGrid,
+  moreThanThreeDeadGrid,
+  threeGrid,
+  threeLiveGrid,
+} from "./helper.js";
 
 const lessThanTwoCanvas = document.getElementById("lessthantwo");
 const lessThanTwoDeadCanvas = document.getElementById("lessthantwodead");
@@ -85,20 +36,26 @@ const deadThreeLiveCanvas = document.getElementById("threelive");
 
 const aluAddition = document.getElementById("alu-addition");
 const aluAnd = document.getElementById("alu-andgate");
-const memoryCell = document.getElementById("memory-cell");
-const controlUnit = document.getElementById("control-unit");
+const memoryCell = document.getElementById("memory");
+const controlUnit = document.getElementById("control");
+
+const gliderGun = document.getElementById("glider");
 
 let addState = initState(additionPattern, 1, 20);
 let andState = initState(andGatePattern, 1, 20);
 let memoryState = initState(memoryCellPattern, 1, 20);
 let controlState = initState(controlUnitPattern, 1, 20);
 
+let gliderGunState = initState(gliderGunPattern, 20, 10);
 
 let gameOfLife = Array.from({ length: 10 }, () =>
   Array.from({ length: 10 }, () => 0)
 );
 
-function drawGrid(grid, cellSize, canvas) {
+function drawGrid(grid, cellSize, canvas, lineWidth = 1) {
+  if (!canvas || !canvas.getContext) {
+    throw new Error("Canvas not found");
+  }
   const ctx = canvas.getContext("2d");
   canvas.width = grid[0].length * cellSize;
   canvas.height = grid.length * cellSize;
@@ -115,12 +72,11 @@ function drawGrid(grid, cellSize, canvas) {
         ctx.fillRect(j * cellSize, i * cellSize, cellSize, cellSize);
       }
       ctx.strokeStyle = "black";
-      ctx.lineWidth = 1;
+      ctx.lineWidth = lineWidth;
       ctx.strokeRect(j * cellSize, i * cellSize, cellSize, cellSize);
     });
   });
 }
-
 
 drawGrid(addState.grid, addState.config.cellSize, aluAddition);
 drawGrid(andState.grid, andState.config.cellSize, aluAnd);
@@ -139,6 +95,7 @@ drawGrid(moreThanThreeDeadGrid, 20, moreThanThreeDeadCanvas);
 drawGrid(threeGrid, 20, deadThreeCanvas);
 drawGrid(threeLiveGrid, 20, deadThreeLiveCanvas);
 
+drawGrid(gliderGunState.grid, gliderGunState.config.cellSize, gliderGun, 0.2);
 let gameSpeed = 0;
 
 // Initialize game state
@@ -249,50 +206,78 @@ controlUnit.addEventListener("mousemove", function (_event) {
   controlUnit.style.cursor = "pointer";
 });
 
+gliderGun.addEventListener("mousemove", function (_event) {
+  gliderGun.style.cursor = "pointer";
+});
 
 aluAddition.onclick = function () {
   addState.paused = !addState.paused;
-  if(!addState.paused) {
-    if(addState.generation > 10) {
+  if (!addState.paused) {
+    if (addState.generation > 10) {
       addState = resetState(addState, addState.config, additionPattern);
       drawGrid(addState.grid, addState.config.cellSize, aluAddition);
     }
     playGame(addState, drawGrid, aluAddition);
   }
-}
+};
 
 aluAnd.onclick = function () {
   andState.paused = !andState.paused;
-  if(!andState.paused) {
-    if(andState.generation > 10) {
+  if (!andState.paused) {
+    if (andState.generation > 10) {
       andState = resetState(andState, andState.config, andGatePattern);
       drawGrid(andState.grid, andState.config.cellSize, aluAnd);
     }
     playGame(andState, drawGrid, aluAnd);
   }
-}
+};
 
 memoryCell.onclick = function () {
   memoryState.paused = !memoryState.paused;
-  if(!memoryState.paused) {
-    if(memoryState.generation > 10) {
-      memoryState = resetState(memoryState, memoryState.config, memoryCellPattern);
+  if (!memoryState.paused) {
+    if (memoryState.generation > 10) {
+      memoryState = resetState(
+        memoryState,
+        memoryState.config,
+        memoryCellPattern
+      );
       drawGrid(memoryState.grid, memoryState.config.cellSize, memoryCell);
     }
     playGame(memoryState, drawGrid, memoryCell);
   }
-}
+};
 
 controlUnit.onclick = function () {
   controlState.paused = !controlState.paused;
-  if(!controlState.paused) {
-    if(controlState.generation > 10) {
-      controlState = resetState(controlState, controlState.config, controlUnitPattern);
+  if (!controlState.paused) {
+    if (controlState.generation > 10) {
+      controlState = resetState(
+        controlState,
+        controlState.config,
+        controlUnitPattern
+      );
       drawGrid(controlState.grid, controlState.config.cellSize, controlUnit);
     }
     playGame(controlState, drawGrid, controlUnit);
   }
-}
+};
 
-
-
+gliderGun.onclick = function () {
+  gliderGunState.paused = !gliderGunState.paused;
+  if (!gliderGunState.paused) {
+    if (gliderGunState.generation > 10) {
+      gliderGunState = resetState(
+        gliderGunState,
+        gliderGunState.config,
+        gliderGunPattern
+      );
+      drawGrid(
+        gliderGunState.grid,
+        gliderGunState.config.cellSize,
+        gliderGun,
+        0.2
+      );
+    }
+    playGame(gliderGunState, drawGrid, gliderGun, 0.2);
+  }
+};
