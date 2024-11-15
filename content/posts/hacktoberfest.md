@@ -59,6 +59,8 @@ Before moving on to the implementation, here's a small tool that would aid in yo
 </div>
 <div id="result" class="result"></div>
 
+Here is the standalone version of the tool: [Barney- A RISC-V Instruction Decoder](https://anubhavp.dev/barney). This is going to be a handy tool to understand the instructions and their working. The tool will also include decoding assembly code to machine code in the future.( an assembler for RISC-V instructions )
+
 ## Yatch
 
 [Yatch](https://github.com/fuzzymfx/yatch.git) is a machine code interpreter for RISC-V written in C++. It is a simpler interpretation of how RISC-V CPUs execute instructions.
