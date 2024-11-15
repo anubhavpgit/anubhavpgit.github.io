@@ -1,7 +1,7 @@
 ---
 title: "Current odyssey"
 description: "Here's what I am upto these days"
-showupdatedate: true
+showdate: true
 ---
 
 ##### Current, 2024

@@ -145,7 +145,7 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
     mdToPdf({ path: filename }, { dest: outpdfname });
   }
 
-  if (file.data.index!=false) {
+  if (file.data.index != false) {
     blogs.set(filename.split("/").slice(-1).join("/").slice(0, -3), {
       title: file.data.title,
       date: file.data.date,
@@ -161,7 +161,7 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
     description: file.data.description,
     tags: file.data.tag,
   });
-  if (file.data.showupdatedate == true) {
+  if (file.data.showdate == true) {
     // Create a hash of the content of the file
     const hash = crypto.createHash("md5").update(file.html).digest("hex");
     let key = filename.split("/").slice(-1).join("/").slice(0, -3);
@@ -174,7 +174,11 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
     const formattedDate = date.toLocaleDateString("en-US", options);
     const datetimeSpan = `<span class="datetime" id="datetime">${formattedDate}</span>`;
 
-    if (hashes[key] === undefined || hashes[key] === null || hashes[key] != hash) {
+    if (
+      hashes[key] === undefined ||
+      hashes[key] === null ||
+      hashes[key] != hash
+    ) {
       hashes[key] = {
         hash: hash,
         date: formattedDate,
@@ -184,7 +188,7 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
         /(<span class="update-date-time">)(<\/span>)/,
         `$1${datetimeSpan}$2`
       );
-    }else{
+    } else {
       templatized = templatized.replace(
         /(<span class="update-date-time">)(<\/span>)/,
         `$1${hashes[key].date}$2`
@@ -219,7 +223,7 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
     mdToPdf({ path: filename }, { dest: outpdfname });
   }
 
-  if (file.data.showupdatedate== true) {
+  if (file.data.showdate == true) {
     // Create a hash of the content of the file
     const hash = crypto.createHash("md5").update(file.html).digest("hex");
     let key = filename.split("/").slice(-1).join("/").slice(0, -3);
@@ -231,7 +235,11 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
     };
     const formattedDate = date.toLocaleDateString("en-US", options);
     const datetimeSpan = `<span class="datetime" id="datetime">${formattedDate}</span>`;
-    if (hashes[key] === undefined || hashes[key] === null || hashes[key] != hash) {
+    if (
+      hashes[key] === undefined ||
+      hashes[key] === null ||
+      hashes[key] != hash
+    ) {
       hashes[key] = {
         hash: hash,
         date: formattedDate,
@@ -288,7 +296,7 @@ const buildBlogIndex = (blogs, path) => {
 
   let allTags = new Set();
 
-  let postsHTML = '';
+  let postsHTML = "";
 
   sortedBlogs.forEach(([key, value]) => {
     const [day, month, year] = value.date.split("-");
@@ -297,11 +305,15 @@ const buildBlogIndex = (blogs, path) => {
     // Handle multiple tags per post
     try {
       if (value.tag) {
-        const tags = value.tag.split(',').map(t => t.trim());
-        tags.forEach(tag => allTags.add(tag));
-        const tagsHTML = tags.map(tag => `<span style="font-size: 0.8em;">#${tag}</span>`).join(',');
+        const tags = value.tag.split(",").map((t) => t.trim());
+        tags.forEach((tag) => allTags.add(tag));
+        const tagsHTML = tags
+          .map((tag) => `<span style="font-size: 0.8em;">#${tag}</span>`)
+          .join(",");
 
-        const listItem = `<li class="flex justify-between pb1" data-tags="${tags.join(' ')}"> 
+        const listItem = `<li class="flex justify-between pb1" data-tags="${tags.join(
+          " "
+        )}"> 
       <a href="./${key}.html" class="link">${value.title}</a>${displayDate}
       </li>`;
 
@@ -323,7 +335,12 @@ const buildBlogIndex = (blogs, path) => {
   const tagSelectionHTML = `
     <div id="tag-selection" style="margin-bottom: 20px;">
       <span data-tag="all" style="cursor: pointer; margin-right: 10px; font-weight: bold;">#all</span>
-      ${tagArray.map(tag => `<span data-tag="${tag}" style="cursor: pointer; margin-right: 10px;">${tag}</span>`).join(' ')}
+      ${tagArray
+        .map(
+          (tag) =>
+            `<span data-tag="${tag}" style="cursor: pointer; margin-right: 10px;">${tag}</span>`
+        )
+        .join(" ")}
     </div>
   `;
 
