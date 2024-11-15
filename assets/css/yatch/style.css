@@ -49,3 +49,20 @@
     transition: opacity 0.2s ease;
 
 }
+
+:root {
+    --color-funct7: #E6A856;
+    /* Warmer orange */
+    --color-rs2: #8FB98A;
+    /* Deeper pastel green */
+    --color-rs1: #9494B8;
+    /* Deeper pastel blue */
+    --color-funct3: #87C6B3;
+    /* Slightly darker pastel cyan */
+    --color-rd: #E69A84;
+    /* Warmer pastel orange */
+    --color-opcode: #7EA6C0;
+    /* Deeper pastel light blue */
+    --color-hover-bg: #FFF8A3;
+    /* Richer pastel yellow */
+}
