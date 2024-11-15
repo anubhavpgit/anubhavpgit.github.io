@@ -15,7 +15,7 @@ showupdatedate: true
 
 I finally built that 32-bit machine code simulator for RISCV in C++, [Yatch](https://anubhavp.dev/blog/hacktoberfest.html) which I was supposed to, do for Hacktoberfest. It took me a longer time due to my mid-semester in between. It supports a realistic five-stage pipeline for processing multiple instructions concurrently with measures for avoiding control and data hazards. It is currently capable of executing RV32I instructions, and I am planning to extend it to support RV32M, RV32A, and RV32F instructions. The project is still in its early stages, and I am looking for contributors. If you are interested in contributing, feel free to reach out to me.
 
-Debugging Yatch inspired me to build a machine code decoder to analyze RV32I instructions and translate them to assembly. A standalone version is in the works which would be capable of encoding assembly to machine code as well. Check it out [here](https://anubhavp.dev/barney.html).
+Debugging Yatch inspired me to build a machine code decoder to analyze RV32I instructions and translate them to assembly. A standalone version is in the works which would be capable of encoding assembly to machine code as well. Check it out [here](https://anubhavp.dev/barney/).
 
 Researching more on designing compilers and automata theory, I came across Conway's Game of Life, a fascinating 0-player cellular automaton that follows simple rules to create complex patterns and is turning complete. Here's my implementation of the Game of Life: [Conway's Game of Life](https://anubhavp.dev/blog/gameoflife.html). It's exciting to see how the four rules are capable of creating such complex patterns, such that you can build a computer using them.
 
