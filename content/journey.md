@@ -63,32 +63,32 @@ pdf: true
 
 ### Projects
 
-- [Barney](https://github.com/fuzzymfx/barney) - An efficient **machine code instruction encoder/decoder** for RISCV written in TS.
+- [Barney](https://github.com/fuzzymf/barney) - An efficient **machine code instruction encoder/decoder** for RISCV written in TS.
 - [Game of Life](https://anubhavp.dev/blog/gameoflife.html) - A **Conway's Game of Life** implementation in JavaScript, and building logic gates in the game.
-- [Yatch](github.com/fuzzymfx/yatch) - A five-stage RISCV **machine code interpreter** written in C++.
-- [Dough](https://github.com/fuzzymfx/dough) - A **cli presentation tool** written in Rust.
-- [Bee](https://github.com/fuzzymfx/b) - A **tiny bit torrent client** written in TypeScript. Built to work with the movie recommendation system and the movie rating prediction system.
-- [RESOC](https://github.com/fuzzymfx/resoc) - A FOSS **social platform** for accessing free academic resources with task management, a chat section, and an open contributions page.
-- [zuzu](https://github.com/fuzzymfx/zuzu) - A **static site generator** written in JavaScript.- Live [🔗](https://anubhavp.dev/zuzu/), Old Blog [🔗](https://anubhavp.dev/oldblog/)
-- [Qtree](https://github.com/fuzzymfx/qd-compression) - Inspired by KoalasToTheMax, QTree is a short demonstration of **image compression and decompression** using Quadtrees, that partitions a two-dimensional image by recursively subdividing it into four quadrants. - Live [🔗](https://anubhavp.dev/blog/qtree/)
-- [Explored](https://github.com/fuzzymfx/explored) - **The Globe** from Github's homepage implemented in **ThreeJS** with beautiful shading. - Live  - [🔗](https://anubhavp.dev/explored/)
-- [W3bChat](https://github.com/fuzzymfx/w3bchat-dapp) - A **decentralized chat application** that uses a graph DB to nstrate the concept of a decentralized chat application. - Live  - [🔗](https://w3bchat-fadfa.web.app/)
-- [Nice Dear](https://github.com/fuzzymfx/nicedear) - A library that *generates random avatars*. *Dicebear rip-off!*
-- [Rokio](https://github.com/fuzzymfx/rust-tokio-chat-server) - A **multi-client chat server** written in Rust using Tokio.
-- [IWT](https://github.com/fuzzymfx/iwtserver) - A group college project based on **MERN** Stack. - Live  [🔗](https://anubhavp.dev/IWT_project/)
-- [Marks Predictor](https://github.com/fuzzymfx/Marks-predictor) - Predicting the marks of a student based on the number of hours studied using **Linear Regression** and **Gradient Descent**.
-- [Depression Detector](https://github.com/fuzzymfx/Detecting-Depression-in-Tweets) - Created a **TF/IDF classifier** - sentiment analysis model to detect depression in tweets.
-- [Taskapp](https://github.com/fuzzymfx/go-react-taskapp) - A **task** management system with - React app - [🔗](https://github.com/fuzzymfx/react-frontend-blogapp)
-- [Fitness Videoplayer](https://github.com/fuzzymfx/fitness-videoplayer) - A **flutter application** to monitor fitness and exercise workouts.
-- [Kanaban Board](https://github.com/fuzzymfx/flutter-golang-taskapp) - A **Kanaban board** to manage tasks.
-- [Movie Rating Prediction](https://github.com/fuzzymfx/Movie-rating-prediction) - Predicting the rating of a movie based on the review using **Naive Bayes**.
-- [Movie Recommendation System](https://github.com/fuzzymfx/Movie-recommendation) - An item-based collaborative recommendation system using **Cosine Similarity**.
-- [Digit Recognizer](https://github.com/fuzzymfx/HandwrittenDigitClassification) - Classifying handwritten digits and MNIST dataset using **CNN** and **KNN**. - [MNIST digit classifier using KNN](https://github.com/fuzzymfx/Classifying-mnist-digit-dataset)
-- [Bird Migration Analysis](https://github.com/fuzzymfx/Bird-Migration-data-analysis) - A **data analysis** project to analyze the migration of birds.
-- [Smart Home Automation System](https://github.com/fuzzymfx/HomeAuto) - Theoretical implementation of a **smart home automation system** in IOT Summer Internship.
-- [Industrial Contamination Detection](https://github.com/fuzzymfx/IndustrialContaminationMonitor) - A theoretical **IOT** project to detect contamination in the soil in irrigation and agriculture.  *- 2021*
+- [Yatch](github.com/fuzzymf/yatch) - A five-stage RISCV **machine code interpreter** written in C++.
+- [Dough](https://github.com/fuzzymf/dough) - A **cli presentation tool** written in Rust.
+- [Bee](https://github.com/fuzzymf/b) - A **tiny bit torrent client** written in TypeScript. Built to work with the movie recommendation system and the movie rating prediction system.
+- [RESOC](https://github.com/fuzzymf/resoc) - A FOSS **social platform** for accessing free academic resources with task management, a chat section, and an open contributions page.
+- [zuzu](https://github.com/fuzzymf/zuzu) - A **static site generator** written in JavaScript.- Live [🔗](https://anubhavp.dev/zuzu/), Old Blog [🔗](https://anubhavp.dev/oldblog/)
+- [Qtree](https://github.com/fuzzymf/qd-compression) - Inspired by KoalasToTheMax, QTree is a short demonstration of **image compression and decompression** using Quadtrees, that partitions a two-dimensional image by recursively subdividing it into four quadrants. - Live [🔗](https://anubhavp.dev/blog/qtree/)
+- [Explored](https://github.com/fuzzymf/explored) - **The Globe** from Github's homepage implemented in **ThreeJS** with beautiful shading. - Live  - [🔗](https://anubhavp.dev/explored/)
+- [W3bChat](https://github.com/fuzzymf/w3bchat-dapp) - A **decentralized chat application** that uses a graph DB to nstrate the concept of a decentralized chat application. - Live  - [🔗](https://w3bchat-fadfa.web.app/)
+- [Nice Dear](https://github.com/fuzzymf/nicedear) - A library that *generates random avatars*. *Dicebear rip-off!*
+- [Rokio](https://github.com/fuzzymf/rust-tokio-chat-server) - A **multi-client chat server** written in Rust using Tokio.
+- [IWT](https://github.com/fuzzymf/iwtserver) - A group college project based on **MERN** Stack. - Live  [🔗](https://anubhavp.dev/IWT_project/)
+- [Marks Predictor](https://github.com/fuzzymf/Marks-predictor) - Predicting the marks of a student based on the number of hours studied using **Linear Regression** and **Gradient Descent**.
+- [Depression Detector](https://github.com/fuzzymf/Detecting-Depression-in-Tweets) - Created a **TF/IDF classifier** - sentiment analysis model to detect depression in tweets.
+- [Taskapp](https://github.com/fuzzymf/go-react-taskapp) - A **task** management system with - React app - [🔗](https://github.com/fuzzymf/react-frontend-blogapp)
+- [Fitness Videoplayer](https://github.com/fuzzymf/fitness-videoplayer) - A **flutter application** to monitor fitness and exercise workouts.
+- [Kanaban Board](https://github.com/fuzzymf/flutter-golang-taskapp) - A **Kanaban board** to manage tasks.
+- [Movie Rating Prediction](https://github.com/fuzzymf/Movie-rating-prediction) - Predicting the rating of a movie based on the review using **Naive Bayes**.
+- [Movie Recommendation System](https://github.com/fuzzymf/Movie-recommendation) - An item-based collaborative recommendation system using **Cosine Similarity**.
+- [Digit Recognizer](https://github.com/fuzzymf/HandwrittenDigitClassification) - Classifying handwritten digits and MNIST dataset using **CNN** and **KNN**. - [MNIST digit classifier using KNN](https://github.com/fuzzymf/Classifying-mnist-digit-dataset)
+- [Bird Migration Analysis](https://github.com/fuzzymf/Bird-Migration-data-analysis) - A **data analysis** project to analyze the migration of birds.
+- [Smart Home Automation System](https://github.com/fuzzymf/HomeAuto) - Theoretical implementation of a **smart home automation system** in IOT Summer Internship.
+- [Industrial Contamination Detection](https://github.com/fuzzymf/IndustrialContaminationMonitor) - A theoretical **IOT** project to detect contamination in the soil in irrigation and agriculture.  *- 2021*
 - [Ransomware Detection](https://docs.google.com/document/d/1MsFnXgt9E5oEyg8YnkDnDNy9T5AQooNEAHOjphvHVyE/edit?usp=sharing) - A **ransomware detection** demonstration on *WannaCry*. *2020*  
-  *...[more](https://github.com/fuzzymfx/)*
+  *...[more](https://github.com/fuzzymf/)*
 
 ---
 

@@ -15,8 +15,8 @@ I'm currently based in NYC, so if you're nearby, feel free to reach out. We coul
 
 [<i class="fa-solid fa-envelope" style="color: #777;"></i>](mailto:anubhabr50@gmail.com)  \   [<i class="fa-solid fa-calendar-days" style="color: #777;"></i>](https://cal.com/anubhavp) 
 
-[<i class="fa-brands fa-github" style="color: #777;"></i>](https://github.com/fuzzymfx) \ [<i class="fa-brands fa-linkedin" style="color: #777;"></i>](https://www.linkedin.com/in/anubhabpatnaik/) \ [<i class="fa-brands fa-instagram" style="color: #777;"></i>](https://instagram.com/anubhavclicks) \ [<i class="fa-solid fa-basketball" style="color: #777;"></i>](https://dribbble.com/fuzzymf) \ [<i class="fa-brands fa-twitter" style="color: #777;"></i>](https://twitter.com/fuzzymfx) \ [<i class="fa-solid fa-earth-americas" style="color: #777;"></i>](https://anubhavp.dev/explored)
+[<i class="fa-brands fa-github" style="color: #777;"></i>](https://github.com/fuzzymf) \ [<i class="fa-brands fa-linkedin" style="color: #777;"></i>](https://www.linkedin.com/in/anubhabpatnaik/) \ [<i class="fa-brands fa-instagram" style="color: #777;"></i>](https://instagram.com/anubhavclicks) \ [<i class="fa-solid fa-basketball" style="color: #777;"></i>](https://dribbble.com/fuzzymf) \ [<i class="fa-solid fa-earth-americas" style="color: #777;"></i>](https://anubhavp.dev/explored)
 
 ---
 
-[*This site*](https://github.com/fuzzymfx/fuzzymfx.github.io) is built using a tailored version of [zuzu](https://github.com/fuzzymfx/zuzu), an open-source static site generator written in JS. The max-width is *36rem*, and the font used is *Segoe UI*.
+[*This site*](https://github.com/fuzzymf/fuzzymf.github.io) is built using a tailored version of [zuzu](https://github.com/fuzzymf/zuzu), an open-source static site generator written in JS. The max-width is *36rem*, and the font used is *Segoe UI*.

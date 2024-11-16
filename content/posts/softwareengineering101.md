@@ -59,17 +59,17 @@ DSA is vast and takes a lot of space. Resouces are scattered all over the intern
 
 The best way to get started with DSA is to solve problems. There are a lot of platforms that provide you with problems to solve. Some of the most popular sought-after LeetCode problems are:
 
-- [This 200 list of problems I found somewhere on the internet](https://github.com/fuzzymfx/LC-200/blob/main/Leetcode%20Questions%20-%20200.xlsx)
+- [This 200 list of problems I found somewhere on the internet](https://github.com/fuzzymf/LC-200/blob/main/Leetcode%20Questions%20-%20200.xlsx)
 - [SDE sheet by Striver](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
-- [450 questions by Love Babbar](https://github.com/fuzzymfx/DSA-450/blob/main/Final-450.pdf)
+- [450 questions by Love Babbar](https://github.com/fuzzymf/DSA-450/blob/main/Final-450.pdf)
 
 There's no particular order in which you should solve these problems. You could start with the easy ones, and then move on to the hard ones. The idea is to get the hang of it, and then move on to building stuff. With the curriculum, you can follow a curated mix of all of these: solve some problems from all of these lists. The number depends on the target you set. You could cover 250+ problems, or 100, or 50. It's up to you. There's no single way to do this.
 
 I haven't completed all, this also essentially helps me as well. Here are my repos for the same, feel free to track my progress:
 
-- [LC200](https://github.com/fuzzymfx/LC-200/)
-- [DSA450](https://github.com/fuzzymfx/DSA-450/)
-- [Striver's SDE Sheet](https://github.com/fuzzymfx/SDE-sheet)
+- [LC200](https://github.com/fuzzymf/LC-200/)
+- [DSA450](https://github.com/fuzzymf/DSA-450/)
+- [Striver's SDE Sheet](https://github.com/fuzzymf/SDE-sheet)
 
 Parallelly, you could start utilizing your DSA superpowers into building stuff. This is where the fun begins.
 

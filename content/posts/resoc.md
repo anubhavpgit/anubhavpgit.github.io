@@ -22,7 +22,7 @@ The idea came to me in the first year of my undergrad, when I found myself scour
 
 ### The open-source codebase
 
-This aims at being a starting point for your journey in contributing to RESOC. This article attempts at explaining the working of this project. Resoc is built using the React and Firebase, majorly. The codebase is open-source and can be found [here](httpsL//github.com/fuzzymfx/resoc).
+This aims at being a starting point for your journey in contributing to RESOC. This article attempts at explaining the working of this project. Resoc is built using the React and Firebase, majorly. The codebase is open-source and can be found [here](httpsL//github.com/fuzzymf/resoc).
 
 Frontend tools in use:
 
@@ -67,7 +67,7 @@ The major components and routes are:
 
 ### Getting Started
 
-The best way to get started would be to clone the repository and try running and exploring all seciton of the web app to become familiar with the codebase. The codebase is open-source and can be found [here](https://github.com/fuzzymfx/resoc). The codebase is a Nodejs project, so you would need to have Nodejs installed on your system. You can install the dependencies by running `npm install` in the root directory. You can run the project by running `npm start`.
+The best way to get started would be to clone the repository and try running and exploring all seciton of the web app to become familiar with the codebase. The codebase is open-source and can be found [here](https://github.com/fuzzymf/resoc). The codebase is a Nodejs project, so you would need to have Nodejs installed on your system. You can install the dependencies by running `npm install` in the root directory. You can run the project by running `npm start`.
 
 The React codebase is in the `src` folder. The `components` folder contains all the components used in the project. The `context` folder contains the context APIs used in the project. The root folder contains the firebase configuration.
 

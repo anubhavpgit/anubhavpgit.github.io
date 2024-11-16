@@ -63,7 +63,7 @@ Here is the standalone version of the tool: [Barney- A RISC-V Instruction Decode
 
 ## Yatch
 
-[Yatch](https://github.com/fuzzymfx/yatch.git) is a machine code interpreter for RISC-V written in C++. It is a simpler interpretation of how RISC-V CPUs execute instructions.
+[Yatch](https://github.com/fuzzymf/yatch.git) is a machine code interpreter for RISC-V written in C++. It is a simpler interpretation of how RISC-V CPUs execute instructions.
 
 The current implementation follows a five-stage pipeline and supports RV32I instructions. The implementation for other instruction sets is in progress. The interpreter reads machine code from a file, executes the instructions, and writes the results back to a file.
 
