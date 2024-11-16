@@ -33,7 +33,7 @@ It's hard not being at home. New York is lovely and feels just like home, but it
 
 Halloween is here, and fall in NYC is as beautiful as ever. The leaves are changing colours, and the days are getting cooler. Sunny days are the best. I'm adapting to the colder weather, the daily commute, and the steady stream of assignments. The workload is getting tougher, and my motivation to study is wearing thin. October has been full of learning and growth. I'm back to grinding on Leetcode, polishing my skills and trying to stay consistent. I've started cooking daily, adjusted my lifestyle, focused on eating healthier, and even lost 5 kg in a month through consistent workouts.
 
-For the Hacktober fest, I wanted to take up  Yatch(https://lnkd.in/gE5FyPys): a machine code interpreter for RISC-V in Python/C++. The aim here is to learn more about compilers, the workings of CPUs, and computer systems architecture. This a great project to get started with if you're keen to learn about low-level programming. I'd love to collaborate with others who share similar interests. 
+For the Hacktober fest, I wanted to take up  [Yatch](https://github.com/fuzzymfx/yatch): a machine code interpreter for RISC-V in Python/C++. The aim here is to learn more about compilers, the workings of CPUs, and computer systems architecture. This a great project to get started with if you're keen to learn about low-level programming. I'd love to collaborate with others who share similar interests. 
 
 The academic pressure was so huge that I had zero time to take out from my schedule to work on any of these. I was heavily occupied with assignments, Leetcode practice, and staying on top of my fitness goals. I aim to wrap up these projects by the first week of November.
 
