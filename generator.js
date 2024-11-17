@@ -10,6 +10,7 @@ import MarkdownIt from "markdown-it";
 import markdownItCheckbox from "markdown-it-checkbox";
 import markdownItAnchor from "markdown-it-anchor";
 import markdownItFootnote from "markdown-it-footnote";
+import markdownItKatex from "markdown-it-katex";
 import string from "string";
 import { mdToPdf } from "md-to-pdf";
 import crypto from "crypto";
@@ -46,7 +47,8 @@ const md = MarkdownIt({
 })
   .use(markdownItAnchor, { slugify }) // Use markdown-it-anchor plugin with slugify function
   .use(markdownItCheckbox) // Use markdown-it-checkbox plugin
-  .use(markdownItFootnote); // Use markdown-it-footnote plugin
+  .use(markdownItFootnote) // Use markdown-it-footnote plugin
+  .use(markdownItKatex, { throwOnError: false, errorColor: "#cc0000" }); // Use markdown-it-katex plugin
 /**
  * Reads a file and returns its content, parsed and rendered as HTML.
  * @param {string} filename - The filename to read.
