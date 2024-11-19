@@ -1,13 +1,33 @@
 ---
 title: Conway's Game of Life
 date: 12-11-2024
-description: Understanding and implementing Conway's Game of Life using simple rules that mimic real-life population dynamics.
+description: Understanding computational models and implementing Conway's Game of Life using simple rules that mimic real-life population dynamics.
 draft: false
 tag: "#tech, #game"
 ---
-<script type="module" src="/assets/js/gameoflife/main.js" ></script>
+<script type="module" src="/assets/js/gameoflife/main.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
 
-Cellular automata are computational systems used to model complex systems and nonlinear dynamics. They are made up of simple, identical units called cells that evolve in parallel at discrete time steps. The state of each cell is determined by the states of its neighbouring cells, and the cells update their states based on a set of rules. Cellular automata have been used to study a wide range of phenomena, including biological systems, physical processes, and social dynamics.
+# Computational Universe
+
+Automata theory is a branch of theoretical computer science that deals with abstract machines and the computational problems that can be solved using these machines. Automata are **fundamental units of computation**, mathematical models of a machine that can perform certain computations. Essentialy, they can process input and produce output based on a set of rules. They are used to model and analyze computational systems, study the limits of computation, and explore the properties of formal languages.
+
+Languages are strings of symbols that can be recognized by automata. A language is said to be recognized by an automaton if the automaton accepts all strings in the language and rejects all strings not in the language.
+
+For example, this automaton can be thought of a machine that processes input strings of 0s and 1s and produces an output based on a set of rules, such as:
+
+$f: \{0, 1\}^* \rightarrow \{0, 1\}^*$ 
+
+where $f$ is a function that takes an input string of $0$s and $1$s and produces an output string of $0$s and $1$s, based on the following rules:
+
+- If the input string contains an odd number of 1s, the output string should be 1.
+- If the input string contains an even number of 1s, the output string should be 0.
+
+Think of it as the smallest part of a machine, that can operate independently and perform a specific task. Breaking this unit further would lead us nowhere, as it is the smallest indivisible part of a machine that can perform a computation. 
+
+# Conway's Game of Life
+
+Building on automata theory, cellular automata are computational systems used to model complex systems and nonlinear dynamics. They are made up of simple, identical units called cells that evolve in parallel at discrete time steps. The state of each cell is determined by the states of its neighbouring cells, and the cells update their states based on a set of rules. Cellular automata have been used to study a wide range of phenomena, including biological systems, physical processes, and social dynamics.
 
 One of the most fascinating aspects of cellular automata is their ability to exhibit complex and unpredictable behaviour from simple rules. Conway's Game of Life is a simple cellular automaton devised by the British mathematician John Horton Conway in 1970. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves.
 
@@ -26,7 +46,6 @@ A few rules govern the evolution of the game are as follows:
     <canvas id="lessthantwodead"  style="border: 1px solid black;"  >
     </canvas>
 </div>
-
 
 2. Any live cell with two or three live neighbours lives on to the next generation.
 
@@ -106,11 +125,32 @@ The Game of Life serves as a fascinating model of how complexity can arise from 
 
 ## A Turing Complete Machine
 
-Formal languages and automata theory is a fundamental area of computer science that deals with abstract machines (automata) and the computational problems that can be solved using these machines. It provides the theoretical underpinnings for designing compilers, and interpreters, and for understanding the limits of what computers can compute.
-
 John Conway's Game of Life is a fascinating example of a cellular automaton, with infinite possibilities for configurations and patterns. It has been studied extensively by computer scientists, mathematicians, and physicists, and has been used to explore a wide range of topics, including complexity theory, artificial life, and emergent behaviour.
 
-The Game of Life has been shown to be Turing complete, meaning it can simulate any computation that a Turing machine can perform, given the right initial conditions. This means it shares a theoretical connection with formal automata and can be thought of as a computational system. Research indicates that certain configurations in the Game of Life can be used to simulate logic gates, memory, and other components of a computer, demonstrating its computational universality and performing universal computation, making it a fascinating area of study for computer scientists and mathematicians alike.
+Automata can be classified into two main categories: finite automata and infinite automata. Finite automata are machines with a finite number of states that can process input strings of finite length. For example, a finite automaton can be used to recognize whether a given input string is a valid email address or a phone number.
+
+Infinte automata, on the other hand, are machines with an infinite number of states that can process input strings of infinite length. Infinite automata are more complex and powerful than finite automata, allowing them to solve more complex computational problems. For example, an infinite automaton can be used to recognize whether a given input string is a valid programming language statement or a mathematical expression. (Compilers and interpreters are examples of infinite automata). Game of Life is a prime example of an infinite automaton, as it can simulate complex systems and exhibit infinte states from a fixed configuration. 
+
+Finite automata can be further classified into:
+1. Deterministic Finite Automata (DFA): A determined outcome for a given input.
+2. Non-Deterministic Finite Automata (NFA): Various outcomes for a given input.
+
+However, both DFA and NFA:
+- Operate on a finite amount of memory (the states).
+- Can only make decisions based on the current state and the immediate input.
+- Cannot handle languages that require unbounded memory, like those involving nested structures or long-term dependencies.
+
+To solve these issues, a Pushdown Automaton (PDA) was introduced. A PDA is an automaton with a stack that can store an unbounded amount of memory. It can push and pop symbols onto the stack, allowing it to handle languages that require more complex memory access. 
+
+However, a PDA still has limitations:
+- The stack provides memory, but it's limited in structure (LIFO- Last in First Out).
+- It can't handle languages requiring more general or unbounded memory access.
+
+This led to the development of the Turing Machine, a theoretical model of computation that can simulate any algorithm or computation that can be performed by a digital computer. A Turing machine consists of an infinite tape divided into cells, a read/write head that can move left or right along the tape, and a finite set of states. The machine can read the symbol on the current cell, write a new symbol, move the tape left or right, and change its state based on a set of rules.
+
+Turing Machine is the pinnacle of computation, as it laid the foundation for modern computers and computational theory. It can, in theory, solve any computational problem that can be solved by a digital computer, making it a universal model of computation.
+
+The Game of Life has been shown to be Turing complete, meaning it can simulate any computation that a Turing machine can perform, given the right initial conditions. Certain configurations in the Game of Life can be used to simulate logic gates, memory, and other components of a computer, demonstrating its computational universality and performing universal computation, making it a fascinating area of study for computer scientists and mathematicians alike.
 
 ### Building A CPU in the Game of Life
 
@@ -187,14 +227,32 @@ A glider gun is a configuration of cells that emits gliders at regular intervals
     </div>
 </div>
 
-
 A single block here can represent '1' and an empty cell can represent '0'. The glider gun emits gliders at regular intervals, which can be used to synchronize the operations of the CPU. 
 
 These inputs can be used to work with adders, logic gates, and memory cells to perform ALU operations, store data, and control the flow of information within the CPU. 
 
 ## Next
 
-While it is theoretically possible to build a computer within the Game of Life, it is painstakingly complex but fun! It requires a deeper understanding of logic gates, instruction sets, implementing memory, and control units. The Game of Life serves as a fascinating model of how complexity can arise from simplicity, providing insight into topics such as self-organization, emergence, and cellular automata theory.
+While it is theoretically possible to build a computer within the Game of Life, it is painstakingly complex but fun! It requires a deeper understanding of logic gates, instruction sets, implementing memory, and control units. To build a fully functional computer, you would need to design and implement a wide range of components, including registers, multiplexers, and arithmetic logic units, and connect them together to form a complete system.
+
+ALU can be constructed using:
+- Adders (Half and Full- they can be used to add binary numbers) [⏎](#arithmetic-logic-unit)
+- Logic Gates (AND, OR, NOT, XOR, etc.- they perform logical operations on binary inputs) [⏎](#arithmetic-logic-unit)
+- Multiplexers( MUX- they select one of many inputs and route it to the output, used to handle multiple data inputs and control signals) 
+- Registers( they store data temporarily during processing and can be used to store intermediate results)
+
+Memory can be constructed using:
+- Flip-Flops (they store a single bit of data using feedback) [⏎](#memory-unit)
+- RAM (Random Access Memory- they store data that can be read and written to- used for storing data and instructions specific to the program)
+- ROM (Read-Only Memory- they store data that can only be read from- used for storing fixed data and instructions that do not change)
+
+Control Unit can be constructed using:
+- Finite State Machines (FSM- they have a finite number of states and transition between states based on inputs) [⏎](#control-unit)
+- Clock Signals (they provide a timing mechanism for the CPU, controlling the rate at which operations are performed- using glider guns) [⏎](#control-unit)
+- Instruction Decoders (they interpret instructions and direct the flow of data within the CPU)
+
+
+Building the CPU would take you to combine these components to carry out fully-functional operations. It would be a fun and challenging project to undertake, requiring a deep understanding of digital logic and computer architecture. The Game of Life serves as a fascinating model of how complexity can arise from simplicity, providing insight into topics such as self-organization, emergence, and cellular automata theory.
 
 [Here's an actual CPU built in the Game of Life by Nicholas Carlini](https://nicholas.carlini.com/writing/2021/unlimited-register-machine-game-of-life.html). In this series of posts, he tries to explain how he built digital logic gates, multiplexers, and registers in the Game of Life. I would love to do this someday when NYU is not down my throat threatening to kick me out for not doing my assignments.
 
