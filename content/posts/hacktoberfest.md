@@ -3,30 +3,30 @@ title: "Docking Compilers at Hacktoberfest'24"
 date: "02-11-2024"
 description: "Compilers and interpreters for machine code in RISC-V at Hacktoberfest."
 tag: "#tech"
-draft: false
+draft: true
 ---
 <script type="module" src="/assets/js/yatch/main.js"></script>
 <link rel="stylesheet" href="/assets/css/yatch/style.css">
 
 Hacktoberfest is a fantastic opportunity to dive into the world of open source, make meaningful contributions, and sharpen your dev skills. This year, I'm most excited about [Yatch](#current-yatch): a machine code interpreter for RISC-V written in C++. It's a great way to learn about machine code, and how CPUs execute instructions.
 
-The aim here is to learn more about compilers, the workings of CPUs, and computer systems architecture. This a great project to get started with if you're keen to learn about low-level programming. I'd love to collaborate with others who share similar interests. 
+The aim here is to learn more about compilers, the workings of CPUs, and computer systems architecture. This post will be long, and our main goal here is to understand the working of compilers, interpreters, and how CPUs compute instructions. 
 
-
-**TOC:**  
+Here's a brief overview of what we'll cover:
+<!-- - [CPU](#cpu-architecture)
+  - [Compiling in C](#compiling-in-c)
   - [RISC-V ISA](#risc-v-isa)
   - [Instruction decoder](#instruction-decoder)
 - [Yatch](#yatch)
   - [Single Stage Pipeline](#1-single-stage-pipeline)
-  - [Five-Stage Pipeline](#2-five-stage-pipeline)
-
+  - [Five-Stage Pipeline](#2-five-stage-pipeline) -->
 
 
 ### RISC-V ISA 
 
 RISC-V is an open-source instruction set architecture (ISA) based on established reduced instruction set computing (RISC) principles. Here is the complete ISA: [RISC-V IS Table](https://five-embeddev.com/riscv-user-isa-manual/Priv-v1.12/instr-table.html).
 
-The base ISA consists of approximately 40 instructions, and this project aims to implement most of them. Other instructions sets are extensions to the base ISA, and I might implement them in the future.
+The base ISA consists of approximately 40 instructions, and this project aims to implement most of them. Other instructions sets are extensions to the base ISA, and we might explore them later.
 
 Here is a summary of the base ISA instructions:
 
@@ -63,7 +63,7 @@ Here is the standalone version of the tool: [Barney- A RISC-V Instruction Decode
 
 ## Yatch
 
-[Yatch](https://github.com/fuzzymf/yatch.git) is a machine code interpreter for RISC-V written in C++. It is a simpler interpretation of how RISC-V CPUs execute instructions.
+[Yatch](https://github.com/fuzzymf/yatch.git) is a machine code interpreter for RISC-V written in C++. It is a simpler interpretation of how RISC-V CPUs execute instructions. The project aims to provide a basic understanding of how CPUs execute instructions and the principles of pipelining.
 
 The current implementation follows a five-stage pipeline and supports RV32I instructions. The implementation for other instruction sets is in progress. The interpreter reads machine code from a file, executes the instructions, and writes the results back to a file.
 
