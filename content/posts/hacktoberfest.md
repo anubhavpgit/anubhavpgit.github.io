@@ -1,28 +1,40 @@
 ---
-title: "Docking Compilers at Hacktoberfest'24"
+title: "Docking Compilers"
 date: "02-11-2024"
 description: "Compilers and interpreters for machine code in RISC-V at Hacktoberfest."
 tag: "#tech"
-draft: true
+draft: false
 ---
 <script type="module" src="/assets/js/yatch/main.js"></script>
 <link rel="stylesheet" href="/assets/css/yatch/style.css">
 
-Hacktoberfest is a fantastic opportunity to dive into the world of open source, make meaningful contributions, and sharpen your dev skills. This year, I'm most excited about [Yatch](#current-yatch): a machine code interpreter for RISC-V written in C++. It's a great way to learn about machine code, and how CPUs execute instructions.
+<!-- This post is the second post in a series of posts on compilers and interpreters. The first post, [The Ferryman](https://anubhavp.dev/posts/ferry), introduces the basics of executing programs and how compilers and interpreters work, and we attempt at building a working C compiler for RISC-V. This post will delve deeper into understanding how CPUs execute machine code instructions. -->
 
-The aim here is to learn more about compilers, the workings of CPUs, and computer systems architecture. This post will be long, and our main goal here is to understand the working of compilers, interpreters, and how CPUs compute instructions. 
+Hacktoberfest is a fantastic opportunity to dive into the world of open source, make meaningful contributions, and sharpen your dev skills. This year, I'm most excited about [Yatch](#current-yatch): a machine code interpreter for RISC-V written in C++.
 
-Here's a brief overview of what we'll cover:
-<!-- - [CPU](#cpu-architecture)
-  - [Compiling in C](#compiling-in-c)
-  - [RISC-V ISA](#risc-v-isa)
-  - [Instruction decoder](#instruction-decoder)
-- [Yatch](#yatch)
-  - [Single Stage Pipeline](#1-single-stage-pipeline)
-  - [Five-Stage Pipeline](#2-five-stage-pipeline) -->
+### Table of Contents
+
+<!-- - [Recap](#recap): A brief overview of how high-level languages are compiled into machine code. -->
+<!-- - [Computer Architecture](#computer-architecture): Understanding the components of a computer system. Why are compilers CPU-specific, while interpreters are not? -->
+  <!-- - [Machine Code](#machine-code): Compiled code that the CPU can execute. -->
+  - [RISC-V ISA](#risc-v-isa): A brief overview of the RISC-V ISA.
+    - [Instruction decoder](#instruction-decoder): A tool to decode RISC-V instructions.
+- [Yatch](#yatch): A machine code interpreter for RISC-V written in C++.
+  - [Walkthrough](#walkthrough): Compiling Yatch and executing instructions.
+  - [Single Stage Pipeline](#1-single-stage-pipeline): A simple interpretation of how CPUs execute instructions.
+  - [Five-Stage Pipeline](#2-five-stage-pipeline): A real simulation of how CPUs execute instructions.
 
 
-### RISC-V ISA 
+<!-- # Recap -->
+
+
+<!-- # Computer Architecture -->
+
+
+<!-- ## Machine Code -->
+
+
+## RISC-V ISA 
 
 RISC-V is an open-source instruction set architecture (ISA) based on established reduced instruction set computing (RISC) principles. Here is the complete ISA: [RISC-V IS Table](https://five-embeddev.com/riscv-user-isa-manual/Priv-v1.12/instr-table.html).
 
@@ -63,9 +75,7 @@ Here is the standalone version of the tool: [Barney- A RISC-V Instruction Decode
 
 ## Yatch
 
-[Yatch](https://github.com/fuzzymf/yatch.git) is a machine code interpreter for RISC-V written in C++. It is a simpler interpretation of how RISC-V CPUs execute instructions. The project aims to provide a basic understanding of how CPUs execute instructions and the principles of pipelining.
-
-The current implementation follows a five-stage pipeline and supports RV32I instructions. The implementation for other instruction sets is in progress. The interpreter reads machine code from a file, executes the instructions, and writes the results back to a file.
+[Yatch](https://github.com/fuzzymf/yatch.git) is a machine code interpreter for RISC-V written in C++. The project aims to provide a basic understanding of how CPUs execute instructions and the principles of pipelining.
 
 To get started with Yatch, you need a C++ compiler. You can use `g++` or `clang++` to compile the code. 
 
@@ -87,7 +97,7 @@ The process of executing instructions is divided into five stages:
 
 The main code runs in a loop, it keeps processing instructions until either it encounters a `HALT` instruction or reaches the end of the program. The interpreter has two main "pipelines" for executing instructions:
 
-*This stage is used for a simple interpretation of how CPUs execute instructions, and is not **actively** used in the current implementation. The code is still present, but it is commented out. It helps understand the basic principles and builds a foundation for the more complex pipeline.*
+*The single stage pipeline is used for a simple interpretation of how CPUs execute instructions, and is not **actively** used in the current implementation. It helps understand the basic principles and builds a foundation for the more complex pipeline.*
 
 #### 1. Single Stage Pipeline:
 
