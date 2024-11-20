@@ -8,13 +8,11 @@ tag: "#tech, #game, #automata"
 <script type="module" src="/assets/js/gameoflife/main.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
 
-# Computational Universe
+# Abstract machines and the computational universe
 
-Automata theory is a branch of theoretical computer science that deals with abstract machines and the computational problems that can be solved using these machines. Automata are mathematical models of a machine that can perform certain computations. Essentialy, they are **fundamental units of computation** can process input and produce output based on a set of rules. They are used to model and analyze computational systems, study the limits of computation, and explore the properties of formal languages.
+Automata theory is a branch of theoretical computer science that deals with abstract machines and the computational problems that can be solved using these machines. Automata are mathematical models of a machine that can perform certain computations. Essentialy, these are **fundamental units of computation** that can process input and produce output based on a set of rules. They are used to model and analyze computational systems, study the limits of computation, and explore the properties of formal languages(sets of strings of symbols that can be recognized by automata).
 
-Languages are strings of symbols('0', '1', 'a', 'b', 'c', etc.) that can be recognized by automata. A language is said to be recognized by an automaton if the automaton accepts all strings in the language and rejects all strings not in the language.
-
-For example, this automaton can be thought of a machine that processes input strings of 0s and 1s and produces an output based on a set of rules, such as:
+For example, this automaton can be thought of as a machine that processes input strings of 0s and 1s and produces an output based on a set of rules, such as:
 
 $f: \{0, 1\}^* \rightarrow \{0, 1\}^*$ 
 
@@ -23,7 +21,9 @@ where $f$ is a function that takes an input string of $0$s and $1$s and produces
 - If the input string contains an odd number of 1s, the output string should be 1.
 - If the input string contains an even number of 1s, the output string should be 0.
 
-Think of it as the smallest part of a machine, that can operate independently and perform a specific task. Breaking this unit further would lead us nowhere, as it is the smallest indivisible part of a machine that can perform a computation. 
+This automaton can be represented as a state machine, with states representing the number of 1s seen so far and transitions based on the input symbols. The machine starts in an initial state and transitions between states based on the input symbols, eventually reaching a final state that determines the output.
+
+In simpler terms, think of it this way: an automaton is the smallest part of a machine that can operate independently and perform a specific task. Breaking this unit further would lead us nowhere, as it is the smallest indivisible part of a machine that can perform a computation. Like, a gearbox in a car is an automaton that performs the task of changing gears, and it can't be broken down further into smaller parts that perform any meaningful task.
 
 # Conway's Game of Life
 
@@ -120,9 +120,9 @@ The speed of the game can be adjusted by changing the `speed` slider. The game w
 
 ## A Turing Complete Machine
 
-Automata can be classified into two main categories: finite automata, machines with a finite number of states that can process input strings of finite length and infinite automata,  machines with an infinite number of states that can process input strings of infinite length. 
+This might seem cool, just a game, but it's more than that. To explain why, I would have to make your brain hurt a little bit more. 
 
-For example, a finite automaton can be used to recognize whether a given input string is a valid email address or a phone number. Infinite automata are more complex and powerful. For example, an infinite automaton can be used to recognize whether a given input string is a valid programming language statement or a mathematical expression. (Compilers and interpreters are examples of infinite automata). Game of Life is a prime example of an infinite automaton, as it can simulate complex systems and exhibit infinte states from a fixed configuration. 
+Automata like these can be classified into two main categories: finite automata( finite states, finite memory) and infinite automata(infinite states, infinite memory). For example, a finite automaton can be used to recognize whether a given input string is a valid email address or a phone number(A [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions)). Infinite automata are more complex and powerful. For example, an infinite automaton can be used to recognize whether a given input string is a valid programming language statement or a mathematical expression. (Compilers and interpreters). Game of Life is a prime example of an infinite automaton, as it can simulate complex systems and exhibit infinite states from a fixed configuration. 
 
 Finite automata can be further classified into:
 1. Deterministic Finite Automata (DFA): A determined outcome for a given input.
@@ -133,19 +133,23 @@ However, both DFA and NFA:
 - Can only make decisions based on the current state and the immediate input.
 - Cannot handle languages that require unbounded memory, like those involving nested structures or long-term dependencies.
 
-To solve these issues, a Pushdown Automaton (PDA) was introduced. A PDA is an automaton with a **stack** that can store an unbounded amount of memory. It can push and pop symbols onto the stack, allowing it to handle languages that require more complex memory access. 
+To solve these issues, a Pushdown Automaton (PDA) was introduced. A PDA is an automaton with a **stack** that can store an unbounded amount of memory. It can push and pop symbols onto the stack, allowing it to handle **context-free languages**( languages that can be described by context-free grammar; languages powerful enough to describe many programming language constructs, such as nested structures (e.g., balanced parentheses, if-else blocks)) that require more complex memory access. Simply put, a PDA can recognize languages that a DFA or NFA cannot, making it a more powerful model of computation.
+
+Bear with me, this will make sense in a bit; I promise. The concepts of FSMs lay the groundwork for understanding why this cellular automaton is such a fascinating piece of work by this brilliant British mathematician.
 
 However, a PDA still has limitations:
 - The stack provides memory, but it's limited in structure (LIFO- Last in First Out).
 - It can't handle languages requiring more general or unbounded memory access.
 
-This led to the development of the Turing Machine, a theoretical model of computation that can simulate any algorithm or computation that can be performed by a digital computer. A Turing machine consists of an infinite tape divided into cells, a read/write head that can move left or right along the tape, and a finite set of states. The machine can read the symbol on the current cell, write a new symbol, move the tape left or right, and change its state based on a set of rules.
+This led to the development of the Turing Machine, a theoretical model of computation that can simulate any algorithm or computation that can be performed by a digital computer. A Turing machine consists of an infinite tape divided into cells, a read/write head that can move left or right along the tape and a finite set of states. The machine can read the symbol on the current cell, write a new symbol, move the tape left or right, and change its state based on a set of rules.
 
-Turing Machine is the pinnacle of computation, as it laid the foundation for modern computers and computational theory. It can, in theory, solve any computational problem that can be solved by a digital computer, making it a universal model of computation.
+Turing Machine is the pinnacle of computation, as it laid the foundation for modern computers and computational theory. It can, in theory, solve any computational problem that can be solved by a digital computer, making it a universal model of computation. Whatever we see today, from the smallest microcontroller to the most powerful supercomputers, satelite systems, and AI, all are based on the principles of the Turing Machine.
 
 The Game of Life has been shown to be Turing complete, meaning it can simulate any computation that a Turing machine can perform, given the right initial conditions. Certain configurations in the Game of Life can be used to simulate logic gates, memory, and other components of a computer, demonstrating its computational universality and performing universal computation, making it a fascinating area of study for computer scientists and mathematicians alike. It has been studied extensively by computer scientists, mathematicians, and physicists, and has been used to explore a wide range of topics, including complexity theory, artificial life, and emergent behaviour.
 
 ### Building A CPU in the Game of Life
+
+We have come this far, let's attempt to build a CPU in the Game of Life; it is capable of doing anything a computer can do.
 
 A CPU essentially is built up of three main components:
 1. ALU (Arithmetic Logic Unit): Performs arithmetic and logical operations on data.
@@ -172,7 +176,7 @@ In addition, you can set up a glider collision that represents the addition of t
 - If only one glider is present (input 1 + 0 or 0 + 1), it moves through without a collision, representing a result of 1.
 - If two gliders collide (input 1 + 1), they create a predictable pattern that can represent the sum of these inputs, often leaving behind a specific "output" glider that can represent the result.
 
-Similarly, An AND gate can be created by positioning still-life patterns (static configurations that do not change) to manipulate gliders. If both inputs are "1" (represented by gliders arriving at the same time), they will interact to produce an output.
+Similarly, An AND gate can be created by positioning still-life patterns (static configurations that do not change) to manipulate gliders. If both inputs are "1" (represented by gliders arriving simultenously), they will interact to produce an output.
 
 - If both gliders arrive at the interaction point simultaneously, they will interact in a way that produces a specific pattern, representing the output 1 for an AND operation.
 - If only one glider arrives, it will pass through or interact with other cells without producing the 1 pattern, representing an output of 0.
@@ -220,11 +224,11 @@ A glider gun is a configuration of cells that emits gliders at regular intervals
     </div>
 </div>
 
-A single block here can represent '1' and an empty cell can represent '0'. The glider gun emits gliders at regular intervals, which can be used to synchronize the operations of the CPU. These inputs can be used to work with adders, logic gates, and memory cells to perform ALU operations, store data, and control the flow of information within the CPU. 
+A single block here can represent '1' and an empty cell can represent '0'. The glider gun emits gliders at regular intervals, which can be used to synchronize the operations of the CPU. These inputs can work with adders, logic gates, and memory cells to perform ALU operations, store data, and control the flow of information within the CPU. 
 
 ##### A Fully Functional Computer
 
-To build a fully functional computer, you would need to design and implement a wide range of components, including registers, multiplexers, and arithmetic logic units, and connect them together to form a complete system. Some of the components you would need to build include:
+To build a fully functional computer, you would need to design and implement a wide range of components, including registers, multiplexers, and arithmetic logic units, and connect them to form a complete system. Some of the components you would need to build include:
 
 ALU components:
 - Adders (Half and Full- they can be used to add binary numbers) [⏎](#arithmetic-logic-unit)
@@ -234,7 +238,7 @@ ALU components:
 
 Memory components:
 - Flip-Flops (they store a single bit of data using feedback) [⏎](#memory-unit)
-- RAM (Random Access Memory- they store data that can be read and written to- used for storing data and instructions specific to the program)
+- RAM (Random Access Memory- they store data that can be read and written to used for storing data and instructions specific to the program)
 - ROM (Read-Only Memory- they store data that can only be read from- used for storing fixed data and instructions that do not change)
 
 Control Unit components:
@@ -246,7 +250,7 @@ Control Unit components:
 
 While it is theoretically possible to build a computer within the Game of Life, it is painstakingly complex and fun! It requires a deeper understanding of logic gates, instruction sets, implementing memory, and control units. 
 
-Building the CPU would take you to combine these components to carry out fully-functional operations. It would be a fun and challenging project to undertake, requiring a deep understanding of digital logic and computer architecture. The Game of Life serves as a fascinating model of how complexity can arise from simplicity, providing insight into topics such as self-organization, emergence, and cellular automata theory.
+Building the CPU would take you to combine these components to carry out fully functional operations. It would be a fun and challenging project to undertake, requiring a deep understanding of digital logic and computer architecture. The Game of Life serves as a fascinating model of how complexity can arise from simplicity, providing insight into topics such as self-organization, emergence, and cellular automata theory.
 
 [Here's an actual CPU built in the Game of Life by Nicholas Carlini](https://nicholas.carlini.com/writing/2021/unlimited-register-machine-game-of-life.html). In this series of posts, he tries to explain how he built digital logic gates, multiplexers, and registers in the Game of Life. I would love to do this someday when NYU is not down my throat threatening to kick me out for not doing my assignments.
 
