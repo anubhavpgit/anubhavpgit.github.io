@@ -120,7 +120,7 @@ The speed of the game can be adjusted by changing the `speed` slider. The game w
 
 ## A Turing Complete Machine
 
-This might seem cool, just a game, but it's more than that. To explain why, I would have to make your brain hurt a little bit more. 
+This might seem cool; just a game, right? It's more interesting than that. To explain why, I would have to make your brain hurt a little bit more. 
 
 Automata like these can be classified into two main categories: finite automata( finite states, finite memory) and infinite automata(infinite states, infinite memory). For example, a finite automaton can be used to recognize whether a given input string is a valid email address or a phone number(A [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions)). Infinite automata are more complex and powerful. For example, an infinite automaton can be used to recognize whether a given input string is a valid programming language statement or a mathematical expression. (Compilers and interpreters). Game of Life is a prime example of an infinite automaton, as it can simulate complex systems and exhibit infinite states from a fixed configuration. 
 
@@ -135,7 +135,7 @@ However, both DFA and NFA:
 
 To solve these issues, a Pushdown Automaton (PDA) was introduced. A PDA is an automaton with a **stack** that can store an unbounded amount of memory. It can push and pop symbols onto the stack, allowing it to handle **context-free languages**( languages that can be described by context-free grammar; languages powerful enough to describe many programming language constructs, such as nested structures (e.g., balanced parentheses, if-else blocks)) that require more complex memory access. Simply put, a PDA can recognize languages that a DFA or NFA cannot, making it a more powerful model of computation.
 
-Bear with me, this will make sense in a bit; I promise. The concepts of FSMs lay the groundwork for understanding why this cellular automaton is such a fascinating piece of work by this brilliant British mathematician.
+Bear with me, this useless information will make sense in a bit; I promise. The concepts of FSMs lay the groundwork for understanding why this cellular automaton is such a fascinating piece of work by this brilliant British mathematician.
 
 However, a PDA still has limitations:
 - The stack provides memory, but it's limited in structure (LIFO- Last in First Out).
@@ -149,9 +149,7 @@ The Game of Life has been shown to be Turing complete, meaning it can simulate a
 
 ### Building A CPU in the Game of Life
 
-We have come this far, let's attempt to build a CPU in the Game of Life; it is capable of doing anything a computer can do.
-
-A CPU essentially is built up of three main components:
+Having come this far, let's attempt to build a CPU in the Game of Life. A CPU essentially is built up of three main components:
 1. ALU (Arithmetic Logic Unit): Performs arithmetic and logical operations on data.
 2. Memory: Stores data and instructions that are currently being executed by the CPU.
 3. Control Unit: Manages the CPU's operations by directing data between the ALU, memory, and I/O devices.
