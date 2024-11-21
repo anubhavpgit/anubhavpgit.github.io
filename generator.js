@@ -179,7 +179,7 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
     if (
       hashes[key] === undefined ||
       hashes[key] === null ||
-      hashes[key] != hash
+      hashes[key]["hash"] != hash
     ) {
       hashes[key] = {
         hash: hash,
@@ -240,7 +240,7 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
     if (
       hashes[key] === undefined ||
       hashes[key] === null ||
-      hashes[key] != hash
+      hashes[key]["hash"] != hash
     ) {
       hashes[key] = {
         hash: hash,
@@ -338,11 +338,11 @@ const buildBlogIndex = (blogs, path) => {
     <div id="tag-selection" style="margin-bottom: 20px;">
       <span data-tag="all" style="cursor: pointer; margin-right: 10px; font-weight: bold;">#all</span>
       ${tagArray
-        .map(
-          (tag) =>
-            `<span data-tag="${tag}" style="cursor: pointer; margin-right: 10px;">${tag}</span>`
-        )
-        .join(" ")}
+      .map(
+        (tag) =>
+          `<span data-tag="${tag}" style="cursor: pointer; margin-right: 10px;">${tag}</span>`
+      )
+      .join(" ")}
     </div>
   `;
 
