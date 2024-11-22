@@ -9,19 +9,18 @@ pdf: true
 
 ### Educational Background
 
-- MSc in Computer Engineering at New York University, Tandon School of Engineering, NYC- 2026 - [🔗]()
-- B.Tech in Computer Science at Silicon Institute of Technology, Bhubaneswar- 2023 - [🔗](/assets/docs/190310030.pdf)
+- MSCE - New York University, Tandon School of Engineering, NY- 2026 - [🔗]()
+- B.Tech in CSE - Silicon Institute of Technology, Bhubaneswar, 2023 - [🔗](/assets/docs/190310030.pdf)
 
 ---
 
 ### Work Experience
 
-- **Software Engineer** - *DatingAI* 2024 - [🔗](https://datingai.pro)
+- **Product/ Software Engineer** - *DatingAI* 2024 - [🔗](https://datingai.pro)
   - Led the revamp of the infrastructure in NodeJs and NextJs, coordinating efforts across teams to reduce network load and
   improve API throttling by 15%, limiting API exhaustion and improving the performance of the AI engine.
-  - Built the Telegram and Discord bots that mimicked the entire application on
-  Telegram, enabling multi-platform access
-  and increasing the total active users by 50%.
+  - Conducted market research, analyzed user feedback, and designed a survey to understand user preferences leading to a 5% increase in traction.
+  - Built the Telegram and Discord bots that mimicked the entire application on Telegram, enabling multi-platform easy access and increasing the total active users by more than 50%.
 - **Software Engineer** - *RadisuAI* 2024 - [🔗](https://radius.ai)
   - Built a multi-threaded, asynchronous health monitoring service using Rust, and Kafka to handle scraping 5000 requests every 10 secs. Optimized and ported the alert mod from Python to Rust to improve performance
   - Automated fault tolerant, consistent DB write operations by different teams using lambda functions and Prefect
@@ -64,8 +63,8 @@ pdf: true
 ### Projects
 
 - [Barney](https://github.com/fuzzymf/barney) - An efficient **machine code instruction encoder/decoder** for RISCV written in TS.
-- [Game of Life](https://anubhavp.dev/blog/gameoflife.html) - A **Conway's Game of Life** implementation in JavaScript, and building logic gates in the game.
-- [Yatch](github.com/fuzzymf/yatch) - A five-stage RISCV **machine code interpreter** written in C++.
+- [Game of Life](https://anubhavp.dev/blog/gameoflife.html) - De-mystifying FSMs and automata. A **Conway's Game of Life** implementation in JavaScript, and building a CPU using that.
+- [Yatch](github.com/fuzzymf/yatch) - A five-stage RISCV **machine code interpreter** written in C++ with forward pass and hazard detection.
 - [Dough](https://github.com/fuzzymf/dough) - A **cli presentation tool** written in Rust.
 - [Bee](https://github.com/fuzzymf/b) - A **tiny bit torrent client** written in TypeScript. Built to work with the movie recommendation system and the movie rating prediction system.
 - [RESOC](https://github.com/fuzzymf/resoc) - A FOSS **social platform** for accessing free academic resources with task management, a chat section, and an open contributions page.
