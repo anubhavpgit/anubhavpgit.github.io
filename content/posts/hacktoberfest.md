@@ -67,7 +67,7 @@ Before moving on to the implementation, here's a small tool that would aid in yo
 
 <div class="container" id="input-container">
   <input type="text" class="input-box" id="input-box" placeholder="Instruction">
-  <i class="fas fa-gear" id="gear"></i>
+  <i class="icon fa-gear" id="gear"></i>
 </div>
 <div id="result" class="result"></div>
 
