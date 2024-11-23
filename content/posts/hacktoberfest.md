@@ -1,38 +1,185 @@
 ---
 title: "Docking Compilers"
-date: "02-11-2024"
-description: "Compilers and interpreters for machine code in RISC-V at Hacktoberfest."
+date: "12-12-2024"
+description: "Understanding compilers and building binary interpreters for machine code in RISC-V in Hacktoberfest."
 tag: "#tech"
 draft: false
 ---
 <script type="module" src="/assets/js/yatch/main.js"></script>
 <link rel="stylesheet" href="/assets/css/yatch/style.css">
 
-<!-- This post is the second post in a series of posts on compilers and interpreters. The first post, [The Ferryman](https://anubhavp.dev/posts/ferry), introduces the basics of executing programs and how compilers and interpreters work, and we attempt at building a working C compiler for RISC-V. This post will delve deeper into understanding how CPUs execute machine code instructions. -->
+This post is the first post in a series of posts on compilers and interpreters. The second post, [The Ferryman](https://anubhavp.dev/posts/ferryman), introduces compiling high-level languages into machine code instructions, and we attempt at building a working C compiler for RISC-V. This post will delve deeper into the next part; understanding how CPUs execute machine code instructions. 
 
 Hacktoberfest is a fantastic opportunity to dive into the world of open source, make meaningful contributions, and sharpen your dev skills. This year, I'm most excited about [Yatch](#current-yatch): a machine code interpreter for RISC-V written in C++.
 
 ### Table of Contents
 
-<!-- - [Recap](#recap): A brief overview of how high-level languages are compiled into machine code. -->
-<!-- - [Computer Architecture](#computer-architecture): Understanding the components of a computer system. Why are compilers CPU-specific, while interpreters are not? -->
-  <!-- - [Machine Code](#machine-code): Compiled code that the CPU can execute. -->
+- [Recap](#compiling-high-level-languages): A brief overview of how high-level languages are compiled into machine code.
+  - [Machine Code](#machine-code): Compiled code that the CPU can execute.
+- [Computer Architecture](#computer-architecture): Understanding the components of a computer system. Why are compilers CPU-specific, while interpreters are not?
   - [RISC-V ISA](#risc-v-isa): A brief overview of the RISC-V ISA.
-    - [Instruction decoder](#instruction-decoder): A tool to decode RISC-V instructions.
+  - [Instruction decoder](#instruction-decoder): A tool to decode RISC-V instructions.
 - [Yatch](#yatch): A machine code interpreter for RISC-V written in C++.
   - [Walkthrough](#walkthrough): Compiling Yatch and executing instructions.
   - [Single Stage Pipeline](#1-single-stage-pipeline): A simple interpretation of how CPUs execute instructions.
   - [Five-Stage Pipeline](#2-five-stage-pipeline): A real simulation of how CPUs execute instructions.
 
 
-<!-- # Recap -->
+# Compiling High-Level Languages
+
+Compilers and interpreters are tools that convert high-level programming languages into machine code instructions that the CPU can execute. Compilers translate the entire program into machine code before execution, while interpreters translate and execute the program line by line. 
+
+```c
+#include <stdio.h>
+int main(){
+  printf("Hello, World!");
+  return 0;
+}
+```
+
+Here's a brief overview of GCC would compile this program:
+
+1. **Preprocessing**: The compiler processes the `#include` directive and includes the contents of the `stdio.h` header file into the program. It also handles macros and other preprocessor directives.
+
+Preprocessed Code: 
+```c
+int main(){
+  printf("Hello, World!");
+  return 0;
+}
+```
+2. **Lexical Analysis**: The compiler breaks the preprocessed code into tokens. It reads the program character by character and groups them into tokens like keywords, identifiers, literals, operators, and punctuation.
+
+> Tokens: `int`, `main`, `(`, `)`, `{`, `printf`, `(`, `"Hello, World!"`, `)`, `;`, `return`, `0`, `;`, `}`
+
+3. **Syntax Analysis**: The compiler checks if the sequence of tokens follows the grammatical rules of C. It builds a parse tree (or abstract syntax tree) representing the program's structure.
+
+```
+FunctionDefinition
+├── ReturnType: int
+├── FunctionName: main
+├── Parameters: ( )
+└── Body:
+    ├── ExpressionStatement: printf("Hello, World!");
+    └── ReturnStatement: return 0;
+```
+
+4. **Semantic Analysis**: The compiler checks the program for semantic correctness. This includes type checking, verifying that functions and variables are declared before use, and ensuring that operations are valid for the given data types. 
+
+```c
+printf is declared in stdio.h and is correctly used.
+The string "Hello, World!" is a valid argument.
+The main function correctly returns an integer.
+```
+
+5. **Intermediate Code Generation**: TThe compiler generates an intermediate representation (IR) of the program. GCC uses internal representations like GIMPLE and RTL.
+```c
+// This is a simplified illustration
+function main()
+{
+  tmp0 = "Hello, World!";
+  call printf(tmp0);
+  return 0;
+}
+```
+
+6. **Optimization**: The compiler optimizes the intermediate code to improve performance. It may remove redundant code, simplify expressions, and reorder instructions.
+
+```c
+function main()
+{
+  call printf("Hello, World!");
+  return 0;
+}
+```
+
+7. **Code Generation**: The compiler generates assembly code from the optimized intermediate code. This code is specific to the target CPU architecture.
+
+Assembly Code (Simplified x86-64 Example):
+```assembly
+    .section .rodata
+.LC0:
+    .string "Hello, World!"
+
+    .text
+    .globl main
+main:
+    push    %rbp
+    mov     %rsp, %rbp
+    lea     .LC0(%rip), %rdi
+    call    puts
+    mov     $0, %eax
+    pop     %rbp
+    ret
+```
+
+8. **Assembly and Linking**:
+
+**Assembly**: The assembler converts the assembly code into object code (machine code in binary form).  
+**Linking**: The linker combines object code with libraries to produce the final executable.
+
+For example, for the x86-64 architecture, the conversion in hexadecimal would look like:
+```
+// Data Section (.rodata)
+48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21 00
+
+// Text Section (.text)
+55                                ; push   %rbp
+48 89 E5                          ; mov    %rsp, %rbp
+48 8D 3D [offset to .LC0]         ; lea    .LC0(%rip), %rdi
+E8 [offset to puts]               ; call   puts
+B8 00 00 00 00                    ; mov    $0, %eax
+5D                                ; pop    %rbp
+C3                                ; ret
+```
+
+The binary or the CPU readable machine code for something like the above might look like:
+
+```bash
+# Data Section (.rodata):
+01001000 01100101 01101100 01101100 01101111 00101100 00100000 01010111 01101111 01110010 01101100 01100100 00100001 00000000
+```
+
+```bash
+01010101
+01001000 10001001 11100101
+01001000 10001101 00111101 **** **** **** ****
+11101000 **** **** **** ****
+10111000 00000000 00000000 00000000 00000000
+01011101
+11000011
+```
+
+GCC uses intermediate representations during compilation:
+
+- GIMPLE: A simplified, language-independent representation that makes it easier to perform optimizations.
+- RTL (Register Transfer Language): A lower-level representation closer to assembly, used for target-specific optimizations and code generation.
+These IRs are crucial for optimizing the code and are internal to the compiler, not typically exposed to the user.
+
+While, interpreters translate and execute the program line by line. The interpreter:
+
+- reads the source code line by line,
+- translates it into machine code( or bytecode in some cases),
+- translates bytecode into machine code and runs it in a virtual machine.
+
+This allows for dynamic typing, interactive debugging, and easier integration with other languages. However, interpreters are generally slower than compilers because they don't optimize the entire program before execution.
 
 
-<!-- # Computer Architecture -->
+I will finish up a [detailed post on compilers and interpreters](https://anubhavp.dev/posts/ferryman) soon. The post will delve deeper into the working of compilers and interpreters, and we will attempt to build a working C compiler for RISC-V.
+
+## Machine Code
+
+The above generated binary code is run as instructions on the CPU. The CPU executes these instructions in a sequence, and the program runs. The CPU has a set of instructions it can execute, known as the instruction set architecture (ISA). The ISA defines the instructions the CPU can execute, the registers it uses, and the memory model it follows. For example, an instruction might look like `00000000000000000000000010000011`, which translates to `lb x1, 0(x0)` in RISC-V assembly. This instruction, specific to the RISC-V ISA, loads a byte from memory into register `x1`.
 
 
-<!-- ## Machine Code -->
+# Computer Architecture
 
+Computer architecture is the design of computer systems, including the CPU, memory, and I/O devices. The CPU executes machine code instructions, which are specific to the CPU architecture. CPU architectures like x86, ARM, and RISC-V have different instruction sets and memory models. Each instruction set has its own assembly language and machine code format.
+
+Here's why it is important to understand computer architecture:
+Compilers generate machine code **specific** to the target CPU architecture. The machine code for x86 is different from ARM or RISC-V. Interpreters, on the other hand, are CPU-independent. They translate high-level code into bytecode or an intermediate representation that can be executed on any platform.
+
+The following post explores machine code instructions and the RISC-V ISA, a popular open-source instruction set architecture. We try to see how a RISC-V CPU would execute machine code instructions using Yatch, a machine code interpreter written in C++.
 
 ## RISC-V ISA 
 
