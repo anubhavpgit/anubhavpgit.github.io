@@ -288,6 +288,18 @@ p {
 	max-width: 36rem;
 }
 
+.nav-home {
+	position: absolute;
+	top: -4px;
+	left: -36px;
+}
+
+.nav-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
 #header nav {
 	display: flex;
 	justify-content: space-between;
@@ -485,4 +497,18 @@ td:first-child:hover~td {
 		margin-left: 1rem;
 		margin-right: 1rem;
 	}
+
+	.nav-home {
+		position: static;
+	}
+}
+
+@media only screen and (min-width: 769px) {
+
+	.nav-home {
+		position: absolute;
+		top: -4px;
+		left: -36px;
+	}
+
 }

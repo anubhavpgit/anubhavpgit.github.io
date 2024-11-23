@@ -1,122 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="description" content="<!-- DESCRIPTION -->" />
-    <meta name="publish-date" content="<!-- DATE -->" />
-    <meta name="author" content="<!-- AUTHOR -->" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta http-equiv="content-language" content="en" />
-    <meta name="author" content="Anubhab Patnaik" />
 
-    <title><!-- TITLE --></title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="description" content="<!-- DESCRIPTION -->" />
+  <meta name="publish-date" content="<!-- DATE -->" />
+  <meta name="author" content="<!-- AUTHOR -->" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="author" content="Anubhab Patnaik" />
 
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="/assets/css/hljs.css" />
-    <link rel="stylesheet" href="/assets/css/tachyons.min.css" />
-  </head>
+  <title><!-- TITLE --></title>
 
-  <body class="markdown-body">
-    <div>
-      <div class="f6">
-        <header id="header" class="center mt6 mb4">
-          <nav>
-            <div class="mb2 dib">
-              <a href="/" title="home" class="index">
-                <img
-                  src="/android-chrome-192x192.png"
-                  alt="logo"
-                  class="mr1 index-logo"
-                />
-              </a>
-              <a
-                href="/current.html"
-                title=" What's up ?
-              "
-                class="gray link"
-                >/current</a
-              >
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/hljs.css" />
+  <link rel="stylesheet" href="/assets/css/tachyons.min.css" />
+</head>
 
-              <a
-                href="/blog"
-                title=" Some weird shit that I have written"
-                class="gray link"
-                >/blog</a
-              >
+<body class="markdown-body">
+  <div>
+    <div class="f6">
+      <header id="header" class="center mt6 mb4">
+        <nav class="nav-wrapper">
+          <div class="mb2 dib">
+            <a href="/" title="home" class="index nav-home">
+              <img src="/android-chrome-192x192.png" alt="logo" class="mr1 index-logo" />
+            </a>
+            <a href="/current.html" title=" What's up ?
+              " class="gray link">/current</a>
 
-              <a
-                href="/about.html"
-                title=" More
-              "
-                class="gray link"
-                >/about</a
-              >
-            </div>
-            <div>
-              <a href="/blog/feed.xml" title="anubhab" class="rss gray link"
-                >/rss</a
-              >
-            </div>
-          </nav>
-          <h2 class="f2 lh-title mb2 mt2" id="blogTitle">
-            <!-- TITLE -->
-          </h2>
-          <div>
-            <p class="mid-gray">
-              <!-- DESCRIPTION -->
-            </p>
+            <a href="/blog" title=" Some weird shit that I have written" class="gray link">/blog</a>
+
+            <a href="/about.html" title=" More
+              " class="gray link">/about</a>
           </div>
-          <h4 class="f6 lh-title">
-            <!-- AUTHOR -->
-          </h4>
-          <ul class="ph0" style="list-style: none">
-            <li class="pb3 mid-gray">
-              <!-- DATE -->
-            </li>
-          </ul>
-          <span class="f6 mid-gray">[<!-- TAGS -->]</span>
-        </header>
-        <section id="main" class="page-post gray mb6 lh-copy">
-          <main>
-            <div class="content custom">
-              <!-- CONTENT -->
-              <hr />
-              <div class="footer">
-                <i>Feedback, Suggestions, Comments - </i>
-                <div class="giscus-div" id="comments">
-                  <script
-                    src="https://giscus.app/client.js"
-                    data-repo="fuzzymf/fuzzymf.github.io"
-                    data-repo-id="MDEwOlJlcG9zaXRvcnk0MDQ1ODEzMjc="
-                    data-category-id="DIC_kwDOGB1rz84Cer0j"
-                    data-mapping="title"
-                    data-strict="0"
-                    data-reactions-enabled="1"
-                    data-emit-metadata="0"
-                    data-input-position="bottom"
-                    data-theme="noborder_light"
-                    data-lang="en"
-                    data-loading="lazy"
-                    crossorigin="anonymous"
-                    async
-                  ></script>
-                </div>
-                Feel free to
-                <a
-                  id="mailtoLink"
-                  href="mailto:anubhabr50@gmail.com?subject=Here's%20a%20suggestion/feedback!&amp;body=Hello%2C%20I%20think%20you%20need%20to%20work%20on..."
-                  >send me a mail</a
-                >.
+
+          <div class="mb2 dib">
+            <a href="/blog/feed.xml" title="Blog - Anubhab Patnaik" class=" gray link">/rss</a>
+          </div>
+        </nav>
+        <h2 class="f2 lh-title mb2 mt2" id="blogTitle">
+          <!-- TITLE -->
+        </h2>
+        <div>
+          <p class="mid-gray">
+            <!-- DESCRIPTION -->
+          </p>
+        </div>
+        <h4 class="f6 lh-title">
+          <!-- AUTHOR -->
+        </h4>
+        <ul class="ph0" style="list-style: none">
+          <li class="pb3 mid-gray">
+            <!-- DATE -->
+          </li>
+        </ul>
+        <span class="f6 mid-gray">[<!-- TAGS -->]</span>
+      </header>
+      <section id="main" class="page-post gray mb6 lh-copy">
+        <main>
+          <div class="content custom">
+            <!-- CONTENT -->
+            <hr />
+            <div class="footer">
+              <i>Feedback, Suggestions, Comments - </i>
+              <div class="giscus-div" id="comments">
+                <script src="https://giscus.app/client.js" data-repo="fuzzymf/fuzzymf.github.io"
+                  data-repo-id="MDEwOlJlcG9zaXRvcnk0MDQ1ODEzMjc=" data-category-id="DIC_kwDOGB1rz84Cer0j"
+                  data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0"
+                  data-input-position="bottom" data-theme="noborder_light" data-lang="en" data-loading="lazy"
+                  crossorigin="anonymous" async></script>
               </div>
+              Feel free to
+              <a id="mailtoLink"
+                href="mailto:anubhabr50@gmail.com?subject=Here's%20a%20suggestion/feedback!&amp;body=Hello%2C%20I%20think%20you%20need%20to%20work%20on...">send
+                me a mail</a>.
             </div>
-          </main>
-        </section>
-      </div>
+          </div>
+        </main>
+      </section>
     </div>
-    <script src="/assets/js/main.js"></script>
-  </body>
+  </div>
+  <script src="/assets/js/main.js"></script>
+</body>
+
 </html>

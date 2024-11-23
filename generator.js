@@ -315,7 +315,6 @@ const buildBlogIndex = (blogs, path) => {
 
     // Handle multiple tags per post
     try {
-      console.log(value);
       if (value.tag) {
         const tags = value.tag.split(",").map((t) => t.trim());
         tags.forEach((tag) => allTags.add(tag));
