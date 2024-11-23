@@ -5,7 +5,7 @@ description: "Anubhab Patnaik| fuzzymf- Engineer/ Entrepreneur"
 
 [<span style="color: #777;"><i class="fa-file-invoice icon"></i> resume</span>](/resume.pdf)
 
-Hi, I am Anubhab Patnaik("fuzzymf"), a software engineer from India. Interested in math, science, engineering, and entrepreneurship, I build scalable and robust systems to solve real-world problems. I am currently working on compilers, distributed systems and databases, LLM Ops, and more. 
+Hi, I am Anubhab Patnaik("fuzzymf"), a software engineer from India. Interested in math, science, engineering, and entrepreneurship, I build software to solve real-world engineering problems. I am currently working on compilers, distributed systems, databases, LLM Ops, and [more](/current.html). 
 
 I previously worked as a software engineer at [RadiusAI](https://radius.ai/), and as the founding engineer at [StackIt](https://nowstackit.com) before that. Currently, a graduate student pursuing a Master's in Computer Engineering at New York University, Tandon. This is a space for my philosophical thoughts and monthly updates; my two cents and musings on life and tech. Here's my [journey so far <i class="fa-arrow-right icon" ></i> ](/journey.html).
 
