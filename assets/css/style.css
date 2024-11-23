@@ -346,6 +346,7 @@ p {
  */
 
 code {
+	font-size: 0.875em !important;
 	font-family: Inconsolata, monospace !important;
 	border-radius: 2px;
 	padding: .2rem .3rem;

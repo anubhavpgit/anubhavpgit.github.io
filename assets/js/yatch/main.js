@@ -774,6 +774,13 @@ class Instruction {
 document.addEventListener("DOMContentLoaded", () => {
   const gearIcon = document.getElementById("gear");
   gearIcon.addEventListener("click", handleGearClick);
+
+  const inputBox = document.getElementById("input-box");
+  inputBox.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      handleGearClick();
+    }
+  });
 });
 
 function createTooltip() {
