@@ -2,7 +2,7 @@
 title: "Docking Compilers"
 date: "12-12-2024"
 description: "Understanding compilers and building binary interpreters for machine code in RISC-V in Hacktoberfest."
-tag: "#tech"
+tag: "#tech, #compiler"
 draft: false
 ---
 <script type="module" src="/assets/js/yatch/main.js"></script>
@@ -119,42 +119,25 @@ main:
 **Linking**: The linker combines object code with libraries to produce the final executable.
 
 For example, for the x86-64 architecture, the conversion in hexadecimal would look like:
-```
-// Data Section (.rodata)
-48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21 00
-
-// Text Section (.text)
-55                                ; push   %rbp
-48 89 E5                          ; mov    %rsp, %rbp
-48 8D 3D [offset to .LC0]         ; lea    .LC0(%rip), %rdi
-E8 [offset to puts]               ; call   puts
-B8 00 00 00 00                    ; mov    $0, %eax
-5D                                ; pop    %rbp
-C3                                ; ret
-```
-
-The binary or the CPU readable machine code for something like the above might look like:
 
 ```bash
 # Data Section (.rodata):
 01001000 01100101 01101100 01101100 01101111 00101100 00100000 01010111 01101111 01110010 01101100 01100100 00100001 00000000
-```
 
-```bash
-01010101
-01001000 10001001 11100101
-01001000 10001101 00111101 **** **** **** ****
-11101000 **** **** **** ****
-10111000 00000000 00000000 00000000 00000000
-01011101
-11000011
+# Text Section (.text):
+01010101 01010101 01010101 01010101 : push %rbp
+01001000 10001001 11100101 : mov %rsp, %rbp
+01001000 10001101 00111101 **** **** **** **** : lea .LC0(%rip), %rdi
+11101000 **** **** **** **** : call puts
+10111000 00000000 00000000 00000000 00000000  : mov $0, %eax
+01011101 : pop %rbp
+11000011 : ret
 ```
 
 GCC uses intermediate representations during compilation:
 
 - GIMPLE: A simplified, language-independent representation that makes it easier to perform optimizations.
 - RTL (Register Transfer Language): A lower-level representation closer to assembly, used for target-specific optimizations and code generation.
-These IRs are crucial for optimizing the code and are internal to the compiler, not typically exposed to the user.
 
 While, interpreters translate and execute the program line by line. The interpreter:
 
@@ -170,7 +153,6 @@ I will finish up a [detailed post on compilers and interpreters](https://anubhav
 ## Machine Code
 
 The above generated binary code is run as instructions on the CPU. The CPU executes these instructions in a sequence, and the program runs. The CPU has a set of instructions it can execute, known as the instruction set architecture (ISA). The ISA defines the instructions the CPU can execute, the registers it uses, and the memory model it follows. For example, an instruction might look like `00000000000000000000000010000011`, which translates to `lb x1, 0(x0)` in RISC-V assembly. This instruction, specific to the RISC-V ISA, loads a byte from memory into register `x1`.
-
 
 # Computer Architecture
 
@@ -247,6 +229,8 @@ The main code runs in a loop, it keeps processing instructions until either it e
 *The single stage pipeline is used for a simple interpretation of how CPUs execute instructions, and is not **actively** used in the current implementation. It helps understand the basic principles and builds a foundation for the more complex pipeline.*
 
 #### 1. Single Stage Pipeline:
+
+<!-- insert diagram -->
 
 One instruction is executed at a time. The interpreter fetches the instruction, decodes it, executes it, accesses memory, and writes back the result in a single cycle, repeats the process for the next instruction. 
 
@@ -361,6 +345,8 @@ This instruction translates to `lb x1, 0(x0)` in RISC-V assembly. It loads a byt
 This entire journey is completed in a single cycle. This serves as a good simulator for understanding how CPUs execute instructions, but the real-world compute requires a more complex pipeline, parallel processing; and multiple instructions executed simultaneously.
 
 #### 2. Five-Stage Pipeline: 
+
+<!-- insert diagram -->
 
 A single program has millions of instructions, and executing them one by one would take a lot of time. This pipeline allows the CPU to execute multiple instructions simultaneously, improving the overall performance.
 
