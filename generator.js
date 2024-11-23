@@ -299,13 +299,23 @@ const buildBlogIndex = (blogs, path) => {
   let allTags = new Set();
 
   let postsHTML = "";
+  let currentYear = "";
 
   sortedBlogs.forEach(([key, value]) => {
     const [day, month, year] = value.date.split("-");
     const displayDate = `${monthNames[parseInt(month) - 1]} ${year.slice(-2)}`;
 
+    if (year !== currentYear) {
+      currentYear = year;
+      postsHTML += `<div class="year-separator">
+      <hr/>
+      <span style="white-space: nowrap; text-decoration: underline;">${year}</span>
+        </div>`;
+    }
+
     // Handle multiple tags per post
     try {
+      console.log(value);
       if (value.tag) {
         const tags = value.tag.split(",").map((t) => t.trim());
         tags.forEach((tag) => allTags.add(tag));
@@ -356,6 +366,7 @@ const buildBlogIndex = (blogs, path) => {
       document.addEventListener('DOMContentLoaded', function() {
         const tagSelectors = document.querySelectorAll('#tag-selection span');
         const posts = document.querySelectorAll('#posts-list li');
+        const yearSeparators = document.querySelectorAll('.year-separator');
 
         tagSelectors.forEach(function(tagSelector) {
           tagSelector.addEventListener('click', function() {
@@ -379,6 +390,21 @@ const buildBlogIndex = (blogs, path) => {
                 }
               });
             }
+
+            // Hide year separators without any visible posts below them
+            yearSeparators.forEach(function(separator) {
+              let nextElement = separator.nextElementSibling;
+              let hasVisiblePost = false;
+              while (nextElement && nextElement.classList.contains('year-separator') === false) {
+                if (nextElement.style.display !== 'none') {
+                  hasVisiblePost = true;
+                  break;
+                }
+                nextElement = nextElement.nextElementSibling;
+              }
+              separator.style.display = hasVisiblePost ? '' : 'none';
+            });
+
           });
         });
       });
