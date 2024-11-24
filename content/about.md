@@ -19,4 +19,4 @@ I'm currently based in NYC, so if you're nearby, feel free to reach out. We coul
 
 ---
 
-[*This site*](https://github.com/fuzzymf/fuzzymf.github.io) is built using a tailored version of [zuzu](https://github.com/fuzzymf/zuzu), an open-source static site generator written in JS. The max-width is *36rem*, and the font used is *Segoe UI*.
+This site[(*source*)](https://github.com/fuzzymf/fuzzymf.github.io) is built using a tailored version of [zuzu](https://github.com/fuzzymf/zuzu), an open-source static site generator.
