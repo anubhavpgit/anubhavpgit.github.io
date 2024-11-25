@@ -2,7 +2,7 @@
 title: "Life, the Universe, and Everything else"
 date: "18-02-2024"
 description: "A few thoughts that warrant a write-up. An attempt to put into words the emotional state of the past few months; a life update." 
-tag: "#life, #philosophy"
+tag: "#life"
 ---
 
 This is a recent life update. Amidst the whirlwind of emotions, finding the right words seems like catching lightning in a bottle. I have always been the one to share the highs, the adventures, the trips, and the zeal to power through. But now, as I peer into the shadows that have crept into my days, I find myself at a loss. I don't know where to begin or how to put things into perspective. This is to say that I might be bad at this, and all I ask of you is to bear with me.
