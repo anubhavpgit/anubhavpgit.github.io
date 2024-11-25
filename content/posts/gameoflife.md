@@ -84,7 +84,7 @@ A few rules govern the evolution of the game are as follows:
 
 The game is played on a two-dimensional grid of cells, each of which can be in one of two states: alive or dead. The game proceeds in discrete steps, with each step representing a generation of cells. At each step, the game applies the rules to each cell in the grid simultaneously, updating the grid to reflect the new state of each cell based on its current state and the states of its neighbours.
 
-## The Game of Life in Action
+# The Game of Life in Action
 
 <div style="text-align: start; width: 100%;">
     <button id="reset">Reset</button>
@@ -118,7 +118,7 @@ To start, design your initial configuration by clicking on the cells to toggle t
 
 The speed of the game can be adjusted by changing the `speed` slider. The game will evolve at a faster pace as the slider is moved to the right. The `grid` slider can be used to adjust the size of the grid, allowing for larger or smaller configurations.
 
-## A Turing Complete Machine
+# A Turing Complete Machine
 
 This might seem cool; just a game, right? It's more interesting than that. To explain why, I would have to make your brain hurt a little bit more. 
 
@@ -147,14 +147,14 @@ Turing Machine is the pinnacle of computation, as it laid the foundation for mod
 
 The Game of Life has been shown to be Turing complete, meaning it can simulate any computation that a Turing machine can perform, given the right initial conditions. Certain configurations in the Game of Life can be used to simulate logic gates, memory, and other components of a computer, demonstrating its computational universality and performing universal computation, making it a fascinating area of study for computer scientists and mathematicians alike. It has been studied extensively by computer scientists, mathematicians, and physicists, and has been used to explore a wide range of topics, including complexity theory, artificial life, and emergent behaviour.
 
-### Building A CPU in the Game of Life
+## Building A CPU in the Game of Life
 
 Having come this far, let's attempt to build a CPU in the Game of Life. A CPU essentially is built up of three main components:
 1. ALU (Arithmetic Logic Unit): Performs arithmetic and logical operations on data.
 2. Memory: Stores data and instructions that are currently being executed by the CPU.
 3. Control Unit: Manages the CPU's operations by directing data between the ALU, memory, and I/O devices.
 
-#### Arithmetic Logic Unit
+### Arithmetic Logic Unit
 
 The **ALU** is responsible for performing arithmetic and logical operations on data. It consists of a number of logic gates, adders, and other components that work together to perform operations such as addition, subtraction, AND, OR, and NOT.
 
@@ -179,11 +179,11 @@ Similarly, An AND gate can be created by positioning still-life patterns (static
 - If both gliders arrive at the interaction point simultaneously, they will interact in a way that produces a specific pattern, representing the output 1 for an AND operation.
 - If only one glider arrives, it will pass through or interact with other cells without producing the 1 pattern, representing an output of 0.
 
-#### Memory Unit
+### Memory Unit
 
 **Memory Unit** stores data and instructions that are currently being executed by the CPU. It consists of registers, cache, and main memory. It is responsible for storing and retrieving data from memory locations.
 
-##### Blinker
+#### Blinker
 
 <div class="container" style="display: flex; align-items: center; justify-content: center; text-align: center;">
     <div style="margin: 10px;">
@@ -198,7 +198,7 @@ Memory can be represented by stable patterns that remain constant unless disturb
 
 Similarly, an external pattern could be designed to change or "write" to the memory cell, altering its oscillation phase to represent a different binary state.
 
-#### Control Unit
+### Control Unit
 
 The control unit manages the CPU's operations by directing data between the ALU, memory, and I/O devices. It fetches and decodes instructions, then signals the ALU and memory to execute.
 
@@ -211,7 +211,7 @@ The control unit manages the CPU's operations by directing data between the ALU,
 
 This pattern is designed to function as a control unit by leveraging the behavior of known oscillators and spaceships in the Game of Life to produce predictable and repeatable outcomes. The pattern includes configurations that will evolve into gliders, which are small patterns that move across the grid over successive generations. Gliders can be used to transmit information or interact with other patterns in the grid.
 
-##### Glider gun
+#### Glider gun
 
 A glider gun is a configuration of cells that emits gliders at regular intervals. It can be used to create a clock signal that controls the timing of operations in the CPU.
 
@@ -224,7 +224,7 @@ A glider gun is a configuration of cells that emits gliders at regular intervals
 
 A single block here can represent '1' and an empty cell can represent '0'. The glider gun emits gliders at regular intervals, which can be used to synchronize the operations of the CPU. These inputs can work with adders, logic gates, and memory cells to perform ALU operations, store data, and control the flow of information within the CPU. 
 
-##### A Fully Functional Computer
+## A Fully Functional Computer
 
 To build a fully functional computer, you would need to design and implement a wide range of components, including registers, multiplexers, and arithmetic logic units, and connect them to form a complete system. Some of the components you would need to build include:
 
@@ -244,7 +244,7 @@ Control Unit components:
 - Clock Signals (they provide a timing mechanism for the CPU, controlling the rate at which operations are performed- using glider guns) [⏎](#control-unit)
 - Instruction Decoders (they interpret instructions and direct the flow of data within the CPU)
 
-## Next
+# Next
 
 While it is theoretically possible to build a computer within the Game of Life, it is painstakingly complex and fun! It requires a deeper understanding of logic gates, instruction sets, implementing memory, and control units. 
 
