@@ -1,7 +1,7 @@
 ---
 title: "Current odyssey"
 description: "Here's what I am upto these days"
-showdate: true
+# showdate: true
 ---
 
 ##### Current, 2024
@@ -10,7 +10,7 @@ showdate: true
 
 <span class="update-date-time"></span>
 
-###### December'24 - January'25
+###### December'24
 
 New York City is as beautiful as ever. The streets are filled with lights, and the air is filled with the sound of Christmas carols. The city is bustling with magic, love and happiness, and the festive season is in full swing. With the onset of 2025, I plan on taking a break from everything and visiting home, back in Bhubaneswar.
 
