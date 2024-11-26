@@ -1,10 +1,9 @@
 ---
-title: "Ups & downs in 2023"
+title: "The daunting realm of adulthood; 2023"
 date: "31-12-2023"
-description: "Ups and downs, highs and lows, peaks and valleys, the year 2023 was a rollercoaster ride."
+description: "The ups and downs of 2023"
 tag: "#life, #journal"
 ---
-
 
 ###### December
 
