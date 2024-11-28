@@ -61,7 +61,7 @@ pdf: true
 ---
 
 ### Projects
-
+- [Pixlr](https://github.com/fuzzymf/pixlr) - A **SVG/PNG to pixel art converter** written in Rust.
 - [Barney](https://github.com/fuzzymf/barney) - An efficient **machine code instruction encoder/decoder** for RISCV written in TS.
 - [Game of Life](https://anubhavp.dev/blog/gameoflife.html) - De-mystifying FSMs and automata. A **Conway's Game of Life** implementation in JavaScript, and building a CPU using that.
 - [Yatch](github.com/fuzzymf/yatch) - A five-stage RISCV **machine code interpreter** written in C++ with forward pass and hazard detection.
@@ -93,22 +93,21 @@ pdf: true
 
 ### Activities
 
-- NYU Food Insecurity Group - 2024
-- Luma - Magic Ball: The AI Reveal - 2023 - [🔗](https://www.linkedin.com/feed/update/urn:li:activity:7128282363955998720/)
+- Participant- DevFest NYC 2024- Google Developer Group - [🔗](https://gdg.community.dev/events/details/google-gdg-nyc-presents-devfest-nyc-2024-responsible-ai-for-the-future-of-tech/)
+- Contributor - NYU Food Insecurity Group - 2024
 - Luma - Magic Ball: OpenAI Dev Day - 2023 - [🔗](https://www.linkedin.com/feed/update/urn:li:activity:7128282363955998720/)
-- CS25 I Stanford Seminar - Transformers United 2023: Introduction to Transformers
-- Luma - Magic Ball: The Reveal - 2023 - [🔗](https://www.linkedin.com/posts/anubhabpatnaik0530_the-reveal-by-magic-ball-activity-7100826884778717184-JkVu?utm_source=share&utm_medium=member_desktop)    
-- Chargebee - Finance Leader Roundtable, 2023
-- Google IO/Connect, 2023
-- Git Groove - UnStop 2023 - [🔗](https://www.linkedin.com/posts/anubhabpatnaik0530_git-groove-getting-into-the-rhythm-of-version-activity-7050527332519862272-jniz?utm_source=share&utm_medium=member_desktop)
+-- Representative, StackIt- Luma - Magic Ball: The Reveal - 2023 - [🔗](https://www.linkedin.com/posts/anubhabpatnaik0530_the-reveal-by-magic-ball-activity-7100826884778717184-JkVu?utm_source=share&utm_medium=member_desktop)    
+- Representative, StackIt, Chargebee - Finance Leader Roundtable, 2023
+- Particpant- Google IO/Connect, 2023
+- Hosted Git Groove - UnStop 2023 - [🔗](https://www.linkedin.com/posts/anubhabpatnaik0530_git-groove-getting-into-the-rhythm-of-version-activity-7050527332519862272-jniz?utm_source=share&utm_medium=member_desktop)
 - Web Developer/ Mentor- Zygon Organizing Committee 2023 - [🔗](https://drive.google.com/file/d/1Xqf9fN3ABCQli4tqEc39RKe3iXkqf-sx/view?usp=share_link)
 - Best Delegate - XIMUN 2023 - [🔗](https://drive.google.com/file/d/1vTZl3K2kRTJgDgFr3lN5mxSaz7pnwvc2/view?usp=sharing)
 - Contingent Leader - IIT Bombay 2023 - [🔗](https://drive.google.com/file/d/1NMJChzaUcKUKqYJJW3EEGX2WogZyVPJh/view?usp=sharing)
-- Binance Ideathon - #BlockchainforGood 2022 - [🔗](https://drive.google.com/file/d/1IcDC_7L4bw-PPsLsNhH9cS2ezDynDAMB/view?usp=share_🔗)
+- Runner's up, Binance Ideathon - #BlockchainforGood 2022 - [🔗](https://drive.google.com/file/d/1IcDC_7L4bw-PPsLsNhH9cS2ezDynDAMB/view?usp=share_🔗)
 - **Co-founder** CBRTL - 2022 - [🔗](https://cbrtl.github.io)
-- Why Rust - Squbix Digital 2022 - [🔗](https://www.linkedin.com/posts/anubhabpatnaik0530_i-hosted-a-tech-talk-last-week-and-it-went-activity-6987708219385122816-aq9z?utm_source=share&utm_medium=member_desktop)
-- Ideate Nirman - SIT 2022 - [🔗](https://drive.google.com/file/d/1i--TyXYDPxMN5IbokTzFoTGE4K-rnpXM/view?usp=share_link)
-- Ideathon - ED Cell SIT 2022 - [🔗](https://drive.google.com/file/d/1i--TyXYDPxMN5IbokTzFoTGE4K-rnpXM/view?usp=share_link)
+- Hosted- Why Rust - Squbix Digital 2022 - [🔗](https://www.linkedin.com/posts/anubhabpatnaik0530_i-hosted-a-tech-talk-last-week-and-it-went-activity-6987708219385122816-aq9z?utm_source=share&utm_medium=member_desktop)
+- Winner, Ideate Nirman - SIT 2022 - [🔗](https://drive.google.com/file/d/1i--TyXYDPxMN5IbokTzFoTGE4K-rnpXM/view?usp=share_link)
+- Runner's Up, Ideathon - ED Cell SIT 2022 - [🔗](https://drive.google.com/file/d/1i--TyXYDPxMN5IbokTzFoTGE4K-rnpXM/view?usp=share_link)
 - **President, Chairperson** IEEE Students' Branch *STB04531* - SIT 2022-23 - [🔗](https://drive.google.com/file/d/1sbO7gOwsointY-x7aWPB8DfyrTFsCugl/view?usp=sharing)
 - **Co-founder & Joint Secretary** - SWITCH 2021-22 - [🔗](https://drive.google.com/file/d/1Zub7ui2WCRYgN7tM0G8p-dbeFLirGR-d/view?usp=sharing)
 - High Commendation I - SITMUN 2021 - [🔗](https://drive.google.com/file/d/1RI8fXtCTYrlYlX-dnGvfQQ76CHx0AEaq/view?usp=sharing)
