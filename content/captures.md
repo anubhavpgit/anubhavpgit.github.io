@@ -1,0 +1,19 @@
+---
+title: "Mementos"
+description: "A collection of recent captures"
+---
+## Mementos
+
+You don't need to give in to Meta's ridiculous and annoying need for validation by signing in to Instagram to view the images. Here are some of the recent captures that I have taken.
+
+For those of you using Instagram, [Anubhav Clicks](https://www.instagram.com/anubhavclicks/)
+
+<br>
+<br>
+
+<!-- LightWidget WIDGET -->
+<div class="lightwidget-widget">
+	<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/51c1cc0dac535176916b5e644cb4bd24.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+</div>
+
+[Follow here](https://www.instagram.com/anubhavclicks/)

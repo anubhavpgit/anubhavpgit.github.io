@@ -6,7 +6,7 @@ showdate: true
 
 ##### Current, 2024
 
-[Reading/ Watching](/reading.html)
+[Reading/ Watching](/reading.html)  |   [Mementos](/captures.html)  |
 
 <span class="update-date-time"></span>
 
