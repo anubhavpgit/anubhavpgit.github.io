@@ -24,8 +24,6 @@ Ever tried to convert a PNG to SVG? Here's why it is difficult to achieve this: 
 
 I was experimenting with pixel-art; trying to convert PNG and SVG formats to pixel art and stumbled across this issue above. To solve this, I am spending the next couple of months working on a application of Fourier series, a mathematical tool for approximating complex shapes with sums of sine and cosine functions. A Fourier series represents a periodic function as a sum of sine and cosine waves, each with specific frequencies, amplitudes, and phases, allowing complex patterns to be broken into simpler components.
 
-Fourier series and transforms help in breaking down a PNG to SVG by analyzing and representing the shapes and edges in the raster image as continuous, smooth curves. In a PNG, the image is pixelated and discrete, but Fourier techniques can extract the frequency components of the contours and gradients in the image, enabling the reconstruction of these edges as mathematical functions. These functions, composed of sine and cosine waves, can then be used to generate scalable vector paths, forming the smooth lines and shapes required for SVG representation. 
-
 Meanwhile, here's a small pixel-art generator for SVGs and PNGs written in Rust: [pixlr](https://github.com/fuzzymf/pixlr)
 
 Yatch, the RISCV simulator, is shaping up well. The forward pass and stalling work well with the current nop setup and bubble implementation. I am currently focused on fixing minor issues in the hazard detection pipeline and am yet to implement multiplexers for forwarding, branch prediction, and control mechanisms.
