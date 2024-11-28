@@ -28,7 +28,7 @@ Fourier series and transforms help in breaking down a PNG to SVG by analyzing an
 
 Meanwhile, here's a small pixel-art generator for SVGs and PNGs written in Rust: [pixlr](https://github.com/fuzzymf/pixlr)
 
-Yatch, the RISCV simulator, is shaping up well. The forward pass and stalling work well with the current nop setup and bubble implementation. I am currently focused on fixing minor issues in the hazard detection and yet to implement multiplexers for forwarding and branch prediction and control mechanisms.
+Yatch, the RISCV simulator, is shaping up well. The forward pass and stalling work well with the current nop setup and bubble implementation. I am currently focused on fixing minor issues in the hazard detection pipeline and am yet to implement multiplexers for forwarding, branch prediction, and control mechanisms.
 
 I am also planning on restarting [bee](https://github.com/fuzzymf/b), a light-weight bittorrent client written in TypeScript. A bencode parser, and a torrent file parser have been implemented. There is a list of trackers associated with a torrent file/ magnet link and each tracker gives out a list of peers from which pieces of the file can be downloaded. The next step would be to implement the handshake and the peer wire protocol. There are various strategies to follow here. My aim is to get the fastest peers, and download the rarest pieces first. I am not sure whether I would start seeding the files as soon as they are downloaded since that would be more complicated, but I am interested in implementing that someday later. The DHT protocol also seemed interesting to me. The DHT protocol is a decentralized way of finding peers, and it is used by clients like qBittorrent, and Transmission to find peers for a torrent.
 
