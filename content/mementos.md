@@ -6,7 +6,7 @@ description: "A collection of recent captures"
 
 You don't need to give in to Meta's ridiculous and annoying need for validation by signing in to Instagram to view the images. Here are some of my recent captures.
 
-For those of you using Instagram, [Anubhav Clicks](https://www.instagram.com/anubhavclicks/)
+For those of you using Instagram, [instagram.com/anubhavclicks](https://www.instagram.com/anubhavclicks/)
 
 <br>
 <br>
