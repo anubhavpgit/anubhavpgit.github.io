@@ -16,19 +16,28 @@ showdate: true
 
 I realized I was too busy trying to work on my projects and knee-deep in useless academics, and now, I find it difficult to comprehend that an entire year just went by. It feels as if I graduated just a couple of months ago, but two years have gone by since, and I am here, in New York, trying to make sense of my life. Pixel arts, databases, compilers, maths and algorithms are on hold for a while.
 
-If you're curious, I will be spending more time on my books, PS5, and Netflix in upcoming months. Red Dead Redemption, Spiderman 2, Pulp Fiction, Godfather, and a long list await this new year. Here’s to new beginnings, and new adventures! 🥂 I hope you have a great year ahead. Merry Christmas, and a happy New Year, everyone! Promise to be back soon. Keep checking :) -->
+If you're curious, I will be spending more time on my books, PS5, and Netflix in the next few weeks. Red Dead Redemption, Spiderman 2, Pulp Fiction, Godfather, and a long list await this new year. Here’s to new beginnings, and new adventures! 🥂 I hope you have a great year ahead. Merry Christmas, and a happy New Year, everyone! Promise to be back soon. Keep checking :) -->
 
 ###### December
 
+<!-- Here's [bee](https://github.com/fuzzymf/b), a light-weight bittorrent client written in TypeScript. The torrent protocol is a peer-to-peer file-sharing protocol that allows users to share files over the internet. 
+Bee typically works as follows:
+- The magnet link or the .torrent file is parsed to extract the metadata.
+  - They are encoded in bencode format, a simple encoding scheme that represents data as a series of key-value pairs.
+- The metadata contains a list of trackers, the file's name, size, and piece length, and a list of hashes for each piece.
+- The tracker is contacted to get a list of peers.
+- The peers are contacted to exchange pieces of the file.
+- The pieces are verified using the SHA-1 hash of the piece data.
+- The file is reassembled from the pieces.
+Technically, Bee should also be able to "seed" files, meaning it can share files with other peers. But I didn't get to implement that yet. It's a leech( one who sucks data from the swarm and does not share it back ) for now :P -->
+
 Ever tried to convert a PNG to SVG? Here's why it is difficult to achieve this: the two formats fundamentally differ in how they represent images. PNG images are pixel-based, meaning they store visual information as a grid of colored pixels, whereas SVG images are path-based, relying on mathematical equations to describe shapes, lines, and curves. The challenge lies in translating the discrete, resolution-dependent data of a PNG into smooth, resolution-independent vector paths. 
 
-I was experimenting with pixel-art; trying to convert PNG and SVG formats to pixel art and stumbled across this issue above. To solve this, I am spending the next couple of months working on a application of Fourier series, a mathematical tool for approximating complex shapes with sums of sine and cosine functions. A Fourier series represents a periodic function as a sum of sine and cosine waves, each with specific frequencies, amplitudes, and phases, allowing complex patterns to be broken into simpler components.
+I was experimenting with pixel-art; trying to convert PNG and SVG formats to pixel art and stumbled across this issue above. To solve this, I am spending the next couple of weeks working on a application of Fourier series, a mathematical tool for approximating complex shapes with sums of sine and cosine functions. A Fourier series represents a periodic function as a sum of sine and cosine waves, each with specific frequencies, amplitudes, and phases, allowing complex patterns to be broken into simpler components.
 
 Meanwhile, here's a small pixel-art generator for SVGs and PNGs written in Rust: [pixlr](https://github.com/fuzzymf/pixlr)
 
 Yatch, the RISCV simulator, is shaping up well. The forward pass and stalling work well with the current nop setup and bubble implementation. I am currently focused on fixing minor issues in the hazard detection pipeline and am yet to implement multiplexers for forwarding, branch prediction, and control mechanisms.
-
-I am also planning on restarting [bee](https://github.com/fuzzymf/b), a light-weight bittorrent client written in TypeScript. A bencode parser, and a torrent file parser have been implemented. There is a list of trackers associated with a torrent file/ magnet link and each tracker gives out a list of peers from which pieces of the file can be downloaded. The next step would be to implement the handshake and the peer wire protocol. There are various strategies to follow here. My aim is to get the fastest peers, and download the rarest pieces first. I am not sure whether I would start seeding the files as soon as they are downloaded since that would be more complicated, but I am interested in implementing that someday later. The DHT protocol also seemed interesting to me. The DHT protocol is a decentralized way of finding peers, and it is used by clients like qBittorrent, and Transmission to find peers for a torrent.
 
 New York City is as beautiful as ever. The streets are filled with lights, and the air is filled with the sound of Christmas carols. The city is bustling with magic, love and happiness, and the festive season is in full swing. With the onset of 2025, I plan on taking a break from everything and visiting home, back in Bhubaneswar.
 
