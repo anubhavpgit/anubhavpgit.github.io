@@ -12,11 +12,11 @@ showdate: true
 
 <!-- ###### January -->
 
-<!-- Taking a break:
+<!-- I realized I was too busy trying to work on my projects and knee-deep in useless academics, and now, I find it difficult to comprehend that an entire year just went by. It feels as if I graduated just a couple of months ago, but two years have gone by since, and I am here, in New York, trying to make sense of my life. Pixel arts, databases, compilers, maths and algorithms are on hold for a while.
 
-I realized I was too busy trying to work on my projects and knee-deep in useless academics, and now, I find it difficult to comprehend that an entire year just went by. It feels as if I graduated just a couple of months ago, but two years have gone by since, and I am here, in New York, trying to make sense of my life. Pixel arts, databases, compilers, maths and algorithms are on hold for a while.
+Taking a break:
 
-If you're curious, I will be spending more time on my books, PS5, and Netflix in the next few weeks. Red Dead Redemption, Spiderman 2, Pulp Fiction, Godfather, and a long list await this new year. Here’s to new beginnings, and new adventures! 🥂 I hope you have a great year ahead. Merry Christmas, and a happy New Year, everyone! Promise to be back soon. Keep checking :) -->
+I am going back home, for 25 days. If you're curious, I will be spending more time on my books, PS5, and Netflix in the next few weeks. Red Dead Redemption, Spiderman 2, Pulp Fiction, Godfather, and a long list await this new year. Here’s to new beginnings, and new adventures! 🥂 I hope you have a great year ahead. Merry Christmas, and a happy New Year, everyone! Promise to be back soon. Keep checking :) -->
 
 ###### December
 
@@ -33,7 +33,7 @@ Technically, Bee should also be able to "seed" files, meaning it can share files
 
 Ever tried to convert a PNG to SVG? Here's why it is difficult to achieve this: the two formats fundamentally differ in how they represent images. PNG images are pixel-based, meaning they store visual information as a grid of colored pixels, whereas SVG images are path-based, relying on mathematical equations to describe shapes, lines, and curves. The challenge lies in translating the discrete, resolution-dependent data of a PNG into smooth, resolution-independent vector paths. 
 
-I was experimenting with pixel-art; trying to convert PNG and SVG formats to pixel art and stumbled across this issue above. To solve this, I am spending the next couple of weeks working on a application of Fourier series, a mathematical tool for approximating complex shapes with sums of sine and cosine functions. A Fourier series represents a periodic function as a sum of sine and cosine waves, each with specific frequencies, amplitudes, and phases, allowing complex patterns to be broken into simpler components.
+I was experimenting with pixel-art; trying to convert PNG and SVG formats to pixel art and stumbled across this issue above. To solve this, I am spending the next couple of weeks working on a application of Fourier series, a mathematical tool for approximating complex shapes with sums of sine and cosine functions. A Fourier series represents a periodic function as a sum of sine and cosine waves, each with specific frequencies, amplitudes, and phases, allowing complex patterns to be broken into simpler components. This might not be the best, most efficient solution, but a fun, educational exercise nonetheless.
 
 Meanwhile, here's a small pixel-art generator for SVGs and PNGs written in Rust: [pixlr](https://github.com/fuzzymf/pixlr)
 
