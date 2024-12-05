@@ -1,5 +1,5 @@
 ---
-title: Pages, Pens, and Pixels
+title: Pens and Pixels
 description: "Thoughts on books read, shows watched"
 ---
 
