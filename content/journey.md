@@ -93,12 +93,7 @@ pdf: true
 
 ### Activities
 
-- Participant- DevFest NYC 2024- Google Developer Group - [🔗](https://gdg.community.dev/events/details/google-gdg-nyc-presents-devfest-nyc-2024-responsible-ai-for-the-future-of-tech/)
 - Contributor - NYU Food Insecurity Group - 2024
-- Luma - Magic Ball: OpenAI Dev Day - 2023 - [🔗](https://www.linkedin.com/feed/update/urn:li:activity:7128282363955998720/)
--- Representative, StackIt- Luma - Magic Ball: The Reveal - 2023 - [🔗](https://www.linkedin.com/posts/anubhabpatnaik0530_the-reveal-by-magic-ball-activity-7100826884778717184-JkVu?utm_source=share&utm_medium=member_desktop)    
-- Representative, StackIt, Chargebee - Finance Leader Roundtable, 2023
-- Particpant- Google IO/Connect, 2023
 - Hosted Git Groove - UnStop 2023 - [🔗](https://www.linkedin.com/posts/anubhabpatnaik0530_git-groove-getting-into-the-rhythm-of-version-activity-7050527332519862272-jniz?utm_source=share&utm_medium=member_desktop)
 - Web Developer/ Mentor- Zygon Organizing Committee 2023 - [🔗](https://drive.google.com/file/d/1Xqf9fN3ABCQli4tqEc39RKe3iXkqf-sx/view?usp=share_link)
 - Best Delegate - XIMUN 2023 - [🔗](https://drive.google.com/file/d/1vTZl3K2kRTJgDgFr3lN5mxSaz7pnwvc2/view?usp=sharing)
@@ -114,16 +109,6 @@ pdf: true
 - High Commendation I ( Best Del ) - SITMUN 2020 - [🔗](https://drive.google.com/file/d/1nbwySBjw8uUQH9bWY_vR0SeXt8x4B54M/view?usp=sharing)
 - Photographer/ Graphic Designer - SIT: Media Cell - 2020 [🔗](https://drive.google.com/file/d/1z91iZPJxbJAIusamhn9BtrjMRN7pVH7k/view?usp=drivesdk)
 - Photographer - Silicon Photography Club 2019 - [🔗](https://www.instagram.com/spc_sitb/)
-- TEDxSITB - #HalfEmptyHalfFilled - SIT 2019 - [🔗](https://drive.google.com/file/d/1gR4mUn0_gmW-SlzKR3x3xHLJiC_FHauu/view?usp=sharing)
-- Ethical Hacking - Robothlon - IIT Delhi 2017 - [🔗](https://drive.google.com/file/d/1l2OJHdRoMyoC82yqap_zMMCxcmC328Qz/view?usp=sharing)
-- Arduino - Robothlon - IIT Delhi 2017 - [🔗](https://drive.google.com/file/d/1l2OJHdRoMyoC82yqap_zMMCxcmC328Qz/view?usp=sharing)
-- Quadcopter UAV - Robothlon - IIT Delhi 2017 - [🔗](https://drive.google.com/file/d/1l2OJHdRoMyoC82yqap_zMMCxcmC328Qz/view?usp=sharing)
-- Life In Space - NASCA 2017 - [🔗](https://drive.google.com/file/d/1hQffr-hLFVeeAo_9Dkvmaq87Vm911YNc/view?usp=sharing)
-- IOT - WAC| 2017 - IIIT Hyderabad - [🔗](https://drive.google.com/file/d/1ah39XzFJcXEOMKJ7zhf-lxNRsVo_FoZJ/view?usp=sharing)
-- Robotics - WAC| 2017 - IIIT Hyderabad - [🔗](https://drive.google.com/file/d/1ah39XzFJcXEOMKJ7zhf-lxNRsVo_FoZJ/view?usp=sharing)
-- DBMUN 2015 - [🔗](https://drive.google.com/file/d/1Q_VKZvBaNKGkLvXJB_O2Tz9zrWRWqpxW/view?usp=sharing)
-- Verbal Mention - Carmel Summit 2015 - [🔗](https://drive.google.com/file/d/1tB5BhhxyfFI4ZGXqUUqqAgwwz8GItF3R/view?usp=sharing)  
-  *...more*
 
 [External Links](https://linktr.ee/anubhabr50)
 <span class="download-cv"></span>
