@@ -2,7 +2,7 @@
 title: 'Resoc, a gift to my alma mater'
 date: "17-03-2023"
 description: "RESOC; short for Resources + Community, is the coolest academic notes-sharing platform around, built by a bunch of tech-savvy students at Silicon Institute, and it's totally free. The metrics below show the traffic :P"
-tag: "#product, #system-design"
+tag: "#tech"
 index: true
 
 ---
