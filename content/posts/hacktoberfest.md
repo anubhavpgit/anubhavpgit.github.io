@@ -491,45 +491,54 @@ The main loop calls these functions in reverse order, in the following sequence:
    bitset<32> instruction = state.ID.Instr;
    // Decode instruction
       uint32_t instr = instruction.to_ulong();
-      uint32_t opcode = instr & 0x7F;
-      uint32_t rd = (instr >> 7) & 0x1F;
-      uint32_t funct3 = (instr >> 12) & 0x7;
-      uint32_t rs1 = (instr >> 15) & 0x1F;
-      uint32_t rs2 = (instr >> 20) & 0x1F;  
-      uint32_t funct7 = (instr >> 25) & 0x7F;
-   // Hazard Detection
-      bool stall = false; // Flag to indicate a stall is required
-   // Check for RAW hazards with EX stage
-      if (state.EX.rd_mem && state.EX.Wrt_reg_addr.to_ulong() != 0){ // checks if the instruction in EX stage is a load instr and that the writeback register is not x0
-        if (state.EX.Wrt_reg_addr.to_ulong() == rs1 || state.EX.Wrt_reg_addr.to_ulong() == rs2) stall = true; // Stall required
-     // handles hazards here
+      if (instr == 0xFFFFFFFF)
+		  {
+			  // HALT instruction encountered
+			  state.IF.nop = true;		 // Stop fetching new instructions
+			  nextState.IF.nop = true; // Stop fetching new instructions
+		  }
+		  else{
+        uint32_t opcode = instr & 0x7F;
+        uint32_t rd = (instr >> 7) & 0x1F;
+        uint32_t funct3 = (instr >> 12) & 0x7;
+        uint32_t rs1 = (instr >> 15) & 0x1F;
+        uint32_t rs2 = (instr >> 20) & 0x1F;  
+        uint32_t funct7 = (instr >> 25) & 0x7F;
+    // Hazard Detection
+        bool stall = false; // Flag to indicate a stall is required
+    // Check for RAW hazards with EX stage
+        if (state.EX.rd_mem && state.EX.Wrt_reg_addr.to_ulong() != 0){ // checks if the instruction in EX stage is a load instr and that the writeback register is not x0
+          if (state.EX.Wrt_reg_addr.to_ulong() == rs1 || state.EX.Wrt_reg_addr.to_ulong() == rs2) stall = true; // Stall required
+      // handles hazards here
      ...
-      if (stall){
-   nextState.ID = state.ID; // Keep the instruction in the ID stage
-   nextState.EX.nop = true; // Insert nop in EX stage
-   nextState.IF = state.IF; // IF stage also needs to stall
-   // stall helps the EX stage to finish the operation before the ID stage reads the value
-      }
-      else{
-   // Prepare data for EX stage
-   nextState.EX.nop = false;
-   nextState.EX.Read_data1 = Read_data1;
-   nextState.EX.Read_data2 = Read_data2;
-   nextState.EX.Rs = rs1;
-   nextState.EX.Rt = rs2;
-   nextState.EX.Wrt_reg_addr = rd;
-   nextState.EX.Imm = bitset<32>(signExtendImmediate(instr));
+        if (stall){
+    nextState.ID = state.ID; // Keep the instruction in the ID stage
+    nextState.EX.nop = true; // Insert nop in EX stage
+    nextState.IF = state.IF; // IF stage also needs to stall
+    // stall helps the EX stage to finish the operation before the ID stage reads the value
+        }
+        else{
+    // Prepare data for EX stage
+    nextState.EX.nop = false;
+    nextState.EX.Read_data1 = Read_data1;
+    nextState.EX.Read_data2 = Read_data2;
+    nextState.EX.Rs = rs1;
+    nextState.EX.Rt = rs2;
+    nextState.EX.Wrt_reg_addr = rd;
+    nextState.EX.Imm = bitset<32>(signExtendImmediate(instr));
 
-   // Set control signals based on opcode
-        setControlSignals(opcode, funct3, funct7, nextState.EX); // sets the controls for the EX stage to execute the instruction based on the control signals
+    // Set control signals based on opcode
+          setControlSignals(opcode, funct3, funct7, nextState.EX); // sets the controls for the EX stage to execute the instruction based on the control signals
 
-   // Branch Handling
-        if (opcode == 0x63) // Branch instructions
-        {
+    // Branch Handling
+          if (opcode == 0x63) // Branch instructions
+          {
      .....
     ```
 
    In the example, the instruction is a load instruction, so the ID stage decodes the instruction and extracts the opcode and operands. The ID stage also checks for hazards with the EX stage. If a hazard is detected, the ID stage stalls and waits for the EX stage to finish the operation before reading the value. The ID stage then prepares the data for the EX stage and sets the control signals based on the opcode.
+
+   The `0xFFFFFFFF` instruction is a placeholder for the HALT instruction. The HALT instruction stops fetching new instructions and halts the program. ID is responsible for HALT detection and handling. 
 
 - **IF**: Instruction Fetch: Fetches the instruction from memory.
 
