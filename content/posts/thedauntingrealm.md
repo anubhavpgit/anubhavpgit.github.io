@@ -2,7 +2,7 @@
 title: "The daunting realm of adulthood; 2023"
 date: "31-12-2023"
 description: "The ups and downs of 2023"
-tag: "#life, #journal"
+tag: "#journal"
 ---
 
 ###### December

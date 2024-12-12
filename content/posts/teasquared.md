@@ -2,7 +2,7 @@
 title: "Teasquared"
 date: "15-05-2023"
 description: "A goodbye to the best four years of my life: an ode to my alma mater."
-tag: "#life"
+tag: "#life, #journal"
 ShowBreadCrumbs: true 
 ---
 <style>
