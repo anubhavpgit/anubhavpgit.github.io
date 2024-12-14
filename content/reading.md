@@ -22,12 +22,11 @@ description: "Thoughts on books read, shows watched"
 ##### Watching 
 
 
-- [ ]  Attack on Titan *- Hajime Isayama*: An anime about humanity's fight against giant humanoid creatures known as Titans.
-- [ ]  The Bear *- Christopher Storer*: A dark comedy about an award-winning chef who returns to his hometown of Chicago to manage the chaotic kitchen at his deceased brother's sandwich shop. 
-- [x]  White Collar *- Jeff Eastin*: A crime drama about a con artist who works with the FBI to catch other criminals while searching for his girlfriend.
+- [x]  Attack on Titan *- Hajime Isayama*: An anime about humanity's fight against giant humanoid creatures known as Titans.
+- [x]  The Bear *- Christopher Storer*: A dark comedy about an award-winning chef who returns to his hometown of Chicago to manage the chaotic kitchen at his deceased brother's sandwich shop. 
+- ~~White Collar *- Jeff Eastin*: A crime drama about a con artist who works with the FBI to catch other criminals while searching for his girlfriend.~~
 - [x]  Better Call Saul *- Vince Gilligan*: A prequel to Breaking Bad, about the life of Jimmy McGill, a small-time lawyer who eventually becomes the sleazy lawyer Saul Goodman.
 - [ ]  Shogun *- James Clavell*: A miniseries based on the novel of the same name, about an English sailor who becomes a samurai in feudal Japan.
-- [x]  Monk *- Andy Breckman*: A detective show about an obsessive-compulsive detective, Adrian Monk, who solves crimes in San Francisco.
 - ~~Fleabag *- Phoebe Waller-Bridge*: A dark comedy about a dry-witted woman, known only as Fleabag, has no filter as she navigates life and love in London while trying to cope with tragedy. - *this show is ssoooooooo good*~~
 -  ~~After Life *- Ricky Gervais*: A dark comedy about a widower who contemplates life after his wife's death. *heartfelt and amazing <3*~~
 - [ ]  The Mandalorian *- Jon Favreau*: A Star Wars series set after the fall of the Empire, following the adventures of a lone bounty hunter in the outer reaches of the galaxy.
