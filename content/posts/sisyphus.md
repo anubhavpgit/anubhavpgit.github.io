@@ -1,6 +1,6 @@
 ---
 title: Sisyphus
-date: 31-12-2024
+date: 31-01-2025
 description: "A journey through whims of fate and lucid memories. Growing up, old and looking for the purpose of life."
 draft: true
 tag: "#life"

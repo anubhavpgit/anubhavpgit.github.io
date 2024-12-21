@@ -154,9 +154,17 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
       tag: file.data.tag,
     });
   }
+  const parts = file.data.date.split("-"); // Split the date into [day, month, year]
+  const date = new Date(parts[2], parts[1] - 1, parts[0]);
+  const viewDate = new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(date);
 
   let templatized = templatize(template, {
     date: file.data.date,
+    viewDate: viewDate,
     title: file.data.title,
     content: file.html,
     author: file.data.author,
@@ -303,7 +311,7 @@ const buildBlogIndex = (blogs, path) => {
 
   sortedBlogs.forEach(([key, value]) => {
     const [day, month, year] = value.date.split("-");
-    const displayDate = `${monthNames[parseInt(month) - 1]} ${year.slice(-2)}`;
+    const displayDate = `${monthNames[parseInt(month) - 1]}`;
 
     if (year !== currentYear) {
       currentYear = year;
