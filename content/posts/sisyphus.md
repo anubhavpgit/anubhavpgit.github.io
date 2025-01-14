@@ -12,8 +12,6 @@ Mortals, gods, and monsters alike are bound by the whims of fate; lives marked b
 
 Sisyphus, the king of Ephyra, was punished by Zeus for cheating death twice. He was condemned to roll a boulder up a hill, only to watch it roll back down, doomed to repeat this task for eternity, never able to complete it. I see the myth of Sisyphus as a metaphor for the futility of life and the eternal journey to find purpose in a world that is indifferent to our existence. A never-ending quest, a journey fraught with constant change and uncertainty.
 
----
-
 My journey throughout these years has been quite similar. Not because I am being punished by Zeus for cheating death, but because I find myself constantly building a new life in a new corner of the world, pushing a new boulder up a new hill.
 
 Each journey represents a new beginning, a fresh start in a different city, where I find myself building a new life, making new friends, and indulging in new cultures. The ascent is filled with hope and possibility. Trying to find my place in the newfound world, building relationships, and creating memories. Eventually, the boulder rolls back down, signalling the inevitable need to move again, leaving behind what I've built and starting afresh. Empty houses - ones filled with laughter and joy, shops that let me pay later since I was a regular, now closed, replaced with malls and supermarkets, friends, now only in distant memories, neighbours who became family, and friends who became strangers. 
