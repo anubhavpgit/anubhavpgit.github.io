@@ -14,7 +14,7 @@ showdate: true
 <!-- ###### February -->
 ###### January
 
-I just finished watching Paatal Lok - Season 2 this weekend and it's an exceptionally good show. The show is a dark, gritty, and realistic portrayal of Indian society; a gripping tale of crime, corruption, and power, and a must-watch for anyone who enjoys crime dramas. I don't understand why it is not celebrated enough. The screenplay, direction, acting, the plot, the dialogues, the cinematography, everything is beautifully crafted with exceptional attention to detail; kept me on edge. 
+I just finished watching Paatal Lok - Season 2 this weekend and it's an exceptionally good show. It's a gripping tale of crime, corruption, and power, and a must-watch for anyone who enjoys crime dramas.
 
 I have a couple of [shows and books](/reading.html) to go on with. Looking forward to an amazing week ahead! 🍿
 
