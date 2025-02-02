@@ -24,9 +24,9 @@ description: "Thoughts on books read, shows watched"
 
 ##### Watching 
 
-- **Paatal Lok** *- Sudip Sharma*: A crime drama about a cynical inspector who investigates a high-profile case involving Nagaland and it's political and social issues. In this season, Inspector Hathi Ram Chaudhary (Jaideep Ahlawat) returns to tackle a complex case that intertwines political intrigue with personal vendettas.
+- ~~Paatal Lok~~ *- Sudip Sharma*: A crime drama about a cynical inspector who investigates a high-profile case involving Nagaland and it's political and social issues. In this season, Inspector Hathi Ram Chaudhary (Jaideep Ahlawat) returns to tackle a complex case that intertwines political intrigue with personal vendettas.
 
-- Jack Reacher *- Nick Santora*: A series about a former military police officer who investigates crimes and helps people in need.
+- **Reacher** *- Nick Santora*: A series about a former military police officer who investigates crimes and helps people in need.
 
 *Pending:*
 -   Attack on Titan *- Hajime Isayama*: An anime about humanity's fight against giant humanoid creatures known as Titans.

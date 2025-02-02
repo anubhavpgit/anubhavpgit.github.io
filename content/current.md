@@ -16,7 +16,7 @@ showdate: true
 
 I just finished watching Paatal Lok - Season 2 this weekend and it's an exceptionally good show. It's a gripping tale of crime, corruption, and power, and a must-watch for anyone who enjoys crime dramas.
 
-I have a couple of [shows and books](/reading.html) to go on with. Looking forward to an amazing week ahead! 🍿
+Also watching Reacher & other [shows](/reading.html) this weekend. Looking forward to an exciting weekend! 🍿 🍺
 
 Back in action: January was like an amazing much-needed magical vacation back home, and now I am back and it feels good. I met my cousins, family and relatives, ate a bunch of good Indian food, and spent a lot of time with my friends, still unsure how a month went by and if I was ready to get back to work. My sister got married, and I can't stop digesting this. She is just six months older than me, and we grew up together, inseparable. I am happy for her, but it feels like a part of me is missing. I can't wait to finish things here and rush back home.
 
