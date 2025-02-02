@@ -28,6 +28,8 @@ description: "Thoughts on books read, shows watched"
 
 - **Reacher** *- Nick Santora*: A series about a former military police officer who investigates crimes and helps people in need.
 
+- **Severance** *- Dan Erickson*: A thriller series about a company that surgically divides employees' work and personal lives.
+
 *Pending:*
 -   Attack on Titan *- Hajime Isayama*: An anime about humanity's fight against giant humanoid creatures known as Titans.
 -   The Bear *- Christopher Storer*: A dark comedy about an award-winning chef who returns to his hometown of Chicago to manage the chaotic kitchen at his deceased brother's sandwich shop. 
