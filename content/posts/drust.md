@@ -1,7 +1,7 @@
 ---
-title: 'a dristibuted chat-app for cbrtl'
+title: 'a dristibuted database'
 date: "01-05-2024"
-description: "A distributed chat application with websockets, worker threads, and a database, written in Rust and Svelte."
+description: "A distributed database application written in Rust and Svelte."
 draft: true
 index: false
 tag: "#tech"
