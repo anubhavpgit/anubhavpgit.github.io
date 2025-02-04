@@ -13,7 +13,7 @@ showdate: true
 
 ###### February
 
-I just finished watching Paatal Lok - Season 2 this weekend and it's an exceptionally good show. It's a gripping tale of crime, corruption, and power, and a must-watch for anyone who enjoys crime dramas. Also watching Reacher & other thriller [shows](/reading.html). Looking forward to an exciting weekend! 🍿 🍺
+I just finished watching Paatal Lok - Season 2 this weekend and it's an exceptionally good Indian show. It's a gripping tale of crime, corruption, and power, and a must-watch for anyone who enjoys Indie crime dramas. Also watching Severance & other thriller [shows](/reading.html). Looking forward to an exciting weekend! 🍿 🍺
 
 ###### January
 
