@@ -30,6 +30,8 @@ description: "Thoughts on books read, shows watched"
 
 - **Severance** *- Dan Erickson*: A thriller series about a company that surgically divides employees' work and personal lives.
 
+- **Ted Lasso** *- Bill Lawrence*: A comedy-drama series that follows an American football coach who is hired to manage an English football team.
+
 *Pending:*
 -   Attack on Titan *- Hajime Isayama*: An anime about humanity's fight against giant humanoid creatures known as Titans.
 -   The Bear *- Christopher Storer*: A dark comedy about an award-winning chef who returns to his hometown of Chicago to manage the chaotic kitchen at his deceased brother's sandwich shop. 
