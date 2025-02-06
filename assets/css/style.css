@@ -500,6 +500,7 @@ td:first-child:hover~td {
 
 	.nav-home {
 		position: static;
+		margin-left: -10px;
 	}
 }
 
