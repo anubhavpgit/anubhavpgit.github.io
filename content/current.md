@@ -31,9 +31,6 @@ To understand why this is revolutionary, consider the following:
 
 *With R1, DeepSeek essentially cracked one of the holy grails of AI: getting models to reason step-by-step without relying on massive supervised datasets. Their DeepSeek-R1-Zero experiment showed something remarkable: using pure reinforcement learning with carefully crafted reward functions, they managed to get models to develop sophisticated reasoning capabilities completely autonomously. This wasn't just about solving problems— the model organically learned to generate long chains of thought, self-verify its work, and allocate more computation time to harder problems.*
 
-*The technical breakthrough here was their novel approach to reward modeling. Rather than using complex neural reward models that can lead to "reward hacking" (where the model finds bogus ways to boost their rewards that don't actually lead to better real-world model performance), they developed a clever rule-based system that combines accuracy rewards (verifying final answers) with format rewards (encouraging structured thinking). This simpler approach turned out to be more robust and scalable than the process-based reward models that others have tried."*
-
-
 These excerpts are from the [The Short Case for Nvidia Stock](https://youtubetranscriptoptimizer.com/blog/05_the_short_case_for_nvda) blog post by Jeffrey Emanuel. Give this a read to understand how DeepSeek was able to achieve this and it's impact on the AI community and the world at large. I am excited to see how all this unfolds in the coming months.
 
 This year, I plan on building fewer projects and spending more time-solving Leetcode and preparing for interviews, as I am graduating by the end of this year. Currently, I am mostly involved in finishing up an old torrent project, fixing up a couple of bugs, and starting with Ferry, a C compiler for RISC-V written in Rust. This helps me learn more about computers and how they work at a lower level. 
