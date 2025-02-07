@@ -15,7 +15,7 @@ showdate: true
 
 I just finished watching Paatal Lok - Season 2 this weekend, and it's an exceptionally good Indian show. It's a gripping tale of crime, corruption, and power, and a must-watch for anyone who enjoys Indie crime dramas. On the other hand, I am currently watching a heartfelt, light-hearted show called Ted Lasso. It's a comedy-drama series that follows an American football coach who is hired to manage an English football team. The sheer optimism and relentless positivity in the show are infectious.
 
-Here's what else is in store: [reads/shows](/reading.html). Looking forward to an exciting weekend! 🍿 🍺
+Here's what else is in store: [reads/shows](/reading.html). Looking forward to an exciting month ahead! 🍿 🍺
 
 ###### January
 
@@ -25,9 +25,7 @@ My LinkedIn is filled with how Deepseek, an open-source LLM just killed it in th
 
 To understand why this is revolutionary, consider the following:
 
-*1. This model is really good. There is a lot of hype that goes around in the LLM AI benchmarks, which is rigged to favor the big players. Google is one of the worst offenders in this space as they claim how remarkable their models are, but they cannnot even solve simple issues let alone coding challenges. These DeepSeek models are not like that— the responses are coherent, compelling, and absolutely on the same level as those from OpenAI and Anthropic*
-
-*2. By being extremely close to the hardware and by layering together a handful of distinct, very clever optimizations, DeepSeek was able to train these incredible models using GPUs in a dramatically more efficient way. By some measurements, over ~45x more efficiently than other leading-edge models. DeepSeek claims that the complete cost to train DeepSeek-V3 was just over $5mm. That is absolutely nothing by the standards of OpenAI, Anthropic, etc., which were well into the $100mm+ level for training costs for a single model as early as 2024.*
+*By being extremely close to the hardware and by layering together a handful of distinct, very clever optimizations, DeepSeek was able to train these incredible models using GPUs in a dramatically more efficient way. By some measurements, over ~45x more efficiently than other leading-edge models. DeepSeek claims that the complete cost to train DeepSeek-V3 was just over $5mm. That is absolutely nothing by the standards of OpenAI, Anthropic, etc., which were well into the $100mm+ level for training costs for a single model as early as 2024.*
 
 *With R1, DeepSeek essentially cracked one of the holy grails of AI: getting models to reason step-by-step without relying on massive supervised datasets. Their DeepSeek-R1-Zero experiment showed something remarkable: using pure reinforcement learning with carefully crafted reward functions, they managed to get models to develop sophisticated reasoning capabilities completely autonomously. This wasn't just about solving problems— the model organically learned to generate long chains of thought, self-verify its work, and allocate more computation time to harder problems.*
 
