@@ -44,7 +44,7 @@ pdf: true
   - Built backend APIs using NodeJs. Configured optional parameters to switch between different blockchains. Refactored the JS-based SDK to TypeScript and NodeJs. Built Chrome extension for wallet transactions for legacy users, solving more than 90% of errors. Used mocha for unit testing.
   - Modified the existing DID pallet using Rust \& Substrate to store ID information in the blockchain with additional unit tests. Collaborated on the wallet transfer PWA to cater to the needs of existing users on the older blockchain.
 - **Freelance Software Developer** - *Afixi Technologies* 2022 - [🔗](https://drive.google.com/file/d/1rWImLNao3abkQF313Jb8gT5Ybq8aNQeA/view?usp=sharing)
-  - Set up a platform to handle DDEX submissions using Amazon AWS S3 & Go. Wrote a Python script to automate the uploading of music from the producer's S3 bucket and automated the uploading of music on YouTube.
+  - Set up a platform to handle DDEX submissions using Amazon AWS S3 & Go. Wrote a Python script to automate the uploading of music from the producer's S3 bucket and automated the uploading of music files on YouTube.
 - **MLOps** & **React Intern** - *Ebibil Technologies* 2021 - [🔗](https://drive.google.com/file/d/1povslBn3QFW9GvSJSvPLF3UqN1-2DBuI/view?usp=sharing)
   - Collaborated on the Django web app to integrate with ML models for a smart parking system.
   - Implemented a PWA using React for the admin panel that manages the parking system.
