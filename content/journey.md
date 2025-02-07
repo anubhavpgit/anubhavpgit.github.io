@@ -9,8 +9,8 @@ pdf: true
 
 ### Educational Background
 
-- MSCE - New York University, Tandon School of Engineering, NY- 2026 - [🔗]()
-- B.Tech in CSE - Silicon Institute of Technology, Bhubaneswar, 2023 - [🔗](/assets/docs/190310030.pdf)
+- MSCE - New York University, Tandon School of Engineering, NY, 2024-25
+- B.Tech in CSE - Silicon Institute of Technology, Bhubaneswar, 2019-23
 
 ---
 
@@ -43,9 +43,9 @@ pdf: true
   - Designed and developed the Squbix Website. Refactored React-Native applications with better UI, implemented offline storage, and push notifications, and built an ERP app to monitor the attendance and tasks of employees.
   - Built backend APIs using NodeJs. Configured optional parameters to switch between different blockchains. Refactored the JS-based SDK to TypeScript and NodeJs. Built Chrome extension for wallet transactions for legacy users, solving more than 90% of errors. Used mocha for unit testing.
   - Modified the existing DID pallet using Rust \& Substrate to store ID information in the blockchain with additional unit tests. Collaborated on the wallet transfer PWA to cater to the needs of existing users on the older blockchain.
-- **Freelance Software Developer** - *Afixi Technologies* 2022 - [🔗](https://drive.google.com/file/d/1rWImLNao3abkQF313Jb8gT5Ybq8aNQeA/view?usp=sharing)
+- **Software Developer <u>Intern</u>** - *Afixi Technologies* 2022 - [🔗](https://drive.google.com/file/d/1rWImLNao3abkQF313Jb8gT5Ybq8aNQeA/view?usp=sharing)
   - Set up a platform to handle DDEX submissions using Amazon AWS S3 & Go. Wrote a Python script to automate the uploading of music from the producer's S3 bucket and automated the uploading of music files on YouTube.
-- **MLOps** & **React Intern** - *Ebibil Technologies* 2021 - [🔗](https://drive.google.com/file/d/1povslBn3QFW9GvSJSvPLF3UqN1-2DBuI/view?usp=sharing)
+- **MLOps Engineer <u>Intern</u>** - *Ebibil Technologies* 2021 - [🔗](https://drive.google.com/file/d/1povslBn3QFW9GvSJSvPLF3UqN1-2DBuI/view?usp=sharing)
   - Collaborated on the Django web app to integrate with ML models for a smart parking system.
   - Implemented a PWA using React for the admin panel that manages the parking system.
   - Contributed to ML models in Python to build an ANPR system to detect the license plate with 67\% accuracy.
@@ -71,6 +71,7 @@ pdf: true
 - [Depression Detector](https://github.com/fuzzymf/Detecting-Depression-in-Tweets) - A **TF/IDF classifier** - sentiment analysis model to detect depression in tweets.
 - [Movie Rating Prediction](https://github.com/fuzzymf/Movie-rating-prediction) - Predicting the rating of a movie based on the review using **Naive Bayes**.
 - [Movie Recommendation System](https://github.com/fuzzymf/Movie-recommendation) - An item-based collaborative recommendation system using **Cosine Similarity**.
+
 ---
 
 ### Activities
@@ -90,5 +91,5 @@ pdf: true
 - High Commendation I ( Best Del ) - SITMUN 2020 - [🔗](https://drive.google.com/file/d/1nbwySBjw8uUQH9bWY_vR0SeXt8x4B54M/view?usp=sharing)
 - Photographer/ Graphic Designer - SIT: Media Cell - 2020 [🔗](https://drive.google.com/file/d/1z91iZPJxbJAIusamhn9BtrjMRN7pVH7k/view?usp=drivesdk)
 
-[Github](https://github.com/fuzzymf) | [LinkedIn](https://www.linkedin.com/in/anubhabpatnaik/) | [Dribble](https://dribbble.com/fuzzymf) | [Instagram](https://www.instagram.com/anubhavclicks/)
+[Email](mailto:anubhabr50@gmail.com) | [Github](https://github.com/fuzzymf) | [LinkedIn](https://www.linkedin.com/in/anubhabpatnaik/) | [Dribble](https://dribbble.com/fuzzymf) | [Instagram](https://www.instagram.com/anubhavclicks/)
 <span class="download-cv"></span>
