@@ -3,8 +3,9 @@ title: 'Rust: the future C++?'
 date: "14-10-2022"
 description: "Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C++ but with emphasis on code safety. Will it replace C++ anytime soon?"
 tag: "#tech"
-ShowBreadCrumbs: true 
 ---
+While choosing the next language to learn, or to use for building a high-performing, memory-efficient application, you might have come across Rust. Here's a breakdown of what I found about Rust and how it compares to the already existing compiled language king, C++.
+
 Rust is a multi-paradigm systems programming language created to ensure high performance similar to that offered by C and C++, but with emphasis on code safety, the lack of which is probably why C and C++ are painful to deal with. It accomplishes memory safety without using a dedicated garbage collector. Rust is also an ahead-of-time compiled language, which means that you can compile a rust program, give it to someone else, and they can run it even without having Rust installed. However, Rust has more than just memory safety on its side. High performance while processing large amounts of data, support for concurrent programming, and an effective compiler are other reasons why well-known software heavyweights such as Firefox, Dropbox, Cloudflare, and many web-3 startups and large corporations use Rust in production.
 
 Some questions that may come to your mind are:
