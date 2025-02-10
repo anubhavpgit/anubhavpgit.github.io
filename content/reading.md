@@ -5,11 +5,11 @@ description: "Thoughts on books read, shows watched"
 
 ##### Reading
 
--   A Thousand Splendid Suns *- Khaled Hosseini*: A novel about the lives of two girls in Afghanistan, and how their lives intertwine. I've read this book before, but I wanted to revisit it.
+- **Hooked: How to Build Habit-Forming Products** *- Nir Eyal*: A book that talks about how to build products that people can't stop using.
 
-*Pending:*
+<!-- *Pending:* -->
 
-- The three body problem *- Cixin Liu*: A sci-fi novel about the first contact between humans and an alien civilization, set in China during the cultural revolution. Initially I found it slow-paced, but it picks up pace after the first few chapters.
+<!-- - The three body problem *- Cixin Liu*: A sci-fi novel about the first contact between humans and an alien civilization, set in China during the cultural revolution. Initially I found it slow-paced, but it picks up pace after the first few chapters. -->
 <!-- -   Dune *- Frank Herbert* -->
 <!-- -   The hitchhiker's guide to the galaxy *- Douglas Adams* -->
 <!-- -  All the light we cannot see *- Anthony Doerr* -->
