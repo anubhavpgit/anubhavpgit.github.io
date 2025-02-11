@@ -3,7 +3,7 @@ title: "Docking Compilers"
 date: "12-12-2024"
 description: "Understanding compilers and building binary interpreters for machine code in RISC-V in Hacktoberfest."
 tag: "#tech, #compiler"
-draft: false
+
 ---
 <script type="module" src="/assets/js/yatch/main.js"></script>
 <link rel="stylesheet" href="/assets/css/yatch/style.css">

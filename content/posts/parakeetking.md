@@ -2,7 +2,7 @@
 title: "The Parakeet King"
 date: "01-08-2024"
 description: "A story about a king who lost his kingdom and found a friend."
-draft: false
+
 tag: "#life"
 ---
 

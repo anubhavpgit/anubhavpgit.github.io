@@ -3,7 +3,7 @@ title: 'iPhone season in the US'
 date: "30-10-2024"
 description: "A short insight into how carrier providers are giving away free iPhones"
 tag: "#business"
-draft: false
+
 ---
 
 This October, I bought the latest, newest release of Apple's iPhone 16 Pro Max, and was amazed at how the carrier providers were giving away the latest iPhones for almost free. Here's what I found:
