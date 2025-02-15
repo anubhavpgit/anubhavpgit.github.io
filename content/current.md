@@ -19,7 +19,7 @@ Tech is a commodity now, anyone with a slight sense of what they are doing can b
 
 The real challenge is to build something that people want. I am currently reading *Hooked: How to Build Habit-Forming Products* by Nir Eyal. It's a great book that talks about how to build products that people can't stop using. It's a must-read for anyone who is interested in building products that people love.
 
-I just finished watching Paatal Lok - Season 2 this weekend, and it's an exceptionally good Indian show. It's a gripping tale of crime, corruption, and power, and a must-watch for anyone who enjoys Indie crime dramas. On the other hand, I am currently watching a heartfelt, light-hearted show called Ted Lasso. It's a comedy-drama series that follows an American football coach who is hired to manage an English football team. The sheer optimism and relentless positivity in the show are infectious.
+I just finished watching Paatal Lok - Season 2 this weekend, and it's a gripping tale of crime, corruption, and power, and a must-watch for anyone who enjoys Indie crime dramas, and it's really good. On the other hand, I am currently watching a heartfelt, light-hearted show called Ted Lasso. It's a comedy-drama series that follows an American football coach who is hired to manage an English football team. The sheer optimism and relentless positivity in the show are infectious. The show is so so good!
 
 Here's what else is in store: [reads/shows](/reading.html). Looking forward to an exciting month ahead! 🍿 🍺
 
