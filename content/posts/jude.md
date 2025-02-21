@@ -1,8 +1,8 @@
 ---
 title: 'Hey, Jude! A product journey roadmap'	
 date: "26-02-2025"
-description: "Not a tribute to the Beatles' song. This is a product journey roadmap of Jude; an AI-powered nutritionist that helps me make healthier life choices."
-draft: false
+description: "Not a tribute to the Beatles' song. This is a product journey roadmap of Jude; why and how I decided to build an AI assisted nutrition tracker, and what it might look like as a full-fledged product."
+draft: true
 tag: "#tech, #product"
 ---
 
