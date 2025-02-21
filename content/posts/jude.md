@@ -78,13 +78,10 @@ Jude has a simple and intuitive interface that makes it easy to track your daily
 
 Each section has an analysis tab that just analyzes the data and provides you with insights on your daily intake according to your goals.
 
-![Intial Sketch](../assets/img/jude/initial_sketch.jpeg)
+![Initial Sketch](../assets/img/jude/initial_sketch.jpeg)
 \- Initial Sketch of the landing page
 
-Focusing more on the homepage design, I came up with this
-![Homepage](../assets/img/jude/homepage.jpeg) 
-
-Here, my objective was to make the platform really attractive and easy to use. These are the initial drafts of the application, the *v0.1s*, and thus, do not yet look like the final product. They are just basic POCs. The homepage with the daily analysis looks somewhat like this for now. 
+Here, my objective was to make the platform really attractive and easy to use. These are the initial drafts of the application, the *v0.xs*, and thus, do not yet look like the final product. They are just basic POCs. The homepage with the daily analysis looks somewhat like this for now. 
 
 <div style="display: flex; justify-content: center; align-items: center;">
 	<div align="center">
@@ -101,7 +98,7 @@ Here, my objective was to make the platform really attractive and easy to use. T
 	</div>
 </div>
 
-The final versions, however, will look entirely different, with much better interface, and more user-friendly. I have designed and re-designed this over a thousand time now, and the final one looks like this:
+The final versions, however, will look entirely different, with a much better interface, and more user-friendly. I have designed and re-designed this over a thousand times now, and the final one looks like this:
 
 (*The screenshot of the latest build is not deployed, yet. Fixing some final nuances.*)
 
@@ -110,7 +107,7 @@ The bottom drawer pulls up the chat section. The chat UI is heavily inspired by 
 <div align="center">
   <figure>
 		<img src="../assets/img/jude/monthly_weekly.jpeg" alt="Chat" class="h-75 w-100	 p-1" />
-		<figcaption>Intial design of the mothly and weekly sections</figcaption>
+		<figcaption>The initial design of the monthly and weekly sections</figcaption>
 	</figure>
 </div>
 
@@ -121,7 +118,7 @@ The bottom drawer pulls up the chat section. The chat UI is heavily inspired by 
 	</figure>
 </div>
 
-And, the latest version of these turned out to a lot better than the scribbled drafts, which look like this:
+And, the latest version of these turned out to be a lot better than the scribbled drafts, which look like this:
 
 (*Yet to update this part*)
 
@@ -139,7 +136,7 @@ I did not want to spend a lot of time in code. It's a pretty straightforward thi
   ```typescript
   <div className="max-w-4xl mx-auto">
     {/* Todo:
-      - Implement a horizontal caraoousel for the following components
+      - Implement a horizontal caraousel for the following components
       - 1. Monthly Stats
       - 2. Weekly Stats
       - 3. Landing Page
@@ -160,9 +157,8 @@ I did not want to spend a lot of time in code. It's a pretty straightforward thi
   </div>
   ```
 - Primsa + MongoDB for the database
-	- Schema for the DB looks like this:
 
-  This model would technically support multiple users. 
+  Schema for the DB looks like this:
 
   ```typescript
   model User {
@@ -178,6 +174,9 @@ I did not want to spend a lot of time in code. It's a pretty straightforward thi
     @@map("users")
   }
   ```
+
+  This model would technically support multiple users. 
+
 
   ```typescript
   model Food { // The main food model
@@ -239,7 +238,7 @@ I'll share it once I am done cleaning, refactoring, and documenting it properly.
 
 ***"How do I know that my data is secure and not being shared with third-party companies?"*** 
 
-As a complete product, I don't see Judestoring any of your personal information. All personal data would be encrypted and would not sent to the AI. The layer in between abstracts the data and sends only the necessary information to the AI. This is also why Jude would use your own AI `API Key. You can still rely on the default setting (using Jude’s default API key) if you don’t want to use your own API key. In any case, your data is secure and not shared with any third-party companies. 
+As a complete product, I don't see Jude storing any of your personal information. All personal data would be encrypted and would not sent to the AI. The layer in between abstracts the data and sends only the necessary information to the AI. This is also why Jude would use your own AI `API Key. You can still rely on the default setting (using Jude’s default API key) if you don’t want to use your own API key. In any case, your data is secure and not shared with any third-party companies. 
 
 The business plan never includes sharing your data with third-party companies for advertising or any other purposes. Even if you see ads on the platform, they are not based on your personal data. The ads are based on the content of the platform and are not targeted at you.
 
@@ -252,10 +251,10 @@ The future of Jude is bright. The platform is in the early stages, and there are
 - Provide you with a shopping list every month based on the meal plan and recipes
 - Support analysing sleep, exercise, and other health-related data
 
-### Reviews, feedbacks, and suggestions - next?
+### Reviews, feedback, and suggestions - what next?
 
-Building Jude is a blast. I am just in the early stages of development, and yet a long, long way to go. At the very least, I am sure it is better than whatever out there you think could compete with it. This article was a simple entry point into how my brain worked like, while building Jude. The final product when completed, would be a lot better than what you see here. Jude is just a personal project that actually solves my problem, and I thought would be cool to share with you all. It isn't fancy tech, no blockchains, graphs, distributed systems or low level compilation. Just first principles.
+Building Jude is a blast. I am just in the early stages of development, and yet a long, long way to go. At the very least, I am sure it is better than whatever out there you think could compete with it. This article was a simple entry point into how my brain worked while building Jude. The final product when completed, would be a lot better than what you see here. Jude is just a personal project that actually solves my problem, and I thought would be cool to share with you all. It isn't fancy tech, no blockchains, graphs, distributed systems or low-level compilation. Just first principles.
 
 And that's how you build a product- you build it for yourself. Identify a problem, ideate, strategize, and brainstorm. And then, build it. Startups can truly be summarized in these few steps. Remember, the most important part of building a product is to build something that you love, and the working prototype is always better than the perfect idea. The world is your oyster. Go build crazy!
 
-If you do end up using it, I hope you like it too. Drop your feedbacks, suggestions, and reviews in the comments below. I would love to hear from you!
+If you do end up using it, I hope you like it too. Drop your feedback, suggestions, and reviews in the comments below. I would love to hear from you!
