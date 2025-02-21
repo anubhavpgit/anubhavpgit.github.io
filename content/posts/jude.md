@@ -79,53 +79,51 @@ Jude has a simple and intuitive interface that makes it easy to track your daily
 Each section has an analysis tab that just analyzes the data and provides you with insights on your daily intake according to your goals.
 
 ![Intial Sketch](../assets/img/jude/initial_sketch.jpeg)
+\- Initial Sketch of the landing page
 
-Focusing more on the homepage design, I came up with:
-
+Focusing more on the homepage design, I came up with this
 ![Homepage](../assets/img/jude/homepage.jpeg) 
 
-Here, my objective was to make the platform really attractive and easy to use. These are the initial drafts of the application and, thus do not yet look like the final product. They are just basic POCs. The homepage with the daily analysis looks somewhat like this for now. This page will be revamped soon to make it more user-friendly and intuitive (will design it over 200 times and go back to the first design in the end), and also include a progress bar to show how much you have consumed for each macronutrient.
+Here, my objective was to make the platform really attractive and easy to use. These are the initial drafts of the application, the *v0.1s*, and thus, do not yet look like the final product. They are just basic POCs. The homepage with the daily analysis looks somewhat like this for now. 
 
 <div style="display: flex; justify-content: center; align-items: center;">
 	<div align="center">
 		<figure>
 			<img src="../assets/img/jude/setEdit_true.jpeg" alt="Chat" class="h-50 w-75	 p-1" />
-			<figcaption>Editing the meals</figcaption>
+			<figcaption> Manually editing the meal entries v0.3 </figcaption>
 		</figure>
 	</div>
 	<div align="center">
 		<figure>
 			<img src="../assets/img/jude/jude_dark.jpeg" alt="Chat" class="h-50 w-75 p-1" />
-			<figcaption>Dark Mode</figcaption>
+			<figcaption>Dark Mode v0.4 </figcaption>
 		</figure>
 	</div>
 </div>
 
-The bottom drawer pulls up the chat section. The chat UI is heavily inspired by ChatGPT. If it ain't broke, don't fix it. Here's a glimpse of what it looks like:
+The final versions, however, will look entirely different, with much better interface, and more user-friendly. I have designed and re-designed this over a thousand time now, and the final one looks like this:
+
+(*The screenshot of the latest build is not deployed, yet. Fixing some final nuances.*)
+
+The bottom drawer pulls up the chat section. The chat UI is heavily inspired by ChatGPT. If it ain't broke, don't fix it. The saved food section is pretty simple. It has a search bar where you can search for the food items you have saved, and you can add them to your daily log. The profile section is where you can update your personal information, dietary preferences, and goals. And, the initial design of the landing segment with the weekly and monthly analysis looks somewhat like this:
 
 <div align="center">
-	<figure>
-		<img src="../assets/img/jude/chat.jpeg" alt="Chat" class="h-25 w-50 p-1" />
-		<figcaption>Chat section</figcaption>
+  <figure>
+		<img src="../assets/img/jude/monthly_weekly.jpeg" alt="Chat" class="h-75 w-100	 p-1" />
+		<figcaption>Intial design of the mothly and weekly sections</figcaption>
 	</figure>
 </div>
 
-The saved food section is pretty simple. It has a search bar where you can search for the food items you have saved, and you can add them to your daily log. The profile section is where you can update your personal information, dietary preferences, and goals. And, the initial design of the landing segment with the weekly and monthly analysis looks somewhat like this:
-
-<div style="display: flex; justify-content: center; align-items: center;">
-	<div align="center">
-		<figure>
-			<img src="../assets/img/jude/monthly_weekly.jpeg" alt="Chat" class="h-75 w-100	 p-1" />
-			<figcaption>Chat section</figcaption>
-		</figure>
-	</div>
-	<div align="center">
-		<figure>
-			<img src="../assets/img/jude/saved_food.jpeg" alt="Chat" class="h-75 w-100 p-1" />
-			<figcaption>Chat section</figcaption>
-		</figure>
-	</div>
+<div align="center">
+	<figure>
+		<img src="../assets/img/jude/saved_food.jpeg" alt="Chat" class="h-75 w-100 p-1" />
+		<figcaption>The saved food section </figcaption>
+	</figure>
 </div>
+
+And, the latest version of these turned out to a lot better than the scribbled drafts, which look like this:
+
+(*Yet to update this part*)
 
 ### Coding up to speed: TypeScript + NextJs + MongoDB + GPT = Jude
 
@@ -135,77 +133,103 @@ I did not want to spend a lot of time in code. It's a pretty straightforward thi
 	- Has `home`, `chat`, `saved_food`, `profile`, and pages with respective components.
 	- The backend similarly has respective API routes. I am not going deep into this; pretty standard stuff.
 	- TailwindCSS for the styling
-- ChatGPT for the AI
+  
+  The intial version of the code looked like this:
+
+  ```typescript
+  <div className="max-w-4xl mx-auto">
+    {/* Todo:
+      - Implement a horizontal caraoousel for the following components
+      - 1. Monthly Stats
+      - 2. Weekly Stats
+      - 3. Landing Page
+    */}
+
+    {/* The default entry point:  Landing Page */}
+
+    {/* Todo- Import:
+      - Saved Food - Swipe Left from home
+      - Profile - Upper right corner
+    */}
+
+    <Home isDark={isDark} setIsDark={setIsDark} />
+        {/* Jude Chat component */}
+    <Drawer open={open} setOpen={setOpen} isDark={isDark}>
+        <Chat isDark={isDark} isOpen={open} setOpen={setOpen} />
+    </Drawer>
+  </div>
+  ```
 - Primsa + MongoDB for the database
 	- Schema for the DB looks like this:
 
-This model would technically support multiple users. 
+  This model would technically support multiple users. 
 
-```typescript
-model User {
-  id          String      @id @default(auto()) @map("_id") @db.ObjectId
-  uid         String      @unique
-  name        String
-  email       String      @unique
-  phoneNumber String?
-  // Relations
-  savedFoods  SavedFood[]
-  mealLogs    MealLog[]
+  ```typescript
+  model User {
+    id          String      @id @default(auto()) @map("_id") @db.ObjectId
+    uid         String      @unique
+    name        String
+    email       String      @unique
+    phoneNumber String?
+    // Relations
+    savedFoods  SavedFood[]
+    mealLogs    MealLog[]
 
-  @@map("users")
-}
-```
+    @@map("users")
+  }
+  ```
 
-```typescript
-model Food { // The main food model
-  id             String    @id @default(auto()) @map("_id") @db.ObjectId
-  name           String
-  proteins       Float
-  fats           Float
-  carbs          Float
-  totalCalories  Int
-  analysis       String?
-  suggestions    String?
-  micronutrients Json?
-  // Relations
-  mealLogEntries MealLogEntry[]
-  savedFoods     SavedFood[]
+  ```typescript
+  model Food { // The main food model
+    id             String    @id @default(auto()) @map("_id") @db.ObjectId
+    name           String
+    proteins       Float
+    fats           Float
+    carbs          Float
+    totalCalories  Int
+    analysis       String?
+    suggestions    String?
+    micronutrients Json?
+    // Relations
+    mealLogEntries MealLogEntry[]
+    savedFoods     SavedFood[]
 
-  @@map("foods")
-}
-```
-These are the main models. Each entry would correspond to a `mealLogEntry`, which is basically what you had in a meal. Each `mealLogEntry` would have a `food` entry. The `food` entry would have the nutritional information. And daily, you would have a `mealLog` entry that would have all the `mealLogEntries` for the day.
+    @@map("foods")
+  }
+  ```
+  These are the main models. Each entry would correspond to a `mealLogEntry`, which is basically what you had in a meal. Each `mealLogEntry` would have a `food` entry. The `food` entry would have the nutritional information. And daily, you would have a `mealLog` entry that would have all the `mealLogEntries` for the day.
 
-```typescript
+  ```typescript
 
-model MealLog { // The daily log: what you ate, how much you ate, and the total calories
-  id            String         @id @default(auto()) @map("_id") @db.ObjectId
-  userId        String         @db.ObjectId
-  logDate       DateTime
-  totalCalories Int?
-  analysis      String?
-  mealEntries   MealLogEntry[] // Each entry in the daily log
+  model MealLog { // The daily log: what you ate, how much you ate, and the total calories
+    id            String         @id @default(auto()) @map("_id") @db.ObjectId
+    userId        String         @db.ObjectId
+    logDate       DateTime
+    totalCalories Int?
+    analysis      String?
+    mealEntries   MealLogEntry[] // Each entry in the daily log
 
-  user          User           @relation(fields: [userId], references: [id])
+    user          User           @relation(fields: [userId], references: [id])
 
-  @@map("mealLogs")
-}
+    @@map("mealLogs")
+  }
 
-model MealLogEntry { // Each meal entry in the daily log
-  id         String   @id @default(auto()) @map("_id") @db.ObjectId
-  mealLogId  String   @db.ObjectId
-  mealType   String   // e.g., "breakfast", "lunch", "dinner", "snack"
-  foodId     String   @db.ObjectId
-  servings   Float
-  calories   Int
+  model MealLogEntry { // Each meal entry in the daily log
+    id         String   @id @default(auto()) @map("_id") @db.ObjectId
+    mealLogId  String   @db.ObjectId
+    mealType   String   // e.g., "breakfast", "lunch", "dinner", "snack"
+    foodId     String   @db.ObjectId
+    servings   Float
+    calories   Int
 
-  mealLog    MealLog  @relation(fields: [mealLogId], references: [id]) // Relates to the daily log
-  food       Food     @relation(fields: [foodId], references: [id])
-  @@map("mealLogEntries")
-}
-```
+    mealLog    MealLog  @relation(fields: [mealLogId], references: [id]) // Relates to the daily log
+    food       Food     @relation(fields: [foodId], references: [id])
+    @@map("mealLogEntries")
+  }
+  ```
+- ChatGPT for the AI
 
-The source is not available as of now cause it is really messy. Since I did not properly spend time thinking about the architecture and the design, it doesn't employ the best practices. For example, I got lazy and stuck with `prop-drilling` rather than using a global state management library, and I did not use any design patterns. Some type inferences are missing, `any` has been my saviour at times, and thus, the code is not clean. As of now, it gets the job done.
+The source is not available as of now cause it is really messy. I did not properly spend time thinking about the architecture and the design and, thus it doesn't employ the best practices. For example, I got lazy and stuck with `prop-drilling` rather than using a global state management library, and I did not use any design patterns. Some type inferences are missing, `any` has been my saviour at times, and thus, the code is not clean. As of now, it gets the job done.
 
 I'll share it once I am done cleaning, refactoring, and documenting it properly.
 
@@ -228,8 +252,10 @@ The future of Jude is bright. The platform is in the early stages, and there are
 - Provide you with a shopping list every month based on the meal plan and recipes
 - Support analysing sleep, exercise, and other health-related data
 
-### Reviews, feedbacks, and suggestions
+### Reviews, feedbacks, and suggestions - next?
 
-Building Jude is a blast. I am just in the early stages of development, and yet a long way to go. At the very least, I am sure it is better than whatever out there you think could compete with it.
+Building Jude is a blast. I am just in the early stages of development, and yet a long, long way to go. At the very least, I am sure it is better than whatever out there you think could compete with it. This article was a simple entry point into how my brain worked like, while building Jude. The final product when completed, would be a lot better than what you see here. Jude is just a personal project that actually solves my problem, and I thought would be cool to share with you all. It isn't fancy tech, no blockchains, graphs, distributed systems or low level compilation. Just first principles.
 
-If you use it, I hope you like it too. Drop your feedbacks, suggestions, and reviews in the comments below. I would love to hear from you!
+And that's how you build a product- you build it for yourself. Identify a problem, ideate, strategize, and brainstorm. And then, build it. Startups can truly be summarized in these few steps. Remember, the most important part of building a product is to build something that you love, and the working prototype is always better than the perfect idea. The world is your oyster. Go build crazy!
+
+If you do end up using it, I hope you like it too. Drop your feedbacks, suggestions, and reviews in the comments below. I would love to hear from you!
