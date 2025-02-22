@@ -2,7 +2,7 @@
 title: Sisyphus
 date: 03-03-2025
 description: "A journey through whims of fate and lucid memories. Growing up, old and looking for the purpose of life."
-draft: false
+draft: true
 tag: "#life"
 ---
 
