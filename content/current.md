@@ -46,5 +46,5 @@ I am going back home, this month. If you're curious, I will be spending more tim
 Here’s to new beginnings, and new adventures! 🥂 I hope you have a great year ahead. Merry Christmas, and a happy New Year, everyone! Promise to be back soon. Keep checking :)
 
 ---
-2024: [The magic and the storms](/blog/themagicandthestorms.html)  
-2023: [The daunting realm of adulthood](/blog/thedauntingrealm.html)
+[2024](/blog/24.html)  
+[2023](/blog/23.html)  
