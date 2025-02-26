@@ -24,12 +24,24 @@ description: "Thoughts on books read, shows watched"
 
 ##### Watching 
 
-- ~~Paatal Lok~~ *- Sudip Sharma*: A crime drama about a cynical inspector who investigates a high-profile case involving Nagaland and it's political and social issues. In this season, Inspector Hathi Ram Chaudhary (Jaideep Ahlawat) returns to tackle a complex case that intertwines political intrigue with personal vendettas.
-- **Reacher** *- Nick Santora*: A series about a former military police officer who investigates crimes and helps people in need.
-- **Severance** *- Dan Erickson*: A thriller series about a company that surgically divides employees' work and personal lives.
+- ~~**The Marvelous Mrs. Maisel**~~ *- Amy Sherman-Palladino*: A comedy-drama series about a housewife who becomes a stand-up comedian in the 1950s.
+
+	This show feels like a breath of fresh air. The writing is sharp, the characters are well-developed, and the acting is top-notch. The wins feel personal here, well-deserved. Running parallels, Midge's journey feels like building something from 0 to 1. 
+
 - ~~**Ted Lasso**~~ *- Bill Lawrence*: A comedy-drama series that follows an American football coach who is hired to manage an English football team.
+
+	There's something about this show that makes you feel so, so good. The characters are really well-written, sharp, each fraught with their own insecurities and vulnerabilities. The writing is top-notch, the humor is on point, and the story is heartwarming. The show is about kindness, empathy, and the power of positivity. It's a reminder that sometimes, all you need is a little bit of optimism to make things better.
+
+- ~~Paatal Lok~~ *- Sudip Sharma*: A crime drama about a cynical inspector who investigates a high-profile case involving Nagaland and it's political and social issues. In this season, Inspector Hathi Ram Chaudhary (Jaideep Ahlawat) returns to tackle a complex case that intertwines political intrigue with personal vendettas.
+	
+	There's a lot to unpack in this show. The story development is slightly slow, but it is worth the wait. A really good Indie-crime drama that delves into the dark underbelly of society. 
+
+
+- **Severance** *- Dan Erickson*: A thriller series about a company that surgically divides employees' work and personal lives.
+
+	
 -   The Bear *- Christopher Storer*: A dark comedy about an award-winning chef who returns to his hometown of Chicago to manage the chaotic kitchen at his deceased brother's sandwich shop. 
-- **The Marvelous Mrs. Maisel** *- Amy Sherman-Palladino*: A comedy-drama series about a housewife who becomes a stand-up comedian in the 1950s.
+
 
 <!-- *Pending:*
 

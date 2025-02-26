@@ -10,6 +10,11 @@ showdate: true
 
 <span class="update-date-time"></span>
 
+<!-- 
+###### March
+
+Is it March yet? I remember going back home, India for a break, and now two months are already over? Strange. On this side of the world, I am currently working building a compiler for a subset of C language to RISC-V assembly language. It's a fun project that helps me understand how compilers work.
+I joined the SSL (Secure Systems Lab) in NYU, and am involved in a project aimed at building a secure system that aims to isolate processes in a single process sandbox. This helps in limiting the damage of bugs or security flaws in the application. Also, involved in some reasearch about [Meta's Orion Glasses](https://about.fb.com/news/2024/09/introducing-orion-our-first-true-augmented-reality-glasses/) because I found the hand gestured controllers fascinating. I am planning to work this semester on a controller as such, and excited to see how this unfolds in the coming months. -->
 
 ###### February
 
@@ -19,9 +24,9 @@ Tech is a commodity now, anyone with a slight sense of what they are doing can b
 
 The real challenge is to build something that people want. I am currently reading *Hooked: How to Build Habit-Forming Products* by Nir Eyal. It's a great book that talks about how to build products that people can't stop using. It's a must-read for anyone who is interested in building products that people love.
 
-I just finished watching Paatal Lok - Season 2 this weekend. It's a gripping tale of crime, corruption, and power, a must-watch for anyone who enjoys Indie crime dramas, and it's really good. On the other hand, also currently watching a heartfelt, light-hearted show called Ted Lasso. It's a comedy-drama series that follows an American football coach who is hired to manage an English football team. The sheer optimism and relentless positivity in the show are infectious. The show is so so good!
+I just finished watching Paatal Lok - Season 2 this weekend. It's a gripping tale of crime, corruption, and power, a must-watch for anyone who enjoys Indie crime dramas, and it's really good. On the other hand, also currently watching a heartfelt, light-hearted show called Ted Lasso. It's a comedy-drama series that follows an American football coach who is hired to manage an English football team. The sheer optimism and relentless positivity in the show are infectious. This show is so good! If you're more interested in watching shows about the journey of building yourself, try watching Marvelous Mrs. Maisel. It's a comedy-drama series about a housewife who becomes a stand-up comedian in the 1950s. The writing is sharp, the characters are well-developed, and the acting is top-notch. Running parallels, Midge's wins feel personal here, well-deserved, like building something, a startup, from 0 to 1.
 
-Here's what else is in store: [reads/shows](/reading.html). Looking forward to an exciting month ahead! 🍿 🍺
+Here's what else is brewing: [reads/shows](/reading.html). Looking forward to an exciting month ahead! 🍿 🍺
 
 ###### January
 
