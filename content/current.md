@@ -4,7 +4,7 @@ description: "Here's what I am upto these days"
 showdate: true
 ---
 
-##### Current, 2024
+##### Current, 2025
 
 [Reading/ Watching](/reading.html)  |   [Mementos](/mementos.html)  
 
