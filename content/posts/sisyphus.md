@@ -2,7 +2,7 @@
 title: Sisyphus
 date: 03-03-2025
 description: "A journey through whims of fate and lucid memories. Growing up, old and looking for the purpose of life."
-draft: true
+draft: false
 tag: "#life"
 ---
 
@@ -112,11 +112,11 @@ However, our time in Jajpur was brief. The rural setting, while peaceful, presen
 
 ### Leaving back the rural life, moving to the city
 
-Me, my mother and sister moved to Cuttack, while my father stayed back in Jajpur to wrap up his term, although the places weren't that far. The move to Cuttack put back a sense of belonging in my life. The city was vibrant, with a rich history and culture. The streets were lined with ancient temples, bustling markets, and the scent of fresh flowers. I was in fifth grade now, and I attended the *DAV Public School*.
+Me, my mother and sister moved to Cuttack, while my father stayed back in Jajpur to wrap up his term, although the places weren't that far. The move to Cuttack put back a sense of belonging in my life. The city was vibrant, with a rich history and culture. The streets were lined with ancient temples, bustling markets, and the scent of fresh flowers. I was in fifth grade now, and I attended the *DAV Public School, CDA*.
 
- <!-- I connected with a lot of folks in the class, and the school was a mix of students from different backgrounds. And, it was quicker to reach home now, like a 30-minute drive from Bhubaneswar. -->
+Cuttack’s culture was as rich as its history. Because it’s one of Odisha’s oldest cities, it has welcomed people from all over India, creating a unique tapestry of communities. While Odia was the main language, I also encountered Bengali, Marwari, and other influences daily. The school introduced me to a bunch of new friends and perspectives, and mytuition classes were fun-filled.
 
-Our life in Cuttack was beautiful, always filled with family and relatives, and more than half the time was back at home. I made a lot of friends, and living in a city made all sense to me. However, the boulder was yet to roll down, and a new hill was yet to be scaled. We were there for just another year before my father's office decided it was time. Time for another ascent, a boulder to be moved, a new life to be built. Bags packed, trucks loaded, sitting in a car, watching the city pass by, we found ourselves in Jamshedpur. The year was 2011, and I was in the sixth grade.
+Our life in Cuttack was beautiful, always filled with family and relatives, and more than half the time was back at home, in Bhubaneswar. I made a lot of friends, and living in a city made all sense to me. However, the boulder was yet to roll down, and a new hill was yet to be scaled. We were there for just another year before my father's office decided it was time. Time for another ascent, a boulder to be moved, a new life to be built. Bags packed, trucks loaded, sitting in a car, watching the city pass by, we found ourselves in Jamshedpur. The year was 2011, and I was in the sixth grade.
 
 ### The longest odyssey yet
 
