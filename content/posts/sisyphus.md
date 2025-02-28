@@ -80,7 +80,7 @@ My family and relatives often used to visit us. In this new world, where the ins
 
 Beyond the colony, there wasn’t much exploration of Asansol itself. Unlike Kolkata, we didn't go out much; the colony truly was my whole world. At eight, I was starting to understand that there was a larger, more complex society beyond our boundary walls, but the extent of my daily life revolved around my friends and our home. Here I am, a 24-year-old me trying to scour pennies and cents in this God-forsaken city to make ends meet, looking at days pass by, and nights go white with the snow and the world outside, a place where I am yet to find my place. 
 
-My school was far away. I remember the bus rides taking one hour to reach the school. My school was like stepping onto a different dimension. It was a Christian Missionary School, deeply invested in sharing biblical stories and holding long, reflective assemblies. The institution’s strictness was jarring to me at first. It was also huge, boasting two expansive playgrounds and a canteen that sold mouthwatering spring rolls for just 10 rupees. I remember that I scored 100/100 in Math. I was always good at Math, Science, Grammar, Literature- you might have guessed so since I spent God knows how long writing this piece, and terrible at History, Civis, Hindi, and Arts. My parents put a lot of emphasis on scoring well. This somehow slowly started to shape my life in a way that I would not have actually wanted. I feel children should be left alone to be children, constantly failing, suceeding on their own merit- paving thier own way in the world, and not be burdened with the weight of the world. A lemon now I know how to make lemonade, for my child, when the time comes.
+My school was far away. I remember the bus rides taking one hour to reach the school. My school was like stepping onto a different dimension. It was a Christian Missionary School, *Assembly of God Church*, deeply invested in sharing biblical stories and holding long, reflective assemblies. The institution’s strictness was jarring to me at first. It was also huge, boasting two expansive playgrounds and a canteen that sold mouthwatering spring rolls for just 10 rupees. I remember that I scored 100/100 in Math. I was always good at Math, Science, Grammar, Literature- you might have guessed so since I spent God knows how long writing this piece, and terrible at History, Civis, Hindi, and Arts. My parents put a lot of emphasis on scoring well. This somehow slowly started to shape my life in a way that I would not have actually wanted. I feel children should be left alone to be children, constantly failing, suceeding on their own merit- paving thier own way in the world, and not be burdened with the weight of the world. A lemon now I know how to make lemonade, for my child, when the time comes.
 
 The vacation vacations were mostly spent back home. Asansol—and indeed most of West Bengal—came alive in October and November with Durga Puja festivities. Durga Puja has always been the most joyous time for me all these years. In all the cities I have lived, life has always been kinder to me in these few days. We would roam the streets at night, visiting brightly lit pandals and paying our respects to the idol of the goddess, returning just in time for community dinners at the colony tents. Novembers and Decembers, the winters were chilly and we couldn't sleep without a heater,, and that was also the year we bought our first car—a cherry-colored Hyundai Getz Prime. We often drove the 500 km to Bhubaneswar, weaving through scenic highways, pausing at roadside stalls, and listening to stories from my parents’ own childhoods, oblivious to what awaits when I grow up.
 
@@ -112,24 +112,37 @@ However, our time in Jajpur was brief. The rural setting, while peaceful, presen
 
 ### Leaving back the rural life, moving to the city
 
-Me, my mother and sister moved to Cuttack, while my father stayed back in Jajpur to wrap up his term, although the places weren't that far. The move to Cuttack put back a sense of belonging in my life. The city was vibrant, with a rich history and culture. The streets were lined with ancient temples, bustling markets, and the scent of fresh flowers. I was in fifth grade now, and I attended the *DAV Public School, CDA*.
+My mother, sister, and I moved to Cuttack, while my father stayed back in Jajpur to wrap up his term, although both places weren't that far. The move to Cuttack put back a sense of belonging in my life. The city was vibrant, with a rich history and culture. The streets were lined with ancient temples, bustling markets, and the scent of fresh flowers. I was in fifth grade now, and I attended the *DAV Public School, CDA*.
 
 Cuttack’s culture was as rich as its history. Because it’s one of Odisha’s oldest cities, it has welcomed people from all over India, creating a unique tapestry of communities. While Odia was the main language, I also encountered Bengali, Marwari, and other influences daily. The school introduced me to a bunch of new friends and perspectives, and mytuition classes were fun-filled.
 
 Our life in Cuttack was beautiful, always filled with family and relatives, and more than half the time was back at home, in Bhubaneswar. I made a lot of friends, and living in a city made all sense to me. However, the boulder was yet to roll down, and a new hill was yet to be scaled. We were there for just another year before my father's office decided it was time. Time for another ascent, a boulder to be moved, a new life to be built. Bags packed, trucks loaded, sitting in a car, watching the city pass by, we found ourselves in Jamshedpur. The year was 2011, and I was in the sixth grade.
 
-### The longest odyssey yet
+### Hitting puberty and prime days
 
-Packed, yet again, I found myself in Jamshedpur. Life in Jamshedpur was a time of absolute growth and transformation. I was in the sixth grade. We were used to this by now, the constant moving and rebuilding. The cycle of life, the journey of Sisyphus, was a part of our existence. 
+Life in Jamshedpur was a time of absolute growth and transformation. I was in the sixth grade. We were used to this by now, the constant moving and rebuilding. The cycle of life, the journey of Sisyphus, was a part of our existence. 
 
-Jamshedpur had a lot, a lot of lemons to shower. I spent my adolescent years in Jamshedpur, a city that was a mix of old-world charm and modernity. The city was a melting pot of cultures, with people from West Bengal, Bihar, Jharkhand, and Odisha, among others, all calling it home. Primarily, because it was situated so conveniently, sharing a border with all these states. Life in this city was my magical world. I don't have to put enough emphasis on why a 16-year-old would find a city nostalgic, do the math, If you're here reading this, you have read enough literature. The streets were lined with trees, and the air was fresh and clean. The city was known for its steel plants, and the sound of the factories filled the air, a constant reminder of the city's industrial heritage. A place where I found myself growing up, making friends, and building memories.
+Jamshedpur had a lot, a lot of lemons to shower. I spent my adolescent years in Jamshedpur, a city that was a mix of old-world charm and modern industry. The city was a melting pot of cultures, with people from West Bengal, Bihar, Jharkhand, and Odisha, among others, all calling it home. Primarily, because it was situated so conveniently, sharing a border with all these states. Life in this city was my magical world. I don't have to put enough emphasis on why a 16-year-old would find a city nostalgic, do the math, if you're here reading this, you have read enough literature. The streets were lined with trees, and the air was refreshingly clean—punctuated by the hum of factories, a reminder of the steel plants that shaped its history. A place where I found myself growing up, making friends, and building memories.
 
-It is difficult to think about what to include, and what not. Think about everything that goes on in the life of a school kid from class 6th to 10th. The first crush, the heartbreaks, fights, friendships, sleepovers, birthday parties, and what else not. I will let you be the judge of what to include from the diary of a school kid.
+It’s hard to decide what to include in this story. Think of everything that happens between sixth and tenth grade: fun, heartbreak, fights, friendships, sleepovers, birthday parties and what else not—the entire spectrum of experiences that shape a growing adolescent. I’ll let you be the judge of how much detail a school kid’s diary deserves on a public platform.
 
-I shifted from DAV Sec-6, Cuttack to DAV, Bistupur, Jamshedpur. Transferring between DAVs isn't a hassle. Initially, the transition was difficult. Jamshedpur had a slightly rude, unwelcoming camaraderie. The school was a mix of all kinds of kids, mostly from Bihar, Jharkhand and West Bengal. 
+I shifted to DAV again, in Jamshedpur. Transferring between DAVs isn't a hassle. Initially, the transition was difficult. Jamshedpur’s culture was distinct from anywhere I’d been before. It's kids, mostly from Bihar, Jharkhand, and West Bengal, had a more direct, sometimes abrasive way of bonding. They weren’t outright bullies, but building rapport wasn’t straightforward. They belonged from different, varied background than what I was used to seeing, and they were hillariously notorious. The teachers, strict, a mix of old and young. These kids used to have a ton of fun with the teachers, mostly involved in namecalling, screaming and shouting, and the teachers, in turn, used to beat them up. They groomed me well and I quicky got ready for this battle, eager to be a member of this undisciplined colony.
 
----
+School was a lot fun. I was involved in all sorts of activities- from cultural events to debates. 
+<!-- More about school -->
+My classmates remained the same across the years, from 6th to 10th. We watched each other grow up, forging deep ties, sharing experiences, and building memories.
 
+<!-- 
+
+- Colony life, friends, 6th & 7th
+- Incidents/ Experiences
+- Tuition classes 8th 9th 10th
+- Incidents/ Experiences 
+- Going back home, Bhubaneswar, losing grandparent in 8th grade
+- Incidents/ Experiences - Toffee
+- 10th grade, board exams, 2015(10th), 2016(the year we left)
+- Toffee
+```
 This one time while returning back from home, I also got my first pet, Toffee. Reminiscing about Toffee feels surreal, as if we were siblings in another life, in a distant past. She was a beautiful Dalmatian—the sweetest, most obedient dog—with an infinite capacity for love that transcended space and time. My sister picked her up from our neighbours in Bhubaneswar while we were heading back to Jamshedpur; she was a gift from them. Initially, I was sceptical. I had never had pets and wasn't particularly too fond of animals. But during that eight-hour ride back to Jamshedpur, Toffee became an endless source of affection, quickly weaving herself into the fabric of our family.
 
 The sad part of this story is that Toffee was taken away from us. My mother said it was too much for her to manage—a dog and two young children. Even now, I struggle to contemplate what was so impossible. She was such a sweet soul, potty trained and obedient. I remember the weekend we returned to Bhubaneswar to drop her off. My aunt was excited; she loved Toffee and wanted to keep her, which was the agreed-upon plan. The thirteen-year-old me was okay with this arrangement since Toffee would still be part of the family, and I would have brought her back after a couple of months. But, unbeknownst to us, my uncle and grandfather had hatched a different sinister plan. They gave her away when my aunt was not home.
@@ -145,6 +158,12 @@ There's something magical about memories—how they weave time and space back to
 Certain incidents in life now make more sense, like the time I unexpectedly broke down in front of my best friend. He was breaking up with his girlfriend, and my job there was to console and support him. Between seeing him in pain, with red and wet eyes, there was something that triggered within me. I suddenly was overwhelmed and for the life of me, I could never fully process and understand why. While I was close to both of them and played a significant role in their relationship, my reaction seemed disproportionate. Now that my internal strategy of dealing with grief is slowly becoming evident, I realize that I have a tendency to push down feelings, deep. The separation from Khusi was not something that I had processed fully. It wasn't until I saw them going through the same rite of passage that I had gone through, that I suddenly felt a familiar pang, and the floodgates opened.
 
 It brings a sense of peace. It might seem unusually weak—a twenty-four-year-old man, strong enough to leave behind his high-paying job for the current market, friends and entire family and start life from scratch in perhaps the world's most costliest city, New York, with a loan of over a hundred thousand, suddenly breaking down in front of his friends and then choosing to write about it. But this vulnerability feels healing. This is what it looks like from within.
+```
+
+ -->
+
+---
+
 
 <!-- *...to be continued* 
 
