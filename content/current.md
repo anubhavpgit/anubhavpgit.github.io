@@ -13,6 +13,23 @@ showdate: true
 
 ###### March
 
+The [internet is going crazy](https://www.reddit.com/r/ClaudeAI/comments/1ixisq1/just_tried_claude_37_sonnet_what_the_actual_fuck/) about Claude 3.7 sonnet and for the rigth reasons. Claude 3.7 just destryoed benchmakrs, and it's a significant improvement over other 
+models. I tried out Claude wanting to see if it's any good, and it's just insane. For instance, I asked it to review an article I wrote earlier with the default prompt provided by Anthropic (look for the *polish your prose* suggestion in claude), and it just nailed it.
+
+Now the question is, do I stop my ChatGPT+ subscription and replace it with claude? I am not sure yet. Claude still lacks a couple of features that I feel I am not ready to give up yet:
+
+1. ChatGPT has a better UX. It's just better, and I am used to it.
+    ChatGPT feels a little cleaner, and more intuitive. I am also not sure if I dig the font choices of Claude, but it's not a big deal. 
+2. I am not sure if this reason works, but Claude mobile app doesn't let you switch between different models. ChatGPT let's me switch between models, which is a big plus for me. I use o1 for research and heavy lifting, and o3-mini-high for coding, and the good old Gpt-4o is good for everything else. But, here's the thing, the reason why I need to switch to gpt-4o is because 1) o1 and o3 have rate limits, and 2) o1 and o3 are slower, which is understandable since it's more heavy. Here's where Claude shines, the default model is 3.7 sonnet now, and somehow, it's blazing fast. It beats o1, o3-mini-high in response speed, and thus, there would be no need to switch to 3.5 sonnet for speed when needed. So, the default setting; 3.7 is good enough for everything. I have a fair idea on maybe how they would have done it which I will explain next.
+
+3. This is a big one, and probably the main reason: Claude **doesn't have a web-search feature**. It's not that they haven't built it, but that they purposefully chose not to, citing security and privacy concerns. Although, that does make sense since giving internet access to the model lets it learn from the internet, and thus, can potentially mislead or misinform the user. I believe this is one of the factors that makes 3.7 sonnet faster than o1 and o3 at code generations or even research tasks. I am not sure if this is a good or bad decision, but I am not ready to give up on this feature yet.
+    > *"It's a huge drawback indeed. From what i've read though, this feature is intentional. Anthropic prioritizes safety over anything else. Giving internet access to the model immediately exposes it to potentially harmful content or misinformation. On the other hand, keeping it 'offline' , allows devs to cherry-pick the training data and the knowledge base, in a way that both comply with their moral standards."*
+    >
+    > *"Allowing the model to browse the web directly implies they should implement a mechanism that not only cross-validates web-search results but also filters any harmful traces in them."* -- [Reddit thread](https://www.reddit.com/r/ClaudeAI/comments/1er1osa/comment/lhvomy8/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+
+    The other solution could be using Google as usual (I do not like Perplexity's UI and for web-search tasks, Google does a better job than Perplexity at **finding relevant sources**, **BUT**, for summarizing and paraphrasing & "how to" queries, an LLM based search engine is better. Which is why I was using ChatGPT + Google for my entire task set. Refer [here](https://medium.com/codex/perplexity-vs-google-search-a-totally-unscientific-comparison-9a58837d7a69)), and then copy-pasting the results to Claude. Claude at least should have a human-like process. It should let us cherry-pick the sources to scan.
+
+
 Is it March yet? I remember going back home, to India for a break, like it was yesterday and now two months are already over? Strange. On this side of the world, I am currently working on building a compiler for a subset of C language to RISC-V assembly language. It’s a fun project that helps me understand how compilers work. I also joined the SSL (Secure Systems Lab) at NYU, and am involved in a project aimed at building a secure system that aims to isolate processes in a single process sandbox. This helps limit the damage caused by bugs or security flaws in the application. Also, involved in some research about [Meta's Orion Glasses](https://about.fb.com/news/2024/09/introducing-orion-our-first-true-augmented-reality-glasses/) because I found the hand-gestured controllers fascinating. I am planning to work this semester on a controller as such, and excited to see how this unfolds in the coming months.
 
 ###### February
