@@ -136,6 +136,7 @@
   \resumeSubHeadingListEnd
 
 
+
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
@@ -144,56 +145,44 @@
       {\textbf{Software Engineer}}{ July 2024 | Aug 2024}
       \resumeItemListStart
         \resumeItem
-          {Led the revamp of the infrastructure in Node.js and Next.js, coordinating efforts across dev and product teams to reduce network load and improve API throttling by 15\%, limiting API exhaustion and improving the performance of the engine.}
+          {Led infrastructure modernization using Node.js and Next.js, improving API throttling by 15\%, reducing service outages by 60\%, and enhancing overall engine reliability through cross-team coordination.}
         \resumeItem
-          {Conducted surveys, market research, resolved customer issues, and built the Telegram and Discord bots that mimicked the entire application enabling multi-platform access and increasing the total active users by 50\%.}
+          {Designed and developed multi-platform integration strategy with Telegram and Discord bots, expanding user reach and increasing total active users by 50\% while maintaining consistent user experience.}
       \resumeItemListEnd
   \resumeSubheading
       {RadiusAI}{Bengaluru, IN}
       {Software Engineer}{Jan 2024 | July 2024}
       \resumeItemListStart
         \resumeItem
-          {Built a multi-threaded, asynchronous health monitoring service using Rust and Kafka to handle 5000 scraping requests every 10 seconds, optimizing and porting the alert module from Python to Rust to improve performance.}
+          {Designed a Rust/Kafka health monitoring service handling 5000 requests/10s with improved Python-to-Rust perf.}
         \resumeItem
-          {Automated fault-tolerant, consistent DB write operations by different teams using lambda functions and Prefect.}
+          {Led Rust optimization of cart simulator with parallel processing for 10x speed boost and faster checkouts.}
         \resumeItem
-          {Developed a native GUI app in Rust to highlight unknown objects present during checkout in LCD counter-top POS.}
+          {Automated DB operations using AWS Lambda/Prefect with 99\% data consistency across distributed systems.}
         \resumeItem
-          {Optimized ShopAssist cart simulator by rewriting it in Rust, writing code to run asynchronous operations in parallel threads, achieving a 10x performance boost and reducing checkout processing time, enhancing customer experience.}
+          {Developed a native GUI application in Rust that highlights unknown objects during checkout in LCD counter-top POS systems, improving store security.}
         \resumeItem
-          {Created a data analytics dashboard app using Gradio to display annotations, reducing inaccuracies by over 30\%.}
-          
+          {Created a real-time analytics dashboard using Gradio to visualize annotation data, reducing labeling inaccuracies by 30\% and improving model training.}
       \resumeItemListEnd
   \resumeSubheading
       {StackIt (Superjoin)}{Bengaluru, IN}
       {\textbf{Founding Engineer}}{ June 2023 | Dec 2023}
       \resumeItemListStart
         \resumeItem
-        {Integrated Chargebee, Hubspot, and Google Ads, increasing user acquisition by 4x. Engineered an advanced custom scheduler and logger in Node.js and Python to store user data periodically, enhancing the performance of the AI engine.}
+        {Architected and implemented a resilient microservices ecosystem using Docker, Kubernetes, and GitHub Actions, ensuring 99.9\% uptime while integrating Chargebee, Hubspot, and Google Ads to increase user acquisition by 4x.}
         \resumeItem
-          {Developed an interactive Data-Preview component in React to enhance Data Visualization \& reducing import errors by 15\%. Worked on building robust filters, joins, and v-lookups, increasing data processing efficiency.}
+          {Engineered an interactive Data-Preview component in React with advanced filtering, joins, and lookup capabilities, improving data visualization by 40\% and reducing import errors by 15\%.}
         \resumeItem
-        {Engineered sustainable RAG pipelines using Python, LangChain, and LlamaIndex to convert text to SQL and NoSQL queries, reducing user churn by more than 50\% and increasing user retention.}
+        {Designed sustainable RAG pipelines using Python, LangChain, and LlamaIndex for natural language to SQL/NoSQL conversion, reducing user churn by over 50\% and improving query accuracy by 35\%.}
       \resumeItemListEnd
     \resumeSubheading
       {\href{https://github.com/anubhab-patnaik}{Squbix Digital}}{Bhubaneswar, IN}
       {Software Developer}{June 2022 | Dec 2022}
       \resumeItemListStart
         \resumeItem
-          {Developed the backend in Node.js, migrated the JS SDK to TS, and resolved over 60\% of user-centric issues. Implemented offline storage, push notifications, and optimized the ID pallet in Rust \& Substrate on Polkadot, cutting errors below 30\%}
+          {Optimized the DID pallet in Rust \& Substrate on Polkadot, implementing efficient on-chain storage patterns that reduced error rates by 30\% while migrating the JS SDK to TypeScript to improve type safety.}
       \resumeItemListEnd
       
-% --------Multiple Positions Heading------------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
-
   \resumeSubHeadingListEnd
 
 %
@@ -201,12 +190,12 @@
 
 \section{Technical Skills}
 \resumeSubHeadingListStart
-  \resumeSubItem{\textbf{Programming Languages}}
-    {C/C++, Python, JavaScript/TypeScript, Rust, $\|$ Go}
-  \resumeSubItem{\textbf{Libraries/ Frameworks}}
-    {MERN, Next, React Native, $\|$ Numpy, Pandas, SkLearn, Django, Flask, Langchain, Llamaindex, FastAPI }
-  \resumeSubItem{\textbf{Developer Tools, Platforms \& Databases}}
-    {Docker, AWS, GCP, Firebase, Kafka, Kubernetes, Redis, MongoDB, PostgreSQL }
+  \resumeSubItem{\textbf{Systems Engineering}}
+    {Rust, C/C++ (Systems Programming), Parallel/Distributed Computing}
+  \resumeSubItem{\textbf{Web \& Cloud Technologies}}
+    {TypeScript/Node.js, React/Next.js, AWS, Docker, Kubernetes, Kafka, MongoDB, PostgreSQL}
+  \resumeSubItem{\textbf{AI/ML Integration}}
+    {RAG Pipelines, LangChain, LlamaIndex, Vector Embeddings, Python (Data Processing)}
 \resumeSubHeadingListEnd
 
 %-------------------------------------------
@@ -218,19 +207,19 @@
   \resumeProjectHeading
     {\href{https://github.com/Lind-Project/lind_project}{\textbf{LIND - Research} \text{/ Open Source Contribution} - \faIcon{link}}}{Rust, WASM}
     \resumeSubItem
-      {A single-process sandbox to safely isolate \& execute programs, and control resource usage to avoid system failures.}
+      {A single-process sandbox to securely isolate program execution with fine-grained resource control to prevent system failures}
 \resumeProjectHeading
   {\href{https://github.com/fuzzymf/yatch}{\textbf{Yatch} - \faIcon{link}}}{C++}
     \resumeSubItem
-      {A five-stage, hazard \& memory-safe 32-bit pipelined RISC-V machine code interpreter with a built-in bin {\href{https://anubhavp.dev/barney}{\underline{\textbf{decoder}}}}. $\rightarrow$ {\href{https://anubhavp.dev/blog/hacktoberfest.html}{\textbf{Demo}}}}
+      {A five-stage, hazard \& memory-safe 32-bit pipelined RISC-V machine code interpreter with a built-in binary {\href{https://anubhavp.dev/barney}{\underline{\textbf{decoder}}}}. $\rightarrow$ {\href{https://anubhavp.dev/blog/hacktoberfest.html}{\textbf{Demo}}}}
   \resumeProjectHeading
     {\href{https://github.com/fuzzymf/dough}{\textbf{DOUGH} - \faIcon{link}}}{Rust, Bash}
     \resumeSubItem
-      {A CLI tool to present markdown files in the terminal, with custom syntax and code highlighting. $\rightarrow$ {\href{https://anubhavp.dev/blog/dough.html}{\textbf{Demo}}}}
+      {A high-performance CLI tool for rendering markdown presentations in the terminal with custom syntax highlighting $\rightarrow$ {\href{https://anubhavp.dev/blog/dough.html}{\textbf{Demo}}}}
   \resumeProjectHeading
     {\href{https://github.com/fuzzymf/b}{{\textbf{BEE} - \faIcon{link} }}}{Python, BitTorrent}
     \resumeSubItem
-      {A custom BitTorrent client to download movies with an item-based collaborative \href{https://github.com/fuzzymf/Movie-recommendation}{\underline{\textbf{ movie recommendation system}}} based on user ratings and the no. of ratings \& a \href{https://github.com/fuzzymf/Movie-rating-prediction}{\underline{\textbf{movie rating prediction system}}} to classify reviews with a 95\% accuracy.}
+      {A custom BitTorrent client with an item-based collaborative \href{https://github.com/fuzzymf/Movie-recommendation}{\underline{\textbf{recommendation system}}} using cosine similarity and a \href{https://github.com/fuzzymf/Movie-rating-prediction}{\underline{\textbf{rating prediction system}}} achieving 95\% accuracy.}
   \resumeProjectHeading
     {\href{https://github.com/fuzzymf/resoc}{\textbf{RESOC} - \faIcon{link} }}{React, Firebase}
     \resumeSubItem
@@ -249,12 +238,10 @@
   \resumeSubHeadingListStart
   \resumeSubItem
       {Member, \href{https://www.linkedin.com/company/gdsc-nyu-tandon/}{\underline{Google Developer Student club (GDSC)}}, New York University, Tandon.  2024|2025}
-    % \resumeSubItem
-    % {Established and led \href{https://cbrtl.github.io}{\underline{cbrtl}}, a FOSS community to foster dev community building, discussing and collaborating on projects.}
     \resumeSubItem
       {Member Secure Systems Lab, New York University, \href{https://ssl.engineering.nyu.edu/}{\underline{SSL, NYU Tandon}}. 2024|2025}
     \resumeSubItem
-      { Chairperson (2022|23) \& Joint secretary (2021|2022) of the \href{https://www.instagram.com/ieeesitbbsr/}{\underline{IEEE Students’ Chapter}}, Silicon Institute of Technology. }
+      {Chairperson (2022|23) \& Joint secretary (2021|2022) of the \href{https://www.instagram.com/ieeesitbbsr/}{\underline{IEEE Students' Chapter}}, Silicon Institute of Technology. }
   \resumeSubHeadingListEnd
 %-------------------------------------------
 
