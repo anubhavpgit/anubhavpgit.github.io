@@ -1,20 +1,9 @@
 ---
 title: "Journey"
 description: "Conquests, sojourns, and adventures in the world of tech."
-showdate: true
-pdf: true
----
-<script type="module" src="/assets/js/cv/main.js"></script>
-*Last Updated: <span class="update-date-time"></span>*
-
-### Educational Background
-
-- **MS in Computer Engineering** – New York University, Tandon School of Engineering (Sep 2024 – Expected Dec 2025)
-- **B.Tech in Computer Science & Engineering** – Silicon Institute of Technology, Bhubaneswar (2019 – 2023)
-
 ---
 
-### Work Experience
+### Work
 
 ###### **Product Engineer** – DatingAI (July 2024 – Aug 2024) [🔗](https://datingai.pro)
 - **Led** infrastructure modernization using **Node.js** and **Next.js**, improving API throttling by **15%**, reducing service outages by **60%**, and enhancing overall engine reliability through cross-team coordination.
@@ -35,10 +24,6 @@ pdf: true
 - **Established** CI/CD infrastructure with automated deployments via **GitHub Actions**, leveraging containerization for consistent development and production environments.
 - **Built** natural language to SQL engines using advanced prompt engineering techniques with **GPT-3.5/4**, significantly improving user retention through intuitive data interactions.
 
-###### **Full-stack Developer** – Asymmetri (2023) [🔗](https://www.linkedin.com/company/asymmetri/)
-- **Implemented** a dynamic PDF generator using **react-pdf** and **react-pdf-highlighter**, enhancing document collaboration capabilities.
-- **Developed** a custom PDF viewer using **Firebase SDK** and **Cloud Firestore** for real-time collaboration between multiple users.
-
 ###### **Software Developer** – Squbix Digital (June 2022 – Dec 2022) [🔗](https://drive.google.com/file/d/1Pr6ttzQEk0Bj83pxCafFloiKx7KYOLJX/view?usp=sharing)
 - **Optimized** the DID pallet in **Rust & Substrate** on Polkadot, implementing efficient on-chain storage patterns that reduced error rates by **30%** while migrating the JS SDK to TypeScript to improve type safety.
 - **Developed** backend APIs in **Node.js**, resolved over **60%** of user-centric issues, and implemented offline storage and push notifications for improved mobile application reliability.
@@ -47,7 +32,7 @@ pdf: true
 ---
 
 ### Projects
-
+<!-- - **[Ferry](https://github.com/fuzzymf/ferry)** – A minimal **C compiler for RISC-V** written in **Rust**, featuring a custom lexer, parser, and code generator. (*WIP*) -->
 - **[Lind (Open Source)](https://github.com/Lind-Project/)** – An isolated, single-process sandbox to securely execute programs with fine-grained resource control to prevent system failures, built with **Rust** and **WASM**.
 - **[Pixlr](https://github.com/fuzzymf/pixlr)** – A **SVG/PNG to pixel art converter** in Rust with optimized image processing algorithms.
 - **[Barney](https://github.com/fuzzymf/barney)** – An efficient machine code **instruction encoder/decoder** for RISC-V in TypeScript.
@@ -69,8 +54,9 @@ pdf: true
 
 ---
 
-### Activities
+### Clubs/ Activities/ Debates
 
+- **HackNYU 2024** – Hackathon, New York University (2024)
 - **Member**, Google Developer Student Club (GDSC), New York University Tandon (2024 – 2025)
 - **Member**, Secure Systems Lab (SSL), NYU Tandon (2024 – 2025)
 - Hosted **Git Groove** – UnStop 2023 [🔗](https://www.linkedin.com/posts/anubhabpatnaik0530_git-groove-getting-into-the-rhythm-of-version-activity-7050527332519862272-jniz?utm_source=share&utm_medium=member_desktop)
@@ -81,17 +67,24 @@ pdf: true
 - **Co-founder**, CBRTL – 2022 [🔗](https://cbrtl.github.io)
 - Hosted **"Why Rust"** – Squbix Digital 2022 [🔗](https://www.linkedin.com/posts/anubhabpatnaik0530_i-hosted-a-tech-talk-last-week-and-it-went-activity-6987708219385122816-aq9z?utm_source=share&utm_medium=member_desktop)
 - Winner, **Ideate Nirman** – SIT 2022 [🔗](https://drive.google.com/file/d/1i--TyXYDPxMN5IbokTzFoTGE4K-rnpXM/view?usp=share_link)
-- Runner-up, Ideathon – ED Cell SIT 2022 [🔗](https://drive.google.com/file/d/1i--TyXYDPxMN5IbokTzFoTGE4K-rnpXM/view?usp=share_link)
 - **President (Chairperson)**, IEEE Students' Branch *STB04531* – SIT 2022-23 [🔗](https://drive.google.com/file/d/1sbO7gOwsointY-x7aWPB8DfyrTFsCugl/view?usp=sharing)
 - **Co-founder & Joint Secretary** – SWITCH 2021-22 [🔗](https://drive.google.com/file/d/1Zub7ui2WCRYgN7tM0G8p-dbeFLirGR-d/view?usp=sharing)
 - High Commendation I – SITMUN 2021 [🔗](https://drive.google.com/file/d/1RI8fXtCTYrlYlX-dnGvfQQ76CHx0AEaq/view?usp=sharing)
 - High Commendation I (Best Del) – SITMUN 2020 [🔗](https://drive.google.com/file/d/1nbwySBjw8uUQH9bWY_vR0SeXt8x4B54M/view?usp=sharing)
 - Photographer/Graphic Designer – SIT Media Cell 2020 [🔗](https://drive.google.com/file/d/1z91iZPJxbJAIusamhn9BtrjMRN7pVH7k/view?usp=drivesdk)
 
+---
+
+### Education
+
+- **MS in Computer Engineering** – New York University, Tandon School of Engineering (Sep 2024 – Expected Dec 2025)
+- **B.Tech in Computer Science & Engineering** – Silicon Institute of Technology, Bhubaneswar (2019 – 2023)
+
+###### Links
+
+
 [Email](mailto:anubhabr50@gmail.com) |
 [Github](https://github.com/fuzzymf) |
 [LinkedIn](https://www.linkedin.com/in/anubhabpatnaik/) |
 [Dribbble](https://dribbble.com/fuzzymf) |
 [Instagram](https://www.instagram.com/anubhavclicks/)
-
-<span class="download-cv"></span>

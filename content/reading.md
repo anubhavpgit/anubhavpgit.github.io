@@ -5,10 +5,9 @@ description: "Thoughts on books read, shows watched"
 
 ##### Reading
 
-- **Hooked: How to Build Habit-Forming Products** *- Nir Eyal*: A book that talks about how to build products that people can't stop using.
 - ~~The three-body problem~~ *- Cixin Liu*: A science fiction novel about humanity's first contact with an alien civilization. The first book in the Remembrance of Earth's Past trilogy.
 -  The dark forest *- Cixin Liu*: The second book in the Remembrance of Earth's Past trilogy, about humanity's response to an alien invasion.
--   Dune *- Frank Herbert*: A science fiction novel about the desert planet Arrakis and its valuable spice melange. 
+-  Dune *- Frank Herbert*: A science fiction novel about the desert planet Arrakis and its valuable spice melange. 
 
 <!-- *Pending:*
 
@@ -22,7 +21,12 @@ description: "Thoughts on books read, shows watched"
 -  Mostly harmless *- Douglas Adams*
 -  And another thing... *- Eoin Colfer* -->
 
-##### Watching 
+##### Watching
+
+
+- **Severance** *- Dan Erickson*: A thriller series about a company that surgically divides employees' work and personal lives.
+
+-   **Better Call Saul** *- Vince Gilligan*: A prequel to Breaking Bad, about the life of Jimmy McGill, a small-time lawyer who eventually becomes the sleazy lawyer Saul Goodman.
 
 - ~~**The Marvelous Mrs. Maisel**~~ *- Amy Sherman-Palladino*: A comedy-drama series about a housewife who becomes a stand-up comedian in the 1950s.
 
@@ -37,16 +41,12 @@ description: "Thoughts on books read, shows watched"
 	There's a lot to unpack in this show. The story development is slightly slow, but it is worth the wait. A really good Indie-crime drama that delves into the dark underbelly of society. 
 
 
-- **Severance** *- Dan Erickson*: A thriller series about a company that surgically divides employees' work and personal lives.
-
-	
 -   The Bear *- Christopher Storer*: A dark comedy about an award-winning chef who returns to his hometown of Chicago to manage the chaotic kitchen at his deceased brother's sandwich shop. 
 
 
 <!-- *Pending:*
 
 -   Attack on Titan *- Hajime Isayama*: An anime about humanity's fight against giant humanoid creatures known as Titans.
--   Better Call Saul *- Vince Gilligan*: A prequel to Breaking Bad, about the life of Jimmy McGill, a small-time lawyer who eventually becomes the sleazy lawyer Saul Goodman.
 -   Shogun *- James Clavell*: A miniseries based on the novel of the same name, about an English sailor who becomes a samurai in feudal Japan.
 -   The Mandalorian *- Jon Favreau*: A Star Wars series set after the fall of the Empire, following the adventures of a lone bounty hunter in the outer reaches of the galaxy. -->
 
