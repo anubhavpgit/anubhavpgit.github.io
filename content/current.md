@@ -6,7 +6,7 @@ showdate: true
 
 ##### Current, 2025
 
-[Reading/ Watching](/reading.html)  |   [Mementos](/mementos.html)  
+[Working](/working.html)  | [Reading](/reading.html)  |   [Mementos](/mementos.html)  
 
 <span class="update-date-time"></span>
 
@@ -32,8 +32,6 @@ The highlight has to be HackNYU, a 48-hour hackathon that I participated in last
 Tech is a commodity now, anyone with a slight sense of what they are doing can build something. I don't see the point in hiring a lot of developers to build something that can be done by a few now. I get what FAANG companies mean when they lay off a lot of devs. Not that I support that, but, it just makes more fiscal sense. The real challenge is to build something that people want.
 
 Finished watching Paatal Lok - Season 2 this weekend. It's a gripping tale of crime, corruption, and power, a must-watch for anyone who enjoys Indie crime dramas, and it's really good. On the other hand, also currently watching a heartfelt, light-hearted show called Ted Lasso. It's a comedy-drama series that follows an American football coach who is hired to manage an English football team. The sheer optimism and relentless positivity in the show are infectious. This show is so good! If you're more interested in watching shows about the journey of building yourself, try watching Marvelous Mrs. Maisel. It's a comedy-drama series about a housewife who becomes a stand-up comedian in the 1950s. The writing is sharp, the characters are well-developed, and the acting is top-notch. Running parallels, Midge's wins feel personal here, well-deserved.
-
-Here's what else is brewing: [reads/shows](/reading.html). Looking forward to an exciting month ahead! 🍿 🍺
 
 ###### January
 

@@ -4,6 +4,6 @@ description: "The alchemy of life, chronicling the magic and storms that shaped 
 ---
 <script type="module" src="/assets/js/index.js"></script>
 
-[Reading/ Watching](/reading.html)  |   [Mementos](/mementos.html)  
+[Working](/working.html)  | [Reading](/reading.html)  |   [Mementos](/mementos.html)  
 
 ## Posts

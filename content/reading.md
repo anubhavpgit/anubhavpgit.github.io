@@ -3,7 +3,7 @@ title: Pens and Pixels
 description: "Thoughts on books read, shows watched"
 ---
 
-##### Reading
+###### Fiction
 
 - ~~The three-body problem~~ *- Cixin Liu*: A science fiction novel about humanity's first contact with an alien civilization. The first book in the Remembrance of Earth's Past trilogy.
 -  The dark forest *- Cixin Liu*: The second book in the Remembrance of Earth's Past trilogy, about humanity's response to an alien invasion.
@@ -21,16 +21,16 @@ description: "Thoughts on books read, shows watched"
 -  Mostly harmless *- Douglas Adams*
 -  And another thing... *- Eoin Colfer* -->
 
-##### Watching
+<!-- ##### Watching -->
 
-
+<!-- 
 - **Severance** *- Dan Erickson*: A thriller series about a company that surgically divides employees' work and personal lives.
 
 -   **Better Call Saul** *- Vince Gilligan*: A prequel to Breaking Bad, about the life of Jimmy McGill, a small-time lawyer who eventually becomes the sleazy lawyer Saul Goodman.
 
 - ~~**The Marvelous Mrs. Maisel**~~ *- Amy Sherman-Palladino*: A comedy-drama series about a housewife who becomes a stand-up comedian in the 1950s.
 
-	This show feels like a breath of fresh air. The writing is sharp, the characters are well-developed, and the acting is top-notch. The wins feel personal here, well-deserved. Running parallels, Midge's journey feels like building something from 0 to 1. 
+	This show feels like a breath of fresh air. The writing is sharp, the characters are well-developed, and the acting is top-notch. Midge's wins feel personal here, well-deserved. Running parallels, Midge's journey feels like building something from 0 to 1. 
 
 - ~~**Ted Lasso**~~ *- Bill Lawrence*: A comedy-drama series that follows an American football coach who is hired to manage an English football team.
 
@@ -41,7 +41,7 @@ description: "Thoughts on books read, shows watched"
 	There's a lot to unpack in this show. The story development is slightly slow, but it is worth the wait. A really good Indie-crime drama that delves into the dark underbelly of society. 
 
 
--   The Bear *- Christopher Storer*: A dark comedy about an award-winning chef who returns to his hometown of Chicago to manage the chaotic kitchen at his deceased brother's sandwich shop. 
+-   The Bear *- Christopher Storer*: A dark comedy about an award-winning chef who returns to his hometown of Chicago to manage the chaotic kitchen at his deceased brother's sandwich shop.  -->
 
 
 <!-- *Pending:*
