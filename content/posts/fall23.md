@@ -8,11 +8,14 @@ showImg: true
 ---
 <style>
  .dubai {
- justify-content: center;
- align-items: center;
- display: flex;
- flex-direction: column;
- }
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	/* Ensure consistent parent width for percentage calculations */
+}
+
  .dubai-group {
 	display: flex;
  flex-direction: row;
