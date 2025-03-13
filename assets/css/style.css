@@ -335,6 +335,12 @@ p {
 	max-width: 38rem;
 }
 
+#main .header-figure {
+	max-width: 42rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 #main .content.custom video {
 	display: block;
 	margin-top: 2rem;
@@ -485,6 +491,14 @@ td:first-child:hover~td {
 	word-wrap: break-word;
 }
 
+/* Base styling for header image */
+.blog-header-image {
+	/* width: 100%; */
+	object-fit: cover;
+	margin: 0;
+	padding: 0;
+}
+
 /* @media screen and (min-width: 1513px) {
 	.f6 {
 		font-size: .938rem !important;
@@ -502,6 +516,19 @@ td:first-child:hover~td {
 		position: static;
 		margin-left: -10px;
 	}
+
+	.blog-header-image {
+		height: auto;
+	}
+
+	/* No negative margin on mobile */
+	#main>main>.content.custom {
+		margin-top: 0;
+	}
+
+	#main>main>figure.header-figure {
+		margin-bottom: 0;
+	}
 }
 
 @media only screen and (min-width: 769px) {
@@ -510,6 +537,26 @@ td:first-child:hover~td {
 		position: absolute;
 		top: -4px;
 		left: -36px;
+	}
+
+	#main>main>figure.header-figure {
+		justify-content: center;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 44rem;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	/* Style the image itself */
+	.blog-header-image {
+		height: auto;
+		display: block;
+	}
+
+	#main>main>figure.header-figure {
+		margin-bottom: 1.5rem;
 	}
 
 }

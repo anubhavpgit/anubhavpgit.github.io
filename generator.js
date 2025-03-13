@@ -38,7 +38,7 @@ const md = MarkdownIt({
       try {
         return hljs.highlight(str, { language }).value;
       } catch (err) {
-        console.log(err);
+        console.error(err);
       }
     }
 
@@ -224,13 +224,17 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
         // Construct the path as it will appear in the HTML
         const imgPath = `${fileBase}/${headerFileName}`;
 
-        // Replace the placeholder in the template
-        templatized = templatized.replace(/<!-- IMAGE -->/g, imgPath);
+        // Create HTML with the new structure - full width figure
+        const headerImageHTML = `
+        <figure class="header-figure">
+          <img src="/assets/img/${imgPath}" alt="${file.data.title}" class="blog-header-image">
+        </figure>`;
 
-        // Make sure the alt text is filled with the title if not already
-        templatized = templatized.replace(/alt=""/g, `alt="${file.data.title}"`);
-
-        console.log(`📸 Added header image for: ${fileBase}`);
+        // Replace the existing figure element
+        templatized = templatized.replace(
+          /<figure class="header-figure">[\s\S]*?<\/figure>/g,
+          headerImageHTML
+        );
       } else {
         // No header image found, remove the figure element
         templatized = templatized.replace(/<figure class="mb4">[\s\S]*?<\/figure>/g, '');
@@ -243,11 +247,14 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
     }
   } else {
     // If showImg is false or not specified, remove the figure element
-    templatized = templatized.replace(/<figure class="mb4">[\s\S]*?<\/figure>/g, '');
+    templatized = templatized.replace(
+      /<figure class="header-figure">[\s\S]*?<\/figure>/g,
+      ""
+    );
   }
   saveFile(outfilename, templatized);
   //skipcq: JS-0002
-  console.log(`📄 ${filename.split("/").slice(-1).join("/").slice(0, -3)}`);
+  console.info(`📄 ${filename.split("/").slice(-1).join("/").slice(0, -3)}`);
 };
 
 /**
@@ -567,7 +574,7 @@ const main = async () => {
     }
     processBlogFile(filename, blogTemplate, blogOutPath, blogs, hashes);
   });
-  console.log("🚀 Build complete!");
+  console.info("🚀 Build complete!");
   fs.writeFileSync(`${dir}/metadata.json`, JSON.stringify(hashes));
 
   buildBlogIndex(blogs, blogOutPath);

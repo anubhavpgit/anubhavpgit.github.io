@@ -18,11 +18,11 @@ showImg: true
 
  .dubai-group {
 	display: flex;
- flex-direction: row;
+	flex-direction: row;
  }
 </style>
 
-**A trek to Kedarnath** 
+### A trek to Kedarnath
 
 I left from BLR to DEL via train and stayed with Mukul's sister for a day. Despite our tight schedule we managed to explore *Purani Dilli* for a day before Haridwar. Our day was filled with visits to iconic landmarks, including the magnificent Jama Masjid and the historic Red Fort. And obviously, we explored the amazing culinary places that I had bookmarked earlier and had multiple feasts there.
 
@@ -43,7 +43,7 @@ Somehow, I managed to trek for six and a half km. Hritik, Mukul and Hemant urged
 With Hritik by my side, we made the decision to mount mules and proceed with the journey. Upon reaching, we paid an incredibly high price for a plate of Maggie and halted. Mukul and Hemant reached after an hour, tired and looking like their souls were almost ready to succumb to fatigue. Hritik, Mukul, and Hemant set off in search of the campsite to rest and recuperate. Mukul looked as if he was on the brink of exhaustion and was borderline dead. I decided to hang back, explore the hills, and click photos.
 
 <figure class="dubai">
-<img alt= 'gangotri'  src ="https://anubhavp.dev/assets/img/fall23/gangotri.jpeg" class="h-75 w-75">
+<img alt= 'gangotri'  src ="https://anubhavp.dev/assets/img/fall23/gangotri.jpeg" class="h-75 w-100">
 <figcaption>
 <a href="https://www.instagram.com/p/CyQ6wKVP7BV/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
 Gangotri Range
@@ -77,7 +77,7 @@ At that point, my journey took a different direction. While the rest of my frien
 
 Coming back home, I met my parents, Swayam and Khusi. Khusi had flown in from Dubai for her fall break, and we had decided to go visit Dubai together. The day after that, both Khusi and I embarked on our journey to Dubai, ready for the adventures and experiences that awaited us in this vibrant city.
 
---- **Marhaba, Dubai** ---
+### Marhaba, Dubai
 
 Dubai proved to be a surreal experience, marking my first international trip outside of India. As I boarded the flight, the first thing that caught my attention was the extended flight time. Our journey spanned 4 hours and 15 minutes from Bhubaneswar to Dubai International Airport.
 
@@ -88,14 +88,14 @@ During our stay in Dubai, we rented out an apartment near where Khusi lives, for
 <div class="dubai-group">
 
 <figure class="dubai">
-<img alt= 'room1'  src ="https://anubhavp.dev/assets/img/fall23/room-1.jpeg" class="h-100 w-100 p-1">
+<img alt= 'room1'  src ="https://anubhavp.dev/assets/img/fall23/room-1.jpeg" class="h-100 w-100 ">
 <figcaption>
 Room -1
 </figcaption>
 </figure>
 
 <figure class="dubai">
-<img alt= 'apartment'  src ="https://anubhavp.dev/assets/img/fall23/room-2.jpeg" class="h-100 w-100 p-1">
+<img alt= 'apartment'  src ="https://anubhavp.dev/assets/img/fall23/room-2.jpeg" class="h-100 w-100">
 <figcaption>
 Apartment
 </figcaption>
@@ -109,7 +109,7 @@ She also introduced me to the places nearby. I decided to get a haircut done and
 The following day, our adventure led us to the iconic Dubai Mall, along with a visit to the Burj Khalifa. I had to get an Apple watch for a junior colleague of mine. We explored eateries and had dinner in the mall. I visited the Apple Store and urged Khusi to get me something but she refused. After a ton of shopping, we left and roamed around in the streets, exploring Dubai until late at night. I realized that Dubai is a city that never sleeps, and somehow most of the cab drivers here are either from India or Pakistan. The streets were bustling with people, and the city was alive with activity. We had dinner at a restaurant and then went back to our apartment. 
 
 <figure class="dubai">
-<img alt= 'burjkhalifa'  src ="https://anubhavp.dev/assets/img/fall23/burj-khalifa.jpeg" class="h-75 w-50">
+<img alt= 'burjkhalifa'  src ="https://anubhavp.dev/assets/img/fall23/burj-khalifa.jpeg" class="h-75 w-75">
 <figcaption>
 <a href="https://www.instagram.com/p/CytDfh0PFAw/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"
 >Burj Khalifa</a>
@@ -123,7 +123,7 @@ After six days of extensive exploration, we decided to have a breather on a Satu
 My scheduled departure back to India was set for Sunday, the 22nd. On that morning, we made our way to Kite Beach. I was in awe at how clean the beaches were. Having lived my life in Bhubaneswar, close to Puri, an iconic beach in India, I couldn't believe how amazing this place was as compared to Puri, where tourists have made it a dustbin of all sorts. We had breakfast at a cafe and then went ahead and  explored the beach. The beach was filled with people wearing fancy clothes, and the place was filled with people from all over the world.
 
 <figure class="dubai">
-<img alt= 'beach'  src ="https://anubhavp.dev/assets/img/fall23/beach-2.jpeg" class="h-75 w-75">
+<img alt= 'beach'  src ="https://anubhavp.dev/assets/img/fall23/beach-2.jpeg" class="h-75 w-100">
 <figcaption>
 <a href="https://www.instagram.com/p/CytDNnKvQfr/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
 Kite Beach
