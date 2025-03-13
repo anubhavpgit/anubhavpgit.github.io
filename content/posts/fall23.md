@@ -4,6 +4,7 @@ date: "23-10-2023"
 description: Two most glorious weeks of my life, unbothered by the world, one in the mountains, chasing the clouds, looking for Nirvana, and the other in the desert, chasing the sun, looking at greater heights.
 tag: "#life, #journal"
 ShowBreadCrumbs: true 
+showImg: true 
 ---
 <style>
  .dubai {
@@ -23,7 +24,7 @@ ShowBreadCrumbs: true
 I left from BLR to DEL via train and stayed with Mukul's sister for a day. Despite our tight schedule we managed to explore *Purani Dilli* for a day before Haridwar. Our day was filled with visits to iconic landmarks, including the magnificent Jama Masjid and the historic Red Fort. And obviously, we explored the amazing culinary places that I had bookmarked earlier and had multiple feasts there.
 
 <figure class="dubai">
-<img alt= 'puranidilli'  src ="https://anubhavp.dev/assets/img/oct/purani-dilli.jpeg" class="h-75 w-75">
+<img alt= 'puranidilli'  src ="https://anubhavp.dev/assets/img/fall23/purani-dilli.jpeg" class="h-75 w-75">
 <figcaption>
 <a href="https://www.instagram.com/p/CytDfh0PFAw/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"
 >Purani Dilli</a>
@@ -39,7 +40,7 @@ Somehow, I managed to trek for six and a half km. Hritik, Mukul and Hemant urged
 With Hritik by my side, we made the decision to mount mules and proceed with the journey. Upon reaching, we paid an incredibly high price for a plate of Maggie and halted. Mukul and Hemant reached after an hour, tired and looking like their souls were almost ready to succumb to fatigue. Hritik, Mukul, and Hemant set off in search of the campsite to rest and recuperate. Mukul looked as if he was on the brink of exhaustion and was borderline dead. I decided to hang back, explore the hills, and click photos.
 
 <figure class="dubai">
-<img alt= 'gangotri'  src ="https://anubhavp.dev/assets/img/oct/gangotri.jpeg" class="h-75 w-75">
+<img alt= 'gangotri'  src ="https://anubhavp.dev/assets/img/fall23/gangotri.jpeg" class="h-75 w-75">
 <figcaption>
 <a href="https://www.instagram.com/p/CyQ6wKVP7BV/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
 Gangotri Range
@@ -58,7 +59,7 @@ The following day, we embarked on our journey to Haridwar, which took us 6 hours
 After reaching Haridwar, we stowed our belongings in a room booked by Hemant. That evening, we roamed the enchanting streets, particularly around the ghats. It was a magical experience. As we explored the bustling markets of Haridwar, we indulged in a variety of food, finally catering to our appetites after being starved for 3 days. Hritik decided to bathe in the *Holy Ganga* and I joined him and dipped my feet in the sacred water. We also visited several temples, walking down memory lane, and reminiscing about our childhood days. We explored old paintings on the walls, discussing mythology and the stories behind them. We visited the *Har ki Pauri* ghat, where we witnessed the *Ganga Aarti*. The entire experience was surreal.
 
 <figure class="dubai">
-<img alt= 'ghat'  src ="https://anubhavp.dev/assets/img/oct/ghat.jpeg" class="h-75 w-75">
+<img alt= 'ghat'  src ="https://anubhavp.dev/assets/img/fall23/ghat.jpeg" class="h-75 w-75">
 <figcaption>
 <a href="https://www.instagram.com/p/CytDNnKvQfr/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
 Ganga Ghat
@@ -84,14 +85,14 @@ During our stay in Dubai, we rented out an apartment near where Khusi lives, for
 <div class="dubai-group">
 
 <figure class="dubai">
-<img alt= 'room1'  src ="https://anubhavp.dev/assets/img/oct/room-1.jpeg" class="h-100 w-100 p-1">
+<img alt= 'room1'  src ="https://anubhavp.dev/assets/img/fall23/room-1.jpeg" class="h-100 w-100 p-1">
 <figcaption>
 Room -1
 </figcaption>
 </figure>
 
 <figure class="dubai">
-<img alt= 'apartment'  src ="https://anubhavp.dev/assets/img/oct/room-2.jpeg" class="h-100 w-100 p-1">
+<img alt= 'apartment'  src ="https://anubhavp.dev/assets/img/fall23/room-2.jpeg" class="h-100 w-100 p-1">
 <figcaption>
 Apartment
 </figcaption>
@@ -105,7 +106,7 @@ She also introduced me to the places nearby. I decided to get a haircut done and
 The following day, our adventure led us to the iconic Dubai Mall, along with a visit to the Burj Khalifa. I had to get an Apple watch for a junior colleague of mine. We explored eateries and had dinner in the mall. I visited the Apple Store and urged Khusi to get me something but she refused. After a ton of shopping, we left and roamed around in the streets, exploring Dubai until late at night. I realized that Dubai is a city that never sleeps, and somehow most of the cab drivers here are either from India or Pakistan. The streets were bustling with people, and the city was alive with activity. We had dinner at a restaurant and then went back to our apartment. 
 
 <figure class="dubai">
-<img alt= 'burjkhalifa'  src ="https://anubhavp.dev/assets/img/oct/burj-khalifa.jpeg" class="h-75 w-50">
+<img alt= 'burjkhalifa'  src ="https://anubhavp.dev/assets/img/fall23/burj-khalifa.jpeg" class="h-75 w-50">
 <figcaption>
 <a href="https://www.instagram.com/p/CytDfh0PFAw/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"
 >Burj Khalifa</a>
@@ -119,7 +120,7 @@ After six days of extensive exploration, we decided to have a breather on a Satu
 My scheduled departure back to India was set for Sunday, the 22nd. On that morning, we made our way to Kite Beach. I was in awe at how clean the beaches were. Having lived my life in Bhubaneswar, close to Puri, an iconic beach in India, I couldn't believe how amazing this place was as compared to Puri, where tourists have made it a dustbin of all sorts. We had breakfast at a cafe and then went ahead and  explored the beach. The beach was filled with people wearing fancy clothes, and the place was filled with people from all over the world.
 
 <figure class="dubai">
-<img alt= 'beach'  src ="https://anubhavp.dev/assets/img/oct/beach-2.jpeg" class="h-75 w-75">
+<img alt= 'beach'  src ="https://anubhavp.dev/assets/img/fall23/beach-2.jpeg" class="h-75 w-75">
 <figcaption>
 <a href="https://www.instagram.com/p/CytDNnKvQfr/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
 Kite Beach
