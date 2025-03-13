@@ -4,6 +4,7 @@ date: "15-05-2023"
 description: "A goodbye to the best four years of my life: an ode to my alma mater."
 tag: "#life, #journal"
 ShowBreadCrumbs: true 
+showImg: true
 ---
 <style>
  .skylab {
@@ -13,12 +14,6 @@ ShowBreadCrumbs: true
  flex-direction: column;
  }
  </style>
-<figure class="skylab">
-<img alt='campus' src ="https://anubhavp.dev/assets/img/teasquared/sit2.jpeg" >
-<figcaption>
-SIT Campus
-</figcaption>
-</figure>
 
 Standing here on the cusp of graduating, gazing upon the halls and pathways that have become my home for the past four years, a swirl of emotions engulfs me. My heart feels heavy with this melancholy as I roam around this campus for the final time. Every nook and corner of this campus holds a special place in my heart. Every memory, every laugh, and every tear have been etched into these walls. And now, as I take my final steps through these corridors, I can feel a sense of separation looming over me. It's hard to let go of something that has been a part of your life for so long. 
 
