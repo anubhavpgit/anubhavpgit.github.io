@@ -284,8 +284,38 @@ p {
 	max-width: 48rem !important;
 }
 
-#header {
+
+/* Style for the header's content area (title, description, etc.) */
+#header .content {
 	max-width: 36rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Let the figure break out of the header's width constraints */
+#header figure.header-figure {
+	max-width: 44rem;
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Style for the image itself */
+#header figure.header-figure img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Nav styles remain the same */
+.nav-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	max-width: 36rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .nav-home {
@@ -493,11 +523,31 @@ td:first-child:hover~td {
 
 /* Base styling for header image */
 .blog-header-image {
-	/* width: 100%; */
+	width: 100%;
+	height: auto;
+	display: block;
 	object-fit: cover;
 	margin: 0;
 	padding: 0;
 }
+
+
+/* #header figure.header-figure {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 42rem;
+	width: 100%;
+
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin-bottom: 1rem;
+} */
 
 /* @media screen and (min-width: 1513px) {
 	.f6 {
@@ -517,18 +567,6 @@ td:first-child:hover~td {
 		margin-left: -10px;
 	}
 
-	.blog-header-image {
-		height: auto;
-	}
-
-	/* No negative margin on mobile */
-	#main>main>.content.custom {
-		margin-top: 0;
-	}
-
-	#main>main>figure.header-figure {
-		margin-bottom: 0;
-	}
 }
 
 @media only screen and (min-width: 769px) {
@@ -538,25 +576,4 @@ td:first-child:hover~td {
 		top: -4px;
 		left: -36px;
 	}
-
-	#main>main>figure.header-figure {
-		justify-content: center;
-		align-items: center;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 44rem;
-		width: 100%;
-		overflow: hidden;
-	}
-
-	/* Style the image itself */
-	.blog-header-image {
-		height: auto;
-		display: block;
-	}
-
-	#main>main>figure.header-figure {
-		margin-bottom: 1.5rem;
-	}
-
 }
