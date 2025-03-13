@@ -3,6 +3,7 @@ title: "The Parakeet King"
 date: "01-08-2024"
 description: "A story about a king who lost his kingdom and found a friend."
 tag: "#life"
+showImg: true
 ---
 
 I recently wrote about [battling anxiety and depression](https://anubhavp.dev/blog/lifeandtheuniverse.html). After six months, writing about something uncomfortable seems partly easier now. My last article helped me engage with an audience experiencing similar struggles. It's remarkable how much we can uncover about each other's inner worlds simply by communicating. Everyday conversations can be incredibly therapeutic—a reminder that we are not alone in our struggles, and my recent experiences have been a testament to this.

@@ -3,16 +3,9 @@ title: 'Dough - A Rich Presentation Tool'
 date: "31-01-2024"
 description: "A rich presentation tool built in Rust that uses markdown for content generation."
 tag: "#tech"
+showImg: true
 ---
 Imagine a presentation tool that seamlessly blends simplicity with power. Welcome to Dough – your new favorite presentation companion. Say goodbye to clunky interfaces and hello to a tool that's as intuitive as it is efficient.
-
-<figure style="justify-content: center; align-items: center; display: flex;flex-direction: column;">
-<video controls style='height: 100%; width: 100%; object-fit: contain;'>
-<source src='https://anubhavp.dev/assets/img/dough/simple-presentation.mp4' 
-type='video/mp4'>
-  Your browser does not support the video tag.
-</video>
-</figure>
 
 ## Why Dough?
 
@@ -79,3 +72,11 @@ If you're eager to dive into the world of Rust and looking for a project to cont
 Feel free to explore these areas, open new issues, or submit pull requests to contribute to Dough's evolution. Your insights and contributions are highly valued as we strive to make Dough the go-to presentation tool for Rust enthusiasts everywhere.
 
 Let your presentations shine like never before :)
+
+<figure style="justify-content: center; align-items: center; display: flex;flex-direction: column;">
+<video controls style='height: 100%; width: 100%; object-fit: contain;'>
+<source src='https://anubhavp.dev/assets/img/dough/simple-presentation.mp4' 
+type='video/mp4'>
+  Your browser does not support the video tag.
+</video>
+</figure>

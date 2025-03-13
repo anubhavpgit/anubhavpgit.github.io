@@ -1,6 +1,7 @@
 ---
 title: Pens and Pixels
 description: "Thoughts on books read, shows watched"
+showImg: true
 ---
 
 ###### Fiction

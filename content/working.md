@@ -1,6 +1,7 @@
 ---
 title: "Working"
 description: "What do I build next?"
+showImg: true
 ---
 
 ###### Next up:

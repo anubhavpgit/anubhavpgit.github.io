@@ -1,6 +1,7 @@
 ---
 title: Anubhab Patnaik
 description: "Anubhab Patnaik| fuzzymf- Engineer/ Entrepreneur"
+showImg: true
 ---
 
 [<span style="color: #777;"><i class="fa-file-invoice icon"></i> resume</span>](/resume.pdf)

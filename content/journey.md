@@ -1,6 +1,7 @@
 ---
 title: "Journey"
 description: "Conquests, sojourns, and adventures in the world of tech."
+showImg: true
 ---
 
 ### Work

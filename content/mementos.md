@@ -1,6 +1,7 @@
 ---
 title: "Mementos"
 description: "A collection of recent captures"
+showImg: true
 ---
 ## Mementos
 

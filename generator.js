@@ -313,6 +313,53 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
       );
     }
   }
+  if (file.data.showImg) {
+    // Get the filename without extension
+    const fileBase = filename.split("/").slice(-1)[0].slice(0, -3);
+
+    // Construct the directory path for the blog's images
+    const imgDirPath = path.join(config.srcPath.assetsPath, 'img', fileBase);
+
+    // Check if the directory exists
+    if (fs.existsSync(imgDirPath)) {
+      // Look for any file that starts with "head." in the directory
+      const headerFiles = fs.readdirSync(imgDirPath)
+        .filter(file => file.startsWith('head.'));
+
+      if (headerFiles.length > 0) {
+        // Use the first matching file
+        const headerFileName = headerFiles[0];
+        // Construct the path as it will appear in the HTML
+        const imgPath = `${fileBase}/${headerFileName}`;
+
+        // Create HTML with the new structure - full width figure
+        const headerImageHTML = `
+        <figure class="header-figure">
+          <img src="/assets/img/${imgPath}" alt="${file.data.title}" class="blog-header-image">
+        </figure>`;
+
+        // Replace the existing figure element
+        templatized = templatized.replace(
+          /<figure class="header-figure">[\s\S]*?<\/figure>/g,
+          headerImageHTML
+        );
+      } else {
+        // No header image found, remove the figure element
+        templatized = templatized.replace(/<figure class="mb4">[\s\S]*?<\/figure>/g, '');
+        console.warn(`⚠️ No header image found for: ${fileBase}`);
+      }
+    } else {
+      // Image directory doesn't exist, remove the figure element
+      templatized = templatized.replace(/<figure class="mb4">[\s\S]*?<\/figure>/g, '');
+      console.warn(`⚠️ Image directory doesn't exist for: ${fileBase}`);
+    }
+  } else {
+    // If showImg is false or not specified, remove the figure element
+    templatized = templatized.replace(
+      /<figure class="header-figure">[\s\S]*?<\/figure>/g,
+      ""
+    );
+  }
 
   saveFile(outfilename, templatized);
   console.info(`📄 ${filename.split("/").slice(-1).join("/").slice(0, -3)}`);

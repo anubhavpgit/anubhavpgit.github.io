@@ -2,6 +2,7 @@
 title: "Current odyssey"
 description: "Here's what I am upto these days"
 showdate: true
+showImg: true
 ---
 
 ##### Current, 2025
