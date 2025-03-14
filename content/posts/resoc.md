@@ -1,7 +1,7 @@
 ---
 title: 'Resoc, a gift to my alma mater'
 date: "17-03-2023"
-description: "RESOC; short for Resources + Community, is the coolest academic notes-sharing platform around, built by a bunch of tech-savvy students at Silicon Institute, and it's totally free. The metrics below show the traffic :P"
+description: "RESOC; short for Resources + Community, is the ABD of notes - the coolest academic notes-sharing platform around, built by a bunch of tech-savvy students at Silicon Institute, and it's totally free!"
 tag: "#tech"
 showImg: true
 
@@ -112,9 +112,19 @@ There are a ton of features and fixes we are looking to implement in the platfor
 ### Metrics
 
 <figure class="resoc">
-<img alt="analytics" src ="https://anubhavp.dev/assets/img/resoc/resoc-traffic.jpeg" class="h-75 w-75">
+<img alt="analytics" src ="https://anubhavp.dev/assets/img/resoc/resoc-traffic.jpeg" class="h-100 w-100" />
 <figcaption>
 RESOC Traffic during exam time!
 </figcaption>
+
+
+<figure class="resoc">
+<img alt="analytics" src ="../assets/img/resoc/24traffic.png" class="h-100 w-100" />
+<figcaption>
+RESOC Traffic in 2024!
+</figcaption>
+
+
+
 
 </figure>
