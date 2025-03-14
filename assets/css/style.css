@@ -294,7 +294,7 @@ p {
 
 /* Let the figure break out of the header's width constraints */
 #header figure.header-figure {
-	max-width: 44rem;
+	max-width: 42rem;
 	width: 100%;
 	height: auto;
 	margin-left: auto;
