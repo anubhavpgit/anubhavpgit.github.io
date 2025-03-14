@@ -57,19 +57,18 @@ The following morning, we awoke from our snug sleeping bags and prepared to visi
 
 We went inside the temple, and the atmosphere was serene. After returning to the campsite, we collected our belongings and I found out that my power bank had been stolen. With a heavy heart, we started our descent. We reached the campsite, and we were all tired. We had our dinner and slept.
 
-The following day, we embarked on our journey to Haridwar, which took us 6 hours to reach Sonprayag. The return journey was beautiful. having successfully completed the trek, we were all in high spirits. We reminisced about our childhood days and the memories we had made. We were all happy and content. Hritik told us how hard his breakup was on him, while me and Mukul made fun of him. Hemant told us that he got a quarter where he later found out that someone had died and decided to switch places. Now, he had to live with his brother while he awaited a new quarter. Somehow six hours passed, and we reached Haridwar.
-
-After reaching Haridwar, we stowed our belongings in a room booked by Hemant. That evening, we roamed the enchanting streets, particularly around the ghats. It was a magical experience. As we explored the bustling markets of Haridwar, we indulged in a variety of food, finally catering to our appetites after being starved for 3 days. Hritik decided to bathe in the *Holy Ganga* and I joined him and dipped my feet in the sacred water. We also visited several temples, walking down memory lane, and reminiscing about our childhood days. We explored old paintings on the walls, discussing mythology and the stories behind them. We visited the *Har ki Pauri* ghat, where we witnessed the *Ganga Aarti*. The entire experience was surreal.
-
 <figure class="dubai">
-<img alt= 'ghat'  src ="https://anubhavp.dev/assets/img/fall23/ghat.jpeg" class="h-75 w-75">
+<img alt= 'kedarnath'  src ="../assets/img/fall23/kedarnath.webp" class="h-75 w-75">
 <figcaption>
 <a href="https://www.instagram.com/p/CytDNnKvQfr/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
-Ganga Ghat
+Journey back
 </a>
 </figcaption>
 </figure>
 
+The following day, we embarked on our journey to Haridwar, which took us 6 hours to reach Sonprayag. The return journey was beautiful. having successfully completed the trek, we were all in high spirits. We reminisced about our childhood days and the memories we had made. We were all happy and content. Hritik told us how hard his breakup was on him, while me and Mukul made fun of him. Hemant told us that he got a quarter where he later found out that someone had died and decided to switch places. Now, he had to live with his brother while he awaited a new quarter. Somehow six hours passed, and we reached Haridwar.
+
+After reaching Haridwar, we stowed our belongings in a room booked by Hemant. That evening, we roamed the enchanting streets, particularly around the ghats. It was a magical experience. As we explored the bustling markets of Haridwar, we indulged in a variety of food, finally catering to our appetites after being starved for 3 days. Hritik decided to bathe in the *Holy Ganga* and I joined him and dipped my feet in the sacred water. We also visited several temples, walking down memory lane, and reminiscing about our childhood days. We explored old paintings on the walls, discussing mythology and the stories behind them. We visited the *Har ki Pauri* ghat, where we witnessed the *Ganga Aarti*. The entire experience was surreal.
 
 We had a train to catch at 11:45 p.m., and at 12, we left for Delhi. 
 
