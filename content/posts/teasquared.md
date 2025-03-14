@@ -19,6 +19,13 @@ Standing here on the cusp of graduating, gazing upon the halls and pathways that
 
 The classrooms where we are always late are filled with nostalgia. The same classrooms where we listened to lectures with half attention, where we struggled to keep our eyes open during the post-lunch sessions, and where we made friends. As I stand at the back of the room and look at the empty seats, I can hear the echo of our conversations. The long hours spent with our lab partners, trying to make sense of the experiments, the fear of lab tests, the laughter and the frustration - all of it comes flooding back. Walking past these memories, I feel a sense of loss. I am leaving behind a part of myself. 
 
+<figure class="skylab">
+<img alt= 'skylab'  src ="https://anubhavp.dev/assets/img/teasquared/sit-1.webp" class="h-75 w-75">
+<figcaption>
+Silicon Institute of Technology
+</figcaption>
+</figure>
+
 It feels like only yesterday that I was a wide-eyed fresher, stepping onto campus for the first time. I was, in my mind, a tech hero, filled with adrenaline, prepared to win and rule. As I stepped into the world of the unknown and grown-ups, I realized I had much to learn. I was a small fish in a big lake and had to learn to swim. I was overwhelmed by the sheer number of people, the hustle and bustle of the campus, and the endless possibilities that lay ahead of me. We used to walk around with an ID card hanging and hang out in corners, bragging about how we were going to change the world upon graduating. I remember hopping on the evening bus to visit the market with my friends. We'd eat a ton while discussing the everyday nuances of our college lives. Participating in events, giving out interviews for clubs, helping organize events and hanging out late with seniors were all we did; we were young, naive, and full of dreams. 
 
 I yearn to go back to the first year and walk through the gate again. I long to don those ID cards once again and stand with my friends at T-Square as we reminisce about our first-year experiences. I remember getting asked to demonstrate riding bikes, ask a senior's name in the proper format, and pry on our classmates and get their numbers for the seniors. Pondering back, I wish I could attend classes again, get sent outside for disturbing, run in sweaty formals, enter the chilled CS labs, and sit there staring blankly at the screens. Looking back, I can't help but smile at the memories. 
