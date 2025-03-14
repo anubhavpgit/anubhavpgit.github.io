@@ -4,6 +4,7 @@ date: 03-03-2025
 description: "A journey through whims of fate and lucid memories. Growing up, old and looking for the purpose of life."
 draft: true
 tag: "#life"
+showImg: true
 ---
 
 Greek mythology is fascinating and full of stories that explore the human condition and the nature of existence. My fascination with it stems from the fact that even gods are flawed. They are not perfect beings, but rather, subject to the same emotions and desires as mortals— erratic, unpredictable, and often facing unintended consequences from their actions. Zeus, the king of the gods, is known for his infidelity and vengeful nature. Hera, his wife, embodies jealousy and vindictiveness, while Aphrodite, the goddess of love, is vain and manipulative.
