@@ -14,7 +14,7 @@ showImg: true
 
 ###### March
 
-Happy Holi folks! I had a lovely Holi celebration here this weekend. So, [​Microsoft has announced a native port of the TypeScript compiler and tools to a language like Go](https://devblogs.microsoft.com/typescript/typescript-native-port/), aiming to drastically improve performance. This native implementation is expected to provide a 10x speedup in editor startup and build times, along with substantial reductions in memory usage. 
+Happy Holi folks! I had a lovely Holi celebration here this weekend. So, [​Microsoft has announced a native port of the TypeScript compiler to Go](https://devblogs.microsoft.com/typescript/typescript-native-port/), aiming to drastically improve performance. This native implementation is expected to provide a 10x speedup in editor startup and build times, along with substantial reductions in memory usage. 
 
 **How Much Faster in real-world projects, you ask?**
 
