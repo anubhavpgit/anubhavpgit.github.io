@@ -14,6 +14,17 @@ showImg: true
 
 ###### March
 
+Happy Holi folks! I had a lovely Holi celebration here this weekend. So, [​Microsoft has announced a native port of the TypeScript compiler and tools to a language like Go](https://devblogs.microsoft.com/typescript/typescript-native-port/), aiming to drastically improve performance. This native implementation is expected to provide a 10x speedup in editor startup and build times, along with substantial reductions in memory usage. 
+
+**How Much Faster in real-world projects, you ask?**
+
+| Codebase   | Size (LOC) | Current tsc Time | Native tsc Time | Speedup |
+|------------|------------|------------------|-----------------|---------|
+| VS Code    | 1,505,000  | 77.8s            | 7.5s            | 10.4x   |
+| Playwright | 356,000    | 11.1s            | 1.1s            | 10.1x   |
+
+[More here](https://devblogs.microsoft.com/typescript/typescript-native-port/#how-much-faster). Typescript had a self-hosted compiler written in TypeScript but this new native port seems like a game-changer for TS devs. Compiled languages are always faster than interpreted languages, and typescript is celebrated for its type safety and developer experience. 
+
 The [internet is going crazy](https://www.reddit.com/r/ClaudeAI/comments/1ixisq1/just_tried_claude_37_sonnet_what_the_actual_fuck/) since the launch of *Claude 3.7 sonnet* and for the right reasons. Claude 3.7 destroyed benchmarks, which is a significant improvement over other models. I tried out Claude, and it's just insane. For instance, I asked it to review an article I wrote earlier with the default prompt provided by Anthropic (look for the *polish your prose* suggestion in Claude), and it just nailed it.
 
 Now the question is, do I replace my ChatGPT+ subscription with Claude? Claude **doesn't have a web-search feature**. It's not that they haven't built it, but they purposefully chose not to, citing security and privacy concerns. Although, that does make sense since giving internet access to the model lets it learn from the internet, and thus, can potentially mislead or misinform the user. I believe this is one of the factors that make the `3.7 sonnet` faster than `o1` and `o3` at code generation or even research tasks. 
