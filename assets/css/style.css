@@ -102,43 +102,33 @@ Icons
  * Elements
  */
 
-
 #main a {
 	color: var(--azure);
-}
-
-#main a {
 	text-decoration: none;
+	position: relative;
+	transition: color .4s;
+	outline: none !important;
+	display: inline-block;
 }
 
 #main a:hover {
-	text-decoration: underline;
-}
-
-#main.page-home a {
-	position: relative;
-	outline: none !important;
 	text-decoration: none;
 }
 
-#main.page-home a {
-	transition: color .4s;
-}
-
-#main.page-home a:before {
+#main a:before {
 	content: "";
 	position: absolute;
-	width: 100%;
-	height: 1px;
-	bottom: 0;
 	left: 0;
+	right: 0;
+	bottom: 2px;
+	height: 1px;
 	background-color: var(--azure);
 	transform: scaleX(0);
-	transition: transform 0.2s var(--ease) 0s;
+	transform-origin: center;
+	transition: transform 0.2s ease;
 }
 
-#main.page-home a:hover:before {
-	visibility: visible;
+#main a:hover:before {
 	transform: scaleX(1);
 }
 
