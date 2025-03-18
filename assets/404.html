@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#000000" />
@@ -11,42 +12,41 @@
   <link rel="manifest" href="/manifest.json" />
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/tachyons.min.css" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="author" content="Anubhab Patnaik" />
   <title>Page Not Found</title>
 </head>
 
-<body>
-  <div>
-    <div class="f6">
-      <header id="header" class="center mt6 mb4">
-        <nav>
-          <div class="mb2 dib">
-            <a href="/" title="home" class="index">
-              <img src="/android-chrome-192x192.png" alt="logo" class="mr1 index-logo" />
-            </a>
-            <a href="/current.html" title=" Here is what I am currently doing
-                " class="gray link">/current</a>
+<body class="markdown-body">
+  <div class="f6">
+    <header id="header" class="center mt6 mb4">
+      <nav class="nav-wrapper">
+        <div class="mb2 dib">
+          <a href="/" title="home" class="index nav-home">
+            <img src="/android-chrome-192x192.png" alt="logo" class="mr1 index-logo" />
+          </a>
+          <a href="/current.html" title=" What's up?" class="gray link">/current</a>
 
-            <a href="/blog"
-              title="The magic and storms that shaped my journey - life, technology and everything in between"
-              class="gray link">/blog</a>
+          <a href="/blog"
+            title="The magic and storms that shaped my journey- life, technology and everything in between"
+            class="gray link">/blog</a>
 
-            <a href="/about.html" title=" Here is more about me
-                " class="gray link">/about</a>
-          </div>
-          <div>
-            <a href="/blog/feed.xml" title="anubhab" class="rss gray link">/rss</a>
-          </div>
-        </nav>
-      </header>
-      <section id="main" class="page-post gray mb6 lh-copy">
+          <a href="/about.html" title=" More" class="gray link">/about</a>
+        </div>
+        <div class="mb2 dib">
+          <a href="/blog/feed.xml" title="anubhab" class="rss gray link">/rss</a>
+        </div>
+      </nav>
+    </header>
+    <section id="main" class="page-post gray mb6 lh-copy">
+      <main>
         <div class="content custom">
           <h5 class="f2 lh-title">404</h5>
-          <p> Nothing found.</p>
-          <p>Well... how did we get here? Let's find our way back <a href="/" class="link"><span
-                class="date gray"><u>here</u></span></a>.
-          </p>
-      </section>
-    </div>
+          <p>Nothing found.</p>
+          <p>Well... how did we get here? Let's find our way back <a href="/" class="link">here</span></a>.</p>
+        </div>
+      </main>
+    </section>
   </div>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/404.js"></script>
