@@ -9,7 +9,7 @@ showImg: true
 - An image/audio analyzer/decomposer to convert svg to png and vice-versa; decomposing periodic functions using fourier series approximation
 - A (short MVP) C/C++ compiler for RISC-V.
 - A consistent, memory-safe fast, read/write distributed database built in Go/Rust that implements a distributed caching mechanism like [docstore](https://www.uber.com/en-IN/blog/how-uber-serves-over-40-million-reads-per-second-using-an-integrated-cache/) or [memcached](https://memcached.org/)
-- Getting hands dirty with LLM Ops: Building a custom AI assisted nutrition manager (A purely personal project)
+- Building a custom AI assisted nutrition manager, [Senseii](https://anubhavp.dev/blog/heyjude.html)
 
 ###### Recent Projects:
 
