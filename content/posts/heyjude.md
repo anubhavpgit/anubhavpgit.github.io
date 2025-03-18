@@ -7,8 +7,6 @@ index: false
 tag: "#tech, #product"
 ---
 
-P.S.: Jude is [Senseii](https://senseii.in) now!
-
 The most annoying part of my day is deciding what and how much to eat. And, like all of you, I too rely on ChatGPT to help me with every little decision I make. From figuring out why this piece of code isn’t working and why Israel attacked Palestine to what to and how much to eat, ChatGPT had been my go-to, and now Claude. Let’s be honest here: LLM Chatbots are the new Google. They have answers to everything and are mostly accurate if you use better models. But I wanted something more robust—something faster and more organized. Thus, I said, *Hey, Jude!*
 
 > Before I go ahead and rant, keep in mind that right now, Jude is in its *Alpha* build. Also, **Jude is [Senseii](https://senseii.in) now!** [Prateek](https://www.prateeksingh.tech/) was also building something similar to Jude, and we decided to build this together. Senseii as a product was exactly what I had imagined Jude to be, and Senseii is the name we decided to stick with. This article is a product journey roadmap of Jude, and how I am deciding to build it in public.
@@ -177,7 +175,7 @@ Jude is primarily meant to solve nutrition tracking and analysis. It is meant fo
 - Looking to build muscle mass and physique
   - Build physique and muscle mass
   - Information on targeting compound movements and isolation movements
-  - Weights tot start with, and how to progress
+  - Weights to start with, and how to progress
   - Muscle recovery and soreness/ fatigue
 - Looking to track their daily intake and analyze their data to make healthier life choices
   - What kind of stuff to eat (good quality proteins, fats and carbs) and avoid (processed food, junk food, etc.)
