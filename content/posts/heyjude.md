@@ -51,25 +51,27 @@ Jude saves all of your personal, dietary, and food preferences initially while c
  
 Yes, you are right; to name a few, HealthifyMe, MyFitnessPal, LoseIt, Cronometer, and the list goes on. I have tried these apps too. There are four main issues I see with something like this:
 
-1. Most of them have a terrible design. 
+#### 1. Terrible design
 
 They are just **not user-friendly**. I just genuinely hate the UI/UX of most of these apps. They just make everything more and more complicated. They clutter too much information in one screen and have a shitton of features that are either too complicated, useless, or not intuitive enough for me to use them daily. It is almost impossible to track your entire journey meticulously. You have to scroll through the app to find the information you need, and sometimes it’s not easy to make sense of the data.
 
 The primary reason for building Jude was to make it simpler and intuitive. The process of tracking nutrition, and mapping out your journey doesn't have to be riddled with unnecessary features and cluttered UI. It should be simple, easy and with an amazing UI to make you want to use it. 
 
-2. The **information provided is usually not accurate**. 
+#### 2. Inaccuracy
 
 They are based on a mix—a mix of data provided by the users and data from the backend, and the data is either not accurate or there is too much data for you to make sense of. Like, there might be 8-9 "*Indian Dosas*" with different calories and nutrition written around them, or if you search for a burger, there would be tens of burgers with hundred different calories and nutritional values, and you are left to choose which one to pick. Some of them do actually have a pretty neat way of taking in images of what you eat and then providing you with the nutritional information, but that’s not always accurate, and you would have to manually enter the data if you want to be sure.
 
 Jude simply uses multiple AI agents that work together, delegate tasks and process each vertical of your journey parallelly. It uses Anthropic's most powerful `Claude 3.7sonnet` and OpenAI's most powerful model, `o1`, to provide you with the most accurate information. Most of the time, the data is accurate and you can rely on it. If you are not sure about the data, you can always ask Jude to provide you with the source of the data, or you could attach a link/ image of the nutritional information, and Jude will use that to provide you with the most accurate information.
 
-3. The **cost**.
+#### 3. The cost
 
 Most of these apps are either too expensive or have a freemium model that is too restrictive. Jude will be entirely free for you to use. It is in the early stages and would be looking for early adopters to provide feedback and help improve the platform. As an early adopter, you will have access to all the features of the platform for free. 
 
 If there are users, who love this and start using it and the platform grows and the costs increase, there might be a small recurring cost to use the platform. But, as opposed to others, either it will be the bare minimum, probably lower than what iCloud charges you, or we might use ads to cover the costs. But, as of now, the platform will be **entirely free** for you to use. Later, you'd have options to pay for the ad-free version, but the free version will be available for you to use and will be "aesthetic enough" and have amazing UI to not be annoying. The ads will be based on the content of the platform and not on your personal data Jude doesn't store your data or would not sell your data to any third party. This brings me to the next point.
 
-4. **Privacy concerns**. Jude is built with privacy in mind. You choose what data you want to share and with whom. You can choose to keep your data private; save all your data locally on your personal device and use it on that particular device or share it with Jude which would let you sync it across multiple devices. In any case, Jude does not store any of your personal information, and all personal data is encrypted. The layer in between abstracts the data and sends only the necessary information to the AI. This is also why Jude would use your own AI `API Key`.
+#### 4. Privacy concerns
+
+Jude is built with privacy in mind. You choose what data you want to share and with whom. You can choose to keep your data private; save all your data locally on your personal device and use it on that particular device or share it with Jude which would let you sync it across multiple devices. In any case, Jude does not store any of your personal information, and all personal data is encrypted. The layer in between abstracts the data and sends only the necessary information to the AI. This is also why Jude would use your own AI `API Key`.
 
 For the AI part, it isn't free or cheap. Jude if made available to the public, will be using your own API key to make sure that the data is not being shared with any third-party companies. You won’t have to pay anything in that case. You can still rely on the default setting (using Jude’s default API key) if you don’t want to use your own API key and pay a small recurring fee. 
 
@@ -77,7 +79,7 @@ For the AI part, it isn't free or cheap. Jude if made available to the public, w
 
 ## The How
 
-Building Jude, my primary concern was design, accuracy anxd performance. I spent the most amount of my time polishing the design of the platform and crafting the AI engineering behind it. I wanted to make sure that the platform looks great, is easy to use, and is fast and accurate.
+Building Jude, my primary concern was design, accuracy and performance. I spent the most amount of my time polishing the design of the platform and crafting the AI engineering behind it. I wanted to make sure that the platform looks great, is easy to use, and is fast and accurate.
 
 ### The nitty-gritty: designing Jude
 
