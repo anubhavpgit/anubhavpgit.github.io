@@ -7,11 +7,13 @@ index: false
 tag: "#tech, #product"
 ---
 
+P.S.: Jude is [Senseii](https://senseii.in) now!
+
 The most annoying part of my day is deciding what and how much to eat. And, like all of you, I too rely on ChatGPT to help me with every little decision I make. From figuring out why this piece of code isn’t working and why Israel attacked Palestine to what to and how much to eat, ChatGPT had been my go-to, and now Claude. Let’s be honest here: LLM Chatbots are the new Google. They have answers to everything and are mostly accurate if you use better models. But I wanted something more robust—something faster and more organized. Thus, I said, *Hey, Jude!*
 
 > Before I go ahead and rant, keep in mind that right now, Jude is in its *Alpha* build. Also, **Jude is [Senseii](https://senseii.in) now!** [Prateek](https://www.prateeksingh.tech/) was also building something similar to Jude, and we decided to build this together. Senseii as a product was exactly what I had imagined Jude to be, and Senseii is the name we decided to stick with. This article is a product journey roadmap of Jude, and how I am deciding to build it in public.
 
-> This article is based on what I wanted Jude to be and is the first *draft journey roadmap. There will be multiple iterations, hundreds of feature changes and architectural changes and thus, this article might not reflect what Jude turns out to be. The current version may vastly differ from this design.
+> This article is based on what I wanted Jude to be and is the first *draft journey roadmap. There will be multiple iterations, hundreds of feature changes and architectural changes and thus, this article might not reflect what Jude turns out to be. The current version may vastly differ from this design. The subsequent articles will be more focused on the current version of Jude and the changes made to it.
 
 ## The Why
 
@@ -76,6 +78,7 @@ Jude is built with privacy in mind. You choose what data you want to share and w
 For the AI part, it isn't free or cheap. Jude if made available to the public, will be using your own API key to make sure that the data is not being shared with any third-party companies. You won’t have to pay anything in that case. You can still rely on the default setting (using Jude’s default API key) if you don’t want to use your own API key and pay a small recurring fee. 
 
 <!--https://claude.ai/share/44639d08-96da-4077-ac6b-9bb16cfe9478 -->
+<!-- Competition analysis: Rather than broadly criticizing existing apps, you could analyze 2-3 specific competitors and highlight particular UX flows or features that frustrate users. This makes your critique more credible and actionable -->
 
 ## The How
 
@@ -147,25 +150,51 @@ A couple of reasons for using NextJs and Shadcn are:
 - Easy to find developers for JS/TS and React. I haven't met anyone who doesn't know React or NodeJs. 
 
 The challenge begins here:
-- R Native + Expo - While the MVP might be a web app, Jude is meant to be a mobile-first product. At some point, I will be switching primarily to a mobile app. I am leaning towards React Native for now, but I might switch to native later.
 
+- R Native + Expo - While the MVP might be a web app, Jude is meant to be a mobile-first product. At some point, I will be switching primarily to a mobile app. I am leaning towards React Native for now, but I might switch to native later.
 - NodeJs + ExpressJs - The backend would have to be separated out into a separate microservice as the product grows and scales. The mobile app would also be reliant on a separate backend. Limitations of Nextjs that would be solved by this solution are:
 - Complex multi-agent orchestration logic
 - Fine-grained control over WebSocket connections
 - Multiple, separate microservices for different tasks
 
 The other more complex parts of the platform are:
-- MongoDB + Pinecone (with TTL) - MongoDB is fast, efficient, and easy to use. Pinecone, on the other hand, can scale and be expensive. Employing TTL would help keep the costs down, BUT, this is a major tradeoff. Agents might not have access to the context necessary to provide accurate information. Let's come back to this later.
 
+- MongoDB + Pinecone (with TTL) - MongoDB is fast, efficient, and easy to use. Pinecone, on the other hand, can scale and be expensive. Employing TTL would help keep the costs down, BUT, this is a major tradeoff. Agents might not have access to the context necessary to provide accurate information. Let's come back to this later.
 - The AI orchestration engine - The current strategy is to use multiple AI agents that work together, delegate tasks and process each vertical of your journey parallelly. It uses Anthropic's most powerful `Claude 3.7sonnet` and OpenAI's most powerful model, `o1`, to provide you with the most accurate information.
 
-<!-- work pending here -->  
+<!-- work pending here -->
+<!-- Multi-agent elaboration: You can expand on the benefits of your multi-agent system without revealing implementation details. For example, explain how having specialized agents improves accuracy for different nutrition contexts (restaurant meals vs. home cooking) or how the delegation between agents creates a more responsive experience. -->
 
 All of these are theoretical at this point, and I am still working on the design and the architecture of the platform. The final product might be a lot different from what I have described here.
 
-## Reviews, feedback, and suggestions - what next?
+
+## Where do you fit in?
+
+Jude is primarily meant to solve nutrition tracking and analysis. It is meant for people who are looking to make healthier life choices, track their daily intake, and analyze their data. The primary goals that come to mind are:
+- Looking to lose/gain weight (including me- that's how I started with this journey):
+  - Make realistic goals and track them
+  - Track your daily intake and analyze your data
+- Looking to build muscle mass and physique
+  - Build physique and muscle mass
+  - Information on targeting compound movements and isolation movements
+  - Weights tot start with, and how to progress
+  - Muscle recovery and soreness/ fatigue
+- Looking to track their daily intake and analyze their data to make healthier life choices
+  - What kind of stuff to eat (good quality proteins, fats and carbs) and avoid (processed food, junk food, etc.)
+  - Avoiding gluten is useless if you are not gluten intolerant. It is a fad that gluten is bad for you.
+  - Similarly, wheat vs flour is the same as brown vs white rice, or sugar vs jaggery. Sugar isn't bad for you, the quantity matters and is important.
+- Looking to build a healthy lifestyle - exercise, sleep, and other health-related data
+
+
+If you're someone with similar goals, or if you're just someone who is looking to make healthier life choices, Jude is for you. I would love for you to try it out first-hand and provide feedback. The entire thing would be lifetime free for you (no ads :)).
+
+If you're a developer, designer, or just someone interested in building something like this, I would love to hear from you. I am looking for people who are interested in using Jude and providing feedback. Consider this a call for early adopters. I am looking for people who are interested in using Jude and providing feedback. If you are interested, please drop a comment below or reach out to me on [LinkedIn](https://www.linkedin.com/in/anubhabpatnaik/).
+
+## Reviews, feedback, timeline and suggestions - what next?
 
 Building Jude is a blast. I am just in the early stages of development, and yet a long, long way to go. At the very least, I am sure it is better than whatever out there you think could compete with it. This article was a simple entry point into how my brain worked while building Jude. The final product when completed, would be a lot better than what you see here. Jude is just a personal project that actually solves my problem, and I thought would be cool to share with you all. It isn't fancy tech, and there are no blockchains, graphs, distributed systems, or low-level compilations. Just first principles.
+
+My realistic aim is to release Jude in the next 2-3 months. With all the school work going on, and the summer internship hunts and open-source work that I am occupied with, the timeline is not very rigid. I am positively sure that I will be able to wrap the first release in the summer, if not earlier.
 
 The future of Jude is bright. The platform is in the early stages, and there are but a few features planned, such as:
 
@@ -173,9 +202,6 @@ The future of Jude is bright. The platform is in the early stages, and there are
 - Possibly provide you with a meal plan based on your goals, what you like, and what ingredients you have
 - Provide you with a shopping list every month based on the meal plan and recipes
 - Support analysing sleep, exercise, and other health-related data
-
-###### The next possible update here would be user validation and feedback 
-<!-- work pending here -->
 
 And that's how you build a product- you build it for yourself. Identify a problem, ideate, strategize, and brainstorm. And then, build it. Startups can truly be summarized in these few steps. Remember, the most important part of building a product is to build something that you love, and the working prototype is always better than the perfect idea. The world is your oyster. Go build crazy!
 
