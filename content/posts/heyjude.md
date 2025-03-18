@@ -9,9 +9,9 @@ tag: "#tech, #product"
 
 The most annoying part of my day is deciding what and how much to eat. And, like all of you, I too rely on ChatGPT to help me with every little decision I make. From figuring out why this piece of code isn’t working and why Israel attacked Palestine to what to and how much to eat, ChatGPT had been my go-to, and now Claude. Let’s be honest here: LLM Chatbots are the new Google. They have answers to everything and are mostly accurate if you use better models. But I wanted something more robust—something faster and more organized. Thus, I said, *Hey, Jude!*
 
-> Before I go ahead and rant, keep in mind that right now, Jude is in its *Alpha* build. Also, **Jude is [Senseii](https://senseii.in) now!** [Prateek](https://www.prateeksingh.tech/) was also building something similar to Jude, and we decided to build this together. Senseii as a product was exactly what I had imagined Jude to be, and Senseii is the name we decided to stick with. This article is a product journey roadmap of Jude, and how I am deciding to build it in public.
+> **Update**: Jude is **[Senseii](https://senseii.in)** now! [Prateek](https://www.prateeksingh.tech/) was also building something similar to Jude, and we decided to build this together. Senseii as a product was exactly what I had imagined Jude to be, and Senseii is the name we decided to stick with. 
 
-> This article is based on what I wanted Jude to be and is the first *draft journey roadmap. There will be multiple iterations, hundreds of feature changes and architectural changes and thus, this article might not reflect what Jude turns out to be. The current version may vastly differ from this design. The subsequent articles will be more focused on the current version of Jude and the changes made to it.
+> Before I go ahead and rant, keep in mind that right now, Jude is in its *Alpha* build. This article is based on what I wanted Jude to be and is the first *draft journey roadmap. There will be multiple iterations, hundreds of feature changes and architectural changes and thus, this article might not reflect what Jude turns out to be. The current version may vastly differ from this design. The subsequent articles will be more focused on the current version of Jude and the changes made to it. This article is a product journey roadmap of Jude, and how I am deciding to build it in public.
 
 ## The Why
 
@@ -19,7 +19,7 @@ Jude is an AI-powered nutritionist that helps me make healthier life choices. No
 
 ### Any other ChatGPT + sheet?
 
-***“I could literally keep a Google/Excel sheet handy and ask ChatGPT to analyze.”***
+***“I could literally keep a Google/Excel sheet/note/log handy and ask ChatGPT to analyze.”***
 
 Well, yes, but no. Any Excel sheet or any other textual or tabular form of information storage gets the job done but 
 
@@ -38,6 +38,8 @@ I have been using ChatGPT and Claude for a while now to track my daily intake. I
 - Claude, also based on a transformer model, focuses on the current chat history and doesn't have to go through the entire chat history. It is equally painstaking to use since as the chat grows, it gets slower and your context increases, leading to quicker exhaustion of the context window. Thus, you'd have to send the same prompt again and again, every day when you start a new chat. It doesn't support web search, and thus, you have to keep on sending relevant nutritional information to it.
 
 And then there’s the process of adding, removing data, and updating the new data; whether you would do it manually three-four times a day or you would want ChatGPT to do it for you and confirm the data, and for that, you would keep on sending the data to ChatGPT, downloading and updating it wherever you want to store it, it’s a hassle.
+
+#### How Jude solves this
 
 Jude solves this problem. It tracks your daily intake, analyzes the data, and provides you with insights into your daily intake based on **your goals**. You can ask the AI to add any data and it will. But it cannot mess up the existing data and this is by design; it has an `upsert-only` mechanism that **adds only new data** after confirming with. It **doesn’t store the entire chat history**, and it doesn’t get slower as the data increases. It’s a simple, easy-to-use, and intuitive tool that helps you make healthier life choices. Jude will be designed to sync up with Apple Health, Samsung Health, and Google Fit, so you can track your daily intake and exercise in one place. It is fast, efficient, and easy to use. You can also decide to stick to any fitness app you are using, and Jude will sync up with it, provided you have a way of exporting data from that app.
 
