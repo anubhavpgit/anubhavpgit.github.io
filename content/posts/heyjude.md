@@ -73,6 +73,8 @@ If there are users, who love this and start using it and the platform grows and 
 
 For the AI part, it isn't free or cheap. Jude if made available to the public, will be using your own API key to make sure that the data is not being shared with any third-party companies. You won’t have to pay anything in that case. You can still rely on the default setting (using Jude’s default API key) if you don’t want to use your own API key and pay a small recurring fee. 
 
+<!--https://claude.ai/share/44639d08-96da-4077-ac6b-9bb16cfe9478 -->
+
 ## The How
 
 Building Jude, my primary concern was design, accuracy anxd performance. I spent the most amount of my time polishing the design of the platform and crafting the AI engineering behind it. I wanted to make sure that the platform looks great, is easy to use, and is fast and accurate.
