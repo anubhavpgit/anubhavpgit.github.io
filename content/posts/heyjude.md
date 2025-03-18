@@ -154,6 +154,7 @@ The other more complex parts of the platform are:
 - MongoDB + Pinecone (with TTL) - MongoDB is fast, efficient, and easy to use. Pinecone, on the other hand, can scale and be expensive. Employing TTL would help keep the costs down, BUT, this is a major tradeoff. Agents might not have access to the context necessary to provide accurate information. Let's come back to this later.
 
 - The AI orchestration engine - The current strategy is to use multiple AI agents that work together, delegate tasks and process each vertical of your journey parallelly. It uses Anthropic's most powerful `Claude 3.7sonnet` and OpenAI's most powerful model, `o1`, to provide you with the most accurate information.
+
 <!-- work pending here -->  
 
 All of these are theoretical at this point, and I am still working on the design and the architecture of the platform. The final product might be a lot different from what I have described here.
