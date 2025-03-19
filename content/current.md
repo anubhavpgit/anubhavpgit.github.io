@@ -7,23 +7,16 @@ showImg: true
 
 ##### Current, 2025
 
-[Working](/working.html)  | [Reading](/reading.html)  |   [Mementos](/mementos.html)  
+[Working](/working.html) | [Reading](/reading.html) |   [Mementos](/mementos.html)  
 
 <span class="update-date-time"></span>
 
 
 ###### March
 
-Happy Holi folks! I had a lovely Holi celebration here this weekend. So, [​Microsoft has announced a native port of the TypeScript compiler to Go](https://devblogs.microsoft.com/typescript/typescript-native-port/), aiming to drastically improve performance. This native implementation is expected to provide a 10x speedup in editor startup and build times, along with substantial reductions in memory usage. 
+Happy Holi folks! I had a lovely Holi celebration here this weekend. I am currently working on many projects, including a compiler for a subset of C language that compiles to RISC-V assembly language in Rust. Compiled languages are always faster than interpreted languages, and that's why ​Microsoft has also announced a [native port of the TypeScript compiler to Go](https://devblogs.microsoft.com/typescript/typescript-native-port/) which was written in TypeScript. This native implementation is expected to provide a 10x speedup in editor startup and build times, along with substantial reductions in memory usage.
 
-**How Much Faster in real-world projects, you ask?**
-
-| Codebase   | Size (LOC) | Current tsc Time | Native tsc Time | Speedup |
-|------------|------------|------------------|-----------------|---------|
-| VS Code    | 1,505,000  | 77.8s            | 7.5s            | 10.4x   |
-| Playwright | 356,000    | 11.1s            | 1.1s            | 10.1x   |
-
-[More here](https://devblogs.microsoft.com/typescript/typescript-native-port/#how-much-faster). Typescript had a self-hosted compiler written in TypeScript but this new native port seems like a game-changer for TS devs. Compiled languages are always faster than interpreted languages, and typescript is celebrated for its type safety and developer experience. 
+I was also involved in contributing to a process isolation sandbox project at the Secure Systems Lab at NYU and in some research about Meta's Orion Glasses, particularly focusing on hand-gestured controllers.
 
 The [internet is going crazy](https://www.reddit.com/r/ClaudeAI/comments/1ixisq1/just_tried_claude_37_sonnet_what_the_actual_fuck/) since the launch of *Claude 3.7 sonnet* and for the right reasons. Claude 3.7 destroyed benchmarks, which is a significant improvement over other models. I tried out Claude, and it's just insane. For instance, I asked it to review an article I wrote earlier with the default prompt provided by Anthropic (look for the *polish your prose* suggestion in Claude), and it just nailed it.
 
@@ -33,7 +26,7 @@ Now the question is, do I replace my ChatGPT+ subscription with Claude? Claude *
 
 I switched, crossed the line, and made the jump to the dark side, but I wish it had a web search feature. It could be a separate entity, like a separate web scraper model, or maybe a separate tab in the app, or something. This would solve all my problems and would be a game-changer. I used ChatGPT for every single thing; from research, and coding to analysing nutritional values of food. For example, every day, I ask ChatGPT to find the nutritional values of a food item, like say a particular branded milk/ oat milk or a coffee from Starbucks, and it still does a great job at it. To maintain a log, I ask it to save all the results in a markdown and return.
 
-The other solution now is using Google as usual (Google does a better job than the likes of Perplexity at **finding relevant sources**, **BUT**, for summarizing and paraphrasing & "how to" queries, an LLM-based search engine is better. Refer [to this article](https://medium.com/codex/perplexity-vs-google-search-a-totally-unscientific-comparison-9a58837d7a69)), and then copy-pasting the results to Claude. 
+The other solution now is using Google as usual (Google does a better job than the likes of Perplexity at **finding relevant sources**, **BUT**, for summarizing, paraphrasing & "how to" queries, an LLM-based search engine is better. Refer [to this article](https://medium.com/codex/perplexity-vs-google-search-a-totally-unscientific-comparison-9a58837d7a69)), and then copy-pasting the results to Claude. 
 
 Is it March yet? I remember going back home, to India for a break, like it was yesterday and now two months are already over? Strange. On this side of the world, I am currently building a compiler for a subset of C language to RISC-V assembly language. It’s a fun project that helps me understand how compilers work. I also joined the SSL (Secure Systems Lab) at NYU, and am involved in a project aimed at building a secure system that aims to isolate processes in a single process sandbox. This helps limit the damage caused by bugs or security flaws in the application. Also, involved in some research about [Meta's Orion Glasses](https://about.fb.com/news/2024/09/introducing-orion-our-first-true-augmented-reality-glasses/) because I found the hand-gestured controllers fascinating. I am planning to work this semester on a controller as such. Excited to see how all these unfold in the coming months.
 
@@ -49,15 +42,9 @@ Finished watching Paatal Lok - Season 2 this weekend. It's a gripping tale of cr
 
 Back in action: January was like an amazing much-needed magical vacation back home, and now I am back and it feels good. I met my cousins, family and relatives, ate a bunch of good Indian food, and spent a lot of time with my friends, still unsure how a month went by and if I was ready to get back to work. My sister got married, and I can't stop digesting this. She is just six months older than me, and we grew up together, inseparable. I am happy for her, but it feels like a part of me is missing. I can't wait to finish things here and rush back home.
 
-My LinkedIn is filled with how Deepseek, an open-source LLM just killed it in the LLM space, and did it at less than 20-40 times the cost of OpenAI. The company has attracted attention in global AI circles after writing in a paper last month that the training of DeepSeek-V3 (ChatGpt 4o alternative) required less than $6 million worth of computing power with Nvidia H800 chips, which is 20 to 50 times cheaper than the cost of training similar models by OpenAI and Anthropic. [This had a significant impact on the AI community](https://www.reuters.com/technology/chinas-deepseek-sets-off-ai-market-rout-2025-01-27/), financial markets, and the world at large. On Monday, January 27, 2025, the stock closed at $118.42, marking a 17% drop from the previous close. This decline erased nearly $600 billion from NVIDIA's market capitalization, setting a record for the largest single-day loss in U.S. stock market history. Several models of DeepSeek like R1 (ChatGpt O1 alternative) are open-source. This democratization of AI is a big win for the community. It has the potential to unlock a new era of AI-powered development with unparalleled potential than what we have seen before to innovate solutions to the most pressing problems.
+Currently reading [The Short Case for Nvidia Stock](https://youtubetranscriptoptimizer.com/blog/05_the_short_case_for_nvda) by Jeffrey Emanuel which explains how Deepseek, an open-source LLM just killed it in the LLM space. The training of DeepSeek-V3 required less than $6 million worth of computing power with Nvidia H800 chips, which is 20 to 50 times cheaper than the cost of training similar models by OpenAI and Anthropic. On Monday, January 27, 2025, the stock closed at $118.42, marking a 17% drop from the previous close. This decline erased nearly $600 billion from NVIDIA's market capitalization, setting a record for the largest single-day loss in U.S. history. The stock's decline was attributed to a combination of factors, including a broader market sell-off, concerns about the company's growth prospects, and a downgrade from analysts at Morgan Stanley.
 
-> *By being extremely close to the hardware and by layering together a handful of distinct, very clever optimizations, DeepSeek was able to train these incredible models using GPUs in a dramatically more efficient way. By some measurements, over ~45x more efficient than other leading-edge models. DeepSeek claims that the complete cost to train DeepSeek-V3 was just over $5mm. That is absolutely nothing by the standards of OpenAI, Anthropic, etc., which were well into the $100mm+ level for training costs for a single model as early as 2024.*
-
-> *With R1, DeepSeek essentially cracked one of the holy grails of AI: getting models to reason step-by-step without relying on massive supervised datasets. Their DeepSeek-R1-Zero experiment showed something remarkable: using pure reinforcement learning with carefully crafted reward functions, they managed to get models to develop sophisticated reasoning capabilities completely autonomously. This wasn't just about solving problems— the model organically learned to generate long chains of thought, self-verify its work, and allocate more computation time to harder problems.*
-
-These excerpts are from the [The Short Case for Nvidia Stock](https://youtubetranscriptoptimizer.com/blog/05_the_short_case_for_nvda) blog post by Jeffrey Emanuel.
-
-This year, I plan on building fewer projects and spending more time Leetcoding as I plan on graduating by the end of this year. Currently, I am mostly involved in finishing up an old torrent project, fixing up a couple of bugs, and starting with Ferry, a C compiler for RISC-V written in Rust. This helps me learn more about computers and how they work at a lower level. 
+This year, I plan on building fewer projects and spending more time Leetcoding as I plan on graduating by the end of this year. The next few months re planned with finishing up an old torrent project, fixing up a couple of bugs, and starting with Ferry, a C compiler for RISC-V written in Rust. This helps me learn more about computers and how they work at a lower level. 
 
 Taking a break:
 
