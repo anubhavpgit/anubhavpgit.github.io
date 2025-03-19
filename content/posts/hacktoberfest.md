@@ -142,13 +142,12 @@ GCC uses intermediate representations during compilation:
 While, interpreters translate and execute the program line by line. The interpreter:
 
 - reads the source code line by line,
-- translates it into machine code( or bytecode in some cases),
+- translates it into machine code (or bytecode in HLLs),
 - translates bytecode into machine code and runs it in a virtual machine.
 
 This allows for dynamic typing, interactive debugging, and easier integration with other languages. However, interpreters are generally slower than compilers because they don't optimize the entire program before execution.
 
-
-I will finish up a [detailed post on compilers and interpreters](https://anubhavp.dev/posts/ferryman) soon. The post will delve deeper into the working of compilers and interpreters, and we will attempt to build a working C compiler for RISC-V.
+I will finish up a [detailed post on a C compiler](https://anubhavp.dev/posts/ferryman) soon. This post is an intriduction to the next part of the series, a machine code interpreter for RISC-V.
 
 ## Machine Code
 
