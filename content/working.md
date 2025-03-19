@@ -7,9 +7,10 @@ showImg: true
 ###### Next up:
 
 - An image/audio analyzer/decomposer to convert svg to png and vice-versa; decomposing periodic functions using fourier series approximation
-- A (short MVP) C/C++ compiler for RISC-V.
+- A (short MVP) C/C++ compiler for RISC-V, [Ferry](https://github.com/fuzzymf/ferry).
 - A consistent, memory-safe fast, read/write distributed database built in Go/Rust that implements a distributed caching mechanism like [docstore](https://www.uber.com/en-IN/blog/how-uber-serves-over-40-million-reads-per-second-using-an-integrated-cache/) or [memcached](https://memcached.org/)
-- Building a custom AI assisted nutrition manager, [Senseii](https://anubhavp.dev/blog/heyjude.html)
+- Building a custom AI assisted nutrition manager, [Jude](https://anubhavp.dev/blog/heyjude.html)
+- A MVP of a neural sensor hardware to capture finger movements to be used as an input device.
 
 ###### Recent Projects:
 
