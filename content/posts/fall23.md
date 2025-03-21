@@ -54,7 +54,7 @@ With Hritik by my side, we decided to mount mules and proceed with the journey. 
 <img alt= 'gangotri'  src ="../assets/img/fall23/maggie.jpeg" class="h-75 w-75">
 <figcaption>
 <a href="https://www.instagram.com/p/CyQ6wKVP7BV/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
-Shops in the hills and a four-legged partner in crime!
+Maggie and the view
 </a>
 </figcaption>
 </figure>
@@ -73,6 +73,16 @@ Gangotri Range
 The following morning, we awoke from our snug sleeping bags and prepared to visit the temple, our spirits high. We went near the temple, and the view was breathtaking. The temple was surrounded by snow-capped mountains, and the sun was shining brightly. We were all in awe of the beauty of the place. Hritik decided to buy gifts for his family and friends. We went ahead and bought some stuff for our families as well. After the shopping, we went ahead and stood in the queue for the temple. The queue was long, and it took us 3 hours to reach the temple. We heard that someone from the Ambanis had come to visit the place and the temple was closed for 3 tedious hours.
 
 Standing there, I eavesdropped on the conversations of the people around me. My mind got busy wandering, travelling to various places in various stories, exploring multiple character arcs and their views of rights and wrongs. I was engrossed in my own thoughts, contemplating morality through the lens of these characters. I was lost in the stories of the people around me, their lives, their struggles, and their aspirations. Until I heard the temple bells ringing.
+
+<figure class="dubai">
+<img alt= 'gangotri'  src ="../assets/img/fall23/gang.jpeg" class="h-75 w-75">
+<figcaption>
+<a href="https://www.instagram.com/p/CyQ6wKVP7BV/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
+The Gang and the temple
+</a>
+</figcaption>
+</figure>
+
 
 We went inside the temple, and the atmosphere was serene. After returning to the campsite in Kedarnath, we collected our belongings and I found out that my power bank had been stolen. With a heavy heart, we started our descent. We reached the campsite, and we were all tired. We had our dinner and slept.
 
