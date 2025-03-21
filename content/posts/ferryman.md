@@ -23,7 +23,7 @@ JK. This post is the second in a series of posts that explores the world of comp
   - [Core](#core): Compiling a simple C program.
     - [Lexical Analysis](#lexical-analysis): Converting the input code into tokens.
     - [Syntax Analysis](#syntax-analysis): Checking the syntax of the input code.
-    - [AST](#ast): The abstract syntax tree representation of the input code.
+      - [AST](#ast): The abstract syntax tree representation of the input code.
     - [Semantic Analysis](#semantic-analysis): Checking the semantic correctness of the input code.
     - [Intermediate Code Generation](#intermediate-code-generation): Generating an intermediate representation of the input code.
     - [Optimization](#optimization): Optimizing the intermediate code for performance.
@@ -82,17 +82,20 @@ I would suggest to get a basic understanding of how Rust works, and how to set u
 
 ### Walkthrough
 
-Compiling Ferry is a pretty straightforward process. You can use the following command to compile it:
+Compiling Ferry is a pretty straightforward process:
 
 ```bash
 cargo build --release
 ```
-This will create an executable file in the `target/release` directory. You can run the compiler using the following command:
+
+and use
 
 ```bash
 ./target/release/ferry <input_file.c>
 ```
-This will compile the input C file into RISC-V assembly code. The output will be saved in a file named `output.s` in the same directory.
+to run the compiler.
+
+An assembly file with '`<input_file>.s` will be generated in the same directory as the input file.
 
 The assembly code can be assembled into machine code using an external assembler like `riscv64-unknown-elf-gcc`. Or, feel free to use an online assembler like [RISC-V Online Assembler](https://riscvasm.lucasteske.dev/). 
 
@@ -130,6 +133,14 @@ The compiler will perform the following steps to convert this code into machine 
 
 #### Lexical Analysis
 
+```rs
+pub fn parse_source(source: &str) -> Result<(), String> {
+    let tokens = tokenize(source)?;
+    let mut _ast = build_ast(&tokens)?;
+    Ok(())
+}
+```
+
 The compiler reads the source code and breaks it down into tokens. Tokens are the smallest units of meaning in the code, such as keywords, identifiers, literals, and operators.
 
 `PreprocessorDirective("#include <stdio.h>")`  --> header file  
@@ -143,11 +154,6 @@ The compiler reads the source code and breaks it down into tokens. Tokens are th
 `String("Hello, World!\n")`  --> string literal  
 `RightParen`  --> closing parenthesis  
 `Semicolon`  --> semicolon  
-`Identifier("printf")`  --> function name  
-`LeftParen`  --> opening parenthesis  
-`String("\\")`  --> string literal  
-`RightParen`  --> closing parenthesis  
-`Semicolon`  --> semicolon  
 `Keyword(Return)`  --> return statement  
 `Number(0.0)`  --> return value  
 `Semicolon`  --> semicolon  
@@ -156,19 +162,78 @@ The compiler reads the source code and breaks it down into tokens. Tokens are th
 
 #### Syntax Analysis
 
-#### AST
+After tokenization, where the source code is broken into tokens, the syntax analyzer (parser) processes these tokens according to the language grammar rules. As it recognizes valid syntactic structures, it constructs the AST. The AST is the output or result of the syntax analysis process.
 
-#### Semantic Analysis
+Each time the parser recognizes a valid language construct (like an expression, statement, or declaration), it creates the corresponding AST nodes.
 
-#### Intermediate Code Generation
+The parser uses a recursive descent parsing approach, where each function corresponds to a grammar rule. For example, the `parse_expression` function handles expressions, while the `parse_statement` function handles statements. The root level function, `parse_program`, is responsible for parsing the entire program, which then calls the other parsing functions as needed.
 
-#### Optimization
+The `parse_program` function might look like this:
 
-#### Code Generation
+```rs
+match &self.peek().token_type { // Check the type of the next token
+  TokenType::Type(_) => { // If it's a type, parse a declaration
+    let declaration = self.parse_declaration()?;
+    program.add_child(declaration); // Add the declaration to the program
+  } 
+  TokenType::PreprocessorDirective(_) => { // Else if it's a preprocessor directive, parse it
+    let directive = self.parse_preprocessor()?;
+    program.add_child(directive); // And the directive to the program
+  }
+  _ => {
+    return Err(format!("Expected declaration, found {:?}.", // Error if neither
+    self.peek().token_type));
+  }
+}
+```
+
+The `declaration_parser` function would then handle the parsing of variable declarations, function declarations, and other constructs. It would create the appropriate AST nodes for each construct and add them to the program node.
+
+##### AST
+
+The Abstract Syntax Tree (AST) is a tree representation of the source code. Each node in the tree represents a construct in the source code, such as a variable declaration, function call, or control flow statement. The AST is used to represent the structure of the program and is an intermediate representation that can be further processed by the compiler.
+
+A node in the AST might look like this:
+
+```rs
+pub struct ASTNode {
+    pub node_type: ASTNodeType,
+    pub children: Vec<ASTNode>,
+    pub value: Option<String>,
+}
+```
+The parser generate the AST by creating nodes for each construct in the source code. For example, a function call might be represented as a node with the type `FunctionCall`, and its children would be the arguments passed to the function and the function name. 
+
+In our example, the AST for the entire program would look something like this:
+
+```bash
+AST Structure:
+└── Root
+├── PreprocessorDirective: Some("#include <stdio.h>")
+└── FunctionDeclaration: Some("main")
+    ├── Type: Some("Int")
+    └── BlockStatement: None
+        ├── ExpressionStatement: None
+        │   └── CallExpression: Some("printf")
+        │       ├── Variable: Some("printf")
+        │       └── Literal: Some("\"Hello, World!\n\"")
+        └── ReturnStatement: None
+            └── Literal: Some("0")
+```
+
+<!-- #### Semantic Analysis -->
+
+<!-- #### Intermediate Code Generation -->
+
+<!-- #### Optimization -->
+
+<!-- #### Code Generation -->
 
 ## Assembly and Linking
 
-The assembly code generated by Ferry is specific to the RISC-V architecture. It can be assembled into machine code using an external assembler like `riscv64-unknown-elf-gcc`. The linker combines the object code with any necessary libraries to create the final executable.
+The assembly code generated by Ferry is specific to the RISC-V architecture. To complete the entire compiler from end-to-end, I should techinically implement the entire process of converting assembly code to machine code, which is done by an assembler, and linking the object code with any necessary libraries to create the final executable. But, for now, I am only focusing on the assembly code generation part. It can be assembled into machine code using an external assembler like `riscv64-unknown-elf-gcc` or an online assembler like [RISC-V Online Assembler](https://riscvasm.lucasteske.dev/). The linker combines the object code with any necessary libraries to create the final executable.
+
+Once the machine code is generated, it can be executed on a RISC-V CPU or a simulator. The machine code is a binary representation of the instructions that the CPU can execute. The CPU executes these instructions in a sequence, and the program runs.
 
 Here's a simple instruction decoder for RISC-V machine code
 
