@@ -14,6 +14,8 @@ showImg: true
 
 ###### March
 
+Claude finally has a web search feature; I can finally let my ChatGPT+ rest in peace now. Well done, soilder. You did well.
+
 Happy Holi folks! I had a lovely Holi celebration here this weekend. My current project is a C compiler in Rust. The compiler is currently capable of parsing, tokenizing and generating a basic AST (Abstract Syntax Tree) for a subset of C language. The following steps would be to perform semantic analysis, type checking, and finally code generation to RISC-V assembly language. 
 
 Compiled languages are always faster than interpreted languages which is why ​Microsoft has also announced a [native port of the TypeScript compiler to Go](https://devblogs.microsoft.com/typescript/typescript-native-port/) which earlier was written in TypeScript.
@@ -22,11 +24,7 @@ I am also involved in contributing to a process isolation sandbox project at the
 
 The [internet is going crazy](https://www.reddit.com/r/ClaudeAI/comments/1ixisq1/just_tried_claude_37_sonnet_what_the_actual_fuck/) since the launch of *Claude 3.7 sonnet* and for the right reasons. Claude 3.7 destroyed benchmarks, which is a significant improvement over other models. I tried out Claude, and it's just insane. For instance, I asked it to review an article I wrote earlier with the default prompt provided by Anthropic (look for the *polish your prose* suggestion in Claude), and it just nailed it.
 
-Now the question is, do I replace my ChatGPT+ subscription with Claude? Claude **doesn't have a web-search feature**. It's not that they haven't built it, but they purposefully chose not to, citing security and privacy concerns. Although, that does make sense since giving internet access to the model lets it learn from the internet, and thus, can potentially mislead or misinform the user. I believe this is one of the factors that make the `3.7 sonnet` faster than `o1` and `o3` at code generation or even research tasks. 
-
-> *"Allowing the model to browse the web directly implies they should implement a mechanism that not only cross-validates web-search results but also filters any harmful traces in them."* -- [Reddit thread](https://www.reddit.com/r/ClaudeAI/comments/1er1osa/comment/lhvomy8/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
-
-I switched, crossed the line, and made the jump to the dark side, but I wish it had a web search feature. It could be a separate entity, like a separate web scraper model, or maybe a separate tab in the app, or something. This would solve all my problems and would be a game-changer. I used ChatGPT for every single thing; from research, and coding to analysing nutritional values of food. For example, every day, I ask ChatGPT to find the nutritional values of a food item, like say a particular branded milk/ oat milk or a coffee from Starbucks, and it still does a great job at it. To maintain a log, I ask it to save all the results in a markdown and return.
+Now the question is, do I replace my ChatGPT+ subscription with Claude? Claude **doesn't have a web-search feature**, yet. But, I switched, crossed the line, and made the jump to the dark side. I wish it had a web search feature. It could be a separate entity, like a separate web scraper model, or maybe a separate tab in the app, or something. This would solve all my problems and would be a game-changer. I used ChatGPT for every single thing; from research, and coding to analysing nutritional values of food. For example, every day, I ask ChatGPT to find the nutritional values of a food item, like say a particular branded milk/ oat milk or a coffee from Starbucks, and it still does a great job at it. To maintain a log, I ask it to save all the results in a markdown and return.
 
 The other solution now is using Google as usual (Google does a better job than the likes of Perplexity at **finding relevant sources**, **BUT**, for summarizing, paraphrasing & "how to" queries, an LLM-based search engine is better. Refer [to this article](https://medium.com/codex/perplexity-vs-google-search-a-totally-unscientific-comparison-9a58837d7a69)), and then copy-pasting the results to Claude. 
 
