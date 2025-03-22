@@ -35,7 +35,7 @@ I have been using ChatGPT and Claude for a while now to track my daily intake. I
 
 - ChatGPT is based on a transformer model, and it has to go through the entire chat history or employs a "sliding window" mechanism to keep the context. This is why it gets slower and slower as the chat history increases. `Gpt4o`, at times the calorie math doesn’t add up, and I have to manually recheck everything. 
 
-- Claude, also based on a transformer model, focuses on the current chat history and doesn't have to go through the entire chat history. It is equally painstaking to use since as the chat grows, it gets slower and your context increases, leading to quicker exhaustion of the context window. Thus, you'd have to send the same prompt again and again, every day when you start a new chat. It doesn't support web search, and thus, you have to keep on sending relevant nutritional information to it.
+- Claude, also based on a transformer model, focuses on the current chat history and has to go through the entire chat history. It is equally painstaking to use since as the chat grows, it gets slower and your context increases, leading to quick exhaustion of the limited context window. Thus, you'd have to send the same prompt again and again, every day when you start a new chat. It doesn't support web search, and thus, you have to keep on sending relevant nutritional information to it.
 
 And then there’s the process of adding, removing data, and updating the new data; whether you would do it manually three-four times a day or you would want ChatGPT to do it for you and confirm the data, and for that, you would keep on sending the data to ChatGPT, downloading and updating it wherever you want to store it, it’s a hassle.
 
