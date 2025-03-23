@@ -76,7 +76,7 @@ async function generateXmls() {
         const date = dateElement ? dateElement.getAttribute("content") : "";
         let author = authorElement ? authorElement.getAttribute("content") : "";
 
-        if (author === "<!-- AUTHOR -->") author = "fuzzymf";
+        if (author === "<!-- AUTHOR -->") author = "Anubhab Patnaik";
 
         const description = descriptionElement
           ? descriptionElement.getAttribute("content")

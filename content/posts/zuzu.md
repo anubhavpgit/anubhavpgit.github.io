@@ -8,7 +8,7 @@ tag: "#tech"
 
 Zuzu is a static site generator that takes in markdown files and renders HTML pages. This blog has been written using this generator. This enables noobs like me to write blogs without having to learn a lot of code :P . 
 
-⚠️ The latest version of zuzu might not updated in the [original codebase](https://github.com/fuzzymf/zuzu), but instead all the features can be found here: [fuzzymf/fuzzymf.github.io](https://github.com/fuzzymf/fuzzymf.github.io). A couple of features have been added to the original codebase, such as RSS feed, PDF generation, and CSS/JS injection. The better codebase is the one mentioned above❗
+⚠️ The latest version of zuzu might not updated in the [original codebase](https://github.com/muttonbiryani69/zuzu), but instead all the features can be found here: [muttonbiryani69/muttonbiryani69.github.io](https://github.com/muttonbiryani69/muttonbiryani69.github.io). A couple of features have been added to the original codebase, such as RSS feed, PDF generation, and CSS/JS injection. The better codebase is the one mentioned above❗
 
 
 - [Features](#features)
@@ -44,12 +44,12 @@ It uses Github-flavoured Markdown CSS and highlight.js to beautify code snippets
 base_url = "https://anubhavp.dev/zuzu/"
 
 # template
-template = "fuzzymf"
+template = "muttonbiryani69"
 
 ...
 
 # Path to the directory containing the templates
-template_dir = "templates/fuzzymf"
+template_dir = "templates/muttonbiryani69"
 
 # Path to the directory containing the static files
 static_dir = "static"
@@ -57,7 +57,7 @@ static_dir = "static"
 ...
 
 # Theme
-templateHTML = "templates/fuzzymf/template.html"
+templateHTML = "templates/muttonbiryani69/template.html"
 
 ```
 
@@ -108,7 +108,7 @@ Execution: The script is executed by calling the main function within an async I
 To get started with Zuzu, clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/fuzzymf/zuzu.git
+git clone https://github.com/muttonbiryani69/zuzu.git
 cd zuzu
 npm install
 ```
@@ -121,11 +121,11 @@ To generate the HTML files, run:
 npm run generate
 ```
 
-You can find two themes in the `templates` folder: `fuzzymf` and `initial`. To change the theme, change the `template` in the `config.toml` file, and the `templateHTML` in the `config.toml` file. Zuzu is highly configurable. You can add your own CSS and JS files to the `static` folder and include them in the markdown file, or better, start with your own `theme`.
+You can find two themes in the `templates` folder: `muttonbiryani69` and `initial`. To change the theme, change the `template` in the `config.toml` file, and the `templateHTML` in the `config.toml` file. Zuzu is highly configurable. You can add your own CSS and JS files to the `static` folder and include them in the markdown file, or better, start with your own `theme`.
 
 ## Next?
 
-The [zuzu](https://github.com/fuzzymf/zuzu) repository is a good place to start. The latest version of zuzu might not updated in the original codebase, but instead you can always find all the features maintained here: [fuzzymf/fuzzymf.github.io](https://github.com/fuzzymf/fuzzymf.github.io). 
+The [zuzu](https://github.com/muttonbiryani69/zuzu) repository is a good place to start. The latest version of zuzu might not updated in the original codebase, but instead you can always find all the features maintained here: [muttonbiryani69/muttonbiryani69.github.io](https://github.com/muttonbiryani69/muttonbiryani69.github.io). 
 
 I am eagerly looking for someone to migrate all the features to the original codebase. Feel free to ping me if you're interested.
 

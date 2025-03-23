@@ -21,7 +21,7 @@ RESOC, a free and open-source platform that primarily lets you share notes, ques
 
 The idea came to me in the first year of my undergrad, when I found myself scouring the internet for notes, and calling up friends in the middle of the night. I have a terrible habit of studying just before the exam( and I am sure, you do too ), and at the end of the day, I always find myself having nothing to read from. This led me to build a Google Drive collection that became an instant hit among my peers. Everybody wanted the link! I didn't bother to put much effort into it, and it was just a bunch of notes that I had collected over the years. Later, I built a static html page and hosted it on GitHub pages.
 
-Cut to the end of 2022, in my final year, I decided to join together bits and pieces from other projects to build RESOC. Resoc is a community-driven platform that lets you share notes, question papers, and other academic resources with friends and classmates. It also helps you stay organized with a personal task board, and a community chat page to interact with other users. The platform is built using React and Firebase and is hosted in Firebase Hosting. The notes are stored in Google Drive, and the user data is stored in Cloud Firestore. The platform is open-source and can be found [here](https://github.com/fuzzymf/resoc).
+Cut to the end of 2022, in my final year, I decided to join together bits and pieces from other projects to build RESOC. Resoc is a community-driven platform that lets you share notes, question papers, and other academic resources with friends and classmates. It also helps you stay organized with a personal task board, and a community chat page to interact with other users. The platform is built using React and Firebase and is hosted in Firebase Hosting. The notes are stored in Google Drive, and the user data is stored in Cloud Firestore. The platform is open-source and can be found [here](https://github.com/muttonbiryani69/resoc).
 
 ### The open-source codebase
 
@@ -68,7 +68,7 @@ The major components and routes are:
 
 ### Getting Started
 
-The best way to get started would be to clone the repository and try running and exploring all sections of the web app to become familiar with the codebase. The codebase is open-source and can be found [here](https://github.com/fuzzymf/resoc). The codebase is a Nodejs project, so you would need to have Nodejs installed on your system. You can install the dependencies by running `npm install` in the root directory. You can run the project by running `npm start`.
+The best way to get started would be to clone the repository and try running and exploring all sections of the web app to become familiar with the codebase. The codebase is open-source and can be found [here](https://github.com/muttonbiryani69/resoc). The codebase is a Nodejs project, so you would need to have Nodejs installed on your system. You can install the dependencies by running `npm install` in the root directory. You can run the project by running `npm start`.
 
 The React codebase is in the `src` folder. The `components` folder contains all the components used in the project. The `context` folder contains the context APIs used in the project. The root folder contains the Firebase configuration.
 
