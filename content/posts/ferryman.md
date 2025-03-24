@@ -272,6 +272,7 @@ pub fn check_types(node: &ASTNode, symbol_table: &SymbolTable) -> Result<Type, S
   }
 }
 ```
+This step raises compile-time errors if the AST is not semantically correct. 
 
 <!-- #### Intermediate Code Generation -->
 
