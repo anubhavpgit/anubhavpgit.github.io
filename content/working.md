@@ -4,7 +4,7 @@ description: "What do I build next?"
 showImg: true
 ---
 
-###### Next up (*25*):
+###### Next up:
 
 - Building a custom AI assisted nutrition manager, [Jude](https://anubhavp.dev/blog/heyjude.html)
 - A MVP of a neural sensor hardware to capture finger movements to be used as an input device.
@@ -13,7 +13,7 @@ showImg: true
 - A consistent, memory-safe fast, read/write distributed database built in Go/Rust that implements a distributed caching mechanism like [docstore](https://www.uber.com/en-IN/blog/how-uber-serves-over-40-million-reads-per-second-using-an-integrated-cache/) or [memcached](https://memcached.org/)
 
 
-###### Recent Projects (*24*):
+###### Recent Projects:
 
 - [Game of Life](https://anubhavp.dev/blog/gameoflife.html)- Implementing John Conway's Game of Life and explaining building CPU units using it
 - [A RISCV machine code interpreter](https://anubhavp.dev/blog/hacktoberfest)-  a pipelined processor executing machine code instructions with hazard handling and memory safety
