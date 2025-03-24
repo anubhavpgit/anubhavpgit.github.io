@@ -11,7 +11,7 @@ Imagine a presentation tool that seamlessly blends simplicity with power. Welcom
 
 (Why, though? - *Get it? xD*)
 
-At StackIt, the team gathers every Saturday for their weekly showcase. Each member presents their progress, showcasing the fruits of their week-long hike. Inspired by this collaborative spirit, I came to the idea of Dough - a presentation generator tool like no other. Built in Rust, [Dough](https://github.com/muttonbiryani69/dough) is a rich, modular, command-line tool to generate presentations. I found similar tools like [slidev](sli.dev) by [antfu](https://antfu.me/) and [presenterm](https://github.com/mfontanini/presenterm) that inspired me to create Dough.
+At StackIt, the team gathers every Saturday for their weekly showcase. Each member presents their progress, showcasing the fruits of their week-long hike. Inspired by this collaborative spirit, I came to the idea of Dough - a presentation generator tool like no other. Built in Rust, [Dough](https://github.com/anubhavp-dev/dough) is a rich, modular, command-line tool to generate presentations. I found similar tools like [slidev](sli.dev) by [antfu](https://antfu.me/) and [presenterm](https://github.com/mfontanini/presenterm) that inspired me to create Dough.
 
 ## Features
 
@@ -26,7 +26,7 @@ At StackIt, the team gathers every Saturday for their weekly showcase. Each memb
 
 - Dough supports **hot reloading**. You can edit your markdown file and do a `ctrl+r` to reflect in the presentation instantly. The auto hot reload is still in the works.
 
-The default style settings are stored in a `style.yaml` file which looks like this: [style.yaml](https://github.com/muttonbiryani69/dough/blob/main/templates/default/style.yml)
+The default style settings are stored in a `style.yaml` file which looks like this: [style.yaml](https://github.com/anubhavp-dev/dough/blob/main/templates/default/style.yml)
 
 ## Unveiling the Core
 
@@ -49,7 +49,7 @@ There are two stages of **rendering**:
 1. The renderer takes in the `prettified` content and renders it in the terminal.
 2. The renderer then handles the navigation actions, the scrolling mechanism and the keybindings. It controls the flow of the presentation and is responsible for rendering the slides in the terminal. It switches between presentation and highlighting mode and also handles the code execution.
 
-Here is the source code of dough - [Dough](https://github.com/muttonbiryani69/dough.git)
+Here is the source code of dough - [Dough](https://github.com/anubhavp-dev/dough.git)
 
 ## Contributing
 

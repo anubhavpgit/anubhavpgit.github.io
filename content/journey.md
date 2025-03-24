@@ -33,26 +33,26 @@ showImg: true
 ---
 
 ### Projects
-- **[Orion](https://github.com/muttonbiryani69/orion)** – A motion detector detecing precise **muscle movements** using EMG sensors to simulate **mouse clicks** and **keyboard strokes**. (*WIP*)
-- **[Ferry](https://github.com/muttonbiryani69/ferry)** – A minimal **C compiler for RISC-V** written in **Rust**, featuring a custom lexer, parser, and code generator. (*WIP*)
+- **[Orion](https://github.com/anubhavp-dev/orion)** – A motion detector detecing precise **muscle movements** using EMG sensors to simulate **mouse clicks** and **keyboard strokes**. (*WIP*)
+- **[Ferry](https://github.com/anubhavp-dev/ferry)** – A minimal **C compiler for RISC-V** written in **Rust**, featuring a custom lexer, parser, and code generator. (*WIP*)
 - **[Lind (Open Source)](https://github.com/Lind-Project/)** – An isolated, single-process sandbox to securely execute programs with fine-grained resource control to prevent system failures, built with **Rust** and **WASM**.
-- **[Pixlr](https://github.com/muttonbiryani69/pixlr)** – A **SVG/PNG to pixel art converter** in Rust with optimized image processing algorithms.
-- **[Barney](https://github.com/muttonbiryani69/barney)** – An efficient machine code **instruction encoder/decoder** for RISC-V in TypeScript.
+- **[Pixlr](https://github.com/anubhavp-dev/pixlr)** – A **SVG/PNG to pixel art converter** in Rust with optimized image processing algorithms.
+- **[Barney](https://github.com/anubhavp-dev/barney)** – An efficient machine code **instruction encoder/decoder** for RISC-V in TypeScript.
 - **[Game of Life](https://anubhavp.dev/blog/gameoflife.html)** – A deep dive into finite state machines using Conway's Game of Life in JavaScript, culminating in building a CPU with the same fundamentals.
-- **[Yatch](https://github.com/muttonbiryani69/yatch)** – A five-stage, hazard & memory-safe **pipelined 32-bit RISC-V machine code interpreter** in C++, with a built-in RISC-V binary decoder.
-- **[Dough](https://github.com/muttonbiryani69/dough)** – A high-performance CLI presentation tool in Rust that renders markdown files as slides with custom syntax highlighting and efficient text processing.
-- **[Bee](https://github.com/muttonbiryani69/b)** – A custom **BitTorrent client** with an item-based collaborative recommendation system using cosine similarity and a rating prediction system achieving **95%** accuracy.
-- **[RESOC](https://github.com/muttonbiryani69/resoc)** – A **college resource-sharing platform** built with React & Firebase, offering taskboards and community chat. Achieved **200+** active users in 3 months.
-- **[WEBCHAT (W3bChat)](https://github.com/muttonbiryani69/w3bchat-dapp)** – A **decentralized chat app** built with GunJS, Svelte, Rust, and Firebase, enabling low-latency, secure, and ephemeral messaging.
-- **[zuzu](https://github.com/muttonbiryani69/zuzu/)** – A **static site generator** in JavaScript ([Live Demo](https://anubhavp.dev/zuzu/)).
-- **[Qtree](https://github.com/muttonbiryani69/qd-compression)** – A demonstration of **image compression and decompression** using quadtrees, inspired by KoalasToTheMax ([Live Demo](https://anubhavp.dev/blog/qtree/)).
-- **[Explored](https://github.com/muttonbiryani69/explored)** – A **ThreeJS** globe inspired by GitHub's homepage, complete with lighting and shading ([Live](https://anubhavp.dev/explored/)).
-- **[Nice Dear](https://github.com/muttonbiryani69/nicedear)** – A library to generate random avatars (Dicebear-style).
-- **[Rokio](https://github.com/muttonbiryani69/rust-tokio-chat-server)** – A **multi-client chat server** in Rust using Tokio for asynchronous concurrency.
-- **[Marks Predictor](https://github.com/muttonbiryani69/Marks-predictor)** – Predicts student marks based on hours studied using **Linear Regression** and **Gradient Descent**.
-- **[Depression Detector](https://github.com/muttonbiryani69/Detecting-Depression-in-Tweets)** – A TF/IDF-based **sentiment analysis** model detecting depression in tweets.
-- **[Movie Rating Prediction](https://github.com/muttonbiryani69/Movie-rating-prediction)** – Predicting movie ratings using **Naive Bayes** based on review text.
-- **[Movie Recommendation System](https://github.com/muttonbiryani69/Movie-recommendation)** – An item-based collaborative recommendation engine using **Cosine Similarity**.
+- **[Yatch](https://github.com/anubhavp-dev/yatch)** – A five-stage, hazard & memory-safe **pipelined 32-bit RISC-V machine code interpreter** in C++, with a built-in RISC-V binary decoder.
+- **[Dough](https://github.com/anubhavp-dev/dough)** – A high-performance CLI presentation tool in Rust that renders markdown files as slides with custom syntax highlighting and efficient text processing.
+- **[Bee](https://github.com/anubhavp-dev/b)** – A custom **BitTorrent client** with an item-based collaborative recommendation system using cosine similarity and a rating prediction system achieving **95%** accuracy.
+- **[RESOC](https://github.com/anubhavp-dev/resoc)** – A **college resource-sharing platform** built with React & Firebase, offering taskboards and community chat. Achieved **200+** active users in 3 months.
+- **[WEBCHAT (W3bChat)](https://github.com/anubhavp-dev/w3bchat-dapp)** – A **decentralized chat app** built with GunJS, Svelte, Rust, and Firebase, enabling low-latency, secure, and ephemeral messaging.
+- **[zuzu](https://github.com/anubhavp-dev/zuzu/)** – A **static site generator** in JavaScript ([Live Demo](https://anubhavp.dev/zuzu/)).
+- **[Qtree](https://github.com/anubhavp-dev/qd-compression)** – A demonstration of **image compression and decompression** using quadtrees, inspired by KoalasToTheMax ([Live Demo](https://anubhavp.dev/blog/qtree/)).
+- **[Explored](https://github.com/anubhavp-dev/explored)** – A **ThreeJS** globe inspired by GitHub's homepage, complete with lighting and shading ([Live](https://anubhavp.dev/explored/)).
+- **[Nice Dear](https://github.com/anubhavp-dev/nicedear)** – A library to generate random avatars (Dicebear-style).
+- **[Rokio](https://github.com/anubhavp-dev/rust-tokio-chat-server)** – A **multi-client chat server** in Rust using Tokio for asynchronous concurrency.
+- **[Marks Predictor](https://github.com/anubhavp-dev/Marks-predictor)** – Predicts student marks based on hours studied using **Linear Regression** and **Gradient Descent**.
+- **[Depression Detector](https://github.com/anubhavp-dev/Detecting-Depression-in-Tweets)** – A TF/IDF-based **sentiment analysis** model detecting depression in tweets.
+- **[Movie Rating Prediction](https://github.com/anubhavp-dev/Movie-rating-prediction)** – Predicting movie ratings using **Naive Bayes** based on review text.
+- **[Movie Recommendation System](https://github.com/anubhavp-dev/Movie-recommendation)** – An item-based collaborative recommendation engine using **Cosine Similarity**.
 
 ---
 
@@ -86,7 +86,7 @@ showImg: true
 
 
 [Email](mailto:anubhabr50@gmail.com) |
-[Github](https://github.com/muttonbiryani69) |
+[Github](https://github.com/anubhavp-dev) |
 [LinkedIn](https://www.linkedin.com/in/anubhabpatnaik/) |
-[Dribbble](https://dribbble.com/fuzzymf) |
+[Dribbble](https://dribbble.com/anubhabpatnaik) |
 [Instagram](https://www.instagram.com/anubhavclicks/)
