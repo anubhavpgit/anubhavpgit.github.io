@@ -18,9 +18,9 @@ Claude finally has a web search feature; I can finally let my ChatGPT+ rest in p
 
 Happy Holi folks! I had a lovely Holi celebration here this weekend. My current project is a C compiler in Rust. The compiler is currently capable of parsing, tokenizing and generating a basic AST (Abstract Syntax Tree) for a subset of C language. The following steps would be to perform semantic analysis, type checking, and finally code generation to RISC-V assembly language. 
 
-Compiled languages are always faster than interpreted languages which is why ​Microsoft has also announced a [native port of the TypeScript compiler to Go](https://devblogs.microsoft.com/typescript/typescript-native-port/) which earlier was written in TypeScript.
+Compiled languages are always faster than interpreted languages, which is why ​Microsoft has also announced a [native port of the TypeScript compiler to Go](https://devblogs.microsoft.com/typescript/typescript-native-port/) which earlier was written in TypeScript.
 
-I am also involved in contributing to a process isolation sandbox project at the Secure Systems Lab at NYU and in some research about Meta's Orion Glasses, particularly focusing on hand-gestured controllers.
+I am also contributing to a process isolation sandbox project, [LIND](https://github.com/Lind-Project), at the Secure Systems Lab at NYU and in some research about Meta's Orion Glasses, particularly focusing on hand-gestured controllers.
 
 The [internet is going crazy](https://www.reddit.com/r/ClaudeAI/comments/1ixisq1/just_tried_claude_37_sonnet_what_the_actual_fuck/) since the launch of *Claude 3.7 sonnet* and for the right reasons. Claude 3.7 destroyed benchmarks, which is a significant improvement over other models. I tried out Claude, and it's just insane. For instance, I asked it to review an article I wrote earlier with the default prompt provided by Anthropic (look for the *polish your prose* suggestion in Claude), and it just nailed it.
 
