@@ -120,6 +120,7 @@ Before moving forward, Ferry only supports a subset of C. The following features
 ### Core
 
 A compiler is a complex program that comprises of several steps to convert high-level code into machine code. Taking an example of a simple C program:
+
 ```c
 #include <stdio.h>
 
@@ -133,6 +134,25 @@ The compiler will perform the following steps to convert this code into machine 
 
 > Source Code --> Parser --> AST --> IR Generator --> IR Optimizer --> 
 > Assembly Generator (**.s**) --> Assembler (**.o**) --> Linker (**executable**)
+
+The following code is the exact implementation of the compiler with abstracted implementations of the steps.
+
+```rs
+fn compile(file: String) -> Result<bool, String> {
+    // Parse the source code
+    let mut ast = parse_source(&file)?; // Parse the source code into an AST
+    // Perform semantic analysis
+    ast = semantic::analyze_semantics(ast)?; // Perform semantic analysis on the AST
+    // Generate code from the AST
+    ir::generate_ir(&ast)?;
+    // Assembly generation
+    let assembly = codegen::generate_assembly(&ir)?;
+
+    Ok(true) // Return true to indicate successful compilation
+}
+```
+
+The assembly code is platform dependent, meaning that the same high-level code can be compiled into different assembly code for different architectures. The assembly code is then assembled into machine code, which is specific to the target CPU architecture. Jump to the [Assembly and Linking](#assembly-and-linking) section to see how the assembly code can be converted into machine code using an external assembler.
 
 #### Lexical Analysis
 
@@ -289,6 +309,19 @@ The process flows like this:
 `.s (Assembly code)` --> **Assembler** --> `.o (Object file)` --> **Linker** --> `Executable/ Machine code/ Binary`
 
 Once the machine code is generated, it can be executed on a RISC-V CPU or a simulator. The machine code is a binary representation of the instructions that the CPU can execute. The CPU executes these instructions in a sequence, and the program runs.
+
+In Ferry, there is an additional module that helps with the assmebly and linking process. This is a separate binary that uses the `riscv64-unknown-elf-as` and `riscv64-unknown-elf-ld` tools to assemble and link the code. It then uses quemu-riscv64 to run the code. The module is called `mac_os_runner` 
+
+```bash
+cargo run --release --bin mac_os_runner -- <input_file.s>
+```
+
+The complete process of compiling and running a C program using Ferry in an ARM64 environment is as follows:
+
+```bash
+cargo run --release --bin ferry -- <input_file.c>
+cargo run --release --bin mac_os_runner -- <input_file.s>
+```
 
 Here's a simple instruction decoder for RISC-V machine code
 
