@@ -3,7 +3,7 @@ title: "The Ferryman"
 date: "25-03-2025"
 description: "The one who compiles high-level languages into machine code."
 tag: "#tech, #compiler"
-draft: true
+draft: false
 ---
 <script type="module" src="/assets/js/yatch/main.js"></script>
 <link rel="stylesheet" href="/assets/css/yatch/style.css">
@@ -248,7 +248,34 @@ AST Structure:
 
 The semantic analyzer checks the AST for semantic correctness. It verifies that the types of variables and expressions are correct, that functions are called with the correct number and types of arguments, and that variables are declared before they are used. The semantic analyzer also performs type checking and resolves any ambiguities in the code.
 
-For example, it checks that the `printf` function is called with a string argument and that the `main` function returns an integer value. If any semantic errors are found, the compiler reports them to the user.
+It checks for preprocessor directives, variable declarations, function declarations, and function calls, and removes any unnecessary nodes from the AST, like the `#include` directives.
+
+For example, assuming there is a `#include<matlab.h>` directive in the code, and the code looks like this:
+
+```c
+#include <matlab.h>
+int main() {
+    Matrix m = createMatrix(3, 3);  // Function declared in matlab.h
+    return 0;
+}
+```
+
+The semantic analyzer would check that the `createMatrix` function is declared in the `matlab.h` header file and that it is called with the correct number of arguments. It would also check that the `Matrix` type is defined in the header file and that it is used correctly.
+
+After preprocessing, it might look like:
+
+```c
+typedef struct {...} Matrix;
+Matrix createMatrix(int rows, int cols);
+// ...many more declarations...
+int main() {
+    Matrix m = createMatrix(3, 3);
+    return 0;
+}
+```
+The linker would then resolve the references to the `createMatrix` function and the `Matrix` type, ensuring that they are defined in the correct header file.
+
+In our original example, the semantic analyzer would check that the `printf` function is declared in the `stdio.h` header file and that it is called with the correct number of arguments. If any semantic errors are found, the compiler reports them to the user.
 
 in the `printf("Hello, World!\n")` statement, the semantic analyzer checks that the `printf` function is called with a string argument. If the argument is not a string, it raises an error.
 
@@ -294,7 +321,51 @@ pub fn check_types(node: &ASTNode, symbol_table: &SymbolTable) -> Result<Type, S
 ```
 This step raises compile-time errors if the AST is not semantically correct. 
 
-<!-- #### Intermediate Code Generation -->
+#### Intermediate Code Generation
+
+The intermediate code generator converts the AST into an intermediate representation (IR). The IR is a low-level, usually a platform-independent representation of the code that is easier to optimize and translate into machine code. 
+
+AST represents the syntactic structure of the code (closely mirrors source code) while IR represents the semantic operations (closer to what the machine will do). IR is specifically designed for optimizations that are difficult at the AST level. Common optimizations like constant folding, dead code elimination, and loop transformations work better on IR.
+
+IR representations are usually standardized and can be used across different compilers. For example, LLVM IR is a widely used intermediate representation that is used by the LLVM compiler infrastructure. It is a low-level, typed assembly-like language that is designed to be easy to optimize and generate machine code from. It is often represented as a three-address code, where each instruction has at most three operands. An LLVM IR representation of the code might look like this:
+
+```llvm
+@.str = private unnamed_addr constant [14 x i8] c"Hello, World!\00", align 1
+define i32 @main() {
+entry:
+  %call = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str, i32 0, i32 0))
+  ret i32 0
+}
+```
+
+Rust Language also uses LLVM IR as its intermediate representation. The Rust compiler (rustc) generates LLVM IR from the Rust source code, optimizes it, and then generates machine code for the target architecture.
+
+Compilers typically use multiple IR forms during compilation:
+- **High-level IR**: A Tree representation of the source code, easier to analyze and optimize.
+- **Low-level IR/ Linear/Three-address code IR**: Each instruction typically has one destination and up to two source operands. Closer to assembly language
+
+Ferry uses a simple IR representation that is built for the purpose of this compiler. The IR is a tree representation of the code, where each node represents an operation or a value. I could have also used `LLVM IR` as the intermediate representation, but the learning curve is steep, and I wanted to keep it simple. Doing so, would actually have made the compiler more robust and powerful. 
+
+The IR would look something like this:
+
+```
+IR Structure:
+└── Root
+└── Function: Some("main")
+    └── BasicBlock: None
+        ├── Call: Some("printf")
+        │   └── Constant: Some("\"Hello, World!\n\"")
+        └── Return: None
+            └── Constant: Some("0")
+```
+
+**Industry Practice:**  
+
+Modern compilers like LLVM, GCC, and .NET all use sophisticated IR systems:
+
+- LLVM IR is a portable, typed, assembly-like language
+- GCC uses GIMPLE and RTL as intermediate representations
+- JIT compilers typically use IR to enable fast compilation and optimization
 
 <!-- #### Optimization -->
 
