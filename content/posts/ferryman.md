@@ -1,9 +1,9 @@
 ---
-title: "The Ferryman"
+title: "Ferry - a C compiler"
 date: "25-03-2025"
-description: "The one who compiles high-level languages into machine code."
+description: "The one who compiles C lang to machine code."
 tag: "#tech, #compiler"
-draft: false
+draft: true
 ---
 <script type="module" src="/assets/js/yatch/main.js"></script>
 <link rel="stylesheet" href="/assets/css/yatch/style.css">
@@ -327,7 +327,7 @@ The intermediate code generator converts the AST into an intermediate representa
 
 AST represents the syntactic structure of the code (closely mirrors source code) while IR represents the semantic operations (closer to what the machine will do). IR is specifically designed for optimizations that are difficult at the AST level. Common optimizations like constant folding, dead code elimination, and loop transformations work better on IR.
 
-IR representations are usually standardized and can be used across different compilers. For example, LLVM IR is a widely used intermediate representation that is used by the LLVM compiler infrastructure. It is a low-level, typed assembly-like language that is designed to be easy to optimize and generate machine code from. It is often represented as a three-address code, where each instruction has at most three operands. An LLVM IR representation of the code might look like this:
+IR representations are usually standardized and can be used across different compilers. LLVM IR is a widely used intermediate representation that is used by the LLVM compiler infrastructure. It is a low-level, typed assembly-like language that is designed to be easy to optimize and generate machine code from. It is often represented as a three-address code, where each instruction has at most three operands. An LLVM IR representation of the code might look like this:
 
 ```llvm
 @.str = private unnamed_addr constant [14 x i8] c"Hello, World!\00", align 1
@@ -338,8 +338,6 @@ entry:
 }
 ```
 
-Rust Language also uses LLVM IR as its intermediate representation. The Rust compiler (rustc) generates LLVM IR from the Rust source code, optimizes it, and then generates machine code for the target architecture.
-
 Compilers typically use multiple IR forms during compilation:
 - **High-level IR**: A Tree representation of the source code, easier to analyze and optimize.
 - **Low-level IR/ Linear/Three-address code IR**: Each instruction typically has one destination and up to two source operands. Closer to assembly language
@@ -348,7 +346,7 @@ Ferry uses a simple IR representation that is built for the purpose of this comp
 
 The IR would look something like this:
 
-```
+```bash
 IR Structure:
 └── Root
 └── Function: Some("main")
@@ -367,7 +365,204 @@ Modern compilers like LLVM, GCC, and .NET all use sophisticated IR systems:
 - GCC uses GIMPLE and RTL as intermediate representations
 - JIT compilers typically use IR to enable fast compilation and optimization
 
-<!-- #### Optimization -->
+Rust Language also uses LLVM IR as its intermediate representation. The Rust compiler (rustc) generates LLVM IR from the Rust source code, optimizes it, and then generates machine code for the target architecture.
+
+GCC also uses a similar approach, generating an intermediate representation called GIMPLE, which is then optimized and translated into machine code.
+
+Interpreters like Python and JavaScript engines (like V8) also use intermediate representations. For example, the V8 engine uses an intermediate representation called Ignition bytecode, which is a low-level representation of the JavaScript code that can be executed by the V8 engine.
+
+#### Optimization
+
+The optimization phase improves the intermediate representation to make it more efficient. This can include removing dead code, inlining functions, and optimizing loops. The goal of optimization is to improve the performance of the generated code without changing its semantics.
+
+Ferry uses the following optimizations:
+
+1. **Constant Folding and Propagation**: Evaluates constant expressions at compile time and propagates constant values to reduce the number of calculations performed at runtime. For example, if a variable is assigned a constant value, that value can be propagated to other parts of the code.
+2. **Dead Code Elimination**: Removes code that is never executed or has no effect on the program's output. For example, if a variable is declared but never used, it can be removed from the IR.
+3. **Common Subexpression Elimination**: Identifies and eliminates redundant calculations. For example, if the same expression is calculated multiple times, it can be stored in a temporary variable and reused.
+4. **Loop Optimizations**: Improves the performance of loops by unrolling them, reducing the number of iterations, or optimizing the loop structure.
+  
+Ferry has two levels of optimizations:
+1. Basic optimizations: These are simple optimizations that can be applied to the IR without changing its structure. For example, constant folding and dead code elimination.
+2. Advanced optimizations: These are more complex optimizations that require a deeper understanding of the code structure. For example, loop unrolling and function inlining.
+
+Say our `code` looks like this:
+
+```c
+int main(){
+	int i = 0 + 2;
+	for (i = 0; i < 10; i++)
+	{
+		if (i == 5)
+			return 0;
+	}
+}
+```
+
+The optimizer should:
+1. Evaluate the expression `0 + 2` at compile time and replace it with `2`.
+2. Stop the loop when `i == 5` to avoid unnecessary iterations.
+3. Remove the unnecessary assignment of `i` to `0` in the loop header.
+4. Add a jump instruction to the loop header to avoid unnecessary iterations.
+5. Optimize the loop to exit early when `i == 5` by adding a return statement.
+
+The IR could look like this:
+
+```bash
+IR Structure:
+└── Root
+└── Function: Some("main")
+    └── BasicBlock: None
+        ├── BasicBlock: None
+        │   ├── Alloca: Some("i")
+        │   └── Store: None
+        │       ├── BinaryOp: Some("+")
+        │       │   ├── Constant: Some("0")
+        │       │   └── Constant: Some("2")
+        │       └── Variable: Some("i")
+        └── BasicBlock: Some("for")
+            ├── Store: None
+            │   ├── Constant: Some("0")
+            │   └── Variable: Some("i")
+            ├── BasicBlock: Some("for.header")
+            │   └── BinaryOp: Some("<")
+            │       ├── Load: None
+            │       │   └── Variable: Some("i")
+            │       └── Constant: Some("10")
+            └── Branch: None
+                ├── BinaryOp: Some("<")
+                │   ├── Load: None
+                │   │   └── Variable: Some("i")
+                │   └── Constant: Some("10")
+                └── BasicBlock: Some("for.body")
+                    ├── BasicBlock: None
+                    │   └── Branch: None
+                    │       ├── BinaryOp: Some("==")
+                    │       │   ├── Load: None
+                    │       │   │   └── Variable: Some("i")
+                    │       │   └── Constant: Some("5")
+                    │       └── Return: None
+                    │           └── Constant: Some("0")
+                    ├── BasicBlock: None
+                    │   ├── Load: None
+                    │   │   └── Variable: Some("i")
+                    │   └── Store: None
+                    │       ├── BinaryOp: Some("+")
+                    │       │   ├── Load: None
+                    │       │   │   └── Variable: Some("i")
+                    │       │   └── Constant: Some("1")
+                    │       └── Variable: Some("i")
+                    └── Jump: Some("for.header")
+```
+
+The basic optimser would then optimize the IR using the following optimizations:
+
+```bash
+---------Starting Optimization---------
+Optimization iteration 1
+Folded binary op to constant: 2
+Replaced load of i with constant None
+Replaced load of i with constant None
+Replaced load of i with constant None
+Replaced load of i with constant None
+Replaced load of i with constant None
+CSE: Found duplicate expression: LOAD(VAR(i))
+CSE: Found duplicate expression: LOAD(VAR(i))
+Optimization iteration 2
+Replaced load of i with constant None
+Replaced load of i with constant None
+Replaced load of i with constant None
+CSE: Found duplicate expression: LOAD(VAR(i))
+CSE: Found duplicate expression: LOAD(VAR(i))
+Optimization iteration 3
+Replaced load of i with constant None
+Replaced load of i with constant None
+Replaced load of i with constant None
+CSE: Found duplicate expression: LOAD(VAR(i))
+CSE: Found duplicate expression: LOAD(VAR(i))
+Optimization iteration 4
+Replaced load of i with constant None
+Replaced load of i with constant None
+Replaced load of i with constant None
+CSE: Found duplicate expression: LOAD(VAR(i))
+CSE: Found duplicate expression: LOAD(VAR(i))
+Optimization iteration 5
+Replaced load of i with constant None
+Replaced load of i with constant None
+Replaced load of i with constant None
+CSE: Found duplicate expression: LOAD(VAR(i))
+CSE: Found duplicate expression: LOAD(VAR(i))
+Optimization complete after 5 iterations
+```
+
+and the following IR structure:
+
+```bash
+IR Structure:
+└── Root
+└── Function: Some("main")
+    └── BasicBlock: None
+        ├── BasicBlock: None
+        │   ├── Alloca: Some("i")
+        │   └── Store: None
+        │       ├── Constant: Some("2")
+        │       └── Variable: Some("i")
+        └── BasicBlock: Some("for")
+            ├── Store: None
+            │   ├── Constant: Some("0")
+            │   └── Variable: Some("i")
+            ├── BasicBlock: Some("for.header")
+            └── Branch: None
+                ├── BinaryOp: Some("<")
+                │   ├── Load: None
+                │   │   └── Variable: Some("i")
+                │   └── Constant: Some("10")
+                └── BasicBlock: Some("for.body")
+                    ├── BasicBlock: None
+                    │   └── Branch: None
+                    │       ├── BinaryOp: Some("==")
+                    │       │   ├── Load: None
+                    │       │   │   └── Variable: Some("i")
+                    │       │   └── Constant: Some("5")
+                    │       └── Return: None
+                    │           └── Constant: Some("0")
+                    ├── BasicBlock: None
+                    │   └── Store: None
+                    │       ├── BinaryOp: Some("+")
+                    │       │   ├── Load: None
+                    │       │   │   └── Variable: Some("i")
+                    │       │   └── Constant: Some("1")
+                    │       └── Variable: Some("i")
+                    └── Jump: Some("for.header")
+```
+The `0 + 2` expression has been correctly folded into just `2`. The optimizer also added a jump instruction to the loop header to avoid unnecessary iterations.
+
+The optimizer hasn't specifically optimized for the early exit when `i==5`. While it correctly preserved the program's structure and performed some basic optimizations like constant folding `(0 + 2 → 2)`, it hasn't performed the more advanced control flow analysis that would recognize this optimization opportunity.
+
+The advanced optimizer would then optimize the IR using the following optimizations:
+
+```bash
+---------Starting Advanced Optimization---------
+Optimization iteration 1
+Optimization iteration 2
+Optimization complete after 2 iterations
+
+----- Optimization Summary -----
+Constants folded: 0
+Dead code blocks removed: 2
+Common expressions eliminated: 0
+Loops optimized: 0
+Functions optimized: 0
+-------------------------------
+```
+
+```bash
+IR Structure:
+└── Root
+└── Function: Some("main")
+    └── BasicBlock: None
+```
+This optimizer has removed the dead code blocks and optimized the loops. The optimiser correctly identified that the code always returns `0` and thus removed the entire loop. 
 
 <!-- #### Code Generation -->
 
