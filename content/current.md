@@ -14,7 +14,7 @@ showImg: true
 
 ###### March
 
-Claude finally has a web search feature; I can finally let my ChatGPT+ rest in peace now. Well done, soilder. You did well. (*Immidiately regrets after looking at the ghibli art images everyone is generating :(*)
+Claude finally has a web search feature; I can finally let my ChatGPT+ rest in peace now. Well done, soilder. You did well. (*Immidiately regrets after looking at the ghibli art images everyone is generating :(* )
 
 Happy Holi folks! I had a lovely Holi celebration here this weekend. Currently working on [a C compiler in Rust](/blog/ferryman.html). The compiler is currently capable of parsing, tokenizing, generating AST and an optimised intermidate representaion of the code for a subset of C language. The following steps would be tocompiling IR to RISC-V assembly. 
 
