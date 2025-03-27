@@ -1,5 +1,5 @@
 ---
-title: "Ferry - C compiler for RISC-V"
+title: "Ferry - A C compiler for RISC-V"
 date: "25-03-2025"
 description: "The one who compiles C lang to machine code."
 tag: "#tech, #compiler"
@@ -19,21 +19,21 @@ JK. This post is the second in a series of posts that explore the world of compi
 - [Computer Architecture](#computer-architecture): Understanding the components of a computer system. Why are compilers CPU-specific, while interpreters are not?
 - [Ferry](#ferry): A simple C compiler that compiles to RISC-V assembly.
   - [Walkthrough](#walkthrough): Compiling Ferry
-  - [Subset of C supported](#subset-of-c-supported): The features of C that Ferry supports.
+    - [Subset of C supported](#subset-of-c-supported): The features of C that Ferry supports.
   - [Core](#core): Compiling a simple C program.
-    - [Lexical Analysis](#lexical-analysis): Converting the input code into tokens.
-    - [Syntax Analysis](#syntax-analysis): Checking the syntax of the input code.
-      - [AST](#ast): The abstract syntax tree representation of the input code.
+  - [Lexical Analysis](#lexical-analysis): Converting the input code into tokens.
+  - [Syntax Analysis](#syntax-analysis): Checking the syntax of the input code.
+    - [AST](#ast): The abstract syntax tree representation of the input code.
     - [Semantic Analysis](#semantic-analysis): Checking the semantic correctness of the input code.
-    - [Intermediate Code Generation](#intermediate-code-generation): Generating an intermediate representation of the input code.
+  - [Intermediate Code Generation](#intermediate-code-generation): Generating an intermediate representation of the input code.
     - [Optimization](#optimization): Optimizing the intermediate code for performance.
-    - [Code Generation](#code-generation): Intermediate code to assembly code.
-- [Assembly and Linking](#assembly-and-linking): Using an external assembler to convert assembly code into machine code.
-  - [Instruction decoder](#instruction-decoder): A tool to decode RISC-V instructions and convert them to assembly code.
+  - [Code Generation](#code-generation): Intermediate code to assembly code.
+  - [Assembly and Linking](#assembly-and-linking): Using an external assembler to convert assembly code into machine code.
+    - [Instruction decoder](#instruction-decoder): A tool to decode RISC-V instructions and convert them to assembly code.
 - [Yatch](#yatch): A simple machine code interpreter for RISC-V.
 - [Future Work](#future-work): Next?
 
-> This next section is a quick recap from the [previous post; Docking Compilers](/blog/hacktoberfest.html). If you are already familiar with how the CPU works, feel free to skip [here](#ferry).
+> This next section is a quick recap from the [previous post- Docking Compilers](/blog/hacktoberfest.html). If you are already familiar with how the CPU works, feel free to skip [here](#ferry).
 
 ---
 
@@ -74,15 +74,15 @@ Compilers generate machine code **specific** to the target CPU architecture. The
 
 ---
 
-## Ferry
+# Ferry
 
 Ferry is a simple C compiler written in Rust that compiles to RISC-V assembly. It is not a complete implementation of the C language, but a good starting point for understanding how compilers work.
 
 I would suggest getting a basic understanding of how Rust works, and how to set up a Rust project before diving further. Just the basics. Find the [Rust Book](https://doc.rust-lang.org/book/) here.
 
-### Walkthrough
+## Walkthrough
 
-Compiling Ferry is a pretty straightforward process:
+Compiling Ferry is a pretty straightforward:
 
 ```bash
 cargo build --release
@@ -98,6 +98,13 @@ to run the compiler.
 An assembly file with '`<input_file>.s` will be generated in the same directory as the input file.
 
 The assembly code can be assembled into machine code using an external assembler like `riscv64-unknown-elf-gcc`. Or, feel free to use an online assembler like [RISC-V Online Assembler](https://riscvasm.lucasteske.dev/). 
+
+or
+
+```bash
+cargo run --release --bin mac_os_runner -- <input_file.s>
+```
+to run the code in Mac OS (Apple Silicon - arm64). This will assemble the code and run it using `qemu-riscv64`.
 
 ### Subset of C supported
 
@@ -117,9 +124,21 @@ Before moving forward, Ferry only supports a subset of C. The following features
 - Basic preprocessor (#include for essential libraries)
 - For loops
 
-### Core
+## Core
 
-A compiler is a complex program that comprises several steps to convert high-level code into machine code. Taking an example of a simple C program:
+Building a compiler is a complicated task. Ferry takes in a program written in C and generates assembly code for the RISC-V using the following steps:
+
+> Source Code --> Parser --> AST --> IR Generator --> IR Optimizer --> 
+> Assembly Generator (**.s**) --> Assembler (**.o**) --> Linker (**executable**)
+
+1. **Lexical Analysis**: The first step in the compilation process is to break the source code into tokens. This is done using a lexer, which reads the source code and generates a stream of tokens. Each token represents a meaningful unit of the source code, such as a keyword, identifier, or operator.
+2. **Syntax Analysis**: The second step is to parse the tokens generated by the lexer and build an abstract syntax tree (AST). The AST is a tree representation of the source code, where each node represents a construct in the source code, such as a variable declaration or function call.
+3. **Semantic Analysis**: The third step is to check the AST for semantic correctness. This includes checking for type errors, variable declarations, and function calls. The semantic analyzer verifies that the types of variables and expressions are correct and that functions are called with the correct number and types of arguments.
+4. **Intermediate Code Generation**: The fourth step is to generate intermediate code from the AST. The intermediate code is a low-level representation of the source code that is easier to optimize and translate into machine code. The intermediate code is usually platform-independent, meaning it can be executed on different architectures.
+5. **Code Generation**: The final step is to generate machine code from the intermediate code. The machine code is a binary representation of the instructions that the CPU can execute. The code generator translates the intermediate code into machine code specific to the target architecture.
+
+
+Assume we have a simple C program:
 
 ```c
 #include <stdio.h>
@@ -130,12 +149,7 @@ int main() {
 }
 ```
 
-The compiler will perform the following steps to convert this code into machine code:
-
-> Source Code --> Parser --> AST --> IR Generator --> IR Optimizer --> 
-> Assembly Generator (**.s**) --> Assembler (**.o**) --> Linker (**executable**)
-
-The following code is the exact implementation of the compiler with abstracted implementations of the steps.
+The following code is the [exact implementation](https://github.com/anubhavp-dev/ferry/blob/main/src/main.rs#L64) of the compiler with abstracted implementations of the steps.
 
 ```rs
 fn compile(file: String) -> Result<bool, String> {
@@ -147,14 +161,15 @@ fn compile(file: String) -> Result<bool, String> {
     ir::generate_ir(&ast)?;
  // Assembly generation
     let assembly = codegen::generate_assembly(&ir)?;
-
     Ok(true) // Return true to indicate successful compilation
 }
 ```
 
 The assembly code is platform-dependent, meaning that the same high-level code can be compiled into different assembly codes for different architectures. The assembly code is then assembled into machine code, which is specific to the target CPU architecture. Jump to the [Assembly and Linking](#assembly-and-linking) section to see how the assembly code can be converted into machine code using an external assembler.
 
-#### Lexical Analysis
+## Lexical Analysis
+
+The compiler reads the source code and breaks it down into tokens. Tokens are the smallest units of meaning in the code, such as keywords, identifiers, literals, and operators.
 
 ```rs
 pub fn parse_source(source: &str) -> Result<(), String> {
@@ -164,26 +179,29 @@ pub fn parse_source(source: &str) -> Result<(), String> {
 }
 ```
 
-The compiler reads the source code and breaks it down into tokens. Tokens are the smallest units of meaning in the code, such as keywords, identifiers, literals, and operators.
+For our example, the tokens generated from the source code would look like this:
 
-`PreprocessorDirective("#include <stdio.h>")` --> header file  
-`Type(Int)` --> type of variable  
-`Identifier("main")` --> function name  
-`LeftParen` --> opening parenthesis  
-`RightParen` --> closing parenthesis  
-`LeftBrace` --> opening brace  
-`Identifier("printf")` --> function name  
-`LeftParen` --> opening parenthesis  
-`String("Hello, World!\n")` --> string literal  
-`RightParen` --> closing parenthesis  
-`Semicolon` --> semicolon  
-`Keyword(Return)` --> return statement  
-`Number(0.0)` --> return value  
-`Semicolon` --> semicolon  
-`RightBrace` --> closing brace  
-`EOF` --> end of file  
+```bash
+Token Stream:
+PreprocessorDirective("#include <stdio.h>") --> header file  
+Type(Int) --> type of variable  
+Identifier("main") --> function name  
+LeftParen --> opening parenthesis  
+RightParen --> closing parenthesis  
+LeftBrace --> opening brace  
+Identifier("printf") --> function name  
+LeftParen --> opening parenthesis  
+String("Hello, World!\n") --> string literal  
+RightParen --> closing parenthesis  
+Semicolon --> semicolon  
+Keyword(Return) --> return statement  
+Number(0.0) --> return value  
+Semicolon --> semicolon  
+RightBrace --> closing brace  
+EOF --> end of file  
+```
 
-#### Syntax Analysis
+## Syntax Analysis
 
 After tokenization, where the source code is broken into tokens, the syntax analyzer (parser) processes these tokens according to the language grammar rules. As it recognizes valid syntactic structures, it constructs the AST. The AST is the output or result of the syntax analysis process.
 
@@ -212,7 +230,7 @@ match &self.peek().token_type { // Check the type of the next token
 
 The `declaration_parser` function would then handle the parsing of variable declarations, function declarations, and other constructs. It would create the appropriate AST nodes for each construct and add them to the program node.
 
-##### AST
+### AST
 
 The Abstract Syntax Tree (AST) is a tree representation of the source code. Each node in the tree represents a construct in the source code, such as a variable declaration, function call, or control flow statement. The AST is used to represent the structure of the program and is an intermediate representation that can be further processed by the compiler.
 
@@ -231,20 +249,20 @@ In our example, the AST for the entire program would look something like this:
 
 ```bash
 AST Structure:
-└── Root
-├── PreprocessorDirective: Some("#include <stdio.h>")
-└── FunctionDeclaration: Some("main")
-    ├── Type: Some("Int")
-    └── BlockStatement: None
-        ├── ExpressionStatement: None
-        │   └── CallExpression: Some("printf")
-        │       ├── Variable: Some("printf")
-        │       └── Literal: Some("\"Hello, World!\n\"")
-        └── ReturnStatement: None
-            └── Literal: Some("0")
+└── Root --> root node
+├── PreprocessorDirective: Some("#include <stdio.h>") --> header file
+└── FunctionDeclaration: Some("main") --> main function declaration
+    ├── Type: Some("Int") --> type of function
+    └── BlockStatement: None --> block of code starts
+        ├── ExpressionStatement: None --> this node doesn't carry any specific value itself - it's just a container that holds the expression
+        │   └── CallExpression: Some("printf") --> function call (from stdio.h)
+        │       ├── Variable: Some("printf")  --> function name. During the semantic analysis phase after parsing, the compiler would verify that this identifier actually refers to a callable function.
+        │       └── Literal: Some("\"Hello, World!\n\"") --> string literal
+        └── ReturnStatement: None --> return statement for the function
+            └── Literal: Some("0") --> return value
 ```
 
-#### Semantic Analysis
+### Semantic Analysis
 
 The semantic analyzer checks the AST for semantic correctness. It verifies that the types of variables and expressions are correct, that functions are called with the correct number and types of arguments, and that variables are declared before they are used. The semantic analyzer also performs type checking and resolves any ambiguities in the code.
 
@@ -321,7 +339,7 @@ pub fn check_types(node: &ASTNode, symbol_table: &SymbolTable) -> Result<Type, S
 ```
 This step raises compile-time errors if the AST is not semantically correct. 
 
-#### Intermediate Code Generation
+## Intermediate Code Generation
 
 The intermediate code generator converts the AST into an intermediate representation (IR). The IR is a low-level, usually platform-independent representation of the code that is easier to optimize and translate into machine code. 
 
@@ -347,14 +365,14 @@ Ferry uses a simple IR representation that is built for the purpose of this comp
 The IR would look something like this:
 
 ```bash
-IR Structure:
-└── Root
-└── Function: Some("main")
-    └── BasicBlock: None
-        ├── Call: Some("printf")
-        │   └── Constant: Some("\"Hello, World!\n\"")
-        └── Return: None
-            └── Constant: Some("0")
+IR Structure: 
+└── Root --> the root node of the IR
+└── Function: Some("main") --> the main function
+    └── BasicBlock: None --> the entry block of the function
+        ├── Call: Some("printf") --> function call
+        │   └── Constant: Some("\"Hello, World!\n\"") --> string literal
+        └── Return: None --> return statement
+            └── Constant: Some("0") --> return value
 ```
 
 **Industry Practice:**  
@@ -371,7 +389,7 @@ GCC also uses a similar approach, generating an intermediate representation call
 
 Interpreters like Python and JavaScript engines (like V8) also use intermediate representations. For example, the V8 engine uses an intermediate representation called Ignition bytecode, which is a low-level representation of the JavaScript code that can be executed by the V8 engine.
 
-#### Optimization
+### Optimization
 
 The optimization phase improves the intermediate representation to make it more efficient. This can include removing dead code, inlining functions, and optimizing loops. The goal of optimization is to improve the performance of the generated code without changing its semantics.
 
@@ -409,50 +427,50 @@ The optimizer should:
 The IR could look like this:
 
 ```bash
-IR Structure:
+IR Structure (Original):
 └── Root
 └── Function: Some("main")
     └── BasicBlock: None
         ├── BasicBlock: None
-        │   ├── Alloca: Some("i")
-        │   └── Store: None
-        │       ├── BinaryOp: Some("+")
-        │       │   ├── Constant: Some("0")
-        │       │   └── Constant: Some("2")
-        │       └── Variable: Some("i")
+        │   ├── Alloca: Some("i")                           // Allocate space for variable 'i'
+        │   └── Store: None                                 // Store initial value to 'i'
+        │       ├── BinaryOp: Some("+")                     // Calculate 0+2
+        │       │   ├── Constant: Some("0")                 // First operand
+        │       │   └── Constant: Some("2")                 // Second operand
+        │       └── Variable: Some("i")                     // Target variable
         └── BasicBlock: Some("for")
-            ├── Store: None
-            │   ├── Constant: Some("0")
-            │   └── Variable: Some("i")
-            ├── BasicBlock: Some("for.header")
-            │   └── BinaryOp: Some("<")
-            │       ├── Load: None
-            │       │   └── Variable: Some("i")
-            │       └── Constant: Some("10")
-            └── Branch: None
-                ├── BinaryOp: Some("<")
-                │   ├── Load: None
+            ├── Store: None                                 // Loop initialization: i = 0
+            │   ├── Constant: Some("0")                     // Value to store
+            │   └── Variable: Some("i")                     // Target variable
+            ├── BasicBlock: Some("for.header")              // Loop condition check
+            │   └── BinaryOp: Some("<")                     // Compare i < 10
+            │       ├── Load: None                          // Load value of 'i'
+            │       │   └── Variable: Some("i")             // Variable to load
+            │       └── Constant: Some("10")                // Upper bound
+            └── Branch: None                                // Conditional branch
+                ├── BinaryOp: Some("<")                     // Same comparison duplicated
+                │   ├── Load: None                          // Load value of 'i' again
                 │   │   └── Variable: Some("i")
                 │   └── Constant: Some("10")
-                └── BasicBlock: Some("for.body")
-                    ├── BasicBlock: None
-                    │   └── Branch: None
-                    │       ├── BinaryOp: Some("==")
-                    │       │   ├── Load: None
+                └── BasicBlock: Some("for.body")            // Loop body
+                    ├── BasicBlock: None                    // If statement block
+                    │   └── Branch: None                    // Conditional branch
+                    │       ├── BinaryOp: Some("==")        // Compare i == 5
+                    │       │   ├── Load: None              // Load value of 'i'
                     │       │   │   └── Variable: Some("i")
-                    │       │   └── Constant: Some("5")
-                    │       └── Return: None
-                    │           └── Constant: Some("0")
-                    ├── BasicBlock: None
-                    │   ├── Load: None
+                    │       │   └── Constant: Some("5")     // Value to compare against
+                    │       └── Return: None                // Early return
+                    │           └── Constant: Some("0")     // Return value
+                    ├── BasicBlock: None                    // Loop increment block
+                    │   ├── Load: None                      // Load value of 'i'
                     │   │   └── Variable: Some("i")
-                    │   └── Store: None
-                    │       ├── BinaryOp: Some("+")
-                    │       │   ├── Load: None
+                    │   └── Store: None                     // Store i+1 back to i
+                    │       ├── BinaryOp: Some("+")         // Calculate i+1
+                    │       │   ├── Load: None              // Load value of 'i' again
                     │       │   │   └── Variable: Some("i")
-                    │       │   └── Constant: Some("1")
-                    │       └── Variable: Some("i")
-                    └── Jump: Some("for.header")
+                    │       │   └── Constant: Some("1")     // Increment by 1
+                    │       └── Variable: Some("i")         // Target variable
+                    └── Jump: Some("for.header")  // Unconditional jump to loop header
 ```
 
 The basic optimizer would then optimize the IR using the following optimizations:
@@ -495,7 +513,7 @@ CSE: Found duplicate expression: LOAD(VAR(i))
 Optimization complete after 5 iterations
 ```
 
-and the following IR structure:
+and this is what the optimization would look like:
 
 ```bash
 IR Structure:
@@ -503,38 +521,39 @@ IR Structure:
 └── Function: Some("main")
     └── BasicBlock: None
         ├── BasicBlock: None
-        │   ├── Alloca: Some("i")
-        │   └── Store: None
-        │       ├── Constant: Some("2")
-        │       └── Variable: Some("i")
+        │   ├── Alloca: Some("i")                          // Allocate space for variable 'i'
+        │   └── Store: None                                // Store initial value to 'i'
+        │       ├── Constant: Some("2")                    // OPTIMIZATION: Constant folding of 0+2 to 2
+        │       └── Variable: Some("i")                    // Target variable
         └── BasicBlock: Some("for")
-            ├── Store: None
-            │   ├── Constant: Some("0")
-            │   └── Variable: Some("i")
-            ├── BasicBlock: Some("for.header")
-            └── Branch: None
-                ├── BinaryOp: Some("<")
-                │   ├── Load: None
-                │   │   └── Variable: Some("i")
+            ├── Store: None                                // Loop initialization: i = 0
+            │   ├── Constant: Some("0")                    // Value to store
+            │   └── Variable: Some("i")                    // Target variable
+            ├── BasicBlock: Some("for.header")             // Loop condition check
+            └── Branch: None                               // Conditional branch
+                ├── BinaryOp: Some("<")                    // OPTIMIZATION: CSE - eliminated duplicate comparison
+                │   ├── Load: None                         // OPTIMIZATION: Single load of 'i' (CSE applied)
+                │   │   └── Variable: Some("i")  
                 │   └── Constant: Some("10")
                 └── BasicBlock: Some("for.body")
                     ├── BasicBlock: None
                     │   └── Branch: None
-                    │       ├── BinaryOp: Some("==")
-                    │       │   ├── Load: None
+                    │       ├── BinaryOp: Some("==")       // Compare i == 5
+                    │       │   ├── Load: None             // OPTIMIZATION: Single load of 'i' (CSE applied)
                     │       │   │   └── Variable: Some("i")
                     │       │   └── Constant: Some("5")
-                    │       └── Return: None
+                    │       └── Return: None               // Early return
                     │           └── Constant: Some("0")
                     ├── BasicBlock: None
-                    │   └── Store: None
+                    │   └── Store: None                    // OPTIMIZATION: Simplified increment
                     │       ├── BinaryOp: Some("+")
-                    │       │   ├── Load: None
+                    │       │   ├── Load: None             // OPTIMIZATION: Single load of 'i' (CSE applied)
                     │       │   │   └── Variable: Some("i")
                     │       │   └── Constant: Some("1")
                     │       └── Variable: Some("i")
-                    └── Jump: Some("for.header")
+                    └── Jump: Some("for.header")           // Loop back
 ```
+
 The `0 + 2` expression has been correctly folded into just `2`. The optimizer also added a jump instruction to the loop header to avoid unnecessary iterations.
 
 The optimizer hasn't specifically optimized for the early exit when `i==5`. While it correctly preserved the program's structure and performed some basic optimizations like constant folding `(0 + 2 → 2)`, it hasn't performed the more advanced control flow analysis that would recognize this optimization opportunity.
@@ -555,6 +574,35 @@ Loops optimized: 0
 Functions optimized: 0
 -------------------------------
 ```
+and this is what the optimization would look like:
+
+```bash
+IR Structure (During Advanced Optimization):
+└── Root
+└── Function: Some("main")
+    └── BasicBlock: None
+        ├── Alloca: Some("i")                     // Allocate space for variable 'i'
+        ├── Store: None                           // OPTIMIZATION: Eliminated dead store (i=2 never used)
+        │   ├── Constant: Some("0")               // Store initial loop value directly
+        │   └── Variable: Some("i")               // Target variable
+        ├── BasicBlock: Some("loop_check")        // OPTIMIZATION: Simplified loop structure
+        │   └── Branch: None                      // Conditional branch for both loop and early exit
+        │       ├── BinaryOp: Some("==")          // OPTIMIZATION: Combined conditions - check i==5 directly
+        │       │   ├── Load: None                // Load value of 'i'
+        │       │   │   └── Variable: Some("i")
+        │       │   └── Constant: Some("5")       // OPTIMIZATION: Early exit condition
+        │       └── Return: None                  // Early return when i==5
+        │           └── Constant: Some("0")       // Return value
+        ├── Store: None                           // Increment i
+        │   ├── BinaryOp: Some("+")               // Calculate i+1
+        │   │   ├── Load: None                    // Load value of 'i'
+        │   │   │   └── Variable: Some("i")
+        │   │   └── Constant: Some("1")           // Increment by 1
+        │   └── Variable: Some("i")               // Target variable
+        └── Jump: Some("loop_check")              // OPTIMIZATION: Direct jump to loop check
+```
+
+and finally the IR structure would look like this:
 
 ```bash
 IR Structure:
@@ -562,9 +610,10 @@ IR Structure:
 └── Function: Some("main")
     └── BasicBlock: None
 ```
-This optimizer has removed the dead code blocks and optimized the loops. The optimiser correctly identified that the code always returns `0` and thus removed the entire loop. 
 
-#### Code Generation
+This optimizer has aggresively removed the dead code blocks and optimized the loops. The optimiser correctly identified that the code always returns `0` and thus removed the entire loop. 
+
+## Code Generation
 
 The final step would be generating Assembly code from the IR. The assembly code is a low-level representation of the program that can be assembled into machine code and is CPU-specific.
 
@@ -609,13 +658,13 @@ This tool helps you decode RISCV32I instructions and convert them to their corre
 
 Here is the standalone version of the tool: [Barney- A RISC-V Instruction Decoder](https://anubhavp.dev/barney). This is going to be a handy tool to understand the instructions and their working. The tool will also include decoding assembly code to machine code in the future. (an assembler for RISC-V instructions)
 
-## Yatch
+# Yatch
 
 Yatch is a simple machine code interpreter for RISC-V. It can execute RISC-V assembly code directly, allowing you to run machine code directly on a simulated RISC-V CPU. Yatch was meant to show how CPUs read and execute instructions. Read everything about Yatch [here](/blog/hacktoberfest.html#yatch).
 
 Once you have the compiled assembly code, you can use a simulator like Yatch to simulate the execution of the code. 
 
-## Future Work
+# Future Work
 
 Well, the current scope of Ferry was to understand and demonstrate the working of compilers. While I would love to finish this, there are far better, superior compilers out there. This article was a simple entry into how systems work. My next steps would be delving more into the world of compilers, optimising CPU operations, and GPU computing, and understanding the mechanics behind the scenes.
 
