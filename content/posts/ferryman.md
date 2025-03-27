@@ -1,5 +1,5 @@
 ---
-title: "Ferry - a C compiler"
+title: "Ferry - C compiler for RISC-V"
 date: "25-03-2025"
 description: "The one who compiles C lang to machine code."
 tag: "#tech, #compiler"
