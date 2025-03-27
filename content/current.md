@@ -16,7 +16,7 @@ showImg: true
 
 Claude finally has a web search feature; I can finally let my ChatGPT+ rest in peace now. Well done, soilder. You did well.
 
-Happy Holi folks! I had a lovely Holi celebration here this weekend. My current project is a C compiler in Rust. The compiler is currently capable of parsing, tokenizing and generating a basic AST (Abstract Syntax Tree) for a subset of C language. The following steps would be to perform semantic analysis, type checking, and finally code generation to RISC-V assembly language. 
+Happy Holi folks! I had a lovely Holi celebration here this weekend. My current project is [a C compiler in Rust](/blog/ferryman.html). The compiler is currently capable of parsing, tokenizing, generating an AST (Abstract Syntax Tree), and generating an optimised intermidate representaion of the code for a subset of C language. The following steps would be to perform semantic analysis, type checking, and finally code generation to RISC-V assembly language. 
 
 Compiled languages are always faster than interpreted languages, which is why ​Microsoft has also announced a [native port of the TypeScript compiler to Go](https://devblogs.microsoft.com/typescript/typescript-native-port/) which earlier was written in TypeScript.
 
