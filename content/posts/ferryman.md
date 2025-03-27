@@ -668,4 +668,6 @@ Once you have the compiled assembly code, you can use a simulator like Yatch to 
 
 Well, the current scope of Ferry was to understand and demonstrate the working of compilers. While I would love to finish this, there are far better, superior compilers out there. This article was a simple entry into how systems work. My next steps would be delving more into the world of compilers, optimising CPU operations, and GPU computing, and understanding the mechanics behind the scenes.
 
+Also, a big big shoutout to my boy, `Claude 3.7 sonnet` for improving the compiler and helping ship it 10x faster. Such a complex task would have taken me weeks, or even months, to complete. Claude wrote lines of redundant code - the extra parsing methods, a couple of functionality implementations in advanced optimisations and type checker functions that would have taken me a lot of time to finish manually. Especially the advanced optimiser. That part was a pain to write and Claude handled it like a pro. You still need a decent Rust knowledge to be able to fix whatever an AI model returns, but it did an excellent job.
+
 This article might seem overwhelming, but it's pretty interesting to realize how all of modern computing works and see how far we've come.
