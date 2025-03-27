@@ -8,7 +8,7 @@ draft: false
 <script type="module" src="/assets/js/yatch/main.js"></script>
 <link rel="stylesheet" href="/assets/css/yatch/style.css">
 
-*The ferryman is a figure in various mythologies who is responsible for carrying souls across the river that divides the world of the living from the world of the dead.*
+*The ferryman is a figure in various mythologies responsible for carrying souls across the river that divides the world of the living from the world of the dead.*
 
 JK. This post is the second in a series of posts that explore the world of compilers, interpreters, CPUs and low-level systems. The [previous post](/blog/hacktoberfest.html) describes how the CPU works; and how CPUs process and execute instructions. This post explains how the code you write in a high-level language is transformed into machine code that the CPU can understand and execute. 
  
@@ -19,7 +19,7 @@ JK. This post is the second in a series of posts that explore the world of compi
 - [Computer Architecture](#computer-architecture): Understanding the components of a computer system. Why are compilers CPU-specific, while interpreters are not?
 - [Ferry](#ferry): A simple C compiler that compiles to RISC-V assembly.
   - [Walkthrough](#walkthrough): Compiling Ferry
-    - [Subset of C supported](#subset-of-c-supported): The features of C that Ferry supports.
+    - [The Subset of C supported](#the-subset-of-c-supported): The features of C that Ferry supports.
   - [Core](#core): Compiling a simple C program.
   - [Lexical Analysis](#lexical-analysis): Converting the input code into tokens.
   - [Syntax Analysis](#syntax-analysis): Checking the syntax of the input code.
@@ -33,7 +33,7 @@ JK. This post is the second in a series of posts that explore the world of compi
 - [Yatch](#yatch): A simple machine code interpreter for RISC-V.
 - [Future Work](#future-work): Next?
 
-> This next section is a quick recap from the [previous post- Docking Compilers](/blog/hacktoberfest.html). If you are already familiar with how the CPU works, feel free to skip [here](#ferry).
+> This next section is a quick recap taken from the [previous post-Docking Compilers](/blog/hacktoberfest.html). If you are already familiar with how the CPU works, feel free to skip [here](#ferry).
 
 ---
 
@@ -59,7 +59,7 @@ While interpreters translate and execute the program line by line. The interpret
 - translates it into machine code (or bytecode in HLLs),
 - translates bytecode into machine code and runs it in a virtual machine.
 
-This allows for dynamic typing, interactive debugging, and easier integration with other languages. However, interpreters are generally slower than compilers because they don't optimize the entire program before execution.
+This allows dynamic typing, interactive debugging, and easier integration with other languages. However, interpreters are generally slower than compilers because they don't optimize the entire program before execution.
 
 ## Machine Code
 
@@ -106,7 +106,7 @@ cargo run --release --bin mac_os_runner -- <input_file.s>
 ```
 to run the code in Mac OS (Apple Silicon - arm64). This will assemble the code and run it using `qemu-riscv64`.
 
-### Subset of C supported
+### The Subset of C supported
 
 Before moving forward, Ferry only supports a subset of C. The following features are supported:
 - Basic arithmetic operations (+, -, *, /, %)
@@ -118,7 +118,7 @@ Before moving forward, Ferry only supports a subset of C. The following features
 - Basic I/O functions (simplified printf-like functionality)
 - Comments (just for readability, your tokenizer already handles this)
 - Pointers (basic pointer operations)
-- Type casting (implicit and explicit)
+- Typecasting (implicit and explicit)
 - Structs (without unions initially)
 - String manipulation (basic operations)
 - Basic preprocessor (#include for essential libraries)
@@ -266,7 +266,7 @@ AST Structure:
 
 The semantic analyzer checks the AST for semantic correctness. It verifies that the types of variables and expressions are correct, that functions are called with the correct number and types of arguments, and that variables are declared before they are used. The semantic analyzer also performs type checking and resolves any ambiguities in the code.
 
-It checks for preprocessor directives, variable declarations, function declarations, and function calls, and removes any unnecessary nodes from the AST, like the `#include` directives.
+It checks for preprocessor directives, variable declarations, function declarations, and function calls, and removes any unnecessary nodes from the AST like the `#include` directives.
 
 For example, assuming there is a `#include<matlab.h>` directive in the code, and the code looks like this:
 
@@ -295,7 +295,7 @@ The linker would then resolve the references to the `createMatrix` function and 
 
 In our original example, the semantic analyzer would check that the `printf` function is declared in the `stdio.h` header file and that it is called with the correct number of arguments. If any semantic errors are found, the compiler reports them to the user.
 
-in the `printf("Hello, World!\n")` statement, the semantic analyzer checks that the `printf` function is called with a string argument. If the argument is not a string, it raises an error.
+In the `printf("Hello, World!\n")` statement, the semantic analyzer checks that the `printf` function is called with a string argument. If the argument is not a string, it raises an error.
 
 Two specific functions handle this case:
 
@@ -401,8 +401,8 @@ Ferry uses the following optimizations:
 4. **Loop Optimizations**: Improves the performance of loops by unrolling them, reducing the number of iterations, or optimizing the loop structure.
   
 Ferry has two levels of optimizations:
-1. Basic optimizations: These are simple optimizations that can be applied to the IR without changing its structure. For example, constant folding and dead code elimination.
-2. Advanced optimizations: These are more complex optimizations that require a deeper understanding of the code structure. For example, loop unrolling and function inlining.
+1. Basic optimizations: Simple optimizations that doesn't change the semantics of the code, like constant folding and dead code elimination.
+2. Advanced optimizations: More complex optimizations that require a deeper understanding of the code structure like loop unrolling and function inlining.
 
 Say our `code` looks like this:
 
@@ -602,7 +602,7 @@ IR Structure (During Advanced Optimization):
         └── Jump: Some("loop_check")              // OPTIMIZATION: Direct jump to loop check
 ```
 
-and finally the IR structure would look like this:
+and finally, the IR structure would look like this:
 
 ```bash
 IR Structure:
@@ -611,7 +611,7 @@ IR Structure:
     └── BasicBlock: None
 ```
 
-This optimizer has aggresively removed the dead code blocks and optimized the loops. The optimiser correctly identified that the code always returns `0` and thus removed the entire loop. 
+This optimizer has aggressively removed the dead code blocks and optimized the loops and correctly identified that the code always returns `0` and thus removed the entire loop. 
 
 ## Code Generation
 
