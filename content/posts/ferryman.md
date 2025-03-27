@@ -611,7 +611,28 @@ IR Structure:
     └── BasicBlock: None
 ```
 
-This optimizer has aggressively removed the dead code blocks and optimized the loops and correctly identified that the code always returns `0` and thus removed the entire loop. 
+and our original code in the final optimised version would look like this:
+
+```bash
+IR Structure:
+└── Root
+└── Function: Some("main")
+    └── BasicBlock: None
+        ├── Call: Some("printf")
+        │   └── Constant: Some("\"Hello, World!\n\"")
+        └── Return: None
+            └── Constant: Some("0")
+```
+
+**Sidenote:**
+
+This optimizer has aggressively removed the dead code blocks and optimized the loops and correctly identified that the code always returns `0` and thus removed the entire loop!
+
+And this, kids, is precisely why a similar code in `C`, `C++`, or `Rust` would be always be faster to run than in `Python`, `Java`, or `JavaScript`. The optimizations are done at the IR level, which is much closer to the machine code than the source code. All optimizations happen before the program runs, so there's no runtime overhead for these analyses. Type information is available at compile time, enabling more powerful optimizations and eliminating runtime type checking.
+
+In contrast, Interpreters typically analyze code line-by-line or function-by-function, missing many global optimization opportunities. Runtime type checking adds overhead and limits certain optimizations. 
+
+Although, there are JITs (Just-In-Time) compilers that compile the code at runtime, which can be faster than traditional interpreters. JITs use a combination of interpretation and compilation to optimize the code at runtime. But, even JIT compilers that optimize during execution have to balance optimization time against execution time. Features like dynamic dispatch, reflection, and metaprogramming make certain optimizations impossible. Modern JIT compilers (like in JavaScript engines) have narrowed the gap through techniques like type specialization and trace-based compilation, but they're still constrained by the dynamic nature of these languages and the need to optimize during execution.
 
 ## Code Generation
 
