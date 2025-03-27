@@ -4,6 +4,7 @@ date: "25-03-2025"
 description: "The one who compiles C lang to machine code."
 tag: "#tech, #compiler"
 draft: false
+showImg: true
 ---
 <script type="module" src="/assets/js/yatch/main.js"></script>
 <link rel="stylesheet" href="/assets/css/yatch/style.css">
