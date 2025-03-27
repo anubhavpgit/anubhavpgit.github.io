@@ -391,7 +391,7 @@ Interpreters like Python and JavaScript engines (like V8) also use intermediate 
 
 ### Optimization
 
-The optimization phase improves the intermediate representation to make it more efficient. This can include removing dead code, inlining functions, and optimizing loops. The goal of optimization is to improve the performance of the generated code without changing its semantics.
+The generated IR is not always optimal. The optimization phase of the compiler improves the IR to make it more efficient. This can include removing dead code, inlining functions, and optimizing loops. The goal of optimization is to improve the performance of the generated code without changing its semantics.
 
 Ferry uses the following optimizations:
 
@@ -400,7 +400,7 @@ Ferry uses the following optimizations:
 3. **Common Subexpression Elimination**: Identifies and eliminates redundant calculations. For example, if the same expression is calculated multiple times, it can be stored in a temporary variable and reused.
 4. **Loop Optimizations**: Improves the performance of loops by unrolling them, reducing the number of iterations, or optimizing the loop structure.
   
-Ferry has two levels of optimizations:
+Ferry employs two types of optimizations:
 1. Basic optimizations: Simple optimizations that doesn't change the semantics of the code, like constant folding and dead code elimination.
 2. Advanced optimizations: More complex optimizations that require a deeper understanding of the code structure like loop unrolling and function inlining.
 
@@ -554,11 +554,7 @@ IR Structure:
                     └── Jump: Some("for.header")           // Loop back
 ```
 
-The `0 + 2` expression has been correctly folded into just `2`. The optimizer also added a jump instruction to the loop header to avoid unnecessary iterations.
-
-The optimizer hasn't specifically optimized for the early exit when `i==5`. While it correctly preserved the program's structure and performed some basic optimizations like constant folding `(0 + 2 → 2)`, it hasn't performed the more advanced control flow analysis that would recognize this optimization opportunity.
-
-The advanced optimizer would then optimize the IR using the following optimizations:
+While it correctly preserved the program's structure and performed some basic optimizations like constant folding `(0 + 2 → 2)`, it hasn't performed the more advanced control flow analysis that would recognize this optimization opportunity. The advanced optimizer would then optimize the IR using the following optimizations:
 
 ```bash
 ---------Starting Advanced Optimization---------
@@ -613,6 +609,9 @@ IR Structure:
 
 and our original code in the final optimised version would look like this:
 
+
+This optimizer has aggressively removed the dead code blocks and optimized the loops and correctly identified that the code always returns `0` and thus removed the entire loop! While our original code example in `IR` would look like this:
+
 ```bash
 IR Structure:
 └── Root
@@ -626,8 +625,6 @@ IR Structure:
 
 **Sidenote:**
 
-This optimizer has aggressively removed the dead code blocks and optimized the loops and correctly identified that the code always returns `0` and thus removed the entire loop!
-
 And this, kids, is precisely why a similar code in `C`, `C++`, or `Rust` would be always be faster to run than in `Python`, `Java`, or `JavaScript`. The optimizations are done at the IR level, which is much closer to the machine code than the source code. All optimizations happen before the program runs, so there's no runtime overhead for these analyses. Type information is available at compile time, enabling more powerful optimizations and eliminating runtime type checking.
 
 In contrast, Interpreters typically analyze code line-by-line or function-by-function, missing many global optimization opportunities. Runtime type checking adds overhead and limits certain optimizations. 
@@ -636,9 +633,7 @@ Although, there are JITs (Just-In-Time) compilers that compile the code at runti
 
 ## Code Generation
 
-The final step would be generating Assembly code from the IR. The assembly code is a low-level representation of the program that can be assembled into machine code and is CPU-specific.
-
-The code generator traverses the IR and generates assembly code for each instruction. Here's a RISC-V reference for the [assembly code](https://michaeljclark.github.io/asm).
+The final step would be generating Assembly code from the IR. The assembly code is a low-level representation of the program that can be assembled into machine code and is CPU-specific. The code generator traverses the IR and generates assembly code for each instruction. Here's a RISC-V reference for the [assembly code](https://michaeljclark.github.io/asm).
 
 ***(WIP*)***
 
