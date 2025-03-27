@@ -3,14 +3,14 @@ title: "Ferry - a C compiler"
 date: "25-03-2025"
 description: "The one who compiles C lang to machine code."
 tag: "#tech, #compiler"
-draft: true
+draft: false
 ---
 <script type="module" src="/assets/js/yatch/main.js"></script>
 <link rel="stylesheet" href="/assets/css/yatch/style.css">
 
 *The ferryman is a figure in various mythologies who is responsible for carrying souls across the river that divides the world of the living from the world of the dead.*
 
-JK. This post is the second in a series of posts that explores the world of compilers, interpreters, CPUs and low level systems. The [previous post](/blog/hacktoberfest.html) describes how the CPU works; how CPUs process and execute instructions. This post explains how the code you write in a high-level language is transformed into machine code that the CPU can understand and execute. 
+JK. This post is the second in a series of posts that explore the world of compilers, interpreters, CPUs and low-level systems. The [previous post](/blog/hacktoberfest.html) describes how the CPU works; and how CPUs process and execute instructions. This post explains how the code you write in a high-level language is transformed into machine code that the CPU can understand and execute. 
  
 ### Table of Contents
 
@@ -45,7 +45,7 @@ For ex.
 ```c
 x = 5;
 ```
-can be compiled into assembly code like this:
+Can be compiled into assembly code like this:
 
 ```assembly
 li x1, 5 // load immediate 5 into register x1
@@ -53,7 +53,7 @@ sw x1, 0(x0) // store word 0 at address x0
 ```
 This assembly code is then translated into machine code, which is a binary representation of the instructions that the CPU can execute. The CPU executes these instructions in a sequence, and the program runs.
 
-While, interpreters translate and execute the program line by line. The interpreter:
+While interpreters translate and execute the program line by line. The interpreter:
 
 - reads the source code line by line,
 - translates it into machine code (or bytecode in HLLs),
@@ -78,7 +78,7 @@ Compilers generate machine code **specific** to the target CPU architecture. The
 
 Ferry is a simple C compiler written in Rust that compiles to RISC-V assembly. It is not a complete implementation of the C language, but a good starting point for understanding how compilers work.
 
-I would suggest to get a basic understanding of how Rust works, and how to set up a Rust project before diving further. Just the basics. Find the [Rust Book](https://doc.rust-lang.org/book/) here.
+I would suggest getting a basic understanding of how Rust works, and how to set up a Rust project before diving further. Just the basics. Find the [Rust Book](https://doc.rust-lang.org/book/) here.
 
 ### Walkthrough
 
@@ -119,7 +119,7 @@ Before moving forward, Ferry only supports a subset of C. The following features
 
 ### Core
 
-A compiler is a complex program that comprises of several steps to convert high-level code into machine code. Taking an example of a simple C program:
+A compiler is a complex program that comprises several steps to convert high-level code into machine code. Taking an example of a simple C program:
 
 ```c
 #include <stdio.h>
@@ -139,20 +139,20 @@ The following code is the exact implementation of the compiler with abstracted i
 
 ```rs
 fn compile(file: String) -> Result<bool, String> {
-    // Parse the source code
+ // Parse the source code
     let mut ast = parse_source(&file)?; // Parse the source code into an AST
-    // Perform semantic analysis
+ // Perform semantic analysis
     ast = semantic::analyze_semantics(ast)?; // Perform semantic analysis on the AST
-    // Generate code from the AST
+ // Generate code from the AST
     ir::generate_ir(&ast)?;
-    // Assembly generation
+ // Assembly generation
     let assembly = codegen::generate_assembly(&ir)?;
 
     Ok(true) // Return true to indicate successful compilation
 }
 ```
 
-The assembly code is platform dependent, meaning that the same high-level code can be compiled into different assembly code for different architectures. The assembly code is then assembled into machine code, which is specific to the target CPU architecture. Jump to the [Assembly and Linking](#assembly-and-linking) section to see how the assembly code can be converted into machine code using an external assembler.
+The assembly code is platform-dependent, meaning that the same high-level code can be compiled into different assembly codes for different architectures. The assembly code is then assembled into machine code, which is specific to the target CPU architecture. Jump to the [Assembly and Linking](#assembly-and-linking) section to see how the assembly code can be converted into machine code using an external assembler.
 
 #### Lexical Analysis
 
@@ -166,22 +166,22 @@ pub fn parse_source(source: &str) -> Result<(), String> {
 
 The compiler reads the source code and breaks it down into tokens. Tokens are the smallest units of meaning in the code, such as keywords, identifiers, literals, and operators.
 
-`PreprocessorDirective("#include <stdio.h>")`  --> header file  
-`Type(Int)`  --> type of variable  
-`Identifier("main")`  --> function name  
-`LeftParen`  --> opening parenthesis  
-`RightParen`  --> closing parenthesis  
-`LeftBrace`  --> opening brace  
-`Identifier("printf")`  --> function name  
-`LeftParen`  --> opening parenthesis  
-`String("Hello, World!\n")`  --> string literal  
-`RightParen`  --> closing parenthesis  
-`Semicolon`  --> semicolon  
-`Keyword(Return)`  --> return statement  
-`Number(0.0)`  --> return value  
-`Semicolon`  --> semicolon  
-`RightBrace`  --> closing brace  
-`EOF`  --> end of file  
+`PreprocessorDirective("#include <stdio.h>")` --> header file  
+`Type(Int)` --> type of variable  
+`Identifier("main")` --> function name  
+`LeftParen` --> opening parenthesis  
+`RightParen` --> closing parenthesis  
+`LeftBrace` --> opening brace  
+`Identifier("printf")` --> function name  
+`LeftParen` --> opening parenthesis  
+`String("Hello, World!\n")` --> string literal  
+`RightParen` --> closing parenthesis  
+`Semicolon` --> semicolon  
+`Keyword(Return)` --> return statement  
+`Number(0.0)` --> return value  
+`Semicolon` --> semicolon  
+`RightBrace` --> closing brace  
+`EOF` --> end of file  
 
 #### Syntax Analysis
 
@@ -198,15 +198,15 @@ match &self.peek().token_type { // Check the type of the next token
   TokenType::Type(_) => { // If it's a type, parse a declaration
     let declaration = self.parse_declaration()?;
     program.add_child(declaration); // Add the declaration to the program
-  } 
+ } 
   TokenType::PreprocessorDirective(_) => { // Else if it's a preprocessor directive, parse it
     let directive = self.parse_preprocessor()?;
     program.add_child(directive); // And the directive to the program
-  }
+ }
   _ => {
     return Err(format!("Expected declaration, found {:?}.", // Error if neither
     self.peek().token_type));
-  }
+ }
 }
 ```
 
@@ -225,7 +225,7 @@ pub struct ASTNode {
     pub value: Option<String>,
 }
 ```
-The parser generate the AST by creating nodes for each construct in the source code. For example, a function call might be represented as a node with the type `FunctionCall`, and its children would be the arguments passed to the function and the function name. 
+The parser generates the AST by creating nodes for each construct in the source code. For example, a function call might be represented as a node with the type `FunctionCall`, and its children would be the arguments passed to the function and the function name. 
 
 In our example, the AST for the entire program would look something like this:
 
@@ -255,7 +255,7 @@ For example, assuming there is a `#include<matlab.h>` directive in the code, and
 ```c
 #include <matlab.h>
 int main() {
-    Matrix m = createMatrix(3, 3);  // Function declared in matlab.h
+ Matrix m = createMatrix(3, 3); // Function declared in matlab.h
     return 0;
 }
 ```
@@ -269,7 +269,7 @@ typedef struct {...} Matrix;
 Matrix createMatrix(int rows, int cols);
 // ...many more declarations...
 int main() {
-    Matrix m = createMatrix(3, 3);
+ Matrix m = createMatrix(3, 3);
     return 0;
 }
 ```
@@ -286,11 +286,11 @@ pub fn check_types(node: &ASTNode, symbol_table: &SymbolTable) -> Result<Type, S
   ...
   if value.starts_with('"') {
     Ok(Type::Pointer(Box::new(Type::Char))) // String literal
-  } else if value == "true" || value == "false" {
+ } else if value == "true" || value == "false" {
     Ok(Type::Bool)
-  } else {
+ } else {
     ...
-  }
+ }
   ...
 }
 ```
@@ -301,29 +301,29 @@ and
 pub fn check_types(node: &ASTNode, symbol_table: &SymbolTable) -> Result<Type, String> {
   ...
   match (target_type, value_type) {
-    // Basic types
-    (Type::Int, Type::Int) => true,
-    (Type::Float, Type::Int) => true, // Implicit conversion
+ // Basic types
+ (Type::Int, Type::Int) => true,
+ (Type::Float, Type::Int) => true, // Implicit conversion
     ...
-    // Pointers
+ // Pointers
         
-    // For box types, reccursivly check if the inner types are compatible
-    (Type::Pointer(target_inner), Type::Pointer(value_inner)) => {
+ // For box types, recursively check if the inner types are compatible
+ (Type::Pointer(target_inner), Type::Pointer(value_inner)) => {
       is_type_compatible(target_inner, value_inner)
-    }
+ }
 
-    // Functions are compatible if their return types and parameter lists match
+ // Functions are compatible if their return types and parameter lists match
     if !is_type_compatible(target_return, value_return) {
       return false;
-    }
-  }
+ }
+ }
 }
 ```
 This step raises compile-time errors if the AST is not semantically correct. 
 
 #### Intermediate Code Generation
 
-The intermediate code generator converts the AST into an intermediate representation (IR). The IR is a low-level, usually a platform-independent representation of the code that is easier to optimize and translate into machine code. 
+The intermediate code generator converts the AST into an intermediate representation (IR). The IR is a low-level, usually platform-independent representation of the code that is easier to optimize and translate into machine code. 
 
 AST represents the syntactic structure of the code (closely mirrors source code) while IR represents the semantic operations (closer to what the machine will do). IR is specifically designed for optimizations that are difficult at the AST level. Common optimizations like constant folding, dead code elimination, and loop transformations work better on IR.
 
@@ -333,8 +333,8 @@ IR representations are usually standardized and can be used across different com
 @.str = private unnamed_addr constant [14 x i8] c"Hello, World!\00", align 1
 define i32 @main() {
 entry:
-  %call = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str, i32 0, i32 0))
-  ret i32 0
+ %call = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str, i32 0, i32 0))
+ ret i32 0
 }
 ```
 
@@ -342,7 +342,7 @@ Compilers typically use multiple IR forms during compilation:
 - **High-level IR**: A Tree representation of the source code, easier to analyze and optimize.
 - **Low-level IR/ Linear/Three-address code IR**: Each instruction typically has one destination and up to two source operands. Closer to assembly language
 
-Ferry uses a simple IR representation that is built for the purpose of this compiler. The IR is a tree representation of the code, where each node represents an operation or a value. I could have also used `LLVM IR` as the intermediate representation, but the learning curve is steep, and I wanted to keep it simple. Doing so, would actually have made the compiler more robust and powerful. 
+Ferry uses a simple IR representation that is built for the purpose of this compiler. The IR is a tree representation of the code, where each node represents an operation or a value. I could have also used `LLVM IR` as the intermediate representation, but the learning curve is steep, and I wanted to keep it simple. Doing so would actually have made the compiler more robust and powerful. 
 
 The IR would look something like this:
 
@@ -390,12 +390,12 @@ Say our `code` looks like this:
 
 ```c
 int main(){
-	int i = 0 + 2;
-	for (i = 0; i < 10; i++)
-	{
-		if (i == 5)
-			return 0;
-	}
+  int i = 0 + 2;
+  for (i = 0; i < 10; i++)
+  {
+    if (i == 5)
+      return 0;
+  }
 }
 ```
 
@@ -455,7 +455,7 @@ IR Structure:
                     └── Jump: Some("for.header")
 ```
 
-The basic optimser would then optimize the IR using the following optimizations:
+The basic optimizer would then optimize the IR using the following optimizations:
 
 ```bash
 ---------Starting Optimization---------
@@ -564,7 +564,13 @@ IR Structure:
 ```
 This optimizer has removed the dead code blocks and optimized the loops. The optimiser correctly identified that the code always returns `0` and thus removed the entire loop. 
 
-<!-- #### Code Generation -->
+#### Code Generation
+
+The final step would be generating Assembly code from the IR. The assembly code is a low-level representation of the program that can be assembled into machine code and is CPU-specific.
+
+The code generator traverses the IR and generates assembly code for each instruction. Here's a RISC-V reference for the [assembly code](https://michaeljclark.github.io/asm).
+
+***(WIP*)***
 
 ## Assembly and Linking
 
@@ -576,7 +582,7 @@ The process flows like this:
 
 Once the machine code is generated, it can be executed on a RISC-V CPU or a simulator. The machine code is a binary representation of the instructions that the CPU can execute. The CPU executes these instructions in a sequence, and the program runs.
 
-In Ferry, there is an additional module that helps with the assmebly and linking process. This is a separate binary that uses the `riscv64-unknown-elf-as` and `riscv64-unknown-elf-ld` tools to assemble and link the code. It then uses quemu-riscv64 to run the code. The module is called `mac_os_runner` 
+In Ferry, there is an additional module that helps with the assembly and linking process. This is a separate binary that uses the `riscv64-unknown-elf-as` and `riscv64-unknown-elf-ld` tools to assemble and link the code. It then uses quemu-riscv64 to run the code. The module is called `mac_os_runner` 
 
 ```bash
 cargo run --release --bin mac_os_runner -- <input_file.s>
@@ -611,6 +617,6 @@ Once you have the compiled assembly code, you can use a simulator like Yatch to 
 
 ## Future Work
 
-Well, the current scope of Ferry was to understand and demonstrate the working of compilers. While I would love to finish this, there are far better, superior compilers out there. This article was a simple entry into how systems work. My next steps would be delving more into the world of compilers, optimising CPU operations, GPU computing, and understanding the mechanics behind the scenes.
+Well, the current scope of Ferry was to understand and demonstrate the working of compilers. While I would love to finish this, there are far better, superior compilers out there. This article was a simple entry into how systems work. My next steps would be delving more into the world of compilers, optimising CPU operations, and GPU computing, and understanding the mechanics behind the scenes.
 
-This article might seem overwhelming, but it's pretty interesting to realize how all of modern computing works, and see how far we've come.
+This article might seem overwhelming, but it's pretty interesting to realize how all of modern computing works and see how far we've come.
