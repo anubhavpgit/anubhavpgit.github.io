@@ -171,8 +171,6 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
     description: file.data.description,
     tags: file.data.tag,
   });
-  // Add lazy loading to images
-  templatized = templatized.replace(/<img(.*?)>/g, '<img$1 loading="lazy">');
 
   if (file.data.showdate == true) {
     // Create a hash of the content of the file
@@ -240,30 +238,29 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
         );
       } else {
         // No header image found, remove the figure element
-        templatized = templatized.replace(/<figure class="mb4">[\s\S]*?<\/figure>/g, '');
+        templatized = templatized.replace(/<figure class="header-figure">[\s\S]*?<\/figure>/g, '');
         console.warn(`⚠️ No header image found for: ${fileBase}`);
       }
     } else {
       // Image directory doesn't exist, remove the figure element
-      templatized = templatized.replace(/<figure class="mb4">[\s\S]*?<\/figure>/g, '');
+      templatized = templatized.replace(/<figure class="header-figure">[\s\S]*?<\/figure>/g, '');
       console.warn(`⚠️ Image directory doesn't exist for: ${fileBase}`);
     }
   } else {
-    // If showImg is false or not specified, remove the figure element
+    // If showImg is false or not specified, remove the figure element completely
     templatized = templatized.replace(
-      /<img((?!loading=["']lazy["']).)*?>/g,
-      function (match) {
-        // If it already has a loading attribute, replace it
-        if (match.includes('loading=')) {
-          return match.replace(/loading=["'][^"']*["']/, 'loading="lazy"');
-        }
-        // Otherwise add the loading attribute before the closing bracket
-        return match.replace(/>$/, ' loading="lazy">');
-      }
+      /<figure class="header-figure">[\s\S]*?<\/figure>/g,
+      ""
     );
   }
+
+  // Add lazy loading to all images except the header image
+  templatized = templatized.replace(
+    /<img(?!\s+loading=["']lazy["'])(?!.*class="blog-header-image")(?!.*class=["'][^"']*blog-header-image)([^>]*)>/g,
+    '<img$1 loading="lazy">'
+  );
+
   saveFile(outfilename, templatized);
-  //skipcq: JS-0002
   console.info(`📄 ${filename.split("/").slice(-1).join("/").slice(0, -3)}`);
 };
 
@@ -286,8 +283,6 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
     description: file.data.description,
   });
 
-  // Add lazy loading to all images in the content
-  templatized = templatized.replace(/<img(.*?)>/g, '<img$1 loading="lazy">');
 
   if (file.data.pdf && file.data.pdf == true) {
     const outpdfname = getOutputPdfname(filename, outPath);
@@ -349,7 +344,7 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
         // Create HTML with the new structure - full width figure with lazy loading
         const headerImageHTML = `
         <figure class="header-figure">
-          <img src="/assets/img/${imgPath}" alt="${file.data.title}" class="blog-header-image" loading="lazy">
+          <img src="/assets/img/${imgPath}" alt="${file.data.title}" class="blog-header-image">
         </figure>`;
 
         // Replace the existing figure element
@@ -375,18 +370,10 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
     );
   }
 
-  // Ensure all img tags have loading="lazy"
-  // This regex looks for img tags that don't already have loading="lazy"
+  // Add lazy loading to all images after all other processing is done
   templatized = templatized.replace(
-    /<img((?!loading=["']lazy["']).)*?>/g,
-    function (match) {
-      // If it already has a loading attribute, replace it
-      if (match.includes('loading=')) {
-        return match.replace(/loading=["'][^"']*["']/, 'loading="lazy"');
-      }
-      // Otherwise add the loading attribute before the closing bracket
-      return match.replace(/>$/, ' loading="lazy">');
-    }
+    /<img(?!\s+loading=["']lazy["'])(?!.*class="blog-header-image")(?!.*class=["'][^"']*blog-header-image)([^>]*)>/g,
+    '<img$1 loading="lazy">'
   );
 
   saveFile(outfilename, templatized);
