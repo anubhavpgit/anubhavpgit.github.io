@@ -171,6 +171,9 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
     description: file.data.description,
     tags: file.data.tag,
   });
+  // Add lazy loading to images
+  templatized = templatized.replace(/<img(.*?)>/g, '<img$1 loading="lazy">');
+
   if (file.data.showdate == true) {
     // Create a hash of the content of the file
     const hash = crypto.createHash("md5").update(file.html).digest("hex");
@@ -248,8 +251,15 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
   } else {
     // If showImg is false or not specified, remove the figure element
     templatized = templatized.replace(
-      /<figure class="header-figure">[\s\S]*?<\/figure>/g,
-      ""
+      /<img((?!loading=["']lazy["']).)*?>/g,
+      function (match) {
+        // If it already has a loading attribute, replace it
+        if (match.includes('loading=')) {
+          return match.replace(/loading=["'][^"']*["']/, 'loading="lazy"');
+        }
+        // Otherwise add the loading attribute before the closing bracket
+        return match.replace(/>$/, ' loading="lazy">');
+      }
     );
   }
   saveFile(outfilename, templatized);
@@ -275,6 +285,10 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
     content: file.html,
     description: file.data.description,
   });
+
+  // Add lazy loading to all images in the content
+  templatized = templatized.replace(/<img(.*?)>/g, '<img$1 loading="lazy">');
+
   if (file.data.pdf && file.data.pdf == true) {
     const outpdfname = getOutputPdfname(filename, outPath);
     mdToPdf({ path: filename }, { dest: outpdfname });
@@ -332,10 +346,10 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
         // Construct the path as it will appear in the HTML
         const imgPath = `${fileBase}/${headerFileName}`;
 
-        // Create HTML with the new structure - full width figure
+        // Create HTML with the new structure - full width figure with lazy loading
         const headerImageHTML = `
         <figure class="header-figure">
-          <img src="/assets/img/${imgPath}" alt="${file.data.title}" class="blog-header-image">
+          <img src="/assets/img/${imgPath}" alt="${file.data.title}" class="blog-header-image" loading="lazy">
         </figure>`;
 
         // Replace the existing figure element
@@ -360,6 +374,20 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
       ""
     );
   }
+
+  // Ensure all img tags have loading="lazy"
+  // This regex looks for img tags that don't already have loading="lazy"
+  templatized = templatized.replace(
+    /<img((?!loading=["']lazy["']).)*?>/g,
+    function (match) {
+      // If it already has a loading attribute, replace it
+      if (match.includes('loading=')) {
+        return match.replace(/loading=["'][^"']*["']/, 'loading="lazy"');
+      }
+      // Otherwise add the loading attribute before the closing bracket
+      return match.replace(/>$/, ' loading="lazy">');
+    }
+  );
 
   saveFile(outfilename, templatized);
   console.info(`📄 ${filename.split("/").slice(-1).join("/").slice(0, -3)}`);
