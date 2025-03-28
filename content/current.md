@@ -14,9 +14,9 @@ showImg: true
 
 ###### March
 
-Claude finally has a web search feature; I can finally let my ChatGPT+ rest in peace now. Well done, soilder. You did well. (*Immidiately regrets after looking at the ghibli art images everyone is generating :(*  )
+Claude finally has a web search feature; I can finally let my ChatGPT+ rest in peace now. Well done, soilder. You did well. (*Immidiately regrets after looking at the ghibli art images everyone is generating*) :(
 
-Happy Holi folks! I had a lovely Holi celebration here this weekend. Currently working on [a C compiler in Rust](/blog/ferryman.html). The compiler is currently capable of parsing, tokenizing, generating AST and an optimised intermidate representaion of the code for a subset of C language. The following steps would be tocompiling IR to RISC-V assembly. 
+Happy Holi folks! I had a lovely Holi celebration here this weekend. Currently wrapping up Ferry, [a C compiler in Rust](/blog/ferryman.html). The compiler is currently capable of parsing, tokenizing, generating AST and an optimised intermidate representaion of the code for a subset of C language. The following steps would be to compile IR to RISC-V assembly. 
 
 Compiled languages are always faster than interpreted languages, which is why ​Microsoft has also announced a [native port of the TypeScript compiler to Go](https://devblogs.microsoft.com/typescript/typescript-native-port/) which earlier was written in TypeScript.
 
@@ -43,8 +43,6 @@ Finished watching Paatal Lok - Season 2 this weekend. It's a gripping tale of cr
 Back in action: January was like an amazing much-needed magical vacation back home, and now I am back and it feels good. I met my cousins, family and relatives, ate a bunch of good Indian food, and spent a lot of time with my friends, still unsure how a month went by and if I was ready to get back to work. My sister got married, and I can't stop digesting this. She is just six months older than me, and we grew up together, inseparable. I am happy for her, but it feels like a part of me is missing. I can't wait to finish things here and rush back home.
 
 Currently reading [The Short Case for Nvidia Stock](https://youtubetranscriptoptimizer.com/blog/05_the_short_case_for_nvda) by Jeffrey Emanuel which explains how Deepseek, an open-source LLM just killed it in the LLM space. The training of DeepSeek-V3 required less than $6 million worth of computing power with Nvidia H800 chips, which is 20 to 50 times cheaper than the cost of training similar models by OpenAI and Anthropic. On Monday, January 27, 2025, the stock closed at $118.42, marking a 17% drop from the previous close. This decline erased nearly $600 billion from NVIDIA's market capitalization, setting a record for the largest single-day loss in U.S. history. The stock's decline was attributed to a combination of factors, including a broader market sell-off, concerns about the company's growth prospects, and a downgrade from analysts at Morgan Stanley.
-
-This year, I plan on building fewer projects and spending more time Leetcoding as I plan on graduating by the end of this year. The next few months re planned with finishing up an old torrent project, fixing up a couple of bugs, and starting with Ferry, a C compiler for RISC-V written in Rust. This helps me learn more about computers and how they work at a lower level. 
 
 Taking a break:
 
