@@ -14,9 +14,9 @@ showImg: true
 
 ###### March
 
-At this point, it's a full blown AI war. `gemini-2.5-pro` just blew my mind. [Google just killed it!](https://www.reddit.com/r/singularity/comments/1jl1eti/man_the_new_gemini_25_pro_0325_is_a_breakthrough/). I asked it to analyse Ferry, my C compiler project, and it just one-shotted the entire project. It was able to understand the code, and suggest improvements, and even provided a detailed analysis of the code structure. 
+It's a full blown AI war. [`gemini-2.5-pro` just killed it!](https://www.reddit.com/r/singularity/comments/1jl1eti/man_the_new_gemini_25_pro_0325_is_a_breakthrough/). I asked it to analyse Ferry, my C compiler project, and it just one-shotted the entire project, was able to understand the code, suggest improvements, and even provided a detailed analysis of the code structure. 
 
-[It creates a minecraft clone](https://www.reddit.com/r/singularity/comments/1jl6j1l/googles_latest_model_gemini_25_pro_is_amazing_it/https://www.reddit.com/r/singularity/comments/1jl6j1l/googles_latest_model_gemini_25_pro_is_amazing_it/). Yes, 5 odd years down the line, all code will be written by AI.
+[It sucesfully created a minecraft clone](https://www.reddit.com/r/singularity/comments/1jl6j1l/googles_latest_model_gemini_25_pro_is_amazing_it/https://www.reddit.com/r/singularity/comments/1jl6j1l/googles_latest_model_gemini_25_pro_is_amazing_it/). Yes, 5 odd years down the line, possibly almost all code will be written by AI. I think at somepoint, AI will be able to write code to improve AI, and this self-replicating cycle will continue. It's finally happening. The sci-fi future is here.
 
 Claude finally has a web search feature; I can finally let my ChatGPT+ rest in peace now. Well done, soilder. You did well. (*Immidiately regrets after looking at the ghibli art images everyone is generating*) :(
 
