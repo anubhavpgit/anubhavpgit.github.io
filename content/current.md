@@ -14,6 +14,8 @@ showImg: true
 
 ###### March
 
+At this point, it's a full blown AI war. `gemini-2.5-pro` just blew my mind. [Google just killed it!](https://www.reddit.com/r/singularity/comments/1jl1eti/man_the_new_gemini_25_pro_0325_is_a_breakthrough/). I asked it to analyse Ferry, my C compiler project, and it just one-shotted the entire project. It was able to understand the code, and suggest improvements, and even provided a detailed analysis of the code structure. Yes, 5 odd years down the line, all code will be written by AI.
+
 Claude finally has a web search feature; I can finally let my ChatGPT+ rest in peace now. Well done, soilder. You did well. (*Immidiately regrets after looking at the ghibli art images everyone is generating*) :(
 
 Happy Holi folks! I had a lovely Holi celebration here this weekend. Currently wrapping up Ferry, [a C compiler in Rust](/blog/ferryman.html). The compiler is currently capable of parsing, tokenizing, generating AST and an optimised intermidate representaion of the code for a subset of C language. The following steps would be to compile IR to RISC-V assembly. 
