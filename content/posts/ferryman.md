@@ -103,7 +103,7 @@ The assembly code can be assembled into machine code using an external assembler
 or
 
 ```bash
-cargo run --release --bin mac_os_runner -- <input_file.s>
+cargo run --release --bin runner -- <input_file.s>
 ```
 to run the code in Mac OS (Apple Silicon - arm64). This will assemble the code and run it using `qemu-riscv64`.
 
@@ -636,7 +636,104 @@ Although, there are JITs (Just-In-Time) compilers that compile the code at runti
 
 The final step would be generating Assembly code from the IR. The assembly code is a low-level representation of the program that can be assembled into machine code and is CPU-specific. The code generator traverses the IR and generates assembly code for each instruction. Here's a RISC-V reference for the [assembly code](https://michaeljclark.github.io/asm).
 
-***(WIP*)***
+A short summary of the RISC-V ISA to understand the assembly code:
+
+![RISCV- RV32I](../assets/img/hacktoberfest/riscv.png)
+
+Considering our example, the codegenerator iterates over the generated IR and generates assembly code for each instruction. The code generator traverses the IR tree and maps each node type to specific RISC-V instructions. This isn't a simple one-to-one mapping - it involves careful register allocation, stack management, and preserving calling conventions. Here's how the process works:
+
+```bash
+IR Node → Register Allocation → Assembly Instructions → Function Prologue/Epilogue → Final Assembly
+```
+
+**Call Node**: For function calls, the code generator does the following:
+1. It pushes temporary registers that might be modified by the call
+2. It evaluates all argument expressions
+3. It moves arguments to parameter registers (a0-a7)
+4. It issues the "call" instruction
+5. After the call, it restores temporary registers
+
+**Register Allocation**: A simple counter system (`get_new_temp()`). For our "Hello, World!" program, the code generator would do the following:
+1. The string constant gets placed in the .rodata section with a unique label
+2. A temporary register (like t0) is loaded with the address of this string
+3. This register is moved to a0 before the printf call
+4. The return value 0 is loaded into a different register (like t1)
+5. This register is moved to a0 before the return
+
+**Stack Management**: Stack management is crucial for function calls. The code generator handles this by:
+1. Function prologue that saves return address (ra) and frame pointer (s0)
+2. Stack space allocation for local variables
+3. Parameter passing using both registers and stack
+4. Restoring saved registers in the epilogue
+
+and the final compiled steps might look like this:
+
+1. The string "Hello, World!\n" is placed in the .rodata section with a label like .LC0
+2. The main function starts with a prologue to set up the stack frame
+3. The address of .LC0 is loaded into a temporary register
+4. This register is moved to a0 (first argument register)
+5. The printf function is called
+6. A constant 0 is loaded into a temporary register
+7. This register is moved to a0 (return value register)
+8. The epilogue restores saved registers and returns
+
+It would look something like this:
+
+```bash
+IR Node: Call: Some("printf")
+     ↓
+Assembly: la t0, .LC0    # Load string address
+          mv a0, t0      # Set first argument
+          call printf    # Call the function
+
+IR Node: Return: None → Constant: Some("0")
+     ↓
+Assembly: li t1, 0       # Load immediate value 0
+          mv a0, t1      # Move to return register
+          # Epilogue follows
+```
+
+and the final assembly code would look like this:
+
+```asm
+.section .data
+.section .text
+.global main
+
+.extern printf
+.global main
+
+main:
+    # Prologue
+    addi sp, sp, -8
+    sw ra, 4(sp)
+    sw s0, 0(sp)
+    addi s0, sp, 8
+
+.section .rodata
+.LC0:
+    .string "Hello, World!\n"
+.section .text
+    la t0, .LC0
+    mv a0, t0
+    call printf
+    li t1, 0
+    mv a0, t1
+    mv sp, s0
+    addi sp, sp, -8
+    lw ra, 4(sp)
+    lw s0, 0(sp)
+    addi sp, sp, 8
+    ret
+
+    # Epilogue
+    lw ra, 4(sp)
+    lw s0, 0(sp)
+    addi sp, sp, 8
+    ret
+```
+
+
 
 ## Assembly and Linking
 
@@ -648,17 +745,18 @@ The process flows like this:
 
 Once the machine code is generated, it can be executed on a RISC-V CPU or a simulator. The machine code is a binary representation of the instructions that the CPU can execute. The CPU executes these instructions in a sequence, and the program runs.
 
-In Ferry, there is an additional module that helps with the assembly and linking process. This is a separate binary that uses the `riscv64-unknown-elf-as` and `riscv64-unknown-elf-ld` tools to assemble and link the code. It then uses quemu-riscv64 to run the code. The module is called `mac_os_runner` 
+Ferry has a separate module that helps with the assembly and linking process. This is a separate binary that uses the 
+`riscv64-unknown-elf-as` to assemble and `riscv64-unknown-elf-gcc` tools to assemble and link the code. It then uses `spike` to run the code. The module is called `mac_os_runner` and the binary is called `runner`.
 
 ```bash
-cargo run --release --bin mac_os_runner -- <input_file.s>
+cargo run --release --bin runner -- <input_file.s>
 ```
 
 The complete process of compiling and running a C program using Ferry in an ARM64 environment is as follows:
 
 ```bash
 cargo run --release --bin ferry -- <input_file.c>
-cargo run --release --bin mac_os_runner -- <input_file.s>
+cargo run --release --bin runner -- <input_file.s>
 ```
 
 Here's a simple instruction decoder for RISC-V machine code
