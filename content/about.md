@@ -16,8 +16,8 @@ I'm currently based in NYC, so if you're nearby, feel free to reach out. We coul
 
 [<i class="fa-envelope icon"></i>](mailto:anubhabr50@gmail.com)  \   [<i class="fa-calendar-days icon"></i>](https://cal.com/anubhavp) 
 
-[<i class="fa-github icon"></i>](https://github.com/anubhavp-dev) \ [<i class="fa-linkedin icon"></i>](https://www.linkedin.com/in/anubhabpatnaik/) \ [<i class="fa-instagram icon"></i>](https://instagram.com/anubhavclicks) \ [<i class="fa-basketball icon"></i>](https://dribbble.com/anubhabpatnaik) \ [<i class="fa-earth-americas icon"></i>](https://anubhavp.dev/explored)
+[<i class="fa-github icon"></i>](https://github.com/anubhavpgit) \ [<i class="fa-linkedin icon"></i>](https://www.linkedin.com/in/anubhabpatnaik/) \ [<i class="fa-instagram icon"></i>](https://instagram.com/anubhavclicks) \ [<i class="fa-basketball icon"></i>](https://dribbble.com/anubhabpatnaik) \ [<i class="fa-earth-americas icon"></i>](https://anubhavp.dev/explored)
 
 ---
 
-This site[(*source*)](https://github.com/anubhavp-dev/anubhavp-dev.github.io) is built using a tailored version of [zuzu](https://github.com/anubhavp-dev/zuzu), an open-source static site generator.
+This site[(*source*)](https://github.com/anubhavpgit/anubhavpgit.github.io) is built using a tailored version of [zuzu](https://github.com/anubhavpgit/zuzu), an open-source static site generator.

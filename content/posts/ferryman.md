@@ -150,7 +150,7 @@ int main() {
 }
 ```
 
-The following code is the [exact implementation](https://github.com/anubhavp-dev/ferry/blob/main/src/main.rs#L64) of the compiler with abstracted implementations of the steps.
+The following code is the [exact implementation](https://github.com/anubhavpgit/ferry/blob/main/src/main.rs#L64) of the compiler with abstracted implementations of the steps.
 
 ```rs
 fn compile(file: String) -> Result<bool, String> {
