@@ -34,7 +34,7 @@ showImg: true
 
 ### Projects
 - **[Orion](https://github.com/anubhavpgit/orion)** – A motion detector detecing precise **muscle movements** using EMG sensors to simulate **mouse clicks** and **keyboard strokes**. (*WIP*)
-- **[Ferry](https://github.com/anubhavpgit/ferry)** – A minimal **C compiler for RISC-V** written in **Rust** featuring a custom IR and optimiser. (*WIP*)
+- **[Ferry](https://github.com/anubhavpgit/ferry)** – A minimal **C compiler for RISC-V** written in **Rust** featuring a custom IR and optimiser. 
 - **[Lind (Open Source)](https://github.com/Lind-Project/)** – An isolated, single-process sandbox to securely execute programs with fine-grained resource control to prevent system failures, built with **Rust** and **WASM**.
 - **[Pixlr](https://github.com/anubhavpgit/pixlr)** – A **SVG/PNG to pixel art converter** in Rust with optimized image processing algorithms.
 - **[Barney](https://github.com/anubhavpgit/barney)** – An efficient machine code **instruction encoder/decoder** for RISC-V in TypeScript.
