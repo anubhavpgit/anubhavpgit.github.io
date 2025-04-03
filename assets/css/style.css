@@ -106,7 +106,7 @@ Icons
 	color: var(--azure);
 	text-decoration: none;
 	position: relative;
-	transition: color .4s;
+	transition: color .4s, opacity 0.1s ease;
 	outline: none !important;
 	display: inline-block;
 }
@@ -125,11 +125,17 @@ Icons
 	background-color: var(--azure);
 	transform: scaleX(0);
 	transform-origin: center;
-	transition: transform 0.2s ease;
+	transition: transform 0.2s ease, opacity 0.1s ease;
 }
 
 #main a:hover:before {
 	transform: scaleX(1);
+}
+
+/* Blink effect - affects both the link and its :before element */
+#main a:active,
+#main a:active:before {
+	opacity: 0;
 }
 
 #main b,

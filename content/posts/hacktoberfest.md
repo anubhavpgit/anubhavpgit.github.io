@@ -8,7 +8,7 @@ tag: "#tech, #compiler"
 <script type="module" src="/assets/js/yatch/main.js"></script>
 <link rel="stylesheet" href="/assets/css/yatch/style.css">
 
-This post is the first post in a series of posts on compilers and interpreters. The second post, [The Ferryman](https://anubhavp.dev/posts/ferryman), introduces compiling high-level languages into machine code instructions, and we attempt at building a working C compiler for RISC-V. This post will delve deeper into the next part; understanding how CPUs execute machine code instructions. 
+This post is the first post in a series of posts on compilers and interpreters. The second post, [The Ferryman](../blog/ferryman.html), introduces compiling high-level languages into machine code instructions, and we attempt at building a working C compiler for RISC-V. This post will delve deeper into the next part; understanding how CPUs execute machine code instructions. 
 
 Hacktoberfest is a fantastic opportunity to dive into the world of open source, make meaningful contributions, and sharpen your dev skills. This year, I'm most excited about [Yatch](#current-yatch): a machine code interpreter for RISC-V written in C++.
 
@@ -203,7 +203,7 @@ Here is the standalone version of the tool: [Barney- A RISC-V Instruction Decode
 
 ## Yatch
 
-[Yatch](https://github.com/anubhavpgit/yatch.git) is a machine code interpreter for RISC-V written in C++. The project aims to provide a basic understanding of how CPUs execute instructions and the principles of pipelining.
+[Yatch](https://github.com/anubhavpgit/yatch) is a machine code interpreter for RISC-V written in C++. The project aims to provide a basic understanding of how CPUs execute instructions and the principles of pipelining.
 
 To get started with Yatch, you need a C++ compiler. You can use `g++` or `clang++` to compile the code. 
 
