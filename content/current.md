@@ -13,6 +13,8 @@ showImg: true
 
 ###### April
 
+Decided to revist an old decentralised encrypted chat app I built three years ago and here is the v2: [https://anubhavp.dev/fireside/](https://anubhavp.dev/fireside/).
+
 F-ed up my pc for a day. Ferry is not programmed to handle malformed code, and the IR-assembly code generation missed adding `epilogue` to this one for-loop in a test.c file. Ferry uses `spike` to emulate the RISC-V assembly code, and it started an infinte loop with seg faults and stack overflows. I quit the emulator (`ctrl` + `c`) and was on my way, but `spike` was silently running in the background. A day later my CPU Fan started roaring and the laptop was heating up. Initially, I ignored but later upon inspection, it was clear today why tests are important in your code. Spike was hogging 99.5% CPU usage! And these macbooks are so performant that I didn’t even notice the CPU was running at 100% for a day. It was only the fan sound that made me realise something was off, and I used it extensively in the meantime- muliple chrome windows, tabs,`nodejs` servers and whatnots.
 
 Current steps would be fixing IR-assembly generator and incorporating unit=tests for all the modules in the project.

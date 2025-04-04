@@ -43,7 +43,7 @@ showImg: true
 - **[Dough](https://github.com/anubhavpgit/dough)** – A high-performance CLI presentation tool in Rust that renders markdown files as slides with custom syntax highlighting and efficient text processing.
 - **[Bee](https://github.com/anubhavpgit/b)** – A custom **BitTorrent client** with an item-based collaborative recommendation system using cosine similarity and a rating prediction system achieving **95%** accuracy.
 - **[RESOC](https://github.com/anubhavpgit/resoc)** – A **college resource-sharing platform** built with React & Firebase, offering taskboards and community chat. Achieved **200+** active users in 3 months.
-- **[WEBCHAT (W3bChat)](https://github.com/anubhavpgit/w3bchat-dapp)** – A **decentralized chat app** built with GunJS, Svelte, Rust, and Firebase, enabling low-latency, secure, and ephemeral messaging.
+- **[Fireside (W3bChat v2)](https://github.com/anubhavpgit/fireside)** – A **decentralized chat app** built with GunJS, Svelte, Rust, and Firebase, enabling low-latency, secure, and ephemeral messaging. ([Live Demo](https://anubhavp.dev/fireside/)).
 - **[zuzu](https://github.com/anubhavpgit/zuzu/)** – A **static site generator** in JavaScript ([Live Demo](https://anubhavp.dev/zuzu/)).
 - **[Qtree](https://github.com/anubhavpgit/qd-compression)** – A demonstration of **image compression and decompression** using quadtrees, inspired by KoalasToTheMax ([Live Demo](https://anubhavp.dev/blog/qtree/)).
 - **[Explored](https://github.com/anubhavpgit/explored)** – A **ThreeJS** globe inspired by GitHub's homepage, complete with lighting and shading ([Live](https://anubhavp.dev/explored/)).
