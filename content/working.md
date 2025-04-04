@@ -13,7 +13,7 @@ showImg: true
 
 ###### Recent Projects:
 
-- [Fireside] - An encrypted, decentralized chat app built with GunJS & Svelte, enabling low-latency, secure, and ephemeral messaging. ([Live Demo](https://anubhavp.dev/fireside/))
+- [Fireside](https://github.com/anubhavpgit/fireside) - An encrypted, decentralized chat app built with GunJS & Svelte, enabling low-latency, secure, and ephemeral messaging. - [Live](https://anubhavp.dev/fireside/)
 - [Ferry](https://github.com/anubhavpgit/ferry) - A C compiler for RISC-V, capable of compiling the code for a subset of C language (enough to solve LeetCode!)
 - [Game of Life](https://anubhavp.dev/blog/gameoflife.html)- Implementing John Conway's Game of Life and explaining building CPU units using it
 - [A RISCV machine code interpreter](https://anubhavp.dev/blog/hacktoberfest)-  a pipelined processor executing machine code instructions with hazard handling and memory safety
