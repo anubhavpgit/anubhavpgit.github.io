@@ -299,16 +299,12 @@ p {
 
 figure.header-figure {
 	background-color: #f0f0f0;
-	/* Light gray placeholder */
 	position: relative;
-	min-height: 16rem;
-	/* Minimum height while loading */
 	max-width: 42rem;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
-	/* Prevents content from spilling out */
 }
 
 /* Style for the image itself */
