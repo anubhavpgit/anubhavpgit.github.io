@@ -16,6 +16,12 @@ import { mdToPdf } from "md-to-pdf";
 import crypto from "crypto";
 import https from "https";
 import toml from "toml";
+import sharp from 'sharp';
+import { minify } from "terser";
+// import PurgeCSS from "@fullhuman/postcss-purgecss";
+import * as PurgeCSS from 'purgecss';
+import cssnano from "cssnano";
+
 
 // Read the config file
 const config = toml.parse(fs.readFileSync("./config.toml", "utf-8"));
@@ -228,7 +234,12 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
         // Create HTML with the new structure - full width figure
         const headerImageHTML = `
         <figure class="header-figure">
-          <img src="/assets/img/${imgPath}" alt="${file.data.title}" class="blog-header-image">
+          <img 
+            src="/assets/img/${imgPath}" 
+            width="3440" 
+            height="1440" 
+            alt="${file.data.title}" 
+            class="blog-header-image">
         </figure>`;
 
         // Replace the existing figure element
@@ -343,10 +354,14 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
 
         // Create HTML with the new structure - full width figure with lazy loading
         const headerImageHTML = `
-        <figure class="header-figure">
-          <img src="/assets/img/${imgPath}" alt="${file.data.title}" class="blog-header-image">
-        </figure>`;
-
+          <figure class="header-figure">
+            <img 
+              src="/assets/img/${imgPath}" 
+              width="3440" 
+              height="1440" 
+              alt="${file.data.title}" 
+              class="blog-header-image">
+          </figure>`;
         // Replace the existing figure element
         templatized = templatized.replace(
           /<figure class="header-figure">[\s\S]*?<\/figure>/g,
@@ -571,6 +586,174 @@ const copyAssets = (src, dest, depth = 0) => {
 };
 
 /**
+ * Creates responsive image variants
+ * @param {string} inputPath - Path to the original image
+ * @param {string} outputFolder - Where to save responsive images
+ * @returns {Array} - Array of generated image filenames
+ */
+async function createResponsiveImages(inputPath, outputFolder) {
+  const sizes = [768, 1200, 1920]; // Responsive sizes
+
+  if (!fs.existsSync(outputFolder)) {
+    fs.mkdirSync(outputFolder, { recursive: true });
+  }
+
+  const filename = path.basename(inputPath, path.extname(inputPath));
+  const ext = path.extname(inputPath).toLowerCase();
+
+  const outputFiles = [];
+
+  for (const width of sizes) {
+    const outputFilename = `${filename}-${width}${ext}`;
+    const outputPath = path.join(outputFolder, outputFilename);
+
+    try {
+      await sharp(inputPath)
+        .resize({ width, withoutEnlargement: true })
+        .webp({ quality: 80 }) // Convert to WebP for better compression
+        .toFile(outputPath.replace(ext, '.webp'));
+
+      outputFiles.push(outputFilename.replace(ext, '.webp'));
+    } catch (error) {
+      console.error(`Error creating responsive image ${outputFilename}:`, error);
+    }
+  }
+
+  return outputFiles;
+}
+
+// Update CSS minification function to work correctly
+async function optimizeCSS(cssPath, htmlFiles) {
+  // Skip if it's already a minified file
+  if (cssPath.includes('.min.css')) {
+    return;
+  }
+
+  const css = fs.readFileSync(cssPath, 'utf8');
+  const outputPath = cssPath.replace('.css', '.min.css');
+
+  try {
+    // Import PostCSS dynamically
+    const postcss = (await import('postcss')).default;
+
+    // Remove unused CSS
+    const purgecss = new PurgeCSS.PurgeCSS();
+    const purgedCSS = await purgecss.purge({
+      content: htmlFiles,
+      css: [{ raw: css }],
+      safelist: ['active', /^fa-/, /^w-/, /^h-/, /^mt-/, /^mb-/, /^ml-/, /^mr-/] // Add classes that might be added dynamically
+    });
+
+    // Minify CSS with cssnano
+    const cssnanoProcessor = await cssnano().process(purgedCSS[0].css, {
+      from: undefined
+    });
+
+    fs.writeFileSync(outputPath, cssnanoProcessor.css);
+    console.info(`      Created: ${path.basename(outputPath)}`);
+  } catch (error) {
+    console.error(`Error in optimizeCSS: ${error.message}`);
+    // Fallback: just minify without purging if there's an error
+    try {
+      const CleanCSS = (await import('clean-css')).default;
+      const minifiedCSS = new CleanCSS().minify(css).styles;
+      fs.writeFileSync(outputPath, minifiedCSS);
+    } catch (fallbackError) {
+      console.error(`Fallback minification also failed: ${fallbackError.message}`);
+    }
+  }
+}
+
+// JS minification function
+async function optimizeJS(jsPath) {
+  // Skip if it's already a minified file
+  if (jsPath.includes('.min.js')) {
+    return;
+  }
+
+  const js = fs.readFileSync(jsPath, 'utf8');
+  const outputPath = jsPath.replace('.js', '.min.js');
+
+  try {
+    const minified = await minify(js, {
+      mangle: true,
+      compress: true
+    });
+
+    if (minified.code) {
+      fs.writeFileSync(outputPath, minified.code);
+      console.info(`      Created: ${path.basename(outputPath)}`);
+    } else {
+      throw new Error('Minification returned empty code');
+    }
+  } catch (error) {
+    console.error(`Error in optimizeJS: ${error.message}`);
+  }
+}
+
+// Add to the main() function, before copyAssets
+const optimizeAssets = async (indexOutPath, blogOutPath, assetsPath) => {
+  console.info("🔧 Optimizing assets...");
+
+  // Get all generated HTML files for PurgeCSS
+  const htmlFiles = [
+    ...glob.sync(`${indexOutPath}/**/*.html`),
+    ...glob.sync(`${blogOutPath}/**/*.html`)
+  ];
+
+  // Optimize CSS files
+  const cssFiles = glob.sync(`${assetsPath}/css/*.css`).filter(file => !file.includes('.min.css'));
+  for (const cssFile of cssFiles) {
+    console.info(`  🎨 Optimizing CSS: ${path.basename(cssFile)}`);
+    try {
+      console.info(`  🎨 Optimizing CSS: ${path.basename(cssFile)}`);
+      await optimizeCSS(cssFile, htmlFiles);
+
+      // Update HTML files to reference minified CSS
+      const cssFilename = path.basename(cssFile);
+      const minCssFilename = cssFilename.replace('.css', '.min.css');
+
+      htmlFiles.forEach(htmlFile => {
+        let htmlContent = fs.readFileSync(htmlFile, 'utf8');
+        htmlContent = htmlContent.replace(
+          new RegExp(`href=["']/assets/css/${cssFilename}["']`, 'g'),
+          `href="/assets/css/${minCssFilename}"`
+        );
+        fs.writeFileSync(htmlFile, htmlContent);
+      });
+    } catch (error) {
+      console.error(`  ❌ Error optimizing ${cssFile}:`, error);
+    }
+  }
+
+  // Optimize JS files
+  const jsFiles = glob.sync(`${assetsPath}/js/*.js`).filter(file => !file.includes('.min.js'));
+  for (const jsFile of jsFiles) {
+    try {
+      console.info(`  🔧 Optimizing JS: ${path.basename(jsFile)}`);
+      await optimizeJS(jsFile);
+
+      // Update HTML files to reference minified JS
+      const jsFilename = path.basename(jsFile);
+      const minJsFilename = jsFilename.replace('.js', '.min.js');
+
+      htmlFiles.forEach(htmlFile => {
+        let htmlContent = fs.readFileSync(htmlFile, 'utf8');
+        htmlContent = htmlContent.replace(
+          new RegExp(`src=["']/assets/js/${jsFilename}["']`, 'g'),
+          `src="/assets/js/${minJsFilename}"`
+        );
+        fs.writeFileSync(htmlFile, htmlContent);
+      });
+    } catch (error) {
+      console.error(`  ❌ Error optimizing ${jsFile}:`, error);
+    }
+  }
+
+  console.info("✅ Asset optimization complete!");
+};
+
+/**
  * Main function that orchestrates the processing of all markdown files.
  */
 const main = async () => {
@@ -642,6 +825,8 @@ const main = async () => {
   buildBlogIndex(blogs, blogOutPath);
 
   copyAssets(assetsPath, indexOutPath);
+  await optimizeAssets(indexOutPath, blogOutPath, indexOutPath + "/assets");
+  console.info("Assets copied and optimized!");
 };
 
 (async () => {

@@ -9,10 +9,13 @@
     <meta name="description" content="<!-- DESCRIPTION -->" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="/assets/css/tachyons.min.css" />
     <meta http-equiv="content-language" content="en" />
     <meta name="author" content="Anubhab Patnaik" />
+    <link rel="preload" href="/assets/css/style.min.css" as="style">
+
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+    <link rel="stylesheet" href="/assets/css/hljs.min.css">
+    <link rel="stylesheet" href="/assets/css/tachyons.min.css">
 
     <title><!-- TITLE --></title>
   </head>
@@ -70,6 +73,6 @@
         </main>
       </section>
     </div>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
   </body>
 </html>

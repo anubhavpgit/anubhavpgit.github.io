@@ -6,6 +6,8 @@
     "devDependencies": {
         "@types/glob": "^8.1.0",
         "@types/mkdirp": "^2.0.0",
+        "clean-css": "^5.3.3",
+        "cssnano": "^7.0.6",
         "glob": "^7.2.3",
         "gray-matter": "^4.0.2",
         "highlight.js": "^11.5.1",
@@ -14,7 +16,10 @@
         "markdown-it-anchor": "^8.6.7",
         "md-to-pdf": "^5.2.4",
         "mkdirp": "^1.0.4",
+        "postcss": "^8.5.3",
+        "purgecss": "^7.0.2",
         "rss": "^1.2.2",
+        "sharp": "^0.33.5",
         "string": "^3.3.3"
     },
     "type": "module",
@@ -29,9 +34,11 @@
     "author": "Anubhab Patnaik",
     "license": "ISC",
     "dependencies": {
+        "@fullhuman/postcss-purgecss": "^7.0.2",
         "markdown-it-checkbox": "^1.1.0",
         "markdown-it-footnote": "^4.0.0",
         "markdown-it-katex": "^2.0.3",
+        "terser": "^5.39.0",
         "toml": "^3.0.0"
     }
 }

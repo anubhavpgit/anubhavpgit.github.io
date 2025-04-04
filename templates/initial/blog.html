@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,9 +15,11 @@
 
   <title><!-- TITLE --></title>
 
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <link rel="stylesheet" href="/assets/css/hljs.css" />
-  <link rel="stylesheet" href="/assets/css/tachyons.min.css" />
+  <link rel="preload" href="/assets/css/style.min.css" as="style">
+
+  <link rel="stylesheet" href="/assets/css/style.min.css">
+  <link rel="stylesheet" href="/assets/css/hljs.min.css">
+  <link rel="stylesheet" href="/assets/css/tachyons.min.css">
 </head>
 
 <body class="markdown-body">
@@ -93,7 +94,7 @@
       </section>
     </div>
   </div>
-  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/main.min.js" defer></script>
 </body>
 
 </html>
