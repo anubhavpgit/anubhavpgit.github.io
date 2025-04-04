@@ -266,7 +266,7 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
 
   // Add lazy loading to all images except the header image
   templatized = templatized.replace(
-    /<img(?!\s+loading=["']lazy["'])(?!.*class="blog-header-image")(?!.*class=["'][^"']*blog-header-image)([^>]*)>/g,
+    /<img(?!\s+loading=["']lazy["'])(?!\s+[^>]*\bclass=["'][^"']*\bblog-header-image\b[^"']*["'])([^>]*)>/g,
     '<img$1 loading="lazy">'
   );
 
@@ -386,7 +386,7 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
 
   // Add lazy loading to all images after all other processing is done
   templatized = templatized.replace(
-    /<img(?!\s+loading=["']lazy["'])(?!.*class="blog-header-image")(?!.*class=["'][^"']*blog-header-image)([^>]*)>/g,
+    /<img(?!\s+loading=["']lazy["'])(?!\s+[^>]*\bclass=["'][^"']*\bblog-header-image\b[^"']*["'])([^>]*)>/g,
     '<img$1 loading="lazy">'
   );
 
