@@ -18,7 +18,6 @@ import https from "https";
 import toml from "toml";
 import sharp from 'sharp';
 import { minify } from "terser";
-// import PurgeCSS from "@fullhuman/postcss-purgecss";
 import * as PurgeCSS from 'purgecss';
 import cssnano from "cssnano";
 
@@ -704,9 +703,9 @@ const optimizeAssets = async (indexOutPath, blogOutPath, assetsPath) => {
   // Optimize CSS files
   const cssFiles = glob.sync(`${assetsPath}/css/*.css`).filter(file => !file.includes('.min.css'));
   for (const cssFile of cssFiles) {
-    console.info(`  🎨 Optimizing CSS: ${path.basename(cssFile)}`);
+    console.info(`   Optimizing CSS: ${path.basename(cssFile)}`);
     try {
-      console.info(`  🎨 Optimizing CSS: ${path.basename(cssFile)}`);
+      console.info(`   Optimizing CSS: ${path.basename(cssFile)}`);
       await optimizeCSS(cssFile, htmlFiles);
 
       // Update HTML files to reference minified CSS
@@ -730,7 +729,7 @@ const optimizeAssets = async (indexOutPath, blogOutPath, assetsPath) => {
   const jsFiles = glob.sync(`${assetsPath}/js/*.js`).filter(file => !file.includes('.min.js'));
   for (const jsFile of jsFiles) {
     try {
-      console.info(`  🔧 Optimizing JS: ${path.basename(jsFile)}`);
+      console.info(`   Optimizing JS: ${path.basename(jsFile)}`);
       await optimizeJS(jsFile);
 
       // Update HTML files to reference minified JS
