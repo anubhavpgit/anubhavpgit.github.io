@@ -13,7 +13,7 @@ showImg: true
 
 ###### April
 
-This weekend was productive. Decided to revist an old decentralised encrypted chat app I built three years ago and here is the v2: [https://anubhavp.dev/fireside/](https://anubhavp.dev/fireside/). Also, implemented a global search feature in this blog. You can now search for any content in the blog in any page, using the search icon, or using `ctrl`/ `cmd` + `k` or `/`. The search is implemented using a custom fuzzy search engine that uses a combination of BM25 and TF-IDF algorithms to rank results in a `max-heap` and a `trie` for a autocomplete handler. If I had to implement this in a production app from scratch, I would have probably used a suffix tree or a suffix array, or used a library like [Lunr.js](https://lunrjs.com/).
+This weekend was productive. Decided to revist an old decentralised encrypted chat app I built three years ago and here is the v2: [https://anubhavp.dev/fireside/](https://anubhavp.dev/fireside/). Also, implemented a global search feature in this blog. You can now search for any content in the blog in any page, using the search icon, or using `ctrl`/ `cmd` + `k` or `/`. The search is implemented using a custom fuzzy search engine that uses the BM25 algorithm to rank results in a `max-heap` and a `trie` for a autocomplete handler. 
 
 At times, there are these one or two out a thousands scenarios where I sometimes feel that Leetcode has had some value in my software engineering journey. 
 
