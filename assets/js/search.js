@@ -859,7 +859,18 @@ function updateAutocompleteSuggestions() {
     tabHint.style.color = '#aaa';
     tabHint.style.fontSize = '0.75rem';
     tabHint.style.pointerEvents = 'none';
-    tabHint.textContent = 'Tab to complete';
+
+    // Check if device is mobile or tablet
+    const isMobileOrTablet = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    tabHint.textContent = isMobileOrTablet ? 'Tap to complete' : 'Tab to complete';
+
+    tabHint.style.pointerEvents = 'auto'; // Allow clicks on the hint
+    tabHint.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent the click from propagating
+      if (currentSuggestions.length > 0) {
+        applySuggestion(currentSuggestions[0]);
+      }
+    });
 
     autocompleteContainer.appendChild(tabHint);
 
