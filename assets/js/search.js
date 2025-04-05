@@ -1,49 +1,173 @@
 /**
- * Unified search functionality for the website
- * Combines search engine with spotlight-style UI
+ * Improved search functionality with title matching priority and proper TF-IDF
  */
+
+// MaxHeap with Set semantics to avoid duplicates
+class MaxHeap {
+  constructor() {
+    this.heap = [];
+    this.docSet = new Set(); // Track documents to avoid duplicates
+  }
+
+  getParentIndex(index) {
+    return Math.floor((index - 1) / 2);
+  }
+
+  getLeftChildIndex(index) {
+    return 2 * index + 1;
+  }
+
+  getRightChildIndex(index) {
+    return 2 * index + 2;
+  }
+
+  hasParent(index) {
+    return this.getParentIndex(index) >= 0;
+  }
+
+  hasLeftChild(index) {
+    return this.getLeftChildIndex(index) < this.heap.length;
+  }
+
+  hasRightChild(index) {
+    return this.getRightChildIndex(index) < this.heap.length;
+  }
+
+  parent(index) {
+    return this.heap[this.getParentIndex(index)];
+  }
+
+  leftChild(index) {
+    return this.heap[this.getLeftChildIndex(index)];
+  }
+
+  rightChild(index) {
+    return this.heap[this.getRightChildIndex(index)];
+  }
+
+  swap(index1, index2) {
+    const temp = this.heap[index1];
+    this.heap[index1] = this.heap[index2];
+    this.heap[index2] = temp;
+  }
+
+  insert(item) {
+    // Check if this document is already in the heap
+    if (this.docSet.has(item.path)) {
+      // Find the existing item and update its score if new score is higher
+      const existingIndex = this.heap.findIndex(h => h.path === item.path);
+      if (existingIndex >= 0 && item.score > this.heap[existingIndex].score) {
+        this.heap[existingIndex].score = item.score;
+        this.heapifyUp(existingIndex);
+      }
+      return;
+    }
+
+    // Add new document to the heap
+    this.heap.push(item);
+    this.docSet.add(item.path);
+    this.heapifyUp();
+  }
+
+  extractMax() {
+    if (this.heap.length === 0) return null;
+
+    const max = this.heap[0];
+    const lastItem = this.heap.pop();
+
+    // Remove from the set
+    this.docSet.delete(max.path);
+
+    if (this.heap.length > 0) {
+      this.heap[0] = lastItem;
+      this.heapifyDown();
+    }
+
+    return max;
+  }
+
+  heapifyUp(startIndex) {
+    let index = startIndex !== undefined ? startIndex : this.heap.length - 1;
+
+    while (this.hasParent(index) && this.parent(index).score < this.heap[index].score) {
+      const parentIndex = this.getParentIndex(index);
+      this.swap(parentIndex, index);
+      index = parentIndex;
+    }
+  }
+
+  heapifyDown() {
+    let index = 0;
+
+    while (this.hasLeftChild(index)) {
+      let largerChildIndex = this.getLeftChildIndex(index);
+
+      if (this.hasRightChild(index) && this.rightChild(index).score > this.leftChild(index).score) {
+        largerChildIndex = this.getRightChildIndex(index);
+      }
+
+      if (this.heap[index].score >= this.heap[largerChildIndex].score) {
+        break;
+      }
+
+      this.swap(index, largerChildIndex);
+      index = largerChildIndex;
+    }
+  }
+
+  getSortedArray() {
+    const result = [];
+    const originalHeap = [...this.heap];
+    const originalSet = new Set(this.docSet);
+
+    while (this.heap.length > 0) {
+      result.push(this.extractMax());
+    }
+
+    // Restore the heap
+    this.heap = originalHeap;
+    this.docSet = originalSet;
+
+    return result;
+  }
+
+  size() {
+    return this.heap.length;
+  }
+}
 
 class SearchEngine {
   constructor() {
     this.searchIndex = null;
     this.initialized = false;
     this.stopWords = ['and', 'the', 'for', 'are', 'with', 'this', 'that', 'not', 'was', 'but'];
+    this.totalDocuments = 0;
   }
 
-  // Initialize the search index
   async initialize() {
     try {
-      // Try different possible locations for the search index
-      let response;
-      const possiblePaths = [
-        '/search-index.json',
-        '/assets/search-index.json',
-        '/assets/js/search-index.json'
-      ];
+      const path = '/search-index.json';
 
-      for (const path of possiblePaths) {
-        try {
-          response = await fetch(path);
-          if (response.ok) {
-            break;
-          }
-        } catch (e) {
-          // Continue trying other paths
+      try {
+        const response = await fetch(path);
+        if (response.ok) {
+          this.searchIndex = await response.json();
+          this.initialized = true;
+
+          // Calculate total documents from fileIndex
+          this.totalDocuments = Object.keys(this.searchIndex.fileIndex).length;
+          console.log(`Search index loaded successfully. Found ${this.totalDocuments} documents.`);
+        } else {
+          throw new Error('Failed to fetch search index');
         }
+      } catch (e) {
+        console.error('Error fetching search index from path:', path, e);
       }
-
-      if (!response || !response.ok) {
-        throw new Error('Failed to load search index from any path');
-      }
-
-      this.searchIndex = await response.json();
-      this.initialized = true;
     } catch (error) {
       console.error('Error loading search index:', error);
     }
   }
 
-  // Tokenize a search query
   tokenizeQuery(query) {
     return query
       .toLowerCase()
@@ -52,7 +176,62 @@ class SearchEngine {
       .filter(token => !this.stopWords.includes(token));
   }
 
-  // Search for documents matching the query
+  // Check if a term appears in a document title
+  checkTitleMatch(term, docPath) {
+    // Extract the title from the path
+    const pathParts = docPath.split('/');
+    const filename = pathParts[pathParts.length - 1].replace('.html', '').replace('.md', '');
+
+    // Add debug logging to understand the match
+    console.log(`Checking title match for term "${term}" in file "${filename}"`);
+
+    // Check for exact title match (complete word) rather than substring
+    const titleWords = filename.toLowerCase().split(/[^a-z0-9]+/);
+    const isExactTitleMatch = titleWords.includes(term.toLowerCase());
+
+    // Check for partial title match (more strict than just includes)
+    const isPartialTitleMatch = titleWords.some(word =>
+      word.startsWith(term.toLowerCase()) || term.toLowerCase().startsWith(word)
+    );
+
+    console.log(`Exact match: ${isExactTitleMatch}, Partial match: ${isPartialTitleMatch}`);
+
+    return isExactTitleMatch ? 2 : (isPartialTitleMatch ? 1 : 0);
+  }
+
+  // Calculate document frequency - how many documents contain this term
+  getDocumentFrequency(term) {
+    return this.searchIndex.invertedIndex[term] ?
+      this.searchIndex.invertedIndex[term].length : 0;
+  }
+
+  // Calculate term frequency - how many times a term appears in a document
+  getTermFrequency(term, docPath) {
+    if (!this.searchIndex.fileIndex[docPath]) return 0;
+
+    // Updated to work with new structure
+    return this.searchIndex.fileIndex[docPath][term.toLowerCase()] || 0;
+  }
+
+  // Calculate TF-IDF score with proper formulas
+  calculateTfIdf(term, docPath) {
+    const tf = this.getTermFrequency(term, docPath);
+
+    // If term doesn't appear, score is 0
+    if (tf === 0) return 0;
+
+    const df = this.getDocumentFrequency(term);
+
+    // If term appears in all documents, IDF is 0
+    if (df === this.totalDocuments) return 0;
+
+    // Calculate IDF: log(total docs / docs with term)
+    const idf = Math.log(this.totalDocuments / (df || 1));
+
+    console.log(`TF-IDF for term "${term}" in "${docPath}": TF=${tf}, DF=${df}, IDF=${idf}`);
+    return tf * idf;
+  }
+
   search(query) {
     if (!this.initialized || !this.searchIndex) {
       console.error('Search index not initialized');
@@ -65,51 +244,115 @@ class SearchEngine {
       return [];
     }
 
-    // Find documents that contain the tokens
-    const { invertedIndex } = this.searchIndex;
+    // Use a Map to store document scores with both title match and content match scores
+    const documentScores = new Map();
+    const { invertedIndex, fileIndex } = this.searchIndex;
 
-    // For each token, get the list of documents
-    const matchingDocuments = {};
-
+    // Process each token in the query
     queryTokens.forEach(token => {
-      // Check for exact match
+      // Check for exact matches
       if (invertedIndex[token]) {
-        invertedIndex[token].forEach(doc => {
-          if (!matchingDocuments[doc]) {
-            matchingDocuments[doc] = 1;
-          } else {
-            matchingDocuments[doc]++;
+        invertedIndex[token].forEach(docPath => {
+          // Improved title match checking - parse into words
+          const pathParts = docPath.split('/');
+          const filename = pathParts[pathParts.length - 1].replace('.html', '').replace('.md', '');
+          const titleWords = filename.toLowerCase().split(/[^a-z0-9]+/);
+
+          // Check for exact title match (complete word)
+          const isExactTitleMatch = titleWords.includes(token.toLowerCase());
+
+          // Check for partial title match
+          const isPartialTitleMatch = !isExactTitleMatch && titleWords.some(word =>
+            word.startsWith(token.toLowerCase()) || token.toLowerCase().startsWith(word)
+          );
+
+          // Get term frequency in this document
+          const tfIdf = this.calculateTfIdf(token, docPath);
+
+          // Score based on match type
+          let score = tfIdf;
+          if (isExactTitleMatch) {
+            score += 10; // Boost for exact title matches
+            console.log(`Exact title match for "${token}" in "${docPath}"`);
+          } else if (isPartialTitleMatch) {
+            score += 5;  // Modest boost for partial matches
+            console.log(`Partial title match for "${token}" in "${docPath}"`);
           }
+
+          // Add to document's total score
+          const currentScore = documentScores.get(docPath) || 0;
+          documentScores.set(docPath, currentScore + score);
         });
       }
 
-      // Also check for prefix match (for partial word search)
+      // Process prefix matches with lower weight
       Object.keys(invertedIndex).forEach(indexToken => {
         if (indexToken.startsWith(token) && indexToken !== token) {
-          invertedIndex[indexToken].forEach(doc => {
-            if (!matchingDocuments[doc]) {
-              matchingDocuments[doc] = 0.5; // Lower score for prefix match
+          invertedIndex[indexToken].forEach(docPath => {
+            // Similar improved title match check for prefix matches
+            const pathParts = docPath.split('/');
+            const filename = pathParts[pathParts.length - 1].replace('.html', '').replace('.md', '');
+            const titleWords = filename.toLowerCase().split(/[^a-z0-9]+/);
+
+
+            let titileMatchScore = this.checkTitleMatch(token, docPath);
+            // Calculate TF-IDF with a lower weight for prefix matches
+            // Add a length penalty
+            const lengthDifference = indexToken.length - token.length;
+            const lengthPenalty = Math.max(0.1, 1 - (lengthDifference * 0.2)); // Diminishes with length
+            const tfIdf = this.calculateTfIdf(indexToken, docPath) * 0.5 * lengthPenalty;
+
+            // Title matches for prefix terms get less boost
+            let score = tfIdf;
+
+            if (titileMatchScore === 2) {
+              score += 10; // Less boost than exact query term match
+            } else if (titileMatchScore === 1) {
+              score += 2;  // Minimal boost for partial prefix match
             } else {
-              matchingDocuments[doc] += 0.5;
+              score += 0;  // No boost for non-matching titles
             }
+
+            console.log(`Prefix match for "${indexToken}" in "${docPath}" with score: ${score}`);
+
+            // Add to document's total score
+            const currentScore = documentScores.get(docPath) || 0;
+            documentScores.set(docPath, currentScore + score);
           });
         }
       });
     });
 
-    // Convert to array and sort by relevance (number of matching tokens)
-    const results = Object.entries(matchingDocuments)
-      .map(([doc, score]) => ({
-        path: doc.endsWith('.md') ? `/${doc.replace('.md', '.html')}` : `/${doc}`,
-        score,
-        file: doc.split('/').pop().replace('.md', '')
-      }))
-      .sort((a, b) => b.score - a.score);
+    // Use MaxHeap to prioritize results
+    const resultsHeap = new MaxHeap();
 
-    return results;
+    // Insert documents into the heap with their scores
+    documentScores.forEach((score, docPath) => {
+      // Add detailed term counts for each query term (for debugging)
+      const termCounts = {};
+      queryTokens.forEach(term => {
+        termCounts[term] = this.getTermFrequency(term, docPath);
+      });
+
+      resultsHeap.insert({
+        path: docPath.endsWith('.md') ? `/${docPath.replace('.md', '.html')}` : `/${docPath}`,
+        score,
+        file: docPath.split('/').pop().replace('.md', ''),
+        // Include detailed debug info
+        termFrequency: termCounts,
+        totalFrequency: Object.values(termCounts).reduce((sum, count) => sum + count, 0)
+      });
+    });
+
+    // Extract results from the heap
+    const sortedResults = [];
+    while (resultsHeap.size() > 0) {
+      sortedResults.push(resultsHeap.extractMax());
+    }
+
+    return sortedResults;
   }
 }
-
 // Initialize the search engine
 const searchEngine = new SearchEngine();
 window.searchEngine = searchEngine;
@@ -372,7 +615,7 @@ document.addEventListener('DOMContentLoaded', () => {
       top: 0;
       left: 0;
       width: 100%;
-      padding: 0 1rem;
+      padding: 0.75rem;
       height: 100%;
       z-index: 9999;
       display: flex;

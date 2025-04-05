@@ -810,7 +810,10 @@ const buildInvertedIndex = (files) => {
           .replace(/^posts\//, 'blog/');
 
         // Add to file index
-        fileIndex[shortFilename] = uniqueTokens;
+        fileIndex[shortFilename] = tokens.reduce((freq, token) => {
+          freq[token] = (freq[token] || 0) + 1;
+          return freq;
+        }, {});
 
         // Add to inverted index
         uniqueTokens.forEach(token => {
@@ -916,11 +919,6 @@ const main = async () => {
   if (!fs.existsSync(assetsDir)) {
     fs.mkdirSync(assetsDir, { recursive: true });
   }
-
-  // Also write to assets directory
-  fs.writeFileSync(`${assetsDir}/search-index.json`, JSON.stringify(searchIndex));
-
-  console.info("Search index generated!");
 
   buildBlogIndex(blogs, blogOutPath);
 
