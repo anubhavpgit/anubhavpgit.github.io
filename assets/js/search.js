@@ -185,7 +185,6 @@ class SearchEngine {
     const filename = pathParts[pathParts.length - 1].replace('.html', '').replace('.md', '');
 
     // Add debug logging to understand the match
-
     // Check for exact title match (complete word) rather than substring
     const titleWords = filename.toLowerCase().split(/[^a-z0-9]+/);
     const isExactTitleMatch = titleWords.includes(term.toLowerCase());
@@ -194,8 +193,6 @@ class SearchEngine {
     const isPartialTitleMatch = titleWords.some(word =>
       word.startsWith(term.toLowerCase()) || term.toLowerCase().startsWith(word)
     );
-
-    // console.log(`Exact match: ${isExactTitleMatch}, Partial match: ${isPartialTitleMatch}`);
 
     return isExactTitleMatch ? 2 : (isPartialTitleMatch ? 1 : 0);
   }
@@ -290,7 +287,7 @@ class SearchEngine {
           );
 
           // Get term frequency in this document
-          const score = this.calculateBM25(token, docPath);
+          let score = this.calculateBM25(token, docPath);  // Changed from const to let
 
           // Score based on match type
           if (isExactTitleMatch) {
@@ -334,7 +331,7 @@ class SearchEngine {
               score += 0;  // No boost for non-matching titles
             }
 
-            // console.log(`Prefix match for "${indexToken}" in "${docPath}" with score: ${score}`);
+            console.log(`Prefix match for "${indexToken}" in "${docPath}" with score: ${score}`);
 
             // Add to document's total score
             const currentScore = documentScores.get(docPath) || 0;
