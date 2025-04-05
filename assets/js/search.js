@@ -142,8 +142,11 @@ class SearchEngine {
     this.initialized = false;
     this.stopWords = ['and', 'the', 'for', 'are', 'with', 'this', 'that', 'not', 'was', 'but'];
     this.totalDocuments = 0;
+    this.k1 = 1.2; // Term frequency saturation parameter
+    this.b = 0.75; // Document length normalization parameter
   }
 
+  // Initialize the search engine
   async initialize() {
     try {
       const path = '/search-index.json';
@@ -156,7 +159,6 @@ class SearchEngine {
 
           // Calculate total documents from fileIndex
           this.totalDocuments = Object.keys(this.searchIndex.fileIndex).length;
-          console.log(`Search index loaded successfully. Found ${this.totalDocuments} documents.`);
         } else {
           throw new Error('Failed to fetch search index');
         }
@@ -183,7 +185,6 @@ class SearchEngine {
     const filename = pathParts[pathParts.length - 1].replace('.html', '').replace('.md', '');
 
     // Add debug logging to understand the match
-    console.log(`Checking title match for term "${term}" in file "${filename}"`);
 
     // Check for exact title match (complete word) rather than substring
     const titleWords = filename.toLowerCase().split(/[^a-z0-9]+/);
@@ -194,7 +195,7 @@ class SearchEngine {
       word.startsWith(term.toLowerCase()) || term.toLowerCase().startsWith(word)
     );
 
-    console.log(`Exact match: ${isExactTitleMatch}, Partial match: ${isPartialTitleMatch}`);
+    // console.log(`Exact match: ${isExactTitleMatch}, Partial match: ${isPartialTitleMatch}`);
 
     return isExactTitleMatch ? 2 : (isPartialTitleMatch ? 1 : 0);
   }
@@ -213,23 +214,45 @@ class SearchEngine {
     return this.searchIndex.fileIndex[docPath][term.toLowerCase()] || 0;
   }
 
+  //Deprecated method -- migrated to calculateBM25
   // Calculate TF-IDF score with proper formulas
-  calculateTfIdf(term, docPath) {
-    const tf = this.getTermFrequency(term, docPath);
+  // _calculateTfIdf(term, docPath) {
+  //   const tf = this.getTermFrequency(term, docPath);
 
-    // If term doesn't appear, score is 0
+  //   // If term doesn't appear, score is 0
+  //   if (tf === 0) return 0;
+
+  //   const df = this.getDocumentFrequency(term);
+
+  //   // If term appears in all documents, IDF is 0
+  //   if (df === this.totalDocuments) return 0;
+
+  //   // Calculate IDF: log(total docs / docs with term)
+  //   const idf = Math.log(this.totalDocuments / (df || 1));
+
+  //   console.log(`TF-IDF for term "${term}" in "${docPath}": TF=${tf}, DF=${df}, IDF=${idf}`);
+  //   return tf * idf;
+  // }
+
+  calculateBM25(term, docPath) {
+    const tf = this.getTermFrequency(term, docPath);
     if (tf === 0) return 0;
 
     const df = this.getDocumentFrequency(term);
+    const docLength = this.searchIndex.documentLengths[docPath];
+    const avgDocLength = this.searchIndex.avgDocumentLength;
 
-    // If term appears in all documents, IDF is 0
-    if (df === this.totalDocuments) return 0;
+    // BM25 IDF component: log((N - n + 0.5) / (n + 0.5) + 1)
+    // Where N is total documents and n is document frequency
+    const idf = Math.log((this.totalDocuments - df + 0.5) / (df + 0.5) + 1);
 
-    // Calculate IDF: log(total docs / docs with term)
-    const idf = Math.log(this.totalDocuments / (df || 1));
+    // BM25 TF component with saturation and length normalization
+    const numerator = tf * (this.k1 + 1);
+    const denominator = tf + this.k1 * (1 - this.b + this.b * docLength / avgDocLength);
 
-    console.log(`TF-IDF for term "${term}" in "${docPath}": TF=${tf}, DF=${df}, IDF=${idf}`);
-    return tf * idf;
+    // console.log(`BM25 for term "${term}" in "${docPath}": TF=${tf}, DF=${df}, IDF=${idf}, DocLen=${docLength}, AvgLen=${avgDocLength}`);
+
+    return idf * numerator / denominator;
   }
 
   search(query) {
@@ -267,16 +290,13 @@ class SearchEngine {
           );
 
           // Get term frequency in this document
-          const tfIdf = this.calculateTfIdf(token, docPath);
+          const score = this.calculateBM25(token, docPath);
 
           // Score based on match type
-          let score = tfIdf;
           if (isExactTitleMatch) {
             score += 10; // Boost for exact title matches
-            console.log(`Exact title match for "${token}" in "${docPath}"`);
           } else if (isPartialTitleMatch) {
             score += 5;  // Modest boost for partial matches
-            console.log(`Partial title match for "${token}" in "${docPath}"`);
           }
 
           // Add to document's total score
@@ -294,26 +314,27 @@ class SearchEngine {
             const filename = pathParts[pathParts.length - 1].replace('.html', '').replace('.md', '');
             const titleWords = filename.toLowerCase().split(/[^a-z0-9]+/);
 
+            let titleMatchScore = this.checkTitleMatch(token, docPath);
 
-            let titileMatchScore = this.checkTitleMatch(token, docPath);
-            // Calculate TF-IDF with a lower weight for prefix matches
-            // Add a length penalty
+            // Add a length penalty for prefix matching
             const lengthDifference = indexToken.length - token.length;
             const lengthPenalty = Math.max(0.1, 1 - (lengthDifference * 0.2)); // Diminishes with length
-            const tfIdf = this.calculateTfIdf(indexToken, docPath) * 0.5 * lengthPenalty;
+
+            // Replace TF-IDF with BM25 for prefix matches
+            const bm25Score = this.calculateBM25(indexToken, docPath) * 0.5 * lengthPenalty;
 
             // Title matches for prefix terms get less boost
-            let score = tfIdf;
+            let score = bm25Score;
 
-            if (titileMatchScore === 2) {
+            if (titleMatchScore === 2) {
               score += 10; // Less boost than exact query term match
-            } else if (titileMatchScore === 1) {
+            } else if (titleMatchScore === 1) {
               score += 2;  // Minimal boost for partial prefix match
             } else {
               score += 0;  // No boost for non-matching titles
             }
 
-            console.log(`Prefix match for "${indexToken}" in "${docPath}" with score: ${score}`);
+            // console.log(`Prefix match for "${indexToken}" in "${docPath}" with score: ${score}`);
 
             // Add to document's total score
             const currentScore = documentScores.get(docPath) || 0;
@@ -448,15 +469,11 @@ const toggleSearchOverlay = window.toggleSearchOverlay;
 // Set up global key listeners
 (function setupKeyListeners() {
   // Add logging to help debug
-  console.log('Setting up keyboard shortcuts for search');
-
   // Combined method with proper event handling
   document.addEventListener('keydown', function (e) {
-    console.log('Key pressed:', e.key, 'Modifiers:', e.ctrlKey, e.metaKey);
 
     // Cmd+K or Ctrl+K detection
     if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K')) {
-      console.log('Search hotkey detected!');
       e.preventDefault();
       e.stopPropagation(); // Stop event from bubbling
       window.toggleSearchOverlay();
@@ -481,7 +498,6 @@ const toggleSearchOverlay = window.toggleSearchOverlay;
   // Add a more aggressive approach for Cmd+K by using document.onkeydown
   document.onkeydown = function (e) {
     if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K' || e.keyCode === 75)) {
-      console.log('Detected through onkeydown');
       e.preventDefault();
       e.stopPropagation();
       window.toggleSearchOverlay();
@@ -561,7 +577,6 @@ document.addEventListener('DOMContentLoaded', () => {
   searchInput.addEventListener('keydown', (e) => {
     const results = document.querySelectorAll('.search-result-item');
     const currentIndex = Array.from(results).findIndex(el => document.activeElement === el);
-    console.log('Current focused index:', currentIndex); // Debug logging
 
     switch (e.key) {
       case 'ArrowDown':

@@ -764,6 +764,9 @@ const buildInvertedIndex = (files) => {
   const invertedIndex = {};
   // File index: file -> [tokens in file]
   const fileIndex = {};
+  let totalDocumentLength = 0;
+  let documentCount = 0;
+  const documentLengths = {};
 
   // Process each file
   files.forEach((filename) => {
@@ -809,6 +812,11 @@ const buildInvertedIndex = (files) => {
           .replace(/^content\//, '')
           .replace(/^posts\//, 'blog/');
 
+        const documentLength = tokens.length;
+        documentLengths[shortFilename] = documentLength;
+        totalDocumentLength += documentLength;
+        documentCount++;
+
         // Add to file index
         fileIndex[shortFilename] = tokens.reduce((freq, token) => {
           freq[token] = (freq[token] || 0) + 1;
@@ -828,13 +836,16 @@ const buildInvertedIndex = (files) => {
       }
     }
   });
+  const avgDocumentLength = totalDocumentLength / documentCount;
 
   console.info(`✅ Indexed ${Object.keys(fileIndex).length} files with ${Object.keys(invertedIndex).length} unique tokens`);
 
   // Create the final index structure
   return {
     invertedIndex,
-    fileIndex
+    fileIndex,
+    documentLengths,
+    avgDocumentLength
   };
 };
 
