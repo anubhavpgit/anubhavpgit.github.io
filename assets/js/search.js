@@ -865,6 +865,7 @@ function updateAutocompleteSuggestions() {
     tabHint.textContent = isMobileOrTablet ? 'Tap to complete' : 'Tab to complete';
 
     tabHint.style.pointerEvents = 'auto'; // Allow clicks on the hint
+    tabHint.style.cursor = 'pointer'; // Change cursor to pointer
     tabHint.addEventListener('click', (e) => {
       e.stopPropagation(); // Prevent the click from propagating
       if (currentSuggestions.length > 0) {
