@@ -158,7 +158,7 @@ const toggleSearchOverlay = window.toggleSearchOverlay;
   // Create the search overlay
   searchOverlay = document.createElement('div');
   searchOverlay.id = 'search-overlay';
-  searchOverlay.className = 'fixed w-100 h-100 top-0 left-0 z-999 flex items-center justify-center';
+  searchOverlay.className = 'fixed w-100 h-100 top-0 left-0 z-999 flex items-center justify-center px2';
   searchOverlay.style.display = 'none';
   // searchOverlay.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
   searchOverlay.style.zIndex = '9999'; // Ensure it's on top
@@ -317,27 +317,35 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add keyboard navigation for results
   searchInput.addEventListener('keydown', (e) => {
     const results = document.querySelectorAll('.search-result-item');
-    const currentIndex = Array.from(results).findIndex(el => el === document.activeElement);
+    const currentIndex = Array.from(results).findIndex(el => document.activeElement === el);
+    console.log('Current focused index:', currentIndex); // Debug logging
 
     switch (e.key) {
       case 'ArrowDown':
         e.preventDefault();
+        e.stopPropagation(); // Stop event from propagating
         if (results.length > 0) {
           if (currentIndex < 0 || currentIndex >= results.length - 1) {
             results[0].focus();
+            // Make sure it's visible by scrolling if needed
+            results[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           } else {
             results[currentIndex + 1].focus();
+            results[currentIndex + 1].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           }
         }
         break;
 
       case 'ArrowUp':
         e.preventDefault();
+        e.stopPropagation(); // Stop event from propagating
         if (results.length > 0) {
           if (currentIndex <= 0) {
             results[results.length - 1].focus();
+            results[results.length - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           } else {
             results[currentIndex - 1].focus();
+            results[currentIndex - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           }
         }
         break;
@@ -364,6 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
       top: 0;
       left: 0;
       width: 100%;
+      padding: 0 1rem;
       height: 100%;
       z-index: 9999;
       display: flex;
