@@ -13,7 +13,9 @@ showImg: true
 
 ###### April
 
-Decided to revist an old decentralised encrypted chat app I built three years ago and here is the v2: [https://anubhavp.dev/fireside/](https://anubhavp.dev/fireside/).
+This weekend was productive. Decided to revist an old decentralised encrypted chat app I built three years ago and here is the v2: [https://anubhavp.dev/fireside/](https://anubhavp.dev/fireside/). Also, implemented a global search feature in this blog. You can now search for any content in the blog in any page, using the search icon, or using `ctrl`/ `cmd` + `k` or `/`. The search is implemented using a custom fuzzy search engine that uses a combination of BM25 and TF-IDF algorithms to rank results in a `max-heap` and a `trie` for a autocomplete handler. If I had to implement this in a production app from scratch, I would have probably used a suffix tree or a suffix array, or used a library like [Lunr.js](https://lunrjs.com/).
+
+At times, there are these one or two out a thousands scenarios where I sometimes feel that Leetcode has had some value in my software engineering journey. 
 
 F-ed up my pc for a day. Ferry is not programmed to handle malformed code, and the IR-assembly code generation missed adding `epilogue` to this one for-loop in a test.c file. Ferry uses `spike` to emulate the RISC-V assembly code, and it started an infinte loop with seg faults and stack overflows. I quit the emulator (`ctrl` + `c`) and was on my way, but `spike` was silently running in the background. A day later my CPU Fan started roaring and the laptop was heating up. Initially, I ignored but later upon inspection, it was clear today why tests are important in your code. Spike was hogging 99.5% CPU usage! And these macbooks are so performant that I didn’t even notice the CPU was running at 100% for a day. It was only the fan sound that made me realise something was off, and I used it extensively in the meantime- muliple chrome windows, tabs,`nodejs` servers and whatnots.
 
