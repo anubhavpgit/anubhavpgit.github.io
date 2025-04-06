@@ -402,12 +402,14 @@ class SearchEngine {
 
   // Helper method to check title match
   checkTitleMatch(token, docPath) {
+    // console.log(`Checking title match for "${token}" in "${docPath}"`);
     const pathParts = docPath.split('/');
     const filename = pathParts[pathParts.length - 1].replace('.html', '').replace('.md', '');
     const titleWords = filename.toLowerCase().split(/[^a-z0-9]+/);
 
     // Check for exact title match (complete word)
     if (titleWords.includes(token.toLowerCase())) {
+      // console.log(`Exact title match for "${token}" in "${docPath}"`);
       return 2; // Exact match
     }
 
@@ -542,6 +544,64 @@ class SearchEngine {
     });
   }
 
+  processPartialTermMatches(token, invertedIndex, fileIndex, documentScores) {
+    // console.log(`Processing partial term matches for "${token}"`);
+    // Find all terms in the index that this token could be a prefix of
+    Object.keys(invertedIndex).forEach(indexToken => {
+      if (indexToken.startsWith(token) && indexToken !== token) {
+        // Score based on how much of the term matches (longer matches = better)
+        const prefixRatio = token.length / indexToken.length;
+        invertedIndex[indexToken].forEach(docPath => {
+          const titleMatchScore = this.checkTitleMatch(indexToken, docPath);
+
+          // Calculate base score with higher weight for closer prefix matches
+          let score = this.calculateBM25(indexToken, docPath) * prefixRatio * 0.8;
+
+          // Add higher boost for title matches of prefix terms
+          if (titleMatchScore === 2) {
+            score += 7; // Higher boost for exact title matches of prefix terms
+          } else if (titleMatchScore === 1) {
+            score += 3; // Modest boost for partial matches
+          }
+
+          documentScores.set(docPath, (documentScores.get(docPath) || 0) + score);
+        });
+      }
+    });
+  }
+
+  // New function to directly search titles
+  processDirectTitleMatches(token, fileIndex, documentScores) {
+    // console.log(`Processing direct title matches for "${token}"`);
+
+    // Loop through all documents in fileIndex
+    Object.keys(fileIndex).forEach(docPath => {
+      const pathParts = docPath.split('/');
+      const filename = pathParts[pathParts.length - 1].replace('.html', '').replace('.md', '');
+      const titleWords = filename.toLowerCase().split(/[^a-z0-9]+/);
+
+      // Check for partial matches - token is prefix of title word
+      for (const titleWord of titleWords) {
+        if (titleWord.startsWith(token.toLowerCase())) {
+          // console.log(`TITLE MATCH: "${token}" matches title word "${titleWord}" in ${docPath}`);
+
+          // Score based on how complete the match is
+          const matchRatio = token.length / titleWord.length;
+
+          // Higher score for more complete matches
+          let score = 10 * matchRatio;
+
+          // Add to document's total score with high priority
+          const currentScore = documentScores.get(docPath) || 0;
+          documentScores.set(docPath, currentScore + score);
+
+          // No need to check other words if we found a match
+          break;
+        }
+      }
+    });
+  }
+
   search(query) {
     if (!this.initialized || !this.searchIndex) {
       console.error('Search index not initialized');
@@ -560,10 +620,19 @@ class SearchEngine {
 
     // Process each token in the query
     queryTokens.forEach(token => {
+
+      this.processDirectTitleMatches(token, fileIndex, documentScores);
+
       // Check for exact matches
       if (invertedIndex[token]) {
         this.processExactMatches(token, invertedIndex[token], documentScores);
       }
+
+      //Process partial term matching (when user types part of a word)
+      // this.processPartialTermMatches(token, invertedIndex, fileIndex, documentScores);
+
+      // Process prefix matches (when a token is a prefix of another term)
+      this.processPrefixMatches(token, invertedIndex, documentScores);
 
       // Find fuzzy matches for this token
       const fuzzyMatches = this.findFuzzyMatches(token);
@@ -575,8 +644,6 @@ class SearchEngine {
         }
       });
 
-      // Process prefix matches (similar to your original code)
-      this.processPrefixMatches(token, invertedIndex, documentScores);
     });
 
     // Use MaxHeap to prioritize results
