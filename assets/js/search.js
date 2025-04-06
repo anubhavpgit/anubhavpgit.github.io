@@ -990,6 +990,41 @@ document.addEventListener('DOMContentLoaded', () => {
   let foundIcon = false;
   for (const selector of searchIconSelectors) {
     const navSearchIcon = document.querySelector(selector);
+
+    if (navSearchIcon) {
+      navSearchIcon.style.cursor = 'pointer';
+      navSearchIcon.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Create and show debug helper when search icon is clicked
+        const searchStatusElement = document.createElement('div');
+        searchStatusElement.style.position = 'fixed';
+        searchStatusElement.style.bottom = '10px';
+        searchStatusElement.style.right = '10px';
+        searchStatusElement.style.backgroundColor = 'rgba(255,255,255,0.8)';
+        searchStatusElement.style.padding = '5px 10px';
+        searchStatusElement.style.borderRadius = '3px';
+        searchStatusElement.style.fontSize = '12px';
+        searchStatusElement.style.color = '#777';
+        searchStatusElement.style.zIndex = '999';
+        searchStatusElement.textContent = 'Search Ready (Cmd+K or / to activate)';
+        document.body.appendChild(searchStatusElement);
+
+        // Remove status element after 5 seconds
+        setTimeout(() => {
+          document.body.removeChild(searchStatusElement);
+        }, 5000);
+
+        window.toggleSearchOverlay();
+        return false;
+      });
+
+      // Add tooltip
+      navSearchIcon.title = 'Search (Cmd+K)';
+      foundIcon = true;
+      break;
+    }
     if (navSearchIcon) {
       navSearchIcon.style.cursor = 'pointer';
       navSearchIcon.addEventListener('click', (e) => {
@@ -1274,29 +1309,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   `;
   document.head.appendChild(style);
-
-  // Debug helper
-  const searchStatusElement = document.createElement('div');
-  searchStatusElement.style.position = 'fixed';
-  searchStatusElement.style.bottom = '10px';
-  searchStatusElement.style.right = '10px';
-  searchStatusElement.style.backgroundColor = 'rgba(255,255,255,0.8)';
-  searchStatusElement.style.padding = '5px 10px';
-  searchStatusElement.style.borderRadius = '3px';
-  searchStatusElement.style.fontSize = '12px';
-  searchStatusElement.style.color = '#777';
-  searchStatusElement.style.zIndex = '999';
-  searchStatusElement.style.display = 'none'; // Hidden by default
-  searchStatusElement.textContent = 'Search Ready (Cmd+K or / to activate)';
-  document.body.appendChild(searchStatusElement);
-
-  // Show status element for debugging
-  setTimeout(() => {
-    searchStatusElement.style.display = 'block';
-    setTimeout(() => {
-      searchStatusElement.style.display = 'none';
-    }, 5000); // Hide after 5 seconds
-  }, 2000);
 });
 
 // Perform search function
