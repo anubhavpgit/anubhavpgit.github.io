@@ -99,7 +99,7 @@ export async function generateXmls() {
 		const feedXML = feed.xml({ indent: true });
 		const feedPath = path.resolve(".dist/blog", "feed.xml");
 		await fs.writeFile(feedPath, feedXML); // Using await with promise-based writeFile
-		console.log("RSS feed generated successfully.");
+		console.log("📑 RSS feed generated successfully.");
 
 		const rootPath = path.resolve(".dist");
 		const rootFiles = await fs.readdir(rootPath);
@@ -155,7 +155,7 @@ export async function generateXmls() {
     </urlset>`;
 		const sitemapPath = path.resolve(".dist", "sitemap.xml");
 		await fs.writeFile(sitemapPath, sitemapXML);
-		console.log("Sitemap generated successfully.");
+		console.log("📑 Sitemap generated successfully.");
 	} catch (err) {
 		console.error(err);
 	}

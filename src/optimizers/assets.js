@@ -41,7 +41,7 @@ export async function optimizeCSS(cssPath, htmlFiles) {
     });
 
     fs.writeFileSync(outputPath, cssnanoProcessor.css);
-    console.info(`      Created: ${path.basename(outputPath)}`);
+    // console.info(`      Created: ${path.basename(outputPath)}`);
   } catch (error) {
     console.error(`Error in optimizeCSS: ${error.message}`);
     // Fallback: just minify without purging if there's an error
@@ -76,7 +76,7 @@ export async function optimizeJS(jsPath) {
 
     if (minified.code) {
       fs.writeFileSync(outputPath, minified.code);
-      console.info(`      Created: ${path.basename(outputPath)}`);
+      // console.info(`      Created: ${path.basename(outputPath)}`);
     } else {
       throw new Error('Minification returned empty code');
     }
@@ -120,7 +120,7 @@ export async function optimizeAssets(indexOutPath, blogOutPath, assetsPath) {
   // Optimize CSS files
   const cssFiles = glob.sync(`${assetsPath}/css/*.css`).filter(file => !file.includes('.min.css'));
   for (const cssFile of cssFiles) {
-    console.info(`   Optimizing CSS: ${path.basename(cssFile)}`);
+    // console.info(`   Optimizing CSS: ${path.basename(cssFile)}`);
     try {
       await optimizeCSS(cssFile, htmlFiles);
 
@@ -137,7 +137,7 @@ export async function optimizeAssets(indexOutPath, blogOutPath, assetsPath) {
   const jsFiles = glob.sync(`${assetsPath}/js/*.js`).filter(file => !file.includes('.min.js'));
   for (const jsFile of jsFiles) {
     try {
-      console.info(`   Optimizing JS: ${path.basename(jsFile)}`);
+      // console.info(`   Optimizing JS: ${path.basename(jsFile)}`);
       await optimizeJS(jsFile);
 
       // Update HTML files to reference minified JS
@@ -157,5 +157,5 @@ export async function optimizeAssets(indexOutPath, blogOutPath, assetsPath) {
     }
   }
 
-  console.info(" Asset optimization complete!");
+  // console.info("Asset optimization complete!");
 }

@@ -120,7 +120,7 @@ const main = async () => {
   // Copy and optimize assets
   copyAssets(assetsPath, indexOutPath);
   await optimizeAssets(indexOutPath, blogOutPath, indexOutPath + "/assets");
-  console.info("Assets copied and optimized!");
+  console.info("📄 Assets copied and optimized!");
 
   await generateXmls();
 };

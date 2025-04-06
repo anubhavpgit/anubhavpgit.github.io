@@ -11,7 +11,7 @@ import matter from "gray-matter";
  * @returns {Object} - Inverted index mapping tokens to files
  */
 export const buildInvertedIndex = (files) => {
-  console.info("Building inverted index...");
+  // console.info("Building inverted index...");
 
   // Inverted index: token -> [files containing token]
   const invertedIndex = {};
@@ -26,7 +26,7 @@ export const buildInvertedIndex = (files) => {
     try {
       const rawFile = fs.readFileSync(filename, "utf8");
       const parsed = matter(rawFile);
-      
+
       // Skip draft posts
       if (parsed.data.draft) {
         return;
@@ -91,10 +91,10 @@ export const buildInvertedIndex = (files) => {
       console.error(`Error indexing file ${filename}: ${error.message}`);
     }
   });
-  
+
   const avgDocumentLength = totalDocumentLength / documentCount;
 
-  console.info(` Indexed ${Object.keys(fileIndex).length} files with ${Object.keys(invertedIndex).length} unique tokens`);
+  console.info(`Indexed ${Object.keys(fileIndex).length} files with ${Object.keys(invertedIndex).length} unique tokens`);
 
   // Create the final index structure
   return {
