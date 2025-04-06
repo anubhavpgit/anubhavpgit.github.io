@@ -1235,6 +1235,7 @@ document.addEventListener('DOMContentLoaded', () => {
       background: transparent;
       color: var(--darkgray);
       padding: 0;
+      font-size: 0.92rem;
     }
 
     #spotlight-search-input::placeholder {
