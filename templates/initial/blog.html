@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -94,6 +95,38 @@
   </div>
   <script src="/assets/js/main.min.js" defer></script>
   <script src="/assets/js/search.min.js" defer></script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "<!-- TITLE -->",
+      "description": "<!-- DESCRIPTION -->",
+      "datePublished": "<!-- DATE -->",
+      "author": {
+        "@type": "Person",
+        "name": "Anubhab Patnaik",
+        "url": "https://anubhavp.dev/about.html",
+        "@id": "https://anubhavp.dev/#person"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Anubhab Patnaik",
+        "@id": "https://anubhavp.dev/#person",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://anubhavp.dev/android-chrome-192x192.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://anubhavp.dev/blog/<!-- BLOGSLUG -->.html"
+      },
+      "keywords": [
+        "<!-- TAGS -->"
+      ]
+    }
 </body>
 
 </html>

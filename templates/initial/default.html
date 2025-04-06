@@ -56,6 +56,40 @@
   </div>
   <script src="/assets/js/main.min.js" defer></script>
   <script src="/assets/js/search.min.js" defer></script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "<!-- TITLE -->",
+      "description": "<!-- DESCRIPTION -->",
+      "image": "https://anubhavp.dev/assets/img/<!-- IMAGE -->",
+      "datePublished": "<!-- DATE -->",
+      "author": {
+        "@type": "Person",
+        "name": "Anubhab Patnaik",
+        "url": "https://anubhavp.dev/about.html",
+        "@id": "https://anubhavp.dev/#person"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Anubhab Patnaik",
+        "@id": "https://anubhavp.dev/#person",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://anubhavp.dev/android-chrome-192x192.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://anubhavp.dev/<!-- BLOGSLUG -->.html"
+      },
+      "keywords": [
+        "<!-- TAGS -->"
+      ]
+    }
+    </script>
 </body>
 
 </html>

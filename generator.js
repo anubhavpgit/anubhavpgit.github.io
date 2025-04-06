@@ -175,6 +175,7 @@ const processBlogFile = (filename, template, outPath, blogs, hashes) => {
     author: file.data.author,
     description: file.data.description,
     tags: file.data.tag,
+    blogslug: filename.split("/").slice(-1).join("/").slice(0, -3),
   });
 
   if (file.data.showdate == true) {
@@ -291,6 +292,7 @@ const processDefaultFile = (filename, template, outPath, hashes) => {
     title: file.data.title,
     content: file.html,
     description: file.data.description,
+    blogslug: filename.split("/").slice(-1).join("/").slice(0, -3),
   });
 
 
