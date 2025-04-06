@@ -56,8 +56,8 @@ export const buildInvertedIndex = (files) => {
 
       // Strip markdown formatting from content
       const plainText = parsed.content
-        .replace(/```[\s\S]*?```/g, '') // Remove code blocks
-        .replace(/`.*?`/g, '')          // Remove inline code
+        .replace(/```(?:[\w]*)\n([\s\S]*?)```/g, '$1')
+        .replace(/`(.*?)`/g, '$1')
         .replace(/\[(.*?)\]\(.*?\)/g, '$1') // Replace links with just text (fixed regex)
         .replace(/\*\*(.*?)\*\*/g, '$1') // Remove bold formatting
         .replace(/\*(.*?)\*/g, '$1')     // Remove italic formatting

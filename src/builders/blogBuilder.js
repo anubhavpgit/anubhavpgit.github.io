@@ -151,7 +151,7 @@ export const buildBlogIndex = (blogs, path) => {
       ${tagArray
       .map(
         (tag) =>
-          `<span data-tag="${tag}" style="cursor: pointer; margin-right: 10px;">#${tag}</span>`
+          `<span data-tag="${tag}" style="cursor: pointer; margin-right: 10px;">${tag}</span>`
       )
       .join(" ")}
     </div>
