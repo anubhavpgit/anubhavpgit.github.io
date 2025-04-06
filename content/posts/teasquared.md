@@ -44,7 +44,7 @@ As we bid farewell to each other, we make promises to stay in touch, meet, and g
 Filled with bittersweet nostalgia, I reflect on the journey that led me here, the friends I have made, and the experiences I have had. As I pen these words, I want to express my deepest gratitude to my alma mater and everyone who has been a part of my journey. I can't help but wonder about my choices and the roads I've taken during this journey. It has been a time of growth, discovery, and unforgettable memories. I bid adieu to this cherished chapter of my life and reflect on the moments that have made it memorable. My silicontites, I will cherish you for a lifetime. While it is bittersweet to say goodbye to this phase of my life, I eagerly look forward to embarking on a new chapter. With my sights set on new horizons, I am excited to see where life takes me and what the future holds.
 
 <figure class="skylab">
-<img alt='zygon' src ="https://anubhavp.dev/assets/img/teasquared/sit1.jpeg" >
+<img alt='zygon' src ="https://anubhavp.dev/assets/img/teasquared/sit1.jpeg" class="h-100 w-100">
 <figcaption>
 Goodbye, SIT ❤️
 </figcaption>
