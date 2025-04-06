@@ -8,4 +8,5 @@ resume.fls
 resume.fdb_latexmk
 .dist
 .DS_Store
+.vscode
 # resume.pdf
