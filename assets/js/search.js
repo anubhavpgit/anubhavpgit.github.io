@@ -745,7 +745,7 @@ function createSearchElements() {
   searchInput.type = 'text';
   searchInput.placeholder = `Search`;
   searchInput.autocomplete = 'off'; // Changed to off to prevent browser autocomplete
-
+  searchInput.style.fontSize = '16px';
   resultsContainer = document.createElement('div');
   resultsContainer.id = 'search-results-container';
   resultsContainer.className = 'overflow-auto';
@@ -1262,7 +1262,7 @@ document.addEventListener('DOMContentLoaded', () => {
       top: 0;
       left: 0;
       width: 100%;
-      padding: 1.75rem;
+      padding: 1.5rem;
       height: 100%;
       z-index: 9999;
       display: flex;
