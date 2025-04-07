@@ -1262,7 +1262,7 @@ document.addEventListener('DOMContentLoaded', () => {
       top: 0;
       left: 0;
       width: 100%;
-      padding: 0.75rem;
+      padding: 1.75rem;
       height: 100%;
       z-index: 9999;
       display: flex;
