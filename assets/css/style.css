@@ -513,7 +513,6 @@ code.hljs {
 /* Blink effect - affects both the link and its :before element */
 #main a:active {
 	transform: translateY(1px);
-	opacity: 0.75;
 	transition: transform 0.1s ease, opacity 0.1s ease;
 }
 
