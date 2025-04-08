@@ -64,7 +64,7 @@ And, it's not a simple *"AI would solve it!"*. Jude is built by keeping in mind-
 
 - Get accurate data from the most reliable sources (like USDA, etc.) and use LLMs like Claude and OpenAI to provide you with the most accurate information and Analysis.
 - Use multiple AI agents that work together, delegate tasks and process each vertical of your journey parallelly. o1 is used to provide you with the most accurate information for nutrition and weight tracking. Claude can be optimised to help manage your exercise and fitness goals. 
-- Effectively use pinecode and mongodb to ensure costs do not skyrocket and CAC is low with ads (based on your chat context and not personal data) to cover the costs. Or you could use your own API key to make sure that the data is not being shared with any third-party companies and not see ads. Or simply pay a small recurring fee to use the platform.
+- Effectively use `pinecone` and `mongodb` to ensure costs do not skyrocket and CAC is low with ads (based on your chat context and not personal data) to cover the costs. Or you could use your own API key to make sure that the data is not being shared with any third-party companies and not see ads. Or simply pay a small recurring fee to use the platform.
 - Use a simple and intuitive interface that makes it easy to track your daily intake. A "no bullshit" markdown table for everyday and a graph-based analysis of your data.
 
 #### 3. The cost
