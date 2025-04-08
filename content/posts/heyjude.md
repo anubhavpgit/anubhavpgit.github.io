@@ -1,7 +1,7 @@
 ---
 title: 'Hey, Jude!'
 date: "26-02-2025"
-description: "Not a tribute to the Beatles' song. This is a product journey roadmap of Jude; why and how I would decide to build an AI-assisted nutrition tracker, and what it might look like as a full-fledged product. An case-study in product management, design, and engineering."
+description: "Not a tribute to the Beatles' song. This is a product journey roadmap of Jude; why and how I would decide to build an AI-assisted nutrition tracker, and what it might look like as a full-fledged product. A case-study in product management, design, and engineering."
 showImg: true
 tag: "#tech, #product, #fitness" 
 ---
