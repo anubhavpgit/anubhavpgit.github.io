@@ -13,14 +13,6 @@ showImg: true
 
 ###### April
 
-This has to be the absolue highlight! I asked claude to give me an <u> unhinged, brutally honest</u> review of my portfolio, background and career goals, and it did not disappoint. I got a little scared and got jumpy intially, but loved this!
-
-![wild1](../assets/img/current/wild1.webp)
-
-![wild2](../assets/img/current/wild2.webp)
-
-This is hilariously amazing advice!
-
 This weekend was productive. Decided to revist an old decentralised encrypted chat app I built three years ago and here is the v2: [https://anubhavp.dev/fireside/](https://anubhavp.dev/fireside/). Also, implemented a global search feature in this blog. You can now search for any content in the blog in any page, using the search icon, or using `ctrl`/ `cmd` + `k` or `/`. The search is implemented using a custom fuzzy search engine that uses the BM25 algorithm to rank results in a `max-heap` and uses a `trie` for a autocomplete handler. 
 
 At times, there are these one or two out a thousands scenarios where I sometimes comntemplate that maybe Leetcode has had some value in my software engineering journey. 

@@ -106,6 +106,13 @@
 	outline: 1px dotted currentColor;
 }
 
+.figure {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 figure,
 main {
 	display: block
@@ -113,6 +120,19 @@ main {
 
 figure {
 	margin: 1em 40px
+}
+
+.content img {
+	max-width: 100%;
+	height: auto;
+}
+
+.h-25 {
+	height: 25%
+}
+
+.h-50 {
+	height: 50%
 }
 
 .w-75 {
@@ -127,14 +147,16 @@ figure {
 	height: 100%;
 }
 
-.w-100 {
-	width: 100%;
+.w-25 {
+	width: 25%;
 }
 
-.content img {
+.w-50 {
+	width: 50%;
+}
+
+.w-100 {
 	width: 100%;
-	max-width: 100%;
-	height: auto;
 }
 
 .border-box,
@@ -182,6 +204,12 @@ th,
 tr,
 ul {
 	box-sizing: border-box
+}
+
+figcaption,
+figure,
+main {
+	display: block
 }
 
 /* --------------------------- */
