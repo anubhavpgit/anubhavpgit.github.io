@@ -1,17 +1,14 @@
 ---
-title: 'Hey, Jude! (Senseii)'
+title: 'Hey, Jude!'
 date: "26-02-2025"
-description: "Not a tribute to the Beatles' song. This is a product journey roadmap of Jude; why and how I decided to build an AI-assisted nutrition tracker, and what it might look like as a full-fledged product."
-draft: false
-index: false
-tag: "#tech, #product"
+description: "Not a tribute to the Beatles' song. This is a product journey roadmap of Jude; why and how I would decide to build an AI-assisted nutrition tracker, and what it might look like as a full-fledged product. An case-study in product management, design, and engineering."
+showImg: true
+tag: "#tech, #product, #fitness" 
 ---
 
 The most annoying part of my day is deciding what and how much to eat. And, like all of you, I too rely on ChatGPT to help me with every little decision I make. From figuring out why this piece of code isn’t working and why Israel attacked Palestine to what to and how much to eat, ChatGPT had been my go-to, and now Claude. Let’s be honest here: LLM Chatbots are the new Google. They have answers to everything and are mostly accurate if you use better models. But I wanted something more robust—something faster and more organized. Thus, I said, *Hey, Jude!*
 
-> **Update**: Jude is **[Senseii](https://senseii.in)** now! [Prateek](https://www.prateeksingh.tech/) was also building something similar to Jude, and we decided to build this together. Senseii as a product was exactly what I had imagined Jude to be, and Senseii is the name we decided to stick with. 
-
-> Before I go ahead and rant, keep in mind that right now, Jude is in its *Alpha* build. This article is based on what I wanted Jude to be and is the first *draft journey roadmap. There will be multiple iterations, hundreds of feature changes and architectural changes and thus, this article might not reflect what Jude turns out to be. The current version may vastly differ from this design. The subsequent articles will be more focused on the current version of Jude and the changes made to it. This article is a product journey roadmap of Jude, and how I am deciding to build it in public.
+> **Note:** Jude is not an *actual* product but rather a conceptual exercise in product thinking. This article outlines my product journey roadmap—how I'd approach building an AI-assisted nutrition tracker from ideation to execution. The design and features described represent the first draft of what such a product might look like, subject to iterations and refinements through the product development process.
 
 ## The Why
 
@@ -33,9 +30,7 @@ And say even if you decide to give up on having a readable format and are happy 
 
 I have been using ChatGPT and Claude for a while now to track my daily intake. I give them a system prompt, and they get slower and slower every day upon using the same chat history. Some small nuanced differences are:
 
-- ChatGPT is based on a transformer model, and it has to go through the entire chat history or employs a "sliding window" mechanism to keep the context. This is why it gets slower and slower as the chat history increases. `Gpt4o`, at times the calorie math doesn’t add up, and I have to manually recheck everything. 
-
-- Claude, also based on a transformer model, focuses on the current chat history and has to go through the entire chat history. It is equally painstaking to use since as the chat grows, it gets slower and your context increases, leading to quick exhaustion of the limited context window. Thus, you'd have to send the same prompt again and again, every day when you start a new chat. It doesn't support web search, and thus, you have to keep on sending relevant nutritional information to it.
+- ChatGPT has to go through the entire chat history or employs a "sliding window" mechanism to keep the context. This is why it gets slower and slower as the chat history increases. `Gpt4o`, at times the calorie math doesn’t add up, and I have to manually recheck everything. Claude focuses on the current chat history and has to go through the entire chat history. It is equally painstaking to use since as the chat grows, it gets slower and your context increases, leading to quick exhaustion of the limited context window.
 
 And then there’s the process of adding, removing data, and updating the new data; whether you would do it manually three-four times a day or you would want ChatGPT to do it for you and confirm the data, and for that, you would keep on sending the data to ChatGPT, downloading and updating it wherever you want to store it, it’s a hassle.
 
@@ -63,26 +58,32 @@ The primary reason for building Jude was to make it simpler and intuitive. The p
 
 They are based on a mix—a mix of data provided by the users and data from the backend, and the data is either not accurate or there is too much data for you to make sense of. Like, there might be 8-9 "*Indian Dosas*" with different calories and nutrition written around them, or if you search for a burger, there would be tens of burgers with hundred different calories and nutritional values, and you are left to choose which one to pick. Some of them do actually have a pretty neat way of taking in images of what you eat and then providing you with the nutritional information, but that’s not always accurate, and you would have to manually enter the data if you want to be sure.
 
-Jude simply uses multiple AI agents that work together, delegate tasks and process each vertical of your journey parallelly. It uses Anthropic's most powerful `Claude 3.7sonnet` and OpenAI's most powerful model, `o1`, to provide you with the most accurate information. Most of the time, the data is accurate and you can rely on it. If you are not sure about the data, you can always ask Jude to provide you with the source of the data, or you could attach a link/ image of the nutritional information, and Jude will use that to provide you with the most accurate information.
+Jude simply uses multiple AI agents to provide accurate information. It uses Anthropic's most powerful `Claude 3.7sonnet` and OpenAI's most powerful model, `o1`, to provide you with the most accurate information. Most of the time, the data is accurate and you can rely on it. If you are not sure about the data, you can always ask Jude to provide you with the source of the data, or you could attach a link/ image of the nutritional information, and Jude will use that to provide you with the most accurate information.
+
+And, it's not a simple *"AI would solve it!"*. Jude is built by keeping in mind- specific instances of **how** AI would solve it.
+
+- Get accurate data from the most reliable sources (like USDA, etc.) and use LLMs like Claude and OpenAI to provide you with the most accurate information and Analysis.
+- Use multiple AI agents that work together, delegate tasks and process each vertical of your journey parallelly. o1 is used to provide you with the most accurate information for nutrition and weight tracking. Claude can be optimised to help manage your exercise and fitness goals. 
+- Effectively use pinecode and mongodb to ensure costs do not skyrocket and CAC is low with ads (based on your chat context and not personal data) to cover the costs. Or you could use your own API key to make sure that the data is not being shared with any third-party companies and not see ads. Or simply pay a small recurring fee to use the platform.
+- Use a simple and intuitive interface that makes it easy to track your daily intake. A "no bullshit" markdown table for everyday and a graph-based analysis of your data.
 
 #### 3. The cost
 
 Most of these apps are either too expensive or have a freemium model that is too restrictive. Jude will be entirely free for you to use. It is in the early stages and would be looking for early adopters to provide feedback and help improve the platform. As an early adopter, you will have access to all the features of the platform for free. 
 
-If there are users, who love this and start using it and the platform grows and the costs increase, there might be a small recurring cost to use the platform. But, as opposed to others, either it will be the bare minimum, probably lower than what iCloud charges you, or we might use ads to cover the costs. But, as of now, the platform will be **entirely free** for you to use. Later, you'd have options to pay for the ad-free version, but the free version will be available for you to use and will be "aesthetic enough" and have amazing UI to not be annoying. The ads will be based on the content of the platform and not on your personal data Jude doesn't store your data or would not sell your data to any third party. This brings me to the next point.
+If there are users, who love this and start using it and the platform grows and the costs increase, there might be a small recurring cost to use the platform. But, as opposed to others, either it will be the bare minimum, probably lower than what iCloud charges you, or we might use ads to cover the costs. But, as of now, the platform will be **entirely free** for you to use. Later, you'd have options to pay for the ad-free version, but the free version will be available for you to use and will be "aesthetic enough" and have amazing UI to not be annoying. The ads will be based on the content of the platform and not on your personal data. This brings me to the next point.
 
-#### 4. Privacy concerns
+For the AI part, it isn't free or cheap. Jude if made available to the public, will have the option of using your own API key to make sure that the data is not being shared with any third-party companies. You won’t have to pay anything in that case. You can still rely on the default setting (using Jude’s default API key) if you don’t want to use your own API key and pay a small recurring fee. 
 
-Jude is built with privacy in mind. You choose what data you want to share and with whom. You can choose to keep your data private; save all your data locally on your personal device and use it on that particular device or share it with Jude which would let you sync it across multiple devices. In any case, Jude does not store any of your personal information, and all personal data is encrypted. The layer in between abstracts the data and sends only the necessary information to the AI. This is also why Jude would use your own AI `API Key`.
+#### 4. The differentiating factor
 
-For the AI part, it isn't free or cheap. Jude if made available to the public, will be using your own API key to make sure that the data is not being shared with any third-party companies. You won’t have to pay anything in that case. You can still rely on the default setting (using Jude’s default API key) if you don’t want to use your own API key and pay a small recurring fee. 
+Why do we fail (*fall*)? No, not because *"so that we can learn to pick ourselves up, master Bruce!"*. But because they are not able to **accurately** track their progress and what may seem as no weight loss can be mere muscle improvement or temporary water retention. Let me be clear: we are **not solving** for fitness! We let you do that. Jude simply gives you a reality check, an honest to god analysis of your daily intake and exercise. It is not your coach; it simply tells you what you have been followin- why or what has worked out and what could it look like going forth.
 
-<!--https://claude.ai/share/44639d08-96da-4077-ac6b-9bb16cfe9478 -->
-<!-- Competition analysis: Rather than broadly criticizing existing apps, you could analyze 2-3 specific competitors and highlight particular UX flows or features that frustrate users. This makes your critique more credible and actionable -->
+A lot of fitness-apps have already solved for this. Have they, really? You wouldn't be looking for something like this, then. You, here, reading this - interested, means that there is a gap and we are ready for it!
 
 ## The How
 
-Building Jude, my primary concern was design, accuracy and performance. I spent the most amount of my time polishing the design of the platform and crafting the AI engineering behind it. I wanted to make sure that the platform looks great, is easy to use, and is fast and accurate.
+Building Jude, my primary concern would be design, accuracy and performance. I would spend the most amount of my time (Took 30 mins with Apple notes — built with Lovable in 5 prompts, polished with GitHub Copilot.) polishing the design of the platform and crafting the AI engineering behind it. I would want to make sure that the platform looks great, is easy to use, and is fast and accurate.
 
 ### The nitty-gritty: designing Jude
 
@@ -96,27 +97,25 @@ Jude has a simple and intuitive interface that makes it easy to track your daily
 
 Each section has an analysis tab that just analyzes the data and provides you with insights on your daily intake according to your goals.
 
-![Initial Sketch](../assets/img/jude/initial_sketch.jpeg)
+![Initial Sketch](../assets/img/heyjude/initial_sketch.jpeg)
 \- Initial Sketch of the landing page
 
-Here, my objective was to make the platform really attractive and easy to use. These are the initial drafts of the application, the *v0.xs*, and thus, do not yet look like the final product. They are just basic POCs. The homepage with the daily analysis looks somewhat like this for now. 
+Here, my objective was to make the platform really attractive and easy to use. These are the initial drafts of the application, the *v0.xs*, and thus, do not yet look like the final product. They are just basic POCs. The homepage with the daily analysis looks somewhat like this:
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <div align="center">
     <figure>
-      <img src="../assets/img/jude/setEdit_true.jpeg" alt="Chat" class="h-50 w-75  p-1" />
+      <img src="../assets/img/heyjude/setEdit_true.jpeg" alt="Chat" class="h-50 w-75  p-1" />
       <figcaption> Manually editing the meal entries v0.3 </figcaption>
     </figure>
   </div>
   <div align="center">
     <figure>
-      <img src="../assets/img/jude/jude_dark.jpeg" alt="Chat" class="h-50 w-75 p-1" />
+      <img src="../assets/img/heyjude/jude_dark.jpeg" alt="Chat" class="h-50 w-75 p-1" />
       <figcaption>Dark Mode v0.4 </figcaption>
     </figure>
   </div>
 </div>
-
-The final versions, however, will look entirely different, with a much better interface, and more user-friendly. I have designed and re-designed this over a thousand times now.
 
 The saved food section is pretty simple. It has a search bar where you can search for the food items you have saved, and you can add them to your daily log. The profile section is where you can update your personal information, dietary preferences, and goals. And, the initial design of the landing segment with the weekly and monthly analysis looks somewhat like this:
 
@@ -124,13 +123,13 @@ The saved food section is pretty simple. It has a search bar where you can searc
 <div style="display: flex; justify-content: center; align-items: center;">
   <div align="center">
   <figure>
-    <img src="../assets/img/jude/monthly_weekly.jpeg" alt="Chat" class="h-75 w-100   p-1" />
+    <img src="../assets/img/heyjude/monthly_weekly.jpeg" alt="Chat" class="h-75 w-100   p-1" />
     <figcaption>The initial design of the monthly and weekly sections</figcaption>
   </figure>
 </div>
   <div align="center">
   <figure>
-    <img src="../assets/img/jude/saved_food.jpeg" alt="Chat" class="h-75 w-100 p-1" />
+    <img src="../assets/img/heyjude/saved_food.jpeg" alt="Chat" class="h-75 w-100 p-1" />
     <figcaption>The saved food section </figcaption>
   </figure>
   </div>
@@ -146,14 +145,14 @@ Jude will likely be built on top of the following stack:
 A couple of reasons for using NextJs and Shadcn are:
 
 - Primarily because my main focus is on the design and the UI/UX of the platform. I want to make sure that the platform looks great, is easy to use, and is fast and accurate. NextJs is fast, efficient, and easy to use, and Shadcn is a really good UI component library.
-- NextJs is excellent for building server-rendered applications, is absolutely production-grade for the use case for the MVP, I want to make sure that the platform is fast and efficient.
+- NextJs is excellent for building server-rendered applications, and is absolutely production-grade for the use case for the MVP, I want to make sure that the platform is fast and efficient.
 - Easy to find developers for JS/TS and React. I haven't met anyone who doesn't know React or NodeJs. 
 
 The challenge begins here:
 
 - R Native + Expo - While the MVP might be a web app, Jude is meant to be a mobile-first product. At some point, I will be switching primarily to a mobile app. I am leaning towards React Native for now, but I might switch to native later.
 - NodeJs + ExpressJs - The backend would have to be separated out into a separate microservice as the product grows and scales. The mobile app would also be reliant on a separate backend. Limitations of Nextjs that would be solved by this solution are:
-- Complex multi-agent orchestration logic
+- Agent orchestration logic
 - Fine-grained control over WebSocket connections
 - Multiple, separate microservices for different tasks
 
@@ -162,13 +161,7 @@ The other more complex parts of the platform are:
 - MongoDB + Pinecone (with TTL) - MongoDB is fast, efficient, and easy to use. Pinecone, on the other hand, can scale and be expensive. Employing TTL would help keep the costs down, BUT, this is a major tradeoff. Agents might not have access to the context necessary to provide accurate information. Let's come back to this later.
 - The AI orchestration engine - The current strategy is to use multiple AI agents that work together, delegate tasks and process each vertical of your journey parallelly. It uses Anthropic's most powerful `Claude 3.7sonnet` and OpenAI's most powerful model, `o1`, to provide you with the most accurate information.
 
-<!-- work pending here -->
-<!-- Multi-agent elaboration: You can expand on the benefits of your multi-agent system without revealing implementation details. For example, explain how having specialized agents improves accuracy for different nutrition contexts (restaurant meals vs. home cooking) or how the delegation between agents creates a more responsive experience. -->
-
-All of these are theoretical at this point, and I am still working on the design and the architecture of the platform. The final product might be a lot different from what I have described here.
-
-
-## Where do you fit in?
+## Where do you fit in (*A user*)?
 
 Jude is primarily meant to solve nutrition tracking and analysis. It is meant for people who are looking to make healthier life choices, track their daily intake, and analyze their data. The primary goals that come to mind are:
 - Looking to lose/gain weight (including me- that's how I started with this journey):
@@ -185,24 +178,61 @@ Jude is primarily meant to solve nutrition tracking and analysis. It is meant fo
   - Similarly, wheat vs flour is the same as brown vs white rice, or sugar vs jaggery. Sugar isn't bad for you, the quantity matters and is important.
 - Looking to build a healthy lifestyle - exercise, sleep, and other health-related data
 
-
-If you're someone with similar goals, or if you're just someone who is looking to make healthier life choices, Jude is for you. I would love for you to try it out first-hand and provide feedback. The entire thing would be lifetime free for you (no ads :)).
-
-If you're a developer, designer, or just someone interested in building something like this, I would love to hear from you. I am looking for people who are interested in using Jude and providing feedback. Consider this a call for early adopters. I am looking for people who are interested in using Jude and providing feedback. If you are interested, please drop a comment below or reach out to me on [LinkedIn](https://www.linkedin.com/in/anubhabpatnaik/).
+If you're someone with similar goals, or if you're just someone who is looking to make healthier life choices, Jude is for you. 
 
 ## Reviews, feedback, timeline and suggestions - what next?
 
-Building Jude is a blast. I am just in the early stages of development, and yet a long, long way to go. At the very least, I am sure it is better than whatever out there you think could compete with it. This article was a simple entry point into how my brain worked while building Jude. The final product when completed, would be a lot better than what you see here. Jude is just a personal project that actually solves my problem, and I thought would be cool to share with you all. It isn't fancy tech, and there are no blockchains, graphs, distributed systems, or low-level compilations. Just first principles.
+No idea. I have built out the initial version of the platform using React + lovable, and I am looking for feedback :) No backend yet, but given that it took me 30 minutes to an hour to build the initial mock-up of the platform, I am sure it won't take more than a couple of days at max.
 
-My realistic aim is to release Jude in the next 2-3 months. With all the school work going on, and the summer internship hunts and open-source work that I am occupied with, the timeline is not very rigid. I am positively sure that I will be able to wrap the first release in the summer, if not earlier.
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div align="center">
+  <figure>
+    <img src="../assets/img/heyjude/home1.png" alt="home 1" class="h-75 w-100 p-1" />
+    <figcaption>The dashboard</figcaption>
+  </figure>
+</div>
+  <div align="center">
+  <figure>
+    <img src="../assets/img/heyjude/home2.png" alt="Home 2" class="h-75 w-100 p-1" />
+    <figcaption> Dashboard -cont.</figcaption>
+  </figure>
+  </div>
+</div>
 
-The future of Jude is bright. The platform is in the early stages, and there are but a few features planned, such as:
+Further, here are what the nutrition, weight tracker and exercise analysis pages could potentially look like:
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div align="center">
+  <figure>
+    <img src="../assets/img/heyjude/weight.png" alt="home 1" class="h-75 w-100 p-1" />
+    <figcaption> Weight </figcaption>
+  </figure>
+</div>
+  <div align="center">
+  <figure>
+    <img src="../assets/img/heyjude/exercise.png" alt="Home 2" class="h-75 w-100 p-1" />
+    <figcaption> Exercise </figcaption>
+  </figure>
+  </div>
+  <div align="center">
+  <figure>
+    <img src="../assets/img/heyjude/nutrition.png" alt="Home 2" class="h-75 w-100 p-1" />
+    <figcaption> Nutrition </figcaption>
+  </figure>
+  </div>
+</div>
+
+This article was a simple entry point into how my brain worked while building Jude. Jude is more of just a personal project that actually solves my problem, and I thought would be cool to share with you all. It isn't fancy tech, and there are no blockchains, graphs, distributed systems, or low-level compilations. Just first principles. It is not primarily built to **generate revenue**, or rather, I truly believe, *tar-pit* ideas as such could never generate enough revenue to be profitable, acquired, or even sustainable. Always has to be backed by some VC to sustain.
+
+Jude, being brutally honest, is an absolute golden-wrapped blanket of a *tarpit* idea. Started as a weekend hack and is far from a blockbuster startup concept. But that’s exactly why it’s pure—built for one real user (me) to solve one real problem. If you’re curious to see how it works or want to shape its future, jump in—Jude is free for early adopters, and your feedback will drive the next chapters.
+
+A couple of features that I could include are:
 
 - Suggest exercises based on your daily intake and goals
 - Possibly provide you with a meal plan based on your goals, what you like, and what ingredients you have
 - Provide you with a shopping list every month based on the meal plan and recipes
 - Support analysing sleep, exercise, and other health-related data
 
-And that's how you build a product- you build it for yourself. Identify a problem, ideate, strategize, and brainstorm. And then, build it. Startups can truly be summarized in these few steps. Remember, the most important part of building a product is to build something that you love, and the working prototype is always better than the perfect idea. The world is your oyster. Go build crazy!
+Honestly, I would want to be as direct as possible with you. This article was to show **how to think**, rather **what to build**. This is a product journey roadmap of Jude. I am not a product manager, nor do I have any experience in building products. I am just a student who is trying to **think** how to approach a problem statement. Not beating around the bush, but there is probably more chance of you being a millionaire **quicker** than Jude being a successful product.
 
-If you do end up using it, I hope you like it too. Drop your feedback, suggestions, and reviews in the comments below. I would love to hear from you!
+And that's how you build a product - you build it for yourself. Identify a problem, ideate, strategize, and brainstorm. Make sure that it has a VIABLE BUSINESS NEED and can exist and sustain in the market. Build a product that you would want to use, and that solves your problem. And then, build it. Remember, the most important part of building a product is to build something that you love, and the working prototype is always better than the perfect idea. The world is your oyster. Go build crazy!
