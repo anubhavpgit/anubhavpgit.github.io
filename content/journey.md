@@ -33,26 +33,27 @@ showImg: true
 ---
 
 ### Projects
-- **[Orion](https://github.com/anubhavpgit/orion)** – A motion detector detecing precise **muscle movements** using EMG sensors to simulate **mouse clicks** and **keyboard strokes**. (*WIP*)
-- **[Ferry](https://github.com/anubhavpgit/ferry)** – A minimal **C compiler for RISC-V** written in **Rust** featuring a custom IR and optimiser. 
-- **[Lind (Open Source)](https://github.com/Lind-Project/)** – An isolated, single-process sandbox to securely execute programs with fine-grained resource control to prevent system failures, built with **Rust** and **WASM**.
-- **[Pixlr](https://github.com/anubhavpgit/pixlr)** – A **SVG/PNG to pixel art converter** in Rust with optimized image processing algorithms.
-- **[Barney](https://github.com/anubhavpgit/barney)** – An efficient machine code **instruction encoder/decoder** for RISC-V in TypeScript.
-- **[Game of Life](https://anubhavp.dev/blog/gameoflife.html)** – A deep dive into finite state machines using Conway's Game of Life in JavaScript, culminating in building a CPU with the same fundamentals.
-- **[Yatch](https://github.com/anubhavpgit/yatch)** – A five-stage, hazard & memory-safe **pipelined 32-bit RISC-V machine code interpreter** in C++, with a built-in RISC-V binary decoder.
-- **[Dough](https://github.com/anubhavpgit/dough)** – A high-performance CLI presentation tool in Rust that renders markdown files as slides with custom syntax highlighting and efficient text processing.
-- **[Bee](https://github.com/anubhavpgit/b)** – A custom **BitTorrent client** with an item-based collaborative recommendation system using cosine similarity and a rating prediction system achieving **95%** accuracy.
-- **[RESOC](https://github.com/anubhavpgit/resoc)** – A **college resource-sharing platform** built with React & Firebase, offering taskboards and community chat. Achieved **200+** active users in 3 months.
-- **[Fireside (W3bChat v2)](https://github.com/anubhavpgit/fireside)** – A **decentralized chat app** built with GunJS, Svelte, Rust, and Firebase, enabling low-latency, secure, and ephemeral messaging. ([Live Demo](https://anubhavp.dev/fireside/)).
-- **[zuzu](https://github.com/anubhavpgit/zuzu/)** – A **static site generator** in JavaScript ([Live Demo](https://anubhavp.dev/zuzu/)).
-- **[Qtree](https://github.com/anubhavpgit/qd-compression)** – A demonstration of **image compression and decompression** using quadtrees, inspired by KoalasToTheMax ([Live Demo](https://anubhavp.dev/blog/qtree/)).
-- **[Explored](https://github.com/anubhavpgit/explored)** – A **ThreeJS** globe inspired by GitHub's homepage, complete with lighting and shading ([Live](https://anubhavp.dev/explored/)).
-- **[Nice Dear](https://github.com/anubhavpgit/nicedear)** – A library to generate random avatars (Dicebear-style).
-- **[Rokio](https://github.com/anubhavpgit/rust-tokio-chat-server)** – A **multi-client chat server** in Rust using Tokio for asynchronous concurrency.
-- **[Marks Predictor](https://github.com/anubhavpgit/Marks-predictor)** – Predicts student marks based on hours studied using **Linear Regression** and **Gradient Descent**.
-- **[Depression Detector](https://github.com/anubhavpgit/Detecting-Depression-in-Tweets)** – A TF/IDF-based **sentiment analysis** model detecting depression in tweets.
-- **[Movie Rating Prediction](https://github.com/anubhavpgit/Movie-rating-prediction)** – Predicting movie ratings using **Naive Bayes** based on review text.
-- **[Movie Recommendation System](https://github.com/anubhavpgit/Movie-recommendation)** – An item-based collaborative recommendation engine using **Cosine Similarity**.
+- **[Fireside (W3bChat v2)](https://github.com/anubhavpgit/fireside)** – A **decentralized chat app** built with GunJS \& Svelte that enables low-latency, secure, and ephemeral messaging. ([Live Demo](https://anubhavp.dev/fireside/)). (2025)
+- **[Orion](https://github.com/anubhavpgit/orion)** – A motion detector detecing precise **muscle movements** using EMG sensors to simulate **mouse clicks** and **keyboard strokes**. (*WIP*) (2025)
+- **[Ferry](https://github.com/anubhavpgit/ferry)** – A minimal **C compiler for RISC-V** written in **Rust** featuring a custom IR and optimiser.  (2025)
+- **[Lind (Open Source)](https://github.com/Lind-Project/)** – An isolated, single-process sandbox to securely execute programs with fine-grained resource control to prevent system failures, built with **Rust** and **WASM**. (2025)
+- **[Pixlr](https://github.com/anubhavpgit/pixlr)** – A **SVG/PNG to pixel art converter** in Rust with optimized image processing algorithms. (2024)
+- **[Barney](https://github.com/anubhavpgit/barney)** – An efficient machine code **instruction encoder/decoder** for RISC-V in TypeScript. (2024)
+- **[Game of Life](https://anubhavp.dev/blog/gameoflife.html)** – A deep dive into finite state machines using Conway's Game of Life in JavaScript, culminating in building a CPU with the same fundamentals. (2024)
+- **[Yatch](https://github.com/anubhavpgit/yatch)** – A five-stage, hazard & memory-safe **pipelined 32-bit RISC-V machine code interpreter** in C++, with a built-in RISC-V binary decoder. (2024)
+- **[Dough](https://github.com/anubhavpgit/dough)** – A high-performance CLI presentation tool in Rust that renders markdown files as slides with custom syntax highlighting and efficient text processing. (2024)
+- **[Qtree](https://github.com/anubhavpgit/qd-compression)** – A demonstration of **image compression and decompression** using quadtrees, inspired by KoalasToTheMax ([Live Demo](https://anubhavp.dev/blog/qtree/)). (2023)
+- **[RESOC](https://github.com/anubhavpgit/resoc)** – A **college resource-sharing platform** built with React & Firebase, offering taskboards and community chat. Achieved **200+** active users in 3 months. (2023)
+- **[Explored](https://github.com/anubhavpgit/explored)** – A **ThreeJS** globe inspired by GitHub's homepage, complete with lighting and shading ([Live](https://anubhavp.dev/explored/)). (2023)
+- **[Nice Dear](https://github.com/anubhavpgit/nicedear)** – A library to generate random avatars (Dicebear-spoof). (2023)
+- **[W3bChat v1](https://github.com/anubhavpgit/fireside)** – A **decentralized chat app** built with GunJS, Svelte, Rust, and Firebase, enabling low-latency, secure, and ephemeral messaging. ([Live Demo](https://anubhavp.dev/fireside/)). (2022 + 2025)
+- **[zuzu](https://github.com/anubhavpgit/zuzu/)** – A **static site generator** in JavaScript ([Live Demo](https://anubhavp.dev/)). (2022)
+- **[Rokio](https://github.com/anubhavpgit/rust-tokio-chat-server)** – A **multi-client chat server** in Rust using Tokio for asynchronous concurrency. (2022)
+- **[Depression Detector](https://github.com/anubhavpgit/Detecting-Depression-in-Tweets)** – A TF/IDF-based **sentiment analysis** model detecting depression in tweets. (2022)
+- **[Bee](https://github.com/anubhavpgit/b)** – A custom **BitTorrent client** with an item-based collaborative recommendation system using cosine similarity and a rating prediction system achieving **95%** accuracy. (2021)
+- **[Marks Predictor](https://github.com/anubhavpgit/Marks-predictor)** – Predicts student marks based on hours studied using **Linear Regression** and **Gradient Descent**. (2021)
+- **[Movie Rating Prediction](https://github.com/anubhavpgit/Movie-rating-prediction)** – Predicting movie ratings using **Naive Bayes** based on review text. (2021)
+- **[Movie Recommendation System](https://github.com/anubhavpgit/Movie-recommendation)** – An item-based collaborative recommendation engine using **Cosine Similarity**. (2021)
 
 ---
 
