@@ -6,16 +6,16 @@ showImg: true
 
 ###### Next up:
 
-- Building a custom AI assisted nutrition manager, [Jude](https://anubhavp.dev/blog/heyjude.html)
+- Product strategy/design/analysis for a potential AI powered fitness product- [Jude](https://anubhavp.dev/blog/heyjude) 
 - A MVP of a neural sensor hardware to capture finger movements to be used as an input device.
-- An image/audio analyzer/decomposer to convert svg to png and vice-versa; decomposing periodic functions using fourier series approximation
-- A consistent, memory-safe fast, read/write distributed database built in Go/Rust that implements a distributed caching mechanism like [docstore](https://www.uber.com/en-IN/blog/how-uber-serves-over-40-million-reads-per-second-using-an-integrated-cache/) or [memcached](https://memcached.org/)
+- A research paper on image/audio analyzer/decomposer to convert svg to png and vice-versa; decomposing periodic functions using fourier series approximation
+- A research paper on consistent, memory-safe fast, read/write distributed database built in Go/Rust that implements a distributed caching mechanism like [docstore](https://www.uber.com/en-IN/blog/how-uber-serves-over-40-million-reads-per-second-using-an-integrated-cache/) or [memcached](https://memcached.org/)
+- [Ferry](https://github.com/anubhavpgit/ferry) - A C compiler for RISC-V, capable of compiling the code for a subset of C language (potentially scalable enough to solve LeetCode problem set.)
 
 ###### Recent Projects:
 
 - Improvements in [Zuzu](https://github.com/anubhavpgit/anubhavpgit.github.io) - Added a custom fuzzy search engine with the BM25 ranking algorithm.
 - [Fireside](https://github.com/anubhavpgit/fireside) - An encrypted, decentralized chat app built with GunJS & Svelte, enabling low-latency, secure, and ephemeral messaging. - [Live](https://anubhavp.dev/fireside/)
-- [Ferry](https://github.com/anubhavpgit/ferry) - A C compiler for RISC-V, capable of compiling the code for a subset of C language (enough to solve LeetCode!)
 - [Game of Life](https://anubhavp.dev/blog/gameoflife.html)- Implementing John Conway's Game of Life and explaining building CPU units using it
 - [A RISCV machine code interpreter](https://anubhavp.dev/blog/hacktoberfest)-  a pipelined processor executing machine code instructions with hazard handling and memory safety
 - [A RISCV machine code decoder](https://anubhavp.dev/barney)-  a simple machine code to assembly decoder that converts machine code to assembly instructions
