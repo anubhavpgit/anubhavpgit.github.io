@@ -13,7 +13,7 @@ showImg: true
 
 ###### April
 
-Killing all potential projects planned or in progress. Too many projects and short stints. Will try to focus relentlessly on one domain for the next 12-18 months to build something meaningful/ tangible.
+Too many projects and short stints; dropping all projects for now. Planning to slow down a bit and try to focus on one clear domain to build something tangible. Let's see how this turns out. New York life is beautiful. Spring is starting, and the city looks lovely! Also got a new gig that I am pretty excited about. Watch the space for more!
 
 This weekend was productive. Decided to revist an old decentralised encrypted chat app I built three years ago and here is the v2: [https://anubhavp.dev/fireside/](https://anubhavp.dev/fireside/). Also, implemented a global search feature in this blog. You can now search for any content in the blog in any page, using the search icon, or using `ctrl`/ `cmd` + `k` or `/`. The search is implemented using a custom fuzzy search engine that uses the BM25 algorithm to rank results in a `max-heap` and uses a `trie` for a autocomplete handler. 
 
