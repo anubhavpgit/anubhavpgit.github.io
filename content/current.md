@@ -13,6 +13,8 @@ showImg: true
 
 ###### April
 
+Killing all potential projects planned or in progress. Too many projects and short stints. Will try to focus relentlessly on one domain for the next 12-18 months to build something meaningful/ tangible.
+
 This weekend was productive. Decided to revist an old decentralised encrypted chat app I built three years ago and here is the v2: [https://anubhavp.dev/fireside/](https://anubhavp.dev/fireside/). Also, implemented a global search feature in this blog. You can now search for any content in the blog in any page, using the search icon, or using `ctrl`/ `cmd` + `k` or `/`. The search is implemented using a custom fuzzy search engine that uses the BM25 algorithm to rank results in a `max-heap` and uses a `trie` for a autocomplete handler. 
 
 At times, there are these one or two out a thousands scenarios where I sometimes comntemplate that maybe Leetcode has had some value in my software engineering journey. 
