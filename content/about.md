@@ -6,7 +6,7 @@ showImg: true
 
 [<span style="color: #777;"><i class="fa-file-invoice icon"></i> resume</span>](/resume.pdf)
 
-Hi, I am Anubhab Patnaik, a software engineer from India, interested in math, science, engineering, and entrepreneurship. I am currently working on compilers, pixel-art converters, distributed systems, high-performance caching databses, process isolation and security in Linux, LLM Ops, and more. More on [what I am working on  <i class="fa-arrow-right icon" ></i> ](/working.html)
+Hi, I am Anubhab Patnaik, a software engineer from India, interested in math, science, engineering, and entrepreneurship. I am currently working on compilers, pixel-art converters, distributed systems, high-performance caching databses, process isolation and security in Linux, LLM Ops, and more. [More <i class="fa-arrow-right icon" ></i> ](https://github.com/anubhavpgit)
 
 I previously worked as a software engineer at [RadiusAI](https://radius.ai/) and as the founding engineer at [StackIt](https://nowstackit.com) before that. Currently, a graduate student pursuing Master's in Computer Engineering at New York University, Tandon. This site is for my monthly logs; my two cents and musings on life and tech. This is what I have worked on [so far <i class="fa-arrow-right icon" ></i> ](/journey.html)
 
