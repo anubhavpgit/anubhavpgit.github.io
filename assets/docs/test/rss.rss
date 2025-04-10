@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+	<channel>
+		<title>Tech Exploration Podcasts</title>
+		<link>https://example.com/podcasts</link>
+		<language>en-us</language>
+		<copyright>© 2025 Example Podcasts</copyright>
+		<itunes:author>Various Creators</itunes:author>
+		<description>A collection of technology and programming podcasts</description>
+		<itunes:image href="https://example.com/podcast-cover.jpg" />
+		<itunes:category text="Technology" />
+
+		<!-- Series 1: "Code Conversations" (2 episodes) -->
+		<item>
+			<title>Code Conversations: Modern JavaScript Frameworks</title>
+			<itunes:title>Modern JavaScript Frameworks</itunes:title>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:episode>12</itunes:episode>
+			<itunes:season>2</itunes:season>
+			<itunes:seriesName>Code Conversations</itunes:seriesName>
+			<description>In this episode, we discuss the latest developments in JavaScript frameworks and
+				how they're shaping web development in 2025.</description>
+			<pubDate>Sun, 23 Mar 2025 09:00:00 GMT</pubDate>
+			<enclosure url="https://example.com/episodes/code-conversations-ep12.mp3" length="34216300"
+				type="audio/mpeg" />
+			<itunes:duration>00:35:42</itunes:duration>
+			<guid isPermaLink="false">cc-ep12-032325</guid>
+			<itunes:explicit>false</itunes:explicit>
+		</item>
+
+		<item>
+			<title>Code Conversations: Database Architecture</title>
+			<itunes:title>Database Architecture</itunes:title>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:episode>11</itunes:episode>
+			<itunes:season>2</itunes:season>
+			<itunes:seriesName>Code Conversations</itunes:seriesName>
+			<description>Learn about modern database architecture, NoSQL vs SQL debates, and how to choose
+				the right database for your project.</description>
+			<pubDate>Sun, 16 Mar 2025 09:00:00 GMT</pubDate>
+			<enclosure url="https://example.com/episodes/code-conversations-ep11.mp3" length="36521400"
+				type="audio/mpeg" />
+			<itunes:duration>00:38:03</itunes:duration>
+			<guid isPermaLink="false">cc-ep11-031625</guid>
+			<itunes:explicit>false</itunes:explicit>
+		</item>
+
+		<!-- Series 2: "Design Dialogues" (2 episodes) -->
+		<item>
+			<title>Design Dialogues: UX Research Methods</title>
+			<itunes:title>UX Research Methods</itunes:title>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:episode>5</itunes:episode>
+			<itunes:season>1</itunes:season>
+			<itunes:seriesName>Design Dialogues</itunes:seriesName>
+			<description>This episode covers practical UX research methods you can implement with limited
+				resources and time constraints.</description>
+			<pubDate>Tue, 25 Mar 2025 10:00:00 GMT</pubDate>
+			<enclosure url="https://example.com/episodes/design-dialogues-ep5.mp3" length="29845200"
+				type="audio/mpeg" />
+			<itunes:duration>00:31:05</itunes:duration>
+			<guid isPermaLink="false">dd-ep5-032525</guid>
+			<itunes:explicit>false</itunes:explicit>
+		</item>
+
+		<item>
+			<title>Design Dialogues: Color Theory in Digital Products</title>
+			<itunes:title>Color Theory in Digital Products</itunes:title>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:episode>4</itunes:episode>
+			<itunes:season>1</itunes:season>
+			<itunes:seriesName>Design Dialogues</itunes:seriesName>
+			<description>Understanding how color impacts user perception, accessibility considerations,
+				and creating effective color palettes for digital products.</description>
+			<pubDate>Tue, 18 Mar 2025 10:00:00 GMT</pubDate>
+			<enclosure url="https://example.com/episodes/design-dialogues-ep4.mp3" length="32145600"
+				type="audio/mpeg" />
+			<itunes:duration>00:33:30</itunes:duration>
+			<guid isPermaLink="false">dd-ep4-031825</guid>
+			<itunes:explicit>false</itunes:explicit>
+		</item>
+
+		<!-- Standalone episode (not in a series) -->
+		<item>
+			<title>The Future of Static Site Generators</title>
+			<itunes:title>The Future of Static Site Generators</itunes:title>
+			<itunes:episodeType>full</itunes:episodeType>
+			<description>A deep dive into how static site generators are evolving, new features on the
+				horizon, and optimization techniques for modern web experiences.</description>
+			<pubDate>Wed, 26 Mar 2025 14:00:00 GMT</pubDate>
+			<enclosure url="https://example.com/episodes/future-of-ssg.mp3" length="41253600"
+				type="audio/mpeg" />
+			<itunes:duration>00:43:00</itunes:duration>
+			<guid isPermaLink="false">standalone-ssg-032625</guid>
+			<itunes:explicit>false</itunes:explicit>
+		</item>
+	</channel>
+</rss>
