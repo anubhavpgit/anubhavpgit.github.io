@@ -7,8 +7,6 @@ showImg: true
 
 ##### Current, 2025
 
-[Working](/working.html) | [Reading](/reading.html) |   [Mementos](/mementos.html)  
-
 <span class="update-date-time"></span>
 
 ###### April
