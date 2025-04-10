@@ -6,14 +6,14 @@ showImg: true
 
 ###### Next up:
 
-- Product strategy/design/analysis for a potential AI powered fitness product- [Jude](https://anubhavp.dev/blog/heyjude) 
-- A MVP of a neural sensor hardware to capture finger movements to be used as an input device.
 - A research paper on image/audio analyzer/decomposer to convert svg to png and vice-versa; decomposing periodic functions using fourier series approximation
-- A research paper on consistent, memory-safe fast, read/write distributed database built in Go/Rust that implements a distributed caching mechanism like [docstore](https://www.uber.com/en-IN/blog/how-uber-serves-over-40-million-reads-per-second-using-an-integrated-cache/) or [memcached](https://memcached.org/)
-- [Ferry](https://github.com/anubhavpgit/ferry) - A C compiler for RISC-V, capable of compiling the code for a subset of C language (potentially scalable enough to solve LeetCode problem set.)
+- Disecting a research paper on consistent, memory-safe fast, read/write distributed database built in Go/Rust that implements a distributed caching mechanism like [docstore](https://www.uber.com/en-IN/blog/how-uber-serves-over-40-million-reads-per-second-using-an-integrated-cache/) or [memcached](https://memcached.org/)
+- Product design and strategy for a potential AI powered fitness product- [Jude](https://anubhavp.dev/blog/heyjude) 
 
 ###### Recent Projects:
 
+- A functional prototype of a neural sensor device to capture finger movements to be used as an input for a AR/VR device.
+- [Ferry](https://github.com/anubhavpgit/ferry) - A C compiler for RISC-V, capable of compiling the code for a subset of C language (potentially scalable enough to solve LeetCode problem set.)
 - Improvements in [Zuzu](https://github.com/anubhavpgit/anubhavpgit.github.io) - Added a custom fuzzy search engine with the BM25 ranking algorithm.
 - [Fireside](https://github.com/anubhavpgit/fireside) - An encrypted, decentralized chat app built with GunJS & Svelte, enabling low-latency, secure, and ephemeral messaging. - [Live](https://anubhavp.dev/fireside/)
 - [Game of Life](https://anubhavp.dev/blog/gameoflife.html)- Implementing John Conway's Game of Life and explaining building CPU units using it
