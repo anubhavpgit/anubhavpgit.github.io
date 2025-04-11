@@ -19,7 +19,7 @@ import { templatize, processTemplateImages, processTemplateTimestamp } from "../
  * @param {Map} blogs - The map containing blog metadata.
  * @param {object} hashes - The object containing the hashes of the content of the files.
  */
-export const processBlogFile = (filename, template, outPath, blogs, hashes) => {
+export const processBlogFile = async (filename, template, outPath, blogs, hashes) => {
   const file = readFile(filename);
 
   // Skip draft posts
@@ -71,7 +71,7 @@ export const processBlogFile = (filename, template, outPath, blogs, hashes) => {
   // Handle images
   const fileBase = filename.split("/").slice(-1)[0].slice(0, -3);
   const imgDirPath = path.join(config.srcPath.assetsPath, 'img', fileBase);
-  templatized = processTemplateImages(templatized, file, fileBase, imgDirPath);
+  templatized = await processTemplateImages(templatized, file, fileBase, imgDirPath);
 
   saveFile(outfilename, templatized);
   console.info(`📄 ${filename.split("/").slice(-1).join("/").slice(0, -3)}`);

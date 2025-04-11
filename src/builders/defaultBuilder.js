@@ -18,7 +18,7 @@ import { templatize, processTemplateImages, processTemplateTimestamp } from "../
  * @param {string} outPath - The output path.
  * @param {object} hashes - The object containing the hashes of the content of the files.
  */
-export const processDefaultFile = (filename, template, outPath, hashes) => {
+export const processDefaultFile = async (filename, template, outPath, hashes) => {
   const file = readFile(filename);
   const outfilename = getOutputFilename(filename, outPath);
 
@@ -42,7 +42,7 @@ export const processDefaultFile = (filename, template, outPath, hashes) => {
   // Handle images
   const fileBase = filename.split("/").slice(-1)[0].slice(0, -3);
   const imgDirPath = path.join(config.srcPath.assetsPath, 'img', fileBase);
-  templatized = processTemplateImages(templatized, file, fileBase, imgDirPath);
+  templatized = await processTemplateImages(templatized, file, fileBase, imgDirPath);
 
   saveFile(outfilename, templatized);
   console.info(`📄 ${filename.split("/").slice(-1).join("/").slice(0, -3)}`);

@@ -29,12 +29,12 @@ export async function createResponsiveImages(inputPath, outputFolder) {
     const outputPath = path.join(outputFolder, outputFilename);
 
     try {
+      // console.log(`For the image ${inputPath} creating the image ${outputPath}`);
       await sharp(inputPath)
         .resize({ width, withoutEnlargement: true })
-        .webp({ quality: 80 }) // Convert to WebP for better compression
-        .toFile(outputPath.replace(ext, '.webp'));
+        .toFile(outputPath);
 
-      outputFiles.push(outputFilename.replace(ext, '.webp'));
+      outputFiles.push(outputFilename);
     } catch (error) {
       console.error(`Error creating responsive image ${outputFilename}:`, error);
     }

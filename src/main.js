@@ -84,20 +84,23 @@ const main = async () => {
   fs.mkdirSync(indexOutPath, { recursive: true });
 
   // Process default pages
-  indexFiles.forEach((filename) => {
-    processDefaultFile(filename, defaultTemplate, indexOutPath, hashes);
-  });
+  await Promise.all(
+    indexFiles.map(async (filename) => {
+      await processDefaultFile(filename, defaultTemplate, indexOutPath, hashes);
+    })
+  );
 
   // Process blog posts
   const blogs = new Map();
-  blogFiles.forEach((filename) => {
-    if (filename.includes("index.md")) {
-      processDefaultFile(filename, defaultTemplate, blogOutPath, hashes);
-      return;
-    }
-    processBlogFile(filename, blogTemplate, blogOutPath, blogs, hashes);
-  });
-
+  await Promise.all(
+    blogFiles.map(async (filename) => {
+      if (filename.includes("index.md")) {
+        await processDefaultFile(filename, defaultTemplate, blogOutPath, hashes);
+        return;
+      }
+      await processBlogFile(filename, blogTemplate, blogOutPath, blogs, hashes);
+    })
+  );
   console.info("🚀 Build complete!");
 
   // Save updated hash metadata

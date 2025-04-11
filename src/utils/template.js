@@ -4,6 +4,8 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
+import { createResponsiveImages } from '../optimizers/images.js';
+import config from '../config.js';
 
 /**
  * Replaces placeholders in a template string with provided data.
@@ -32,7 +34,7 @@ export const templatize = (template, data) => {
  * @param {string} imgDirPath - The path to image directory.
  * @returns {string} - The processed template with images added.
  */
-export const processTemplateImages = (templatized, file, fileBase, imgDirPath) => {
+export const processTemplateImages = async (templatized, file, fileBase, imgDirPath) => {
   if (file.data.showImg) {
     // Check if the directory exists
     if (fs.existsSync(imgDirPath)) {
@@ -44,15 +46,22 @@ export const processTemplateImages = (templatized, file, fileBase, imgDirPath) =
         // Use the first matching file
         const headerFileName = headerFiles[0];
         // Construct the path as it will appear in the HTML
-        const imgPath = `${fileBase}/${headerFileName}`;
+        const imgPath = path.resolve(path.join(imgDirPath, headerFileName));
+        const outPath = path.join(config.srcPath.indexOutPath, imgDirPath);
 
-        // Create HTML with the new structure - full width figure
+        const responsiveImages = await createResponsiveImages(imgPath, path.resolve(outPath));
+
         const headerImageHTML = `
         <figure class="header-figure">
           <img 
-            src="/assets/img/${imgPath}" 
+            src="/assets/img/${fileBase}/head-1200${path.extname(headerFileName)}" 
+            srcset="/assets/img/${fileBase}/head-768${path.extname(headerFileName)} 768w, 
+                    /assets/img/${fileBase}/head-1200${path.extname(headerFileName)} 1200w, 
+                    /assets/img/${fileBase}/head-1920${path.extname(headerFileName)} 1920w"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
             width="3440" 
             height="1440" 
+            fetchpriority="high"
             alt="${file.data.title}" 
             class="blog-header-image">
         </figure>`;
@@ -101,7 +110,7 @@ export const processTemplateTimestamp = (templatized, file, key, hashes) => {
   if (file.data.showdate !== true) {
     return templatized;
   }
-  
+
   // Create a hash of the content of the file
   const hash = crypto.createHash("md5").update(file.html).digest("hex");
   const date = new Date();
