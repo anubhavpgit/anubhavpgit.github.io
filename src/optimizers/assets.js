@@ -1,6 +1,6 @@
 /**
  * Asset optimization module
- * Handles CSS and JS minification
+ * Handles CSS and JS minification with caching
  */
 import fs from "fs";
 import path from "path";
@@ -8,9 +8,59 @@ import glob from "glob";
 import * as PurgeCSS from 'purgecss';
 import cssnano from "cssnano";
 import { minify } from "terser";
+import crypto from "crypto";
+
+// Cache directory for storing processed assets between builds
+const ASSETS_CACHE_DIR = './.cache/assets';
+
+/**
+ * Calculate hash of file contents
+ * @param {string} filePath - Path to the file
+ * @returns {string} - MD5 hash of file contents
+ */
+function getFileHash(filePath) {
+  try {
+    const fileBuffer = fs.readFileSync(filePath);
+    const hashSum = crypto.createHash('md5');
+    hashSum.update(fileBuffer);
+    return hashSum.digest('hex');
+  } catch (error) {
+    console.error(`Error hashing file ${filePath}:`, error);
+    return null;
+  }
+}
+
+/**
+ * Calculate hash of multiple file contents
+ * @param {Array} filePaths - List of file paths
+ * @returns {string} - Combined MD5 hash
+ */
+function getFilesHash(filePaths) {
+  try {
+    const hashSum = crypto.createHash('md5');
+    for (const filePath of filePaths) {
+      const fileContent = fs.readFileSync(filePath, 'utf8');
+      hashSum.update(fileContent);
+    }
+    return hashSum.digest('hex');
+  } catch (error) {
+    console.error(`Error hashing files:`, error);
+    return null;
+  }
+}
+
+/**
+ * Ensure cache directory exists
+ */
+function ensureAssetsCacheDir() {
+  if (!fs.existsSync(ASSETS_CACHE_DIR)) {
+    fs.mkdirSync(ASSETS_CACHE_DIR, { recursive: true });
+  }
+}
 
 /**
  * Optimizes CSS files by removing unused selectors and minifying
+ * Uses caching to avoid reprocessing unchanged files
  * @param {string} cssPath - Path to the CSS file
  * @param {Array} htmlFiles - List of HTML files to check for CSS usage
  */
@@ -22,6 +72,32 @@ export async function optimizeCSS(cssPath, htmlFiles) {
 
   const css = fs.readFileSync(cssPath, 'utf8');
   const outputPath = cssPath.replace('.css', '.min.css');
+  
+  // Ensure cache directory exists
+  ensureAssetsCacheDir();
+  
+  // Calculate hash of CSS content and HTML files (since HTML affects purging)
+  const cssHash = getFileHash(cssPath);
+  const htmlHash = getFilesHash(htmlFiles);
+  if (!cssHash || !htmlHash) {
+    console.error(`Could not calculate hash for ${cssPath} or HTML files`);
+    return;
+  }
+  
+  // Create a combined hash for the cache key
+  const combinedHash = crypto.createHash('md5')
+    .update(`${cssHash}_${htmlHash}`)
+    .digest('hex');
+    
+  const cacheKey = `css_${path.basename(cssPath)}_${combinedHash}`;
+  const cachePath = path.join(ASSETS_CACHE_DIR, cacheKey);
+  
+  // Check if cached version exists
+  if (fs.existsSync(cachePath)) {
+    // Use cached version
+    fs.copyFileSync(cachePath, outputPath);
+    return;
+  }
 
   try {
     // Import PostCSS dynamically
@@ -40,8 +116,11 @@ export async function optimizeCSS(cssPath, htmlFiles) {
       from: undefined
     });
 
-    fs.writeFileSync(outputPath, cssnanoProcessor.css);
-    // console.info(`      Created: ${path.basename(outputPath)}`);
+    const optimizedCSS = cssnanoProcessor.css;
+    fs.writeFileSync(outputPath, optimizedCSS);
+    
+    // Save to cache for future builds
+    fs.writeFileSync(cachePath, optimizedCSS);
   } catch (error) {
     console.error(`Error in optimizeCSS: ${error.message}`);
     // Fallback: just minify without purging if there's an error
@@ -49,6 +128,9 @@ export async function optimizeCSS(cssPath, htmlFiles) {
       const CleanCSS = (await import('clean-css')).default;
       const minifiedCSS = new CleanCSS().minify(css).styles;
       fs.writeFileSync(outputPath, minifiedCSS);
+      
+      // Save fallback to cache
+      fs.writeFileSync(cachePath, minifiedCSS);
     } catch (fallbackError) {
       console.error(`Fallback minification also failed: ${fallbackError.message}`);
     }
@@ -57,6 +139,7 @@ export async function optimizeCSS(cssPath, htmlFiles) {
 
 /**
  * Optimizes JavaScript files through minification
+ * Uses caching to avoid reprocessing unchanged files
  * @param {string} jsPath - Path to the JavaScript file
  */
 export async function optimizeJS(jsPath) {
@@ -67,6 +150,26 @@ export async function optimizeJS(jsPath) {
 
   const js = fs.readFileSync(jsPath, 'utf8');
   const outputPath = jsPath.replace('.js', '.min.js');
+  
+  // Ensure cache directory exists
+  ensureAssetsCacheDir();
+  
+  // Calculate hash of JS content
+  const jsHash = getFileHash(jsPath);
+  if (!jsHash) {
+    console.error(`Could not calculate hash for ${jsPath}`);
+    return;
+  }
+  
+  const cacheKey = `js_${path.basename(jsPath)}_${jsHash}`;
+  const cachePath = path.join(ASSETS_CACHE_DIR, cacheKey);
+  
+  // Check if cached version exists
+  if (fs.existsSync(cachePath)) {
+    // Use cached version
+    fs.copyFileSync(cachePath, outputPath);
+    return;
+  }
 
   try {
     const minified = await minify(js, {
@@ -76,7 +179,9 @@ export async function optimizeJS(jsPath) {
 
     if (minified.code) {
       fs.writeFileSync(outputPath, minified.code);
-      // console.info(`      Created: ${path.basename(outputPath)}`);
+      
+      // Save to cache for future builds
+      fs.writeFileSync(cachePath, minified.code);
     } else {
       throw new Error('Minification returned empty code');
     }
