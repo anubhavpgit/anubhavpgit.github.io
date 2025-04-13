@@ -5,9 +5,7 @@ showImg: true
 ---
 ## Mementos
 
-You don't need to give in to Meta's ridiculous need for validation. Here are some of my recent captures.
-
-For those of you using Instagram, [instagram.com/anubhavclicks](https://www.instagram.com/anubhavclicks/)
+[instagram.com/anubhavclicks](https://www.instagram.com/anubhavclicks/)
 
 <br>
 <br>
