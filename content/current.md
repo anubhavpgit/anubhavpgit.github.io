@@ -13,7 +13,7 @@ showImg: true
 
 Too many projects and short stints; dropping all projects for now. Planning to slow down a bit and try to focus on one clear domain to build something tangible. Let's see how this turns out. New York life is beautiful. Spring is starting, and the city looks lovely! Also got a new gig that I am pretty excited about. Will write more soon. 
 
-College life is slow but more meanigful. Formal education and I seem to be done with each other. Thus, this semester almost half of my credits are just projects. Ferry is almost done, and I am focused on wrapping up Orion. [*Details here*](https://github.com/anubhavpgit). Will try to keep up the pace next semester as well and graduate early. Spending most of my time on product strategies, design, architecture and case-studies: product market fits.
+College life is slow but more meanigful. Formal education and I seem to be done with each other. Thus, this semester almost half of my credits are just projects. Ferry is almost done, and I am focused on wrapping up Orion. (More details [*here*](https://github.com/anubhavpgit)). Will try to keep up the pace next semester as well and graduate early. Spending most of my time on product strategies, design, architecture and case-studies: product market fits.
 
 Helped out a friend this weekend build a [AI accelerated hardware simulator](https://github.com/anubhavpgit/accelerator/) in 'C' and Verilog to demonstrate vector multiplications and speedup in hardware. The benchmarks show massive speedup in TPUs and NPUs: O(1) vs O(n) in CPUs by running the multiplication in parallel. 
 
