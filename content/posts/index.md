@@ -5,4 +5,6 @@ showImg: true
 ---
 <script type="module" src="/assets/js/index.min.js"></script>
 
+[Reviews](/reviews.html)  |   [Mementos](/mementos.html)
+
 ## Posts
