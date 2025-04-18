@@ -25,7 +25,8 @@
     "type": "module",
     "scripts": {
         "dev": "npx nodemon -e js,md,css,html,webp --ignore dist/ ./src/main.js",
-        "build": "node ./src/main.js"
+        "build": "node ./src/main.js",
+        "clean": "rm -rf .cache && rm -rf .dist"
     },
     "bin": {
         "zuzussg": "./generator.js"

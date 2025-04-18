@@ -1,14 +1,14 @@
 ---
-title: Pens and Pixels
+title: Reviews
 description: "Thoughts on books read, shows watched"
 showImg: true
 ---
 
-###### Fiction
+### Thoughts on books read, shows watched
 
 - ~~The three-body problem~~ *- Cixin Liu*: A science fiction novel about humanity's first contact with an alien civilization. The first book in the Remembrance of Earth's Past trilogy.
--  The dark forest *- Cixin Liu*: The second book in the Remembrance of Earth's Past trilogy, about humanity's response to an alien invasion.
--  Dune *- Frank Herbert*: A science fiction novel about the desert planet Arrakis and its valuable spice melange. 
+<!-- -  The dark forest *- Cixin Liu*: The second book in the Remembrance of Earth's Past trilogy, about humanity's response to an alien invasion.
+-  Dune *- Frank Herbert*: A science fiction novel about the desert planet Arrakis and its valuable spice melange.  -->
 
 <!-- *Pending:*
 

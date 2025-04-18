@@ -7,15 +7,15 @@ showImg: true
 
 ##### Current, 2025
 
-[Working](/working.html) | [Reading](/reading.html) |   [Mementos](/mementos.html)  
-
 <span class="update-date-time"></span>
 
 ###### April
 
 Too many projects and short stints; dropping all projects for now. Planning to slow down a bit and try to focus on one clear domain to build something tangible. Let's see how this turns out. New York life is beautiful. Spring is starting, and the city looks lovely! Also got a new gig that I am pretty excited about. Will write more soon. 
 
-College life is slow but more meanigful. Formal education and I seem to be done with each other. Most of my time is spend on designing, product markets and other case-studies. Most of my education is through self-learning- research papers, online articles and LLMs. It's going good. Excited for what's next.
+College life is slow but more meanigful. Formal education and I seem to be done with each other. Thus, this semester almost half of my credits are just projects. Ferry is almost done, and I am focused on wrapping up Orion. (More details [*here*](https://github.com/anubhavpgit)). Will try to keep up the pace next semester as well and graduate early. Spending most of my time on product strategies, design, architecture and case-studies: product market fits.
+
+Helped out a friend this weekend build a [AI accelerated hardware simulator](https://github.com/anubhavpgit/accelerator/) in 'C' and Verilog to demonstrate vector multiplications and speedup in hardware. The benchmarks show massive speedup in TPUs and NPUs: O(1) vs O(n) in CPUs by running the multiplication in parallel. 
 
 This weekend was productive. Decided to revist an old decentralised encrypted chat app I built three years ago and here is the v2: [https://anubhavp.dev/fireside/](https://anubhavp.dev/fireside/). Also, implemented a global search feature in this blog. Search for any content in the blog in any page, using the search icon, or `ctrl`/ `cmd` + `k` or `/`. The search is implemented using a custom prefix-matching plus a fuzzy search engine that uses the BM25 ranking algorithm. At times, there are these one or two out a thousands scenarios where I sometimes comntemplate that maybe Leetcode has had some value in my software engineering journey. 
 

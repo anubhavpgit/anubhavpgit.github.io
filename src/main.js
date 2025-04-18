@@ -77,27 +77,38 @@ const main = async () => {
   // Fetch hash metadata
   const hashes = await fetchHashesMetadata();
 
-  // Clean output directory and recreate it
+  // Clean output directory but preserve cache
   if (fs.existsSync(indexOutPath)) {
-    fs.rmSync(indexOutPath, { recursive: true, force: true });
+    // Get all files and directories in the output path except the .cache directory
+    const items = fs.readdirSync(indexOutPath);
+    for (const item of items) {
+      if (item !== '.cache') {
+        const itemPath = path.join(indexOutPath, item);
+        fs.rmSync(itemPath, { recursive: true, force: true });
+      }
+    }
+  } else {
+    fs.mkdirSync(indexOutPath, { recursive: true });
   }
-  fs.mkdirSync(indexOutPath, { recursive: true });
 
   // Process default pages
-  indexFiles.forEach((filename) => {
-    processDefaultFile(filename, defaultTemplate, indexOutPath, hashes);
-  });
+  await Promise.all(
+    indexFiles.map(async (filename) => {
+      await processDefaultFile(filename, defaultTemplate, indexOutPath, hashes);
+    })
+  );
 
   // Process blog posts
   const blogs = new Map();
-  blogFiles.forEach((filename) => {
-    if (filename.includes("index.md")) {
-      processDefaultFile(filename, defaultTemplate, blogOutPath, hashes);
-      return;
-    }
-    processBlogFile(filename, blogTemplate, blogOutPath, blogs, hashes);
-  });
-
+  await Promise.all(
+    blogFiles.map(async (filename) => {
+      if (filename.includes("index.md")) {
+        await processDefaultFile(filename, defaultTemplate, blogOutPath, hashes);
+        return;
+      }
+      await processBlogFile(filename, blogTemplate, blogOutPath, blogs, hashes);
+    })
+  );
   console.info("🚀 Build complete!");
 
   // Save updated hash metadata
@@ -107,6 +118,26 @@ const main = async () => {
   const allFiles = [...indexFiles, ...blogFiles];
   const searchIndex = buildInvertedIndex(allFiles);
   fs.writeFileSync(`${indexOutPath}/search-index.json`, JSON.stringify(searchIndex));
+
+  // Create cache info file for diagnostics
+  if (!fs.existsSync(`${indexOutPath}/.cache`)) {
+    fs.mkdirSync(`${indexOutPath}/.cache`, { recursive: true });
+  }
+
+  const now = new Date();
+  const cacheInfo = {
+    lastBuild: now.toISOString(),
+    cacheStats: {
+      images: fs.existsSync('./.cache/images') ?
+        fs.readdirSync('./.cache/images').length : 0,
+      assets: fs.existsSync('./.cache/assets') ?
+        fs.readdirSync('./.cache/assets').length : 0,
+      markdown: fs.existsSync('./.cache/markdown') ?
+        fs.readdirSync('./.cache/markdown').length : 0
+    }
+  };
+
+  fs.writeFileSync(`${indexOutPath}/.cache/info.json`, JSON.stringify(cacheInfo, null, 2));
 
   // Create assets directory
   const assetsDir = path.join(indexOutPath, 'assets');

@@ -60,7 +60,7 @@ showImg: true
 ### Clubs/ Activities/ Debates
 
 - **HackNYU 2024** – Hackathon, New York University, 2024
-- **Member**, Google Developer Student Club (GDSC), New York University Tandon, 2024 – 2025
+- **Member**, Google Developer Student Club (GDSC), NYU Tandon, 2024 – 2025
 - **Member**, Secure Systems Lab (SSL), NYU Tandon, 2024 – 2025
 - Hosted **Git Groove** – UnStop 2023 [🔗](https://www.linkedin.com/posts/anubhabpatnaik0530_git-groove-getting-into-the-rhythm-of-version-activity-7050527332519862272-jniz?utm_source=share&utm_medium=member_desktop)
 - Web Developer/Mentor – Zygon Organizing Committee 2023 [🔗](https://drive.google.com/file/d/1Xqf9fN3ABCQli4tqEc39RKe3iXkqf-sx/view?usp=share_link)

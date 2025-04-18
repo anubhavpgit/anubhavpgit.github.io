@@ -9,4 +9,5 @@ resume.fdb_latexmk
 .dist
 .DS_Store
 .vscode
+.cache
 # resume.pdf

@@ -5,6 +5,6 @@ showImg: true
 ---
 <script type="module" src="/assets/js/index.min.js"></script>
 
-[Working](/working.html)  | [Reading](/reading.html)  |   [Mementos](/mementos.html)  
+[Reviews](/reviews.html)  |   [Mementos](/mementos.html)
 
 ## Posts
