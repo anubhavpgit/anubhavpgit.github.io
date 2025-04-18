@@ -2,10 +2,10 @@
  * Template processing utilities
  */
 import fs from 'fs';
+import path from 'path';
 import crypto from 'crypto';
 import { createResponsiveImages } from '../optimizers/images.js';
 import config from '../config.js';
-import path from 'path';
 
 /**
  * Replaces placeholders in a template string with provided data.
