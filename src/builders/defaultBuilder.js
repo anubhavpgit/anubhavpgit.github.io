@@ -22,6 +22,10 @@ export const processDefaultFile = async (filename, template, outPath, hashes) =>
   const file = readFile(filename);
   const outfilename = getOutputFilename(filename, outPath);
 
+  // Skip draft posts
+  const draft = file.data.draft;
+  if (draft) return;
+
   let templatized = templatize(template, {
     title: file.data.title,
     content: file.html,
