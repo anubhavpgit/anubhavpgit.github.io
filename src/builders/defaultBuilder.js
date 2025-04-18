@@ -8,7 +8,7 @@ import { mdToPdf } from "md-to-pdf";
 import config from "../config.js";
 import { readFile } from "../utils/markdown.js";
 import { saveFile, getOutputFilename, getOutputPdfname } from "../utils/file.js";
-import { templatize, processTemplateImages, processTemplateTimestamp } from "../utils/template.js";
+import { templatize, processTemplateImages, processTemplateTimestamp, processPodcasts } from "../utils/template.js";
 
 /**
  * Processes a default file: reads it, replaces placeholders in the template with actual data, and saves the result.
@@ -21,6 +21,10 @@ import { templatize, processTemplateImages, processTemplateTimestamp } from "../
 export const processDefaultFile = async (filename, template, outPath, hashes) => {
   const file = readFile(filename);
   const outfilename = getOutputFilename(filename, outPath);
+
+  // Skip draft posts
+  const draft = file.data.draft;
+  if (draft) return;
 
   let templatized = templatize(template, {
     title: file.data.title,
@@ -43,6 +47,8 @@ export const processDefaultFile = async (filename, template, outPath, hashes) =>
   const fileBase = filename.split("/").slice(-1)[0].slice(0, -3);
   const imgDirPath = path.join(config.srcPath.assetsPath, 'img', fileBase);
   templatized = await processTemplateImages(templatized, file, fileBase, imgDirPath);
+
+  templatized = processPodcasts(templatized, file, config);
 
   saveFile(outfilename, templatized);
   console.info(`📄 ${filename.split("/").slice(-1).join("/").slice(0, -3)}`);

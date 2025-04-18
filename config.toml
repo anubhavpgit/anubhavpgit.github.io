@@ -26,3 +26,12 @@ options = { weekday = "long", month = "long", day = "numeric" }
 
 [indexes]
 tags = { tech = 0, life = 1, journal = 2, business = 3 }
+
+# Podcast Configurations
+[podcasts]
+
+[[podcasts.featured]]
+id = "278974813"
+name = "Pop Culture Happy Hour"
+slug = "pop-culture-happy-hour"
+description = "NPR's entertainment and pop culture round-table podcast about movies, TV, music, books, and more."

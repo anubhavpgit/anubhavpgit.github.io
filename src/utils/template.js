@@ -145,3 +145,46 @@ export const processTemplateTimestamp = (templatized, file, key, hashes) => {
 
   return templatized;
 };
+/**
+ * Processes a template to add podcast embed code.
+ * @param {string} templatized - The initial templated string.
+ * @param {object} file - The file data object.
+ * @returns {string} - The processed template with podcast embed added.
+ */
+export const processPodcasts = (templatized, file, config) => {
+  if (!file.data.isPodcast) return templatized;
+
+  // Get podcasts from config
+  const podcastsConfig = config.podcasts?.featured || [];
+
+  let podcastsHTML = '';
+
+  // If podcasts exist in config, use them
+  if (podcastsConfig.length > 0) {
+    podcastsConfig.forEach(podcast => {
+      podcastsHTML += `
+      <div class="pt3 podcast-wrapper mb3">
+        <h6>Featured: ${podcast.name}</h6>
+        <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" 
+          style="width:100%;max-width:660px;overflow:hidden;background:transparent;" 
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
+          src="https://embed.podcasts.apple.com/us/podcast/${podcast.slug}/id${podcast.id}">
+        </iframe>
+      </div>`;
+    });
+  } else {
+    podcastsHTML = `
+    <div class="podcast-wrapper">
+      <h3>No featured podcasts available.</h3>
+      <p>Check back later for updates!</p>
+    </div>`;
+  }
+
+  // Replace the loading div with the podcast embed
+  templatized = templatized.replace(
+    /<div class="podcasts-here">[\s\S]*?<\/div>/,
+    `<div class="podcasts-here">${podcastsHTML}</div>`
+  );
+
+  return templatized;
+};
