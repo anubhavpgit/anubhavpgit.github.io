@@ -6,18 +6,18 @@ showImg: true
 
 ### Work
 
-###### **Product Engineer** – DatingAI (July 2024 – Aug 2024) [🔗](https://datingai.pro)
+###### **Product Engineer** – [DatingAI](https://datingai.pro) (July 2024 – Aug 2024)
 - **Led** infrastructure modernization using **Node.js** and **Next.js**, improving API throttling by **15%**, reducing service outages by **60%**, and enhancing overall engine reliability through cross-team coordination.
 - **Designed and developed** multi-platform integration strategy with **Telegram** & **Discord** bots, expanding user reach and increasing total active users by **50%** while maintaining consistent user experience.
 
-###### **Software Engineer** – RadiusAI (Jan 2024 – July 2024) [🔗](https://radius.ai)
+###### **Software Engineer** – [RadiusAI](https://radius.ai) (Jan 2024 – July 2024)
 - **Designed** a scalable health monitoring service in **Rust** and **Kafka** processing **5000 requests/10s** with improved Python-to-Rust performance and reduced latency.
 - **Led** Rust optimization of cart simulator with parallel processing for **10x** speed boost and faster checkouts, mentoring two junior engineers on performance profiling techniques.
 - **Automated** DB operations using **AWS Lambda/Prefect** with **99%** data consistency across distributed systems.
 - **Developed** a native GUI application in **Rust** that highlights unknown objects during checkout in LCD counter-top POS systems, improving store security.
 - **Created** a real-time analytics dashboard using **Gradio** to visualize annotation data, reducing labeling inaccuracies by **30%** and improving model training efficiency.
 
-###### **Founding Engineer** – StackIt (Superjoin) (June 2023 – Dec 2023) [🔗](https://nowstackit.com)
+###### **Founding Engineer** – [StackIt](https://nowstackit.com) (Superjoin) (June 2023 – Dec 2023)
 
 - **Architected and implemented** a resilient microservices ecosystem using **Docker**, **Kubernetes**, and **GitHub Actions**, ensuring **99.9%** uptime while integrating **Chargebee**, **Hubspot**, and **Google Ads** to increase user acquisition by **4x**.
 - **Engineered** an interactive Data-Preview component in **React** with advanced filtering, joins, and lookup capabilities, improving data visualization by **40%** and reducing import errors by **15%**.
@@ -62,19 +62,19 @@ showImg: true
 - **HackNYU 2024** – Hackathon, New York University, 2024
 - **Member**, Google Developer Student Club (GDSC), NYU Tandon, 2024 – 2025
 - **Member**, Secure Systems Lab (SSL), NYU Tandon, 2024 – 2025
-- Hosted **Git Groove** – UnStop 2023 [🔗](https://www.linkedin.com/posts/anubhabpatnaik0530_git-groove-getting-into-the-rhythm-of-version-activity-7050527332519862272-jniz?utm_source=share&utm_medium=member_desktop)
-- Web Developer/Mentor – Zygon Organizing Committee 2023 [🔗](https://drive.google.com/file/d/1Xqf9fN3ABCQli4tqEc39RKe3iXkqf-sx/view?usp=share_link)
-- Best Delegate – XIMUN 2023 [🔗](https://drive.google.com/file/d/1vTZl3K2kRTJgDgFr3lN5mxSaz7pnwvc2/view?usp=sharing)
-- Contingent Leader – IIT Bombay 2023 [🔗](https://drive.google.com/file/d/1NMJChzaUcKUKqYJJW3EEGX2WogZyVPJh/view?usp=sharing)
-- Runner-up, Binance Ideathon #BlockchainforGood 2022 [🔗](https://drive.google.com/file/d/1IcDC_7L4bw-PPsLsNhH9cS2ezDynDAMB/view?usp=share_🔗)
-- **Co-founder**, CBRTL – 2022 [🔗](https://cbrtl.github.io)
-- Hosted **"Why Rust"** – Squbix Digital 2022 [🔗](https://www.linkedin.com/posts/anubhabpatnaik0530_i-hosted-a-tech-talk-last-week-and-it-went-activity-6987708219385122816-aq9z?utm_source=share&utm_medium=member_desktop)
-- Winner, **Ideate Nirman** – SIT 2022 [🔗](https://drive.google.com/file/d/1i--TyXYDPxMN5IbokTzFoTGE4K-rnpXM/view?usp=share_link)
-- **President (Chairperson)**, IEEE Students' Branch *STB04531* – SIT 2022-23 [🔗](https://drive.google.com/file/d/1sbO7gOwsointY-x7aWPB8DfyrTFsCugl/view?usp=sharing)
-- **Co-founder & Joint Secretary** – SWITCH 2021-22 [🔗](https://drive.google.com/file/d/1Zub7ui2WCRYgN7tM0G8p-dbeFLirGR-d/view?usp=sharing)
-- High Commendation I – SITMUN 2021 [🔗](https://drive.google.com/file/d/1RI8fXtCTYrlYlX-dnGvfQQ76CHx0AEaq/view?usp=sharing)
-- High Commendation I (Best Del) – SITMUN 2020 [🔗](https://drive.google.com/file/d/1nbwySBjw8uUQH9bWY_vR0SeXt8x4B54M/view?usp=sharing)
-- Photographer/Graphic Designer – SIT Media Cell 2020 [🔗](https://drive.google.com/file/d/1z91iZPJxbJAIusamhn9BtrjMRN7pVH7k/view?usp=drivesdk)
+- Hosted **Git Groove** – [UnStop 2023](https://www.linkedin.com/posts/anubhabpatnaik0530_git-groove-getting-into-the-rhythm-of-version-activity-7050527332519862272-jniz?utm_source=share&utm_medium=member_desktop)
+- Web Developer/Mentor – [Zygon Organizing Committee 2023](https://drive.google.com/file/d/1Xqf9fN3ABCQli4tqEc39RKe3iXkqf-sx/view?usp=share_link)
+- Best Delegate – [XIMUN 2023](https://drive.google.com/file/d/1vTZl3K2kRTJgDgFr3lN5mxSaz7pnwvc2/view?usp=sharing)
+- Contingent Leader – [IIT Bombay 2023](https://drive.google.com/file/d/1NMJChzaUcKUKqYJJW3EEGX2WogZyVPJh/view?usp=sharing)
+- Runner-up, [Binance Ideathon #BlockchainforGood 2022](https://drive.google.com/file/d/1IcDC_7L4bw-PPsLsNhH9cS2ezDynDAMB/view?usp=share_link)
+- **Co-founder**, [CBRTL](https://cbrtl.github.io) – 2022
+- Hosted **"Why Rust"** – [Squbix Digital 2022](https://www.linkedin.com/posts/anubhabpatnaik0530_i-hosted-a-tech-talk-last-week-and-it-went-activity-6987708219385122816-aq9z?utm_source=share&utm_medium=member_desktop)
+- Winner, **Ideate Nirman** – [SIT 2022](https://drive.google.com/file/d/1i--TyXYDPxMN5IbokTzFoTGE4K-rnpXM/view?usp=share_link)
+- **President (Chairperson)**, IEEE Students' Branch *STB04531* – [SIT 2022-23](https://drive.google.com/file/d/1sbO7gOwsointY-x7aWPB8DfyrTFsCugl/view?usp=sharing)
+- **Co-founder & Joint Secretary** – [SWITCH 2021-22](https://drive.google.com/file/d/1Zub7ui2WCRYgN7tM0G8p-dbeFLirGR-d/view?usp=sharing)
+- High Commendation I – [SITMUN 2021](https://drive.google.com/file/d/1RI8fXtCTYrlYlX-dnGvfQQ76CHx0AEaq/view?usp=sharing)
+- High Commendation I (Best Del) – [SITMUN 2020](https://drive.google.com/file/d/1nbwySBjw8uUQH9bWY_vR0SeXt8x4B54M/view?usp=sharing)
+- Photographer/Graphic Designer – [SIT Media Cell 2020](https://drive.google.com/file/d/1z91iZPJxbJAIusamhn9BtrjMRN7pVH7k/view?usp=drivesdk)
 
 ---
 
