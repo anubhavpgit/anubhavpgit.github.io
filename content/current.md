@@ -11,7 +11,7 @@ showImg: true
 
 ###### April
 
-Too many projects and short stints; dropping all projects for now. Planning to slow down a bit and try to focus on one clear domain to build something tangible. Let's see how this turns out. New York life is beautiful. Spring is starting, and the city looks lovely! Also got a new gig that I am pretty excited about. Will write more soon. 
+Too many projects and short stints; dropping all projects for now. Planning to slow down a bit and try to focus on one clear domain to build something tangible. Let's see how this turns out. New York life is beautiful. Spring is starting, and the city looks lovely! Also got a new gig that I am pretty excited about. I got a Tech Product Management internship for this summer at [YourMove.ai](https://yourmove.ai/), a AI based dating tools.
 
 College life is slow but more meanigful. Formal education and I seem to be done with each other. Thus, this semester almost half of my credits are just projects. Ferry is almost done, and I am focused on wrapping up Orion. (More details [*here*](https://github.com/anubhavpgit)). Will try to keep up the pace next semester as well and graduate early. Spending most of my time on product strategies, design, architecture and case-studies: product market fits.
 
