@@ -10,7 +10,7 @@ Hi, I am Anubhab Patnaik, a software engineer from India, interested in math, sc
 
 I previously worked as a software engineer at [RadiusAI](https://radius.ai/) and as the founding engineer at [StackIt](https://nowstackit.com) before that. Currently, a graduate student pursuing Master's in Computer Engineering at New York University, Tandon. This site is for my monthly logs; my two cents and musings on life and tech. This is what I have worked on [so far <i class="fa-arrow-right icon" ></i> ](/journey.html)
 
-Fond of tales and lore, I venture into [narrative writing](/blog/#life) and [disect stories](/reviews.html), exploring the art of storytelling. I love poetry and music, indulge in [photography](/mementos.html), and dabble in [graphic design](https://dribbble.com/anubhabpatnaik). Besides, I adventure, travel and explore places, experiment with [tech and engineering](/blog/#tech), and attend gatherings related to space exploration and startups. More on [what I am up to <i class="fa-arrow-right icon" ></i> ](/current.html).
+Fond of tales and lore, I venture into [narrative writing](/blog/#life) and [dissecting stories](/reviews.html), exploring the art of storytelling. I love poetry and music, indulge in [photography](/mementos.html), and dabble in [graphic design](https://dribbble.com/anubhabpatnaik). Besides, I adventure, travel and explore places, experiment with [tech and engineering](/blog/#tech), and attend gatherings related to space exploration and startups. More on [what I am up to <i class="fa-arrow-right icon" ></i> ](/current.html).
 
 I'm currently based in NYC, so if you're nearby, feel free to reach out. We could chat about startups, dive into some code, or collaborate on a project.
 
