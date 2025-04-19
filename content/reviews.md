@@ -6,12 +6,12 @@ showImg: true
 
 # Reviews 
 
-Thoughts on books read, shows and movies watched
+Thoughts on books read, shows and movies watched recently.
 
 
 ##### Reads
 
-- **[The Three-Body Problem](https://www.goodreads.com/book/show/20518872-the-three-body-problem)** : A science fiction novel about humanity's first contact with an alien civilization. The first book in the Remembrance of Earth's Past trilogy. The plot is sharp and the cohesive storytelling is excellent, especially for folks like me interested in theoretical and astrophyics. The plot timeline is a bit confusing in the initial chapters, but it fits well once you start reading. I felt the book was a bit long, and the pacing could have been a bit faster. But, overall, it is a brilliant read.
+- **[The Three-Body Problem](https://www.goodreads.com/book/show/20518872-the-three-body-problem)** : A science fiction novel about humanity's first contact with an alien civilization. The first book in the Remembrance of Earth's Past trilogy. The plot is sharp and the cohesive storytelling is excellent, especially for folks like me interested in theoretical and astrophyics. The plot timeline is a bit confusing in the initial chapters, but it fits well once you start reading. I felt the book was a bit long, and the pacing could have been a bit faster. But, overall, it is a good read.
 
 
 <!-- The dark forest *- Cixin Liu*: The second book in the Remembrance of Earth's Past trilogy, about humanity's response to an alien invasion.  -->
@@ -30,9 +30,6 @@ Thoughts on books read, shows and movies watched
 -  And another thing... *- Eoin Colfer* -->
 
 ##### Shows
-
-- **[Paatal Lok](https://www.imdb.com/title/tt9680440/) - Season 2**: A gripping tale of crime, corruption, and power. Paatal Lok is a testament to the fact that Indian cinema is capable of producing world-class content. The plot and direction win here. The show delves deep into the dark underbelly of society, exploring themes of caste, class, and the human condition. The writing is sharp, the characters are well-developed, and the acting is top-notch. The story development is slightly slow and meandering, it could have improved the writing to reveal obvious plot points earlier and still make it equally or more engaging.
-A really good Indie-crime drama that doesn't disappoint and carries on the legacy of the first season.
 
 - **[Ted Lasso](https://www.imdb.com/title/tt10986410/)**: A comedy-drama series that follows an American football coach who is hired to manage an English football team. The show's premise tends to base its premise on kindness, empathy, and the power of positivity. The characters and their arc are well-written, each fraught with their own insecurities and vulnerabilities. The humour is heartwarming; it's a reminder that sometimes, all you need is a little bit of optimism to make things better. It explores complex themes of mental health, relationships, teamwork and positivity, and has been critically acclaimed for its writing and direction for its sheer optimism and heartfulness.
 
