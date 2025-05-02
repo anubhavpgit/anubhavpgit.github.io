@@ -11,3 +11,4 @@ resume.fdb_latexmk
 .vscode
 .cache
 # resume.pdf
+content/.obsidian
