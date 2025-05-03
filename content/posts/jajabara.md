@@ -169,7 +169,7 @@ While the revelations are peaceful, it is not easy embracing them. The journey o
 
 *To be continued...*
 
-Grounding back to Jamshedpur, I was now in the ninth grade. The sisyphean journey continued. The academics were getting tougher, and the pressure was mounting. Technical challenge was not what I was worried about. I was a really good student, math, science and literature (as you might have guessed) were my strong suits. Civics and history, not so much.  
+<!-- Grounding back to Jamshedpur, I was now in the ninth grade. The sisyphean journey continued. The academics were getting tougher, and the pressure was mounting. Technical challenge was not what I was worried about. I was a really good student, math, science and literature (as you might have guessed) were my strong suits. Civics and history, not so much.   -->
 
 <!-- The year was 2015 now. The passage of time was becoming more evident. The world was changing. I could see the boulder ready to be rolled back in a year, after my tenth grade. No matter how hard I try, Father would make us move again. I was not ready for this. I was not ready to leave behind my friends, my life, and everything I had built over the years. The thought of starting over again was daunting, and this time I was absolutely terrified of what lay ahead. -->
 
