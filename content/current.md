@@ -14,8 +14,8 @@ showImg: true
 Orion is going good. The device is currently capable of recording various muscle signals based on activity and the data shows distinguishable patterns between relaxed, fist, index, and index-middle finger positions. It conditions signals using moving average filtering, rectification and envelope signals with additional raw signals for improved accuracy. The challenge here is improving the deep learning model that has a terrible accuracy of around 60-70% for the current dataset. The annoying part about this is that the data is terrible. Primarily, because the jumper wires keep falling off, and the electrodes are not placed properly. And, muscles get fatigued after a while. 
 
 <figure style="justify-content: center; align-items: center; display: flex; flex-direction: row; gap: 10px;">
-	<img alt='arm' src="../assets/img/current/arm_two.jpeg" style="max-width: 30%;">
-	<img alt='arm' src="../assets/img/current/arm_two_mcu.jpg" style="max-width: 30%;">
+	<img alt='arm' src="../assets/img/current/arm_two.webp" style="max-width: 30%;">
+	<img alt='arm' src="../assets/img/current/arm_two_mcu.webp" style="max-width: 30%;">
 </figure>
 <figcaption style="text-align: center; font-size: 0.8em;">Left: Arm with electrodes and sensors, Right: MCU with electrodes and sensors live</figcaption>
 
