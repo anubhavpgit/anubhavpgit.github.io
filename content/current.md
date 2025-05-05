@@ -11,7 +11,8 @@ showImg: true
 
 ###### May
 
-Orion is going good. The device is currently capable of recording various muscle signals based on activity and the data shows distinguishable patterns between relaxed, fist, index, and index-middle finger positions. It conditions signals using moving average filtering, rectification and envelope signals with additional raw signals for improved accuracy. The challenge here would be the deep learning model that would be used to classify the signals. 
+Orion is going good. The device is currently capable of recording various muscle signals based on activity and the data shows distinguishable patterns between relaxed, fist, index, and index-middle finger positions. It conditions signals using moving average filtering, rectification and envelope signals with additional raw signals for improved accuracy. The challenge here is improving the deep learning model that has a terrible accuracy of around 60-70% for the current dataset. The annoying part about this is that the data is terrible. Primarily, because the jumper wires keep falling off, and the electrodes are not placed properly. And, muscles get fatigued after a while. 
+
 <figure style="justify-content: center; align-items: center; display: flex; flex-direction: row; gap: 10px;">
 	<img alt='arm' src="../assets/img/current/arm_two.jpeg" style="max-width: 30%;">
 	<img alt='arm' src="../assets/img/current/arm_two_mcu.jpg" style="max-width: 30%;">
@@ -22,7 +23,7 @@ Further in the next semester, I am planning to integrate a the language recognit
 
 Tasks are ready for yourmove.ai. The current goal is to increase user engagement and traction using free tools and generating enough backlinks to the paid tool. My internships starts in a couple of weeks. Current engagement metrics are still insane. 300k+ visitors in a month, for a tool that is basically chatgpt+ wrapper with a reddish theme. The founder claims that the tool is far superior in terms of accuracy and performance when compared to generic AI tools like chatGPT, which is why it is getting so much traction.
 
-New York in spring is beautiful as ever. The highs are in the late 20s and the lows are around 14-16, the sweet spot. The cherry blossoms are in full bloom, and the city feels lively. Charting out a few short trip plans for the summer. East coast isn't as scenic as the west coast, but, let's see how it goes.
+New York in spring is beautiful as ever. The highs are around 27-28 and the lows are around 14-16, the sweet spot. The cherry blossoms are in full bloom, and the city feels lively. Charting out a few short trip plans for the summer. East coast isn't as scenic as the west coast, but, let's see how it goes.
 
 Last ten odds days were disturbing, was mostly glued to the news. The situation back in home is heartbreaking. What is more annoying is most of the news channels are too polarised, thus, instead of information, they spend more time on sensationalism. I have faith that the India will have a response ready. Vengeance is coming.
 
