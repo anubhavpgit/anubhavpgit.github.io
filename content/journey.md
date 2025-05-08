@@ -8,7 +8,7 @@ showImg: true
 
 ###### **Product Manager Intern** – [YourMove.AI](https://yourmove.ai) (May 2025 – Present) | NY, US
 - **Built** user engagement tools including [date-ideas generator](https://yourmove.ai/date-ideas), [dating coach](https://yourmove.ai/date-coach), and [zodiac-compatibility analyzer](https://yourmove.ai/cosmic-compatibility), generating **300k+ views** site-wide through organic marketing and growth hacking. Improved SEO and user experience by more than **50%**. Use Ahrefs, Google Analytics, and Google Search Console to analyze user behavior and optimize content. Increase revenue by **3-5%**.
-- **Improved** core product using **Node.js**, **Ionic**, and **Capacitor**, enhancing user experience and increasing user retention.
+- **Improved** core product using **Node.js**, **React.Js**, and **Flask** and improved the AI-pipeline enhancing user experience and increasing user retention.
 
 ###### **Product Engineer** – [DatingAI](https://datingai.pro) (July 2024 – Aug 2024), | BLR, IN
 - **Led** infrastructure modernization using **Node.js** and **Next.js**, improving API throttling by **15%**, reducing service outages by **60%**, and enhancing overall engine reliability through cross-team coordination.
