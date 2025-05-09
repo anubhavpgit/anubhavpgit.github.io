@@ -4,7 +4,6 @@ date: 10-05-2025
 description: "A journey through whims of fate and lucid memories. Growing up and looking for the purpose of life."
 tag: "#life, #memoir"
 showImg: true
-index: false
 ---
 
 Greek mythology is fascinating and full of stories that explore the human condition. My fascination stems from the fact that even gods are flawed - subject to the same emotions and desires as mortals. Zeus with his infidelity, Hera with her jealousy, Aphrodite with her vanity - all divine yet deeply imperfect.
