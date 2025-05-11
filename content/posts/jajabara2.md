@@ -18,8 +18,6 @@ The myth of Sisyphus speaks about the futility of life, the absurdity of existen
 
 ### Growing Up
 
-Somewhere in mid-2007, I found myself packed with bags, my mother and cousin uncles helping us move with a new boulder this time. This eternal movement in my fate, my Sisyphean journey, was because my father's job required us to constantly uproot and rebuild in different cities- every two years as the government mandated it. 
-
 The company quarters we moved into were located in a sprawling colony, and my house number was B2/2. The colony was huge, a little universe of its own, with its own customs. It was a mix of people from different backgrounds and cultures, mostly from South and Central East—West Bengal, Jharkhand, Bihar, and Odisha. We traded homemade dishes, celebrated festivals together, and played until the sun disappeared—or until our parents dragged us back home, whichever came first.
 
 I was lucky enough to meet many kids around my age. Together, we formed a large, rambunctious group, though most of them were four or five years older than me. That age gap meant I often served as their errand boy, fetching items or doing other grunt work, but I was happy to be part of the group. Two rival groups prevailed: the men versus the ladies. Each group had four to five members, and we played hide-and-seek, football, badminton, and all sorts of games together. I was one of the younger members and was at the mercy of the older ones. The women bossed me around, always using me in their battles. Men were simpler, but equally provocative in wars. I was the weapon of choice for both sides. 
