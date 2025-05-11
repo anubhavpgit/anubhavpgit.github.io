@@ -32,6 +32,9 @@ January-
 
 ##### Shows
 
+May-
+<!-- - **[When Life Gives You Tangerines](https://www.imdb.com/title/tt26471411/)**: A korean drama about a spirited girl and a steadfast boy's island story that blossoms into a lifelong tale of setbacks and triumphs, proving love endures across time. This show is a delightful watch. The cinematography is stunning, with beautiful shots of the island and its surroundings. The characters are well-developed, and the performances are good. The premise of the show is the journey of the two main characters, which is extremely heartwarming. The show explores themes of love, friendship, and the importance of family. The pacing is good, and the story flows well.  -->
+
 April-
 - **[Better Call Saul](https://www.imdb.com/title/tt3032476/)**: A prequel to Breaking Bad, about the life of Jimmy McGill, a small-time lawyer who eventually becomes the sleazy lawyer Saul Goodman. It is a slow burn, but the character development is phenomenal. The show is an absolute masterclass in storytelling, with its intricate plot and well-developed characters. The cinematography is stunning, the scenes shot in the desert, showcasing New Mexico and the South American cultural elements, feel real, not overdone. The acting is just top-notch. Bob’s brilliant versatility is subtle and nuanced- the slow burn of Jimmy McGill and the rise of immoral Saul is a delight. In a particular season, there’s this scene where Jimmy has to convince the board to let him reinstate his license. The way he manipulates the situation by tapping a numb spot using his own dead brother’s name is just brilliant. Kim’s expression is evident when she realises Jimmy has no remorse for what he did and enjoyed doing it.
 
