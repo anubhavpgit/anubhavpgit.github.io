@@ -11,6 +11,8 @@ showImg: true
 
 ###### May
 
+The semester is almost over. I feel I am done with building projects now. They still excite me, but the monetary aspect of it is more appealing now. I'd like to focus on building and solving for problems that are more business-oriented. Summer internship starts in a few days. At 24 C, New York feels warmer now. People are out and about, and the city is alive. I'd like to save up for a few trips this summer, mostly exploring cities off the east coast. Maybe Miami, Atlantic City, and a few more. 
+
 [Jai Hind :)](https://x.com/adgpi/status/1919850036596199492) Orion is going good. The device is currently capable of recording various muscle signals based on activity, and the data shows distinguishable patterns between relaxed, fist, index, and index-middle finger positions. It conditions signals using moving average filtering, rectification and envelope signals with additional raw signals for improved accuracy. The challenge here is improving the deep learning model that has a terrible accuracy of around 60-70% for the current dataset. The annoying part about this is that the data is terrible. Primarily, because the jumper wires kept falling off, and the electrodes were not placed properly. Also, the muscles get fatigued after a while. 
 
 <figure style="justify-content: center; align-items: center; display: flex; flex-direction: row; gap: 10px;">
@@ -23,7 +25,9 @@ Further, in the next semester, I am planning to integrate a language recognition
 
 New York in spring is beautiful as ever. The highs are around 27-28 and the lows are around 14-16, the sweet spot. The cherry blossoms are in full bloom, and the city feels lively. Charting out a few short trip plans for the summer. East coast isn't as scenic as the west coast, but, let's see how it goes.
 
-Last ten odds days were disturbing, was mostly glued to the news. The situation back in home is heartbreaking. What is more annoying is most of the news channels are too polarised, thus, instead of information, they spend more time on sensationalism. I have faith that the India will have a response ready. [Vengeance is coming](https://x.com/adgpi/status/1919850036596199492). Jai Hind.
+Currently watching *When Life Gives You Tangerines*, a Korean series that beautifully explores themes of love, loss, and self-discovery. The story follows a young woman as she navigates the complexities of relationships and personal growth. Stunning cinematography and heartfelt narrative. Also, *You*, a psychological thriller series that follows Joe Goldberg, a charming yet dangerous psychopath who becomes obsessed with people he loves. 
+
+Last ten odds days were disturbing, was mostly glued to the news. The situation back in home is heartbreaking. What is more annoying is all of the news channels are too polarised, thus, instead of information, they spend more time on sensationalism. I have faith that the India will have a response ready. [Vengeance is coming](https://x.com/adgpi/status/1919850036596199492). Jai Hind.
 
 ###### April
 
