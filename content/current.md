@@ -9,6 +9,16 @@ showImg: true
 
 <span class="update-date-time"></span>
 
+###### June
+
+Summer is here. Moving to SF for the summer, pretty stoked! Summer internship as a Research Engineer at a Web3 startup, H011YW00D - an AI agent running on BASE (Ethereum L2) that generates videos, currently active on [Twitter](https://x.com/h011yw00dAgent/). My role involves working on the AI engine and the underlying distributed computing and deploying and maintaining it.
+
+My speculations about the Web3 world aside, and the fact that crypto is 99% a scam, innovation and profitability are two separate things. Businesses don't need useful technology to make money. I see  potential in companies working not "in" but “with” the Web3 space. They provide utility for users working in that space. Companies like Coinbase generate massive returns despite limited utility. (Coinbase is funded by Tiger Global and Y Combinator.)
+
+Most are financially successful businesses built on technically questionable foundations, not meaningful innovations solving real problems. The bottom line is, **distribution trumps innovation**. Not that I see myself working in the web3 space, but this stint feels like a decent opportunity to learn more about the space and the money behind it.
+
+On the other side, YourMove.ai is going strong. We’re generating massive traffic—and being a tiny, bootstrapped team, we’re profitable. That’s the thing about SaaS: execute well, and it pays.
+
 ###### May
 
 The semester is almost over. I feel I am done with building projects now. They still excite me, but the monetary aspect of it is more appealing now. I'd like to focus on building and solving for problems that are more business-oriented. Summer internship starts in a few days. At 24 C, New York feels warmer now. People are out and about, and the city is alive. I'd like to save up for a few trips this summer, mostly exploring cities off the east coast. Maybe Miami, Atlantic City, and a few more. 
