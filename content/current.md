@@ -11,7 +11,7 @@ showImg: true
 
 ###### June
 
-Summer is here. Moving to SF for the summer, pretty stoked! Summer internship as a Research Engineer at a Web3 startup, H011YW00D - an AI agent running on BASE (Ethereum L2) that generates videos, currently active on [Twitter](https://x.com/h011yw00dAgent/). My role involves working on the AI engine and the underlying distributed computing and deploying and maintaining it.
+Summer is here. Moving to SF for the summer, pretty stoked! Summer internship as a AI Research Engineer at a AI/Web3 startup, H011YW00D - an AI agent running on BASE (Ethereum L2) that generates videos, currently active on [Twitter](https://x.com/h011yw00dAgent/). My role involves working on the AI engine and the underlying distributed computing and deploying and maintaining it.
 
 My speculations about the Web3 world aside, and the fact that crypto is 99% a scam, innovation and profitability are two separate things. Businesses don't need useful technology to make money. I see  potential in companies working not "in" but “with” the Web3 space. They provide utility for users working in that space. Companies like Coinbase generate massive returns despite limited utility. (Coinbase is funded by Tiger Global and Y Combinator.)
 
