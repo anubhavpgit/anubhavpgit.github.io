@@ -6,8 +6,8 @@ showImg: true
 
 ### Work
 
-###### **AI Research Engineer Intern** – [YourMove.AI](https://yourmove.ai) (May 2025 – Present) | NY, US
-- **Working on** the AI engine with distributed computing infrastructure, handling deployment and maintenance of production systems.
+###### **AI Research Engineer Intern** – [H0LYW00D](https://x.com/h011yw00dAgent/) (May 2025 – Present) | NY, US
+- **Working on** decoupling the video generative AI engine from Scrypted's AVB stack with distributed computing building deploying and maintaining the production systems.
 
 ###### **Product Manager Intern** – [YourMove.AI](https://yourmove.ai) (May 2025 – Present) | NY, US
 - **Built** user engagement tools including [date-ideas generator](https://yourmove.ai/date-ideas), [dating coach](https://yourmove.ai/date-coach), and [zodiac-compatibility analyzer](https://yourmove.ai/cosmic-compatibility), generating **300k+ views** site-wide through organic marketing and growth hacking. Improved SEO and user experience by more than **50%**. Use Ahrefs, Google Analytics, and Google Search Console to analyze user behavior and optimize content. Increase revenue by **3-5%**.
