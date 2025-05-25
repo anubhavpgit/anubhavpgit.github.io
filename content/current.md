@@ -11,11 +11,9 @@ showImg: true
 
 ###### June
 
-Summer is here. Moving to SF for the summer. Summer internship as a AI Research Engineer at a AI/Web3 startup, H011YW00D - an AI agent running on BASE (Ethereum L2) that generates videos, currently active on [Twitter](https://x.com/h011yw00dAgent/). My role involves working on the AI engine and the underlying distributed computing and deploying and maintaining it.
+Moving to SF for the summer. Summer internship as a AI Research Engineer at a AI/Web3 startup, H011YW00D - an AI agent that generates autonomous cinematic videos, currently active on [Twitter](https://x.com/h011yw00dAgent/). My role involves working on the AI engine and the underlying distributed computing and deploying and maintaining it.
 
-My speculations about the Web3 world aside, and the fact that crypto is 99% a scam, innovation and profitability are two separate things. Businesses don't need useful technology to make money. I see  some potential in companies working not "in" but “with” the Web3 space. Companies like Coinbase generate massive returns despite limited utility. (Coinbase is funded by Tiger Global and Y Combinator.)
-
-A few are financially successful businesses, although built on technically questionable foundations, not meaningful innovations solving real problems. The bottom line is, **distribution trumps innovation**. Not that I see myself working in the web3 space, but this stint feels like a decent opportunity to network and learn more about the space and the money behind this part of the tech world.
+My speculations about the Web3 world aside, and the fact that crypto is 99% a scam, innovation and profitability are two separate things. Businesses don't need useful technology to make money. A few are financially successful businesses, although built on technically questionable foundations, not meaningful innovations solving real problems. Examples include Coinbase, OpenSea etc. The bottom line is, **distribution trumps innovation**. Not that I see myself working in the web3 space, but this stint feels like a decent opportunity to network and explore more.
 
 On the other side, YourMove.ai is going strong. We’re generating massive traffic—and being a tiny, bootstrapped team, we’re profitable. That’s the thing about SaaS: execute well, and it pays.
 
