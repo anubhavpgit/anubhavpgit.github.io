@@ -6,7 +6,7 @@ showImg: true
 
 ### Work
 
-###### **AI Research Engineer Summer Intern** – [H011Yw00D](https://x.com/h011yw00dAgent/) (May 2025 – Present) | CA, US
+###### **AI Research Engineer Summer Intern** – [H011Yw00D](https://x.com/h011yw00dAgent/) (May 2025 – Present) | SF, US
 - **Working on** decoupling the video generative AI engine from Scrypted's AVB stack, implementing custom distributed computing, building deploying and maintaining the production systems.
 
 ###### **Product Manager Intern** – [YourMove.AI](https://yourmove.ai) (May 2025 – Present) | NY, US
