@@ -27,7 +27,7 @@ const feed = new rss({
 		{
 			"atom:link": {
 				_attr: {
-					href: "https://anubhavp.dev/blog/feed.xml",
+					href: "https://anubhavp.dev/feed.xml",
 					rel: "self",
 					type: "application/rss+xml",
 				},
@@ -101,7 +101,7 @@ export async function generateXmls() {
 		try {
 			const currentHtml = await fs.readFile(currentFilePath, "utf-8");
 			const currentDom = new JSDOM(currentHtml);
-			
+
 			const currentTitle = currentDom.window.document.querySelector("title").textContent;
 			const currentDescriptionElement = currentDom.window.document.querySelector(
 				'meta[name="description"]'
@@ -145,7 +145,7 @@ export async function generateXmls() {
 		}
 
 		const feedXML = feed.xml({ indent: true });
-		const feedPath = path.resolve(".dist/blog", "feed.xml");
+		const feedPath = path.resolve(".dist/", "feed.xml");
 		await fs.writeFile(feedPath, feedXML); // Using await with promise-based writeFile
 		console.log("📑 RSS feed generated successfully.");
 
