@@ -15,9 +15,9 @@ async function loadConfig() {
 const feed = new rss({
 	title: "fuzzymusings",
 	description: "A space for my two cents, musings, and insights.",
-	feed_url: "https://anubhavp.dev/blog/feed.xml",
-	site_url: "https://anubhavp.dev/blog",
-	guid: "https://anubhavp.dev/blog",
+	feed_url: "https://anubhavp.dev/feed.xml",
+	site_url: "https://anubhavp.dev",
+	guid: "https://anubhavp.dev",
 	date: new Date(),
 	author: "Anubhab Patnaik",
 	custom_namespaces: {
@@ -94,6 +94,54 @@ export async function generateXmls() {
 				};
 				feed.item(item);
 			}
+		}
+
+		// Add current.html file to RSS feed
+		const currentFilePath = path.resolve(config.srcPath.indexOutPath, "current.html");
+		try {
+			const currentHtml = await fs.readFile(currentFilePath, "utf-8");
+			const currentDom = new JSDOM(currentHtml);
+			
+			const currentTitle = currentDom.window.document.querySelector("title").textContent;
+			const currentDescriptionElement = currentDom.window.document.querySelector(
+				'meta[name="description"]'
+			);
+			const currentBodyElement = currentDom.window.document.querySelector("main");
+			const updateDateElement = currentDom.window.document.querySelector(
+				'span.update-date-time'
+			);
+
+			let currentDate = "";
+			if (updateDateElement) {
+				const dateText = updateDateElement.textContent.trim();
+				// Parse "Sunday, May 25" format and convert to RSS-compatible format
+				const currentYear = new Date().getFullYear();
+				const dateParts = dateText.split(", ");
+				if (dateParts.length === 2) {
+					const [, monthDay] = dateParts;
+					const parsedDate = new Date(`${monthDay}, ${currentYear}`);
+					if (!isNaN(parsedDate)) {
+						currentDate = parsedDate.toISOString().split('T')[0];
+					}
+				}
+			}
+
+			const currentDescription = currentDescriptionElement
+				? currentDescriptionElement.getAttribute("content")
+				: "";
+			const currentBody = currentBodyElement ? currentBodyElement.innerHTML : "";
+
+			const currentItem = {
+				title: currentTitle,
+				description: currentDescription,
+				url: "https://anubhavp.dev/current.html",
+				date: currentDate,
+				author: "Anubhab Patnaik",
+				custom_elements: [{ "content:encoded": currentBody }, { subtitle: currentDescription }],
+			};
+			feed.item(currentItem);
+		} catch (err) {
+			console.warn("Could not add current.html to RSS feed:", err.message);
 		}
 
 		const feedXML = feed.xml({ indent: true });
