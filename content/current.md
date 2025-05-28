@@ -9,7 +9,7 @@ showImg: true
 
 <span class="update-date-time"></span>
 
-###### June
+###### May
 
 Moving to SF for the summer. Summer internship as a AI Research Engineer at a AI/Web3 startup, H011YW00D - an AI agent that generates autonomous cinematic videos, currently active on [Twitter](https://x.com/h011yw00dAgent/). My role involves working on the AI engine and the underlying distributed computing and deploying and maintaining it.
 
@@ -17,9 +17,7 @@ My speculations about the Web3 world aside, and the fact that crypto is 99% a sc
 
 On the other side, YourMove.ai is going strong. We’re generating massive traffic—and being a tiny, bootstrapped team, we’re profitable. That’s the thing about SaaS: execute well, and it pays.
 
-###### May
-
-The semester is almost over. I feel I am done with building projects now. They still excite me, but the monetary aspect of it is more appealing now. I'd like to focus on building and solving for problems that are more business-oriented. Summer internship starts in a few days. At 24 C, New York feels warmer now. People are out and about, and the city is alive. I'd like to save up for a few trips this summer, mostly exploring places around the bay area.
+The semester is over. I feel I am done with building projects now. They still excite me, but the monetary aspect of it is more appealing now. I'd like to focus on building and solving for problems that are more business-oriented. Summer internship starts in a few days. At 24 C, New York feels warmer now. People are out and about, and the city is alive. I'd like to save up for a few trips this summer, mostly exploring places around the bay area.
 
 [Jai Hind :)](https://x.com/adgpi/status/1919850036596199492) Orion is going good. The device is currently capable of recording various muscle signals based on activity, and the data shows distinguishable patterns between relaxed, fist, index, and index-middle finger positions. It conditions signals using moving average filtering, rectification and envelope signals with additional raw signals for improved accuracy. The challenge here is improving the deep learning model that has a terrible accuracy of around 60-70% for the current dataset. The annoying part about this is that the data is terrible. Primarily, because the jumper wires kept falling off, and the electrodes were not placed properly. Also, the muscles get fatigued after a while. 
 
