@@ -9,6 +9,10 @@ showImg: true
 
 <span class="update-date-time"></span>
 
+###### June
+
+The summer in California is beautiful. Healdsburg is a small town in Sonoma County, known for its picturesque vineyards and wineries. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. The town has a charming vibe with boutique shops, restaurants, and cafes. Currently it's filled with tourists/ people attending Edge, a tech pop-up village, more like a tech summer camp, where people can come together to learn, share ideas, and collaborate on projects. 
+
 ###### May
 
 Moving to SF for the summer. Summer internship as a AI Research Engineer at a AI/Web3 startup, H011YW00D - an AI agent that generates autonomous cinematic videos, currently active on [Twitter](https://x.com/h011yw00dAgent/). My role involves working on the AI engine and the underlying distributed computing and deploying and maintaining it.
@@ -29,7 +33,7 @@ The semester is over. I feel I am done with building projects now. They still ex
 
 Further, in the next semester, I am planning to integrate a language recognition model that would be used to convert the signals into text. This has a lot of potential applications, including controlling devices, typing (air keyboard), and even hand-gesture to-speech conversion. 
 
-New York in spring is beautiful as ever. The highs are around 27-28 and the lows are around 14-16, the sweet spot. The cherry blossoms are in full bloom, and the city feels lively. Charting out a few short trip plans for the summer. East coast isn't as scenic as the west coast, but, let's see how it goes.
+New York in spring is beautiful as ever. The highs are around 20-24 and the lows are around 12-14, the sweet spot. The cherry blossoms are in full bloom, and the city feels lively. Charting out a few short trip plans for the summer. East coast isn't as scenic as the west coast, but, let's see how it goes.
 
 Currently watching *When Life Gives You Tangerines*, a Korean series that beautifully explores themes of love, loss, and self-discovery. The story follows a young woman as she navigates the complexities of relationships and personal growth. Stunning cinematography and heartfelt narrative. Also, *You*, a psychological thriller series that follows Joe Goldberg, a charming yet dangerous psychopath who becomes obsessed with people he loves. 
 
