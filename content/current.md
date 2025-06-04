@@ -16,7 +16,7 @@ Walking the rite of passage, clicked a photo here so my startup pitch deck knows
 <figure style="justify-content: center; align-items: center; display: flex; flex-direction: row; gap: 10px;">
   <img alt='arm' src="../assets/img/current/golden_gate.webp" style="max-width: 50%;">
 </figure>
-<figcaption style="text-align: center; font-size: 0.8em;"> The American Tech Dream; Silicon Institute to Silicon Valley.</figcaption>
+<figcaption style="text-align: center; font-size: 0.8em; margin-bottom: 10px;"> The techie dream</figcaption>
 
 The summer in California is beautiful. Healdsburg is a small town in Sonoma County, known for its picturesque vineyards and wineries. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. The town has a charming vibe with boutique shops, restaurants, and cafes. Currently it's filled with tourists/ people attending Edge, a tech pop-up village, more like a tech summer camp, where people can come together to learn, share ideas, and collaborate on projects. 
 
