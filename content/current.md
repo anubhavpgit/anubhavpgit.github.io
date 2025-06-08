@@ -9,16 +9,17 @@ showImg: true
 
 <span class="update-date-time"></span>
 
+<!-- ###### July
+
+July starts with a trip back home, to India until fall. This month would mark the end of a whole year of my life in the US. I moved here back in August 2024 and it feels like it all of that was a month ago. Excited for the what is next.
+
+taking a break from the project-building phase was a mindfull call. I spend all my energy on actual work, focusing on internship. Currently working with distributed computing - scaling, maintaing, deploying, and managing the video generation service at hollywood. The aim would be to keep hunting for techinal founding roles for when I graduate, which will probably be in the end of this semester/ year. Looking forward to what is in store for me. -->
+
 ###### June
 
-Walking the rite of passage, clicked a photo here so my startup pitch deck knows I’m dead serious. Where dreams get priced, pitched, or burned. 
+The summer in California is beautiful. Healdsburg is a small town in Sonoma County, known for its picturesque vineyards and wineries. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. The town has a charming vibe with boutique shops, restaurants, and cafes. Currently it's filled with tourists/ people attending Edge City, a tech pop-up village, is more like a tech summer camp, where people can come together to learn, share ideas, and collaborate on projects. I am part of the World Residency program, where we build and deploy a mini app that runs on the World ecosystem. 
 
-<figure style="justify-content: center; align-items: center; display: flex; flex-direction: row; gap: 10px;">
-  <img alt='arm' src="../assets/img/current/golden_gate.webp" style="max-width: 50%;">
-</figure>
-<figcaption style="text-align: center; font-size: 0.8em; margin-bottom: 10px;"> The techie dream</figcaption>
-
-The summer in California is beautiful. Healdsburg is a small town in Sonoma County, known for its picturesque vineyards and wineries. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. The town has a charming vibe with boutique shops, restaurants, and cafes. Currently it's filled with tourists/ people attending Edge, a tech pop-up village, more like a tech summer camp, where people can come together to learn, share ideas, and collaborate on projects. 
+The rest of the time when I am not working, I spend exploring California, visiting San Francisco, Redwood National Park, and the beautiful beaches along the coast. San Francisco is a vibrant city, beautiful city, known for its diverse culture, tech scene, and stunning views. The weather is mild, with temperatures ranging from 15 to 20 degrees Celsius. The city has a rich cultural scene, with museums, galleries, and theaters. I attended a few meetups and events, got to meet some amazing foudners. SF inspires me to move here someday. If I ever do decide to move out of New York, I think SF would be the place.
 
 ###### May
 
