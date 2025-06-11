@@ -17,9 +17,15 @@ Taking a break from the project-building phase was a mindful call. I spend all m
 
 ###### June
 
-Summer in California is beautiful. Healdsburg is a small town in Sonoma County, known for its picturesque vineyards and wineries. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. The town has a charming vibe with boutique shops, restaurants, and cafes. Currently, it's filled with tourists/ people attending Edge City, a tech pop-up village, which is more like a tech summer camp, where people can come together to learn, share ideas, and collaborate on projects. I am part of the World Residency program, where we build and deploy a mini app that runs on the World ecosystem. 
+Summer in California is beautiful. Healdsburg is a small town in Sonoma County, known for its picturesque vineyards and wineries. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. The town has a charming vibe with boutique shops, restaurants, and cafes. Currently, it's filled with tourists/ people attending Edge City, a tech pop-up village, which is more like a tech summer camp, where people can come together to share ideas and collaborate on projects. I am part of the World Residency program, where we build and deploy a mini app that runs on the World ecosystem. 
 
-The rest of the time when I am not working, I spend exploring California, visiting San Francisco, Redwood National Park, and the beautiful beaches along the coast. San Francisco is a vibrant city, a beautiful city, known for its diverse culture, tech scene, and stunning views. The weather is mild, with temperatures ranging from 15 to 20 degrees Celsius. The city has a rich cultural scene, with museums, galleries, and theatres. I attended a few meetups and events and got to meet some amazing founders. SF inspires me to move here someday. If I ever do decide to move out of New York, I think SF would be the place.
+Now while I am here, I did decide to ship [fireside](https://anubhavp.dev/fireside/), a decentralised encrypted chat app I built some years ago, on worldchain. I was anyway working on shipping h011yw00d, thought might as well try to ship something of my own.
+
+The rest of the time when I am not working, I spend exploring California, visiting San Francisco, Redwood National Park, and the beautiful beaches along the coast. 
+
+San Francisco is a vibrant, beautiful city, known for its diverse culture, tech scene, and absolutely stunning views. The weather is mild/ cold, with temperatures ranging from 12 to 20 degrees Celsius. California has microclimates, so the weather can vary significantly from one part of the city to another. I halted in Presidio for a couple of days, a bay area neighbourhood, also a former naval base turned into a national park. Worked out of the [House of Web3](https://houseofweb3.com/), with beautiful views of the Golden Gate Bridge and the bay, with hiking trails and picnic areas. Presidio also has this amazing amazing trail, Land's End, which offers breathtaking views of the Pacific Ocean from the cliffs. This is hands down my favourite place in SF, and my favourite hike so far. 
+
+The city has a rich cultural scene, with museums, galleries, theatres, and amazing culinary experiences. The food here is the probably the best I have had in the US so far. I attended a few meetups and events and got to meet some amazing founders. SF inspires me to move here someday. If I ever do decide to move out of New York, I think SF would be the place.
 
 ###### May
 
