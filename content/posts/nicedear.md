@@ -1,7 +1,7 @@
 ---
 title: 'Generating avatars with Nicedear'
 date: "01-04-2024"
-description: "A random avatar generator for your website or app: an obvious dicebear spoof :P "
+description: "A random avatar generator for websites or apps; a dicebear spoof."
 draft: false
 tag: "#tech"
 ---
@@ -17,11 +17,9 @@ Source: [Nicedear](https://api.nicedear.vip/?seed=how), seed: "how"
 
 ## The Magic
 
-Behind the scenes, Nicedear uses a simple hash function to convert a seed string into a numerical value, which is then used to select features for the avatar. The process involves choosing from a set of predefined features, such as heads, faces, and facial hair, and applying transformations like scaling, rotating, and mirroring to create a unique avatar. Here's the [source](https://github.com/fuzzymf/nicedear), and here's how it works:
+Nicedear uses a simple hash function to convert a seed string into a numerical value, which is then used to select features for the avatar. The process involves choosing from a set of predefined features, such as heads, faces, and facial hair, and applying transformations like scaling, rotating, and mirroring to create a unique avatar. Here's the [source](https://github.com/fuzzymf/nicedear), and here's how it works:
 
-1. With Nicedear, every avatar starts with a seed – a tiny spark that ignites a world of creativity. The seed can be anything from your name to a random word, and it serves as the foundation for your avatar's unique identity.
-
-	Nicedear uses a simple hash function to convert the seed into a numerical value. This hash is then used to select features for the avatar. The hash function is designed to produce a consistent output for the same input, ensuring that your avatar remains the same every time you use the same seed.
+1.Every avatar starts with a seed. The seed can be anything from a user name to a random word. It uses a simple hash function to convert the seed into a numerical value. This hash is then used to select features for the avatar. The hash function is designed to produce a consistent output for the same input, which ensures that the same seed will always generate the same avatar.
 
 	
 <a name="hashfunction"></a>
@@ -39,7 +37,7 @@ Behind the scenes, Nicedear uses a simple hash function to convert a seed string
   };
   ```
 
-2. Nicedear then uses the hash to select choices for each feature in the avatar. From captivating heads to charming facial hair, each aspect of your avatar is carefully curated to reflect your style and personality.
+2. Nicedear then uses the hash to select choices for each feature in the avatar. The **Feature Array** is an array of Feature objects that contain the choices for each feature. `Head`, `Face`, `Facial-hair` are examples of features. The has is used to select a choice from each feature. A **feature image** (*a face*) is a choice from a set of choices(*a folder containing all the faces*) is selected based on the modulo of the hash and the number of choices in the feature.
 
 ```ts
  return features.map((feature) => {
@@ -47,8 +45,6 @@ Behind the scenes, Nicedear uses a simple hash function to convert a seed string
   return feature.choices[index];
  });
 ```
-
-The **Feature Array** is an array of Feature objects that contain the choices for each feature. `Head`, `Face`, `Facial-hair` are examples of features. Nicedear uses the hash to select a choice from each feature. A **feature image** (*a face*) is a choice from a set of choices(*a folder containing all the faces*) is selected based on the modulo of the hash and the number of choices in the feature.
 
 Assuming Input = "`fuzzymf`", the hash generated using the hash function [⏎](#hashfunction) is `497870557`. The hash is then divided by the number of faces present in the folder, say `25`, to get the modulo, which is **7**. The **7th face** is then selected from the folder containing all the `25` faces.
 
@@ -61,7 +57,7 @@ Here's an example of a feature object, `a suspicious face`, from the theme `open
   ![A Suspicious Face](https://anubhavp.dev/assets/img/nicedear/Suspicious.svg)
 </div>
 
-3. Nicedear then applies transformations to the selected choices, such as scaling, rotating, and mirroring, to create a unique avatar that captures your essence.
+3. Based on the API request or CLI input, transformations are applied to the avatar. These transformations include scaling, rotating, and mirroring the avatar. The transformations are applied based on the parameters provided by the user. For example, if the user wants to scale the avatar by `1.5`, Nicedear will apply a scaling transformation to the avatar.
 
 ```ts
  const layers: OverlayOptions[] = await Promise.all(imagePaths.map(async (imgPath, i) => {
@@ -84,11 +80,11 @@ Here's an example of a feature object, `a suspicious face`, from the theme `open
   return await applyTransformations(`_output/${seed}${pathHash}.png`, params);
 ```
 
-Nicedear's transformative powers come to life. The selected choices are then layered over and composited together to form the avatar, and a png is created. The png (image) is then transformed and converted to `SVG`. Your tailored avatar is ready to be shared with the world.
+The final response is a PNG image of the avatar, which can be used in websites or applications. 
 
 ## The Transformations
 
-Nicedear offers a plethora of transformation features to tailor the avatar according to specific preferences:
+There are several transformations that can be applied to the avatar, such as scaling, rotating, and mirroring. These transformations are applied based on the parameters provided by the user. The following transformations are available now:
 
 ### Parameters
 
@@ -115,40 +111,61 @@ Fine-tunes the y-coordinate of the avatar. Defaults to 0.
 - **features**: string[]  
 Specifies which features to include in the avatar, such as face, facial-hair, and head.
 
-## Usage
+## Usage Examples
 
-Nicedear offers seamless integration for both CLI and API usage, making it easy to generate avatars for your website or application.
+### Simple API Call
 
-```bash
-node dist/index.js foo open-peeps true 45 red skinColor hairColor 1.0 10.0 20.0 face,facial-hair,head
+For basic avatar generation, just provide a seed:
+
 ```
-
-And, an API request might look like this:
-
-```bash
-GET http://localhost:3000/?seed=<seed>&theme=<theme>&mirror=<mirror>&rotate=<rotate>&background=<background>&skincolor=<skincolor>&hairColor=<hairColor>&scale=<scale>&transalteX=<transalteX>&transalteY=<transalteY>&features=face,facialHair,head
-```
-
-Or, a simple API request might look like this:
-  
-```bash
-api.nicedear.vip/?seed=asimpleone
+https://api.nicedear.vip/?seed=johndoe
 ```
 
 <div style="display: flex; justify-content: center; align-items: center; height: 250px; width: 250px;">
-
-![Nicedear: simple](https://anubhavp.dev/assets/img/nicedear/takli.svg)
+  <img src="https://anubhavp.dev/assets/img/nicedear/takli.svg" alt="Simple avatar example" />
 </div>
 
-And, a complex one might look like this:
+### Advanced Customization
 
-```bash
-api.nicedear.vip/?seed=extreme&theme=open-peeps&mirror=true&rotate=325&scale=0.6&transalteX=10.0&transalteY=20.0&features=face,facialHair,head
+For complex avatars with multiple transformations:
+
+```
+https://api.nicedear.vip/?seed=extreme&theme=open-peeps&mirror=true&rotate=325&scale=0.6&translateX=10.0&translateY=20.0&features=face,facialHair,head
 ```
 
 <div style="display: flex; justify-content: center; align-items: center; height: 250px; width: 250px;">
-
-![Nicedear: extreme](https://anubhavp.dev/assets/img/nicedear/extreme.svg)
+  <img src="https://anubhavp.dev/assets/img/nicedear/extreme.svg" alt="Advanced customized avatar" />
 </div>
 
-Or, just visit [https://api.nicedear.vip](https://api.nicedear.vip) for a random avatar.
+### CLI Usage
+
+For local development or batch processing:
+
+```bash
+node dist/index.js [seed] [theme] [mirror] [rotate] [background] [skinColor] [hairColor] [scale] [translateX] [translateY] [features]
+```
+
+Example:
+```bash
+node dist/index.js "myuser" "open-peeps" true 45 "#ff0000" "#fdbcb4" "#000000" 1.2 5.0 -3.0 "face,facialHair,head"
+```
+
+## Integration Examples
+
+```javascript
+// Generate avatar URL
+const avatarUrl = `https://api.nicedear.vip/?seed=${username}&theme=open-peeps`;
+
+// Use in img tag
+<img src={avatarUrl} alt={`${username}'s avatar`} />
+```
+
+```javascript
+const commentAvatar = `https://api.nicedear.vip/?seed=${userEmail}&scale=0.8`;
+```
+
+```javascript
+const defaultAvatar = `https://api.nicedear.vip/?seed=${userId}&theme=open-peeps&background=%23f0f0f0`;
+```
+
+Nicedear provides a robust, customizable solution that scales with your needs. Its deterministic approach ensures users always see the same avatar for the same seed, creating a sense of identity and consistency that users appreciate.
