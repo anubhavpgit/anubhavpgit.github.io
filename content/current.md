@@ -33,7 +33,7 @@ Moving to SF for the summer. Summer internship as an AI Research Engineer at an 
 
 My speculations about the Web3 world aside, and the fact that crypto is 99% a scam, innovation and profitability are two separate things. Businesses don't need useful technology to make money. A few are financially successful businesses, although built on technically questionable foundations, not meaningful innovations solving real problems. Examples include Coinbase, OpenSea etc. The bottom line is, **distribution trumps innovation**. Not that I see myself working in the web3 space, but this stint feels like a decent opportunity to network and explore more.
 
-On the other side, YourMove.ai is going strong. We’re generating massive traffic—and being a tiny, bootstrapped team, we’re profitable. That’s the thing about SaaS: executes well, and it pays.
+<!-- On the other side, YourMove.ai is going strong. We’re generating massive traffic—and being a tiny, bootstrapped team, we’re profitable. That’s the thing about SaaS: executes well, and it pays. -->
 
 The semester is over. I feel I am done with building projects now. They still excite me, but the monetary aspect of it is more appealing now. I'd like to focus on building and solving more business-oriented problems. Summer internship starts in a few days. At 24 C, New York feels warmer now. People are out and about, and the city is alive. I'd like to save up for a few trips this summer, mostly exploring places around the bay area.
 
