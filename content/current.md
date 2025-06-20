@@ -21,7 +21,7 @@ Summer in California is beautiful. Healdsburg is a small town in Sonoma County, 
 
 Now while I am here, I did decide to ship [fireside](https://anubhavp.dev/fireside/), a decentralised encrypted chat app I built some years ago, on [worldcoin](https://worldcoin.org/mini-app?app_id=app_7501435523cb7805cb06ca6918973726). I was anyway working on shipping h011yw00d, thought might as well try to ship something of my own. This blew up! Acquired 500 users in a day and was in the top 10% of the apps without any marketing.
 
-Here are the metrics:
+Here are the metrics after a day of launch :) -
 
 ![fireside metrics](../assets/img/current/fireside-metrics.webp)
 
