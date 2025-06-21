@@ -17,7 +17,9 @@ Taking a break from the project-building phase was a mindful call. I spend all m
 
 ###### June
 
-Summer in California is beautiful. Healdsburg is a small town in Sonoma County, known for its picturesque vineyards and wineries. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. The town has a charming vibe with boutique shops, restaurants, and cafes. Currently, it's filled with tourists/ people attending Edge City, a tech pop-up village, which is more like a tech summer camp, where people can come together to share ideas and collaborate on projects. I am part of the World Residency program, where we build and deploy a mini app that runs on the World ecosystem. Sam Altman, the CEO of OpenAI, is the co-founder of Worldcoin.
+Won the World Residency Buildathon! :) Everyone lovvveeeedd h011yw00d! LFG
+
+Summer in California is beautiful. Healdsburg is a small town in Sonoma County, known for its picturesque vineyards and wineries. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. The town has a charming vibe with boutique shops, restaurants, and cafes. Currently, it's filled with tourists/ people attending Edge City, a tech pop-up village, which is more like a tech summer camp, where people can come together to share ideas and collaborate on projects. I am part of the World Residency program, where we build and deploy a mini app that runs on the World ecosystem. 
 
 Now while I am here, I did decide to ship [fireside](https://anubhavp.dev/fireside/), a decentralised encrypted chat app I built some years ago, on [worldcoin](https://worldcoin.org/mini-app?app_id=app_7501435523cb7805cb06ca6918973726). I was anyway working on shipping h011yw00d, thought might as well try to ship something of my own. This blew up! Acquired 500 users in a day and was in the top 10% of the apps without any marketing.
 
