@@ -9,15 +9,15 @@ showImg: true
 
 <span class="update-date-time"></span>
 
-<!-- ###### July
+###### July
 
 July starts with a trip back home to India until the fall. *[Ratha Jaatra](https://en.wikipedia.org/wiki/Ratha_Yatra)*, the chariot festival in Puri is the one event I try hard to make it to every year. This month marks the end of a whole year of my life in the US. Feels happy nostalgic and contentment; a sense of fulfilment and accomplishment; eudaimonic in ways, looking back at all that I have achieved so far, having made a whole year, alone as a an adult in the US. I moved here back in August 2024, and it feels like all of that was a month ago. Excited for what is next.
 
-Taking a break from the project-building phase was a mindful call. I spend all my energy on actual work, focusing on my internship. I think the next project that I decide to get involved in will need to solve a real problem and generate revenue. Currently working with distributed computing - scaling, maintaining, deploying, and managing the video generation service at Hollywood. The aim would be to keep hunting for technical founding staff/ founding engineer roles for when I graduate, which will probably be at the end of this semester/ year. Looking forward to what is in store for me. -->
+Taking a break from the project-building phase was a mindful call. I spend most of my energy on actual work, focusing on my internship. I think the next project that I decide to get involved in will need to solve a real problem and generate revenue. Currently working with distributed computing - scaling, maintaining, deploying, and managing the video generation service at Hollywood. The aim would be to keep hunting for technical founding staff/ founding engineer roles for when I graduate, which will probably be at the end of this semester/ year. Looking forward to what is in store for me.
 
 ###### June
 
-Won the World Residency Buildathon! :) h011yw00d was extremely popular! LFG
+Won the World Residency Buildathon! :) LFG
 
 Summer in California is beautiful. Healdsburg is a small town in Sonoma County, known for its picturesque vineyards and wineries. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. The town has a charming vibe with boutique shops, restaurants, and cafes. Currently, it's filled with tourists/ people attending Edge City, a tech pop-up village, which is more like a tech summer camp, where people can come together to share ideas and collaborate on projects. I am part of the World Residency program, where we build and deploy a mini app that runs on the World ecosystem. 
 
@@ -47,7 +47,7 @@ The semester is over. I feel I am done with building projects now. They still ex
   <img alt='arm' src="../assets/img/current/arm_two.webp" style="max-width: 30%;">
   <img alt='arm' src="../assets/img/current/arm_two_mcu.webp" style="max-width: 30%;">
 </figure>
-<figcaption style="text-align: centre; font-size: 0.8em;">Left: Arm with electrodes and sensors, Right: MCU with electrodes and sensors live</figcaption>
+<figcaption style="text-align: center; font-size: 0.8em;">Left: Arm with electrodes and sensors, Right: MCU with electrodes and sensors live</figcaption>
 
 Further, in the next semester, I am planning to integrate a language recognition model that will be used to convert the signals into text. This has a lot of potential applications, including controlling devices, typing (air keyboard), and even hand-gesture-to-speech conversion. 
 
