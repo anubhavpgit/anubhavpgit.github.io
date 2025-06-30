@@ -11,7 +11,7 @@ showImg: true
 
 ###### July
 
-July starts with a trip back home to India until the fall. *[Ratha Jaatra](https://en.wikipedia.org/wiki/Ratha_Yatra_(Puri))*, the chariot festival in Puri is the one event I try hard to make it to every year. This month marks the end of a whole year of my life in the US. Feels happy nostalgic and contentment; a sense of fulfilment and accomplishment; eudaimonic in ways, looking back at all that I have achieved so far, having made a whole year, alone as a an adult in the US. I moved here back in August 2024, and it feels like all of that was a month ago. Excited for what is next.
+July starts with a trip back home to India until the fall. *[Ratha Jaatra](https://en.wikipedia.org/wiki/Ratha_Yatra_(Puri))*, the chariot festival in Puri is the one event I try hard to make it to every year. This month marks the end of a whole year of my life in the US. Feels happy nostalgic and contentment; eudaimonic in ways, looking back at all that I have achieved so far, having made a whole year, alone as a an adult in the US. I moved here back in August 2024, and it feels like all of that was a month ago. Excited for what is next.
 
 Taking a break from the project-building phase was a mindful call. I spend most of my energy on actual work, focusing on my internship. I think the next project that I decide to get involved in will need to solve a real problem and generate revenue. Currently working with distributed computing - scaling, maintaining, deploying, and managing the video generation service at Hollywood. The aim would be to keep hunting for technical founding staff/ founding engineer roles for when I graduate, which will probably be at the end of this semester/ year. Looking forward to what is in store for me.
 
