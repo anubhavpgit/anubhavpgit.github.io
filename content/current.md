@@ -13,7 +13,7 @@ showImg: true
 
 July starts with a trip back home to India until the fall. *[Ratha Jaatra](https://en.wikipedia.org/wiki/Ratha_Yatra_(Puri))*, the chariot festival in Puri is the one event I try hard to make it to every year. This month marks the end of a whole year of my life in the US. Feels happy nostalgic and contentment; eudaimonic in ways, looking back at all that I have achieved so far, having made a whole year, alone as a an adult in the US. I moved here back in August 2024, and it feels like all of that was a month ago.
 
-Taking a break from the project-building phase was a mindful call. I spend most of my energy on actual work, focusing on my internships. Currently working with distributed computing - scaling, maintaining, deploying, and managing the video generation service at Hollywood. The aim would be to keep hunting for technical founding staff/ founding engineer roles for when I graduate, which will probably be at the end of this semester/ year.  Excited for what's next.
+Taking a break from the project-building phase was a mindful call. I spend most of my energy on actual work, focusing on my internships. Currently working with distributed computing - scaling, maintaining, deploying, and managing the video generation app at Hollywood. The aim would be to keep hunting for technical founding staff/ founding engineer roles for when I graduate, which will probably be at the end of this semester/ year.  Excited for what's next.
 
 ###### June
 
@@ -35,7 +35,7 @@ The city has a rich cultural scene, with museums, galleries, theatres, and amazi
 
 ###### May
 
-Moving to SF for the summer. Summer internship as an AI Research Engineer at an AI/Web3 startup, H011YW00D - an AI agent that generates autonomous cinematic videos, currently active on [Twitter](https://x.com/h011yw00dAgent/). My role involves working on the AI engine and the underlying distributed computing and deploying and maintaining it.
+Moving to SF for the summer. Summer internship as an AI Research Engineer at an AI/Web3 startup, H011YW00D - an AI agent that generates autonomous cinematic videos, currently active on [Twitter](https://x.com/h011yw00dAgent/). My role involves working on the apps that run on this AI engine - the underlying distributed computing infra deploying and maintaining it.
 
 My speculations about the Web3 world aside, and the fact that crypto is 99% a scam, innovation and profitability are two separate things. Businesses don't need useful technology to make money. A few are financially successful businesses, although built on technically questionable foundations, not meaningful innovations solving real problems. Examples include Coinbase, OpenSea etc. The bottom line is, **distribution trumps innovation**. Not that I see myself working in the web3 space, but this stint feels like a decent opportunity to network and explore more.
 
