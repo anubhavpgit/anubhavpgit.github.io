@@ -9,13 +9,13 @@ showImg: true
 
 <span class="update-date-time"></span>
 
-###### August
+<!-- ###### August
 
 Leaving for New York in mid-August. Excited to be finally back, properly, but I will miss Seoul. The last time I was living in New York for a while was back in April. These four months have been a whirlwind of experiences, from Healdsburg to Seoul, and now back to New York.
 
 Built on top of Next.js, Vercel, and Capacitor, Authentic is now live on the app stores. Think of it as a privacy-focused, ephemeral social media app- a Snapchat/ Instagram of sorts without ads or doomscrolling. The primary motivation behind the app is to create a non-infinite space where people can share their thoughts and experiences without the fear of being judged, having to apply filters to fit in, or worrying about the permanence of their posts. We fight doomscrolling, ads targeting, and the constant pressure to curate a perfect online persona. 
 
-Life in Seoul is going amazing. Seoul is vibrant, rich in culture, and has a fantastic food scene. I spend most of my time working on Authentic and remaining focused on exploring the city. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius.
+Life in Seoul is going amazing. Seoul is vibrant, rich in culture, and has a fantastic food scene. I spend most of my time working on Authentic and remaining focused on exploring the city. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. -->
 
 ###### July
 
