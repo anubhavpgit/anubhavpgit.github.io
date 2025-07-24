@@ -7,9 +7,8 @@ showImg: true
 
 ## 2025
 
-###### **AI Research Engineer Summer Intern** – [h011yw00d](https://x.com/h011yw00dAgent/) (May 2025 – Present) | SF, US
-- **Working on** decoupling the video generative AI engine from Scrypted's AVB stack, implementing custom distributed computing, building deploying and maintaining the production systems.
-
+###### **Mobile Software Engineer** – [Authentic](https://authentic.tech) (July 2025 – Present) | Seoul, SK
+- **Developing** a **Capacitor** application for **iOS** and **Android**, built on top of NextJs, Neon, and Prisma, deployed on **Vercel** for a seamless user experience.
 
 ---
 
