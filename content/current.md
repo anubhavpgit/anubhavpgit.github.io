@@ -19,7 +19,7 @@ Life in Seoul is going amazing. Seoul is vibrant, rich in culture, and has a fan
 
 ###### July
 
-A lot of updates this month. The h011yw00d internship comes to an end with an amazing experience in CA, building a user-centric social media app with tens of thousands of users. CA led me to some other awesome teams working in similar spaces. Thus, a new life update: I am now a part of the [Authentic](https://authentic.tech/) team, a privacy-focused, ephemeral social media app, as the mobile software engineer. My aim here is to take the web-app mobile, building a capacitor app based on the Next.js app and ship it on the app stores as the first MVP version.
+A lot of updates this month. The h011yw00d internship comes to an end. Had an amazing experience in California building a user-centric social media app with tens of thousands of users. CA led me to some other awesome teams working in similar spaces. Thus, a new life update: I am now a part of the [Authentic](https://authentic.tech/) team, a privacy-focused, ephemeral social media app, as a mobile software engineer. My aim here is to take the web-app mobile, building a capacitor app based on the Next.js app and ship it on the app stores as the first MVP version.
 
 Relocated to Seoul, South Korea, for a month. Authentic is currently operating out of Seoul. The company is fully remote, but we get together a few times a year to work together in person. Excited to be here, exploring the city, and working with an amazing team of engineers and designers. The culture is vibrant, the food is delicious, and the people are friendly. Looking forward to experiencing the local culture and learning more about the tech scene here.
 
