@@ -9,13 +9,19 @@ showImg: true
 
 <span class="update-date-time"></span>
 
-<!-- ###### August
+###### August
 
 Leaving for New York in mid-August. Excited to be finally back, properly, but I will miss Seoul. The last time I was living in New York for a while was back in April. These four months have been a whirlwind of experiences, from Healdsburg to Seoul, and now back to New York.
 
 Built on top of Next.js, Vercel, and Capacitor, Authentic is now live on the app stores. Think of it as a privacy-focused, ephemeral social media app- a Snapchat/ Instagram of sorts without ads or doomscrolling. The primary motivation behind the app is to create a non-infinite space where people can share their thoughts and experiences without the fear of being judged, having to apply filters to fit in, or worrying about the permanence of their posts. We fight doomscrolling, ads targeting, and the constant pressure to curate a perfect online persona. 
 
-Life in Seoul is going amazing. Seoul is vibrant, rich in culture, and has a fantastic food scene. I spend most of my time working on Authentic and remaining focused on exploring the city. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. -->
+Life in Seoul is going amazing. Seoul is vibrant, rich in culture, and has a fantastic food scene. I spend most of my time working on Authentic and remaining focused on exploring the city. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. 
+
+We ultimately decided to build the app using React Native. Choosing a mobile framework just makes more sense as a developer and from UX perspectives. The first week of August would be spent doing Coffee Chats with end users testing and gathering feedback on the app on the alpha build. The app will be soon out on beta and I would be sharing the links to the app stores soon.
+
+Migrating from Next.js to React Native was a challenge, but a week of toil and badgering Claude 4 Opus APIs and exhaustion later, we have a working app. The app for all intents and purposes is now a cute looking functional app that works on both iOS and Android. Excited to share soon.
+
+**The why**: my personal motivations behind deciding to be a part of Authentic, building this social media app are pretty simple. I wanted a platform which functions essentially Snapchat but without the ads, doomscrolling and data selling. And I just deeply hate the clunky mess that Snapchat is, the number of things it tried to do at once, and how it is just a cesspool of weird doll house shit about makeup and dress up of avatars and what else not. Instagram as a platform appeals more to me, but I still find myself doomscrolling for hours and hours, and then later deciding to just uninstall the app and not using it. Also, Instagram is notorious for selling user data and I don't want an app showing me sneakers even when I subconsciously think about them. Hence, [Authentic](https://authentic.tech/)
 
 ###### July
 
