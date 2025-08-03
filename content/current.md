@@ -15,7 +15,7 @@ Leaving for New York in mid-August. Excited to be finally back, properly, but I 
 
 Built on top of Next.js (Migrating to Express), Vercel, and React Native, Authentic is now live on the testflights on app stores. Think of it as a privacy-focused, ephemeral social media app- a Snapchat/ Instagram of sorts without ads or doomscrolling. The primary motivation behind the app is to create a non-infinite space where people can share their thoughts and experiences without the fear of being judged, having to apply filters to fit in, or worrying about the permanence of their posts. We fight doomscrolling, ads targeting, and the constant pressure to curate a perfect online persona. 
 
-Life in Seoul is going amazing. Seoul is vibrant, rich in culture, and has a fantastic food scene. I spend most of my time working on Authentic and remaining focused on exploring the city. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. 
+Life in Seoul is going amazing. Seoul is vibrant, rich in culture, and has a fantastic food scene. I spend most of my time working on Authentic and remaining focused on exploring the city. The weather is warm, with temperatures ranging from 28 to 40 degrees Celsius. 
 
 We ultimately decided to build the app using React Native. Choosing a mobile framework just makes more sense as a developer and from a UX perspective. The first week of August would be spent doing Coffee Chats with end users, testing and gathering feedback on the app on the alpha build. The app will be out on beta, and I will be sharing the links to the app stores soon.
 
