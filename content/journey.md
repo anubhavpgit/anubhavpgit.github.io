@@ -48,8 +48,10 @@ Started `MS in Computer Engineering` – New York University, Tandon School of E
 ---
 ## 2022
 
-###### **Software Developer Intern** – Squbix Digital (June 2022 – Dec 2022) | BBI, IN
-- **Developed** backend APIs in **Node.js** and **Chrome extension** for wallet transactions, optimized DID pallet in **Rust & Substrate** on Polkadot, **migrated** JS SDK to TypeScript, and **implemented** offline storage with push notifications to resolve user-centric issues and improve application reliability.
+###### **Full Stack Engineer** – [Squbix Digital](https://drive.google.com/file/d/1Pr6ttzQEk0Bj83pxCafFloiKx7KYOLJX/view?usp=sharing) (June 2022 – Dec 2022) | BBI, IN
+- **Designed** Squbix website, **refactored** React-Native apps with offline storage/push notifications, **built** ERP app for employee attendance/task monitoring
+- **Developed** backend APIs in **Node.js** with blockchain switching capability, **built** Chrome extension for wallet transactions solving 90% of legacy user errors
+- **Modified** DID pallet using **Rust/Substrate**, **migrated** JS SDK to **TypeScript**, **implemented** unit tests with **Mocha**
 
 ---
 ## 2019
