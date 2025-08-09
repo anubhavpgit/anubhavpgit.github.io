@@ -1,5 +1,5 @@
 ---
-title: "The myth of Sisyphus (2/5)"
+title: "Sisyphus (2/5)"
 date: 09-08-2025
 description: "A journey through whims of fate and lucid memories. Growing up and looking for the purpose of life."
 tag: "#life, #memoir"
@@ -10,9 +10,7 @@ showImg: true
 
 1. [Jajabara](/blog/jajabara.html)  
 
----
-
-The myth of Sisyphus speaks about the futility of life, the absurdity of existence, and the struggle against the inevitable. Growing up, looking for the purpose of life, turning twenty-five, exploring existentialism and quarter-life crisis.
+The myth of Sisyphus speaks about the futility of life, the absurdity of existence, and the struggle against the inevitable. Growing up, looking for the purpose of life, turning twenty-five, exploring existentialism and quarter-life crisis. Sisyphus, the king of Ephyra, was condemned to roll a boulder up a hill, only for it to roll back down each time he reached the top. This endless cycle of moving to reach a destination that always eludes him mirrors my human experience. Growing up, I found myself packing and moving every couple of years, always searching for a place to call home.
 
 ### Growing Up
 
