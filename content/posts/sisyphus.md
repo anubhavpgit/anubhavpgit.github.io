@@ -1,9 +1,7 @@
 ---
 title: "The myth of Sisyphus (2/5)"
-date: 30-05-2025
+date: 09-08-2025
 description: "A journey through whims of fate and lucid memories. Growing up and looking for the purpose of life."
-draft: true
-index: false
 tag: "#life, #memoir"
 showImg: true
 ---
