@@ -7,10 +7,12 @@ showImg: true
 
 ## 2025
 
-###### **Mobile Software Engineer** – [Authentic](https://authentic.tech) (July 2025 – Present) | Seoul, SK
-- **Developing** a **Capacitor** application for **iOS** and **Android**, built on top of NextJs, Neon, and Prisma, deployed on **Vercel** for a seamless user experience.
+###### **Mobile Software Engineer** – [Authentic](https://authentic.tech) (July 2025 – Aug 2025) | Seoul, SK
+- **Developed** a **Capacitor** application for **iOS** and **Android**, built on top of NextJs, NeonDb, and Prisma, deployed on **Vercel** for a seamless user experience.
+- **Implemented** end-to-end encryption and ephemeral messaging features, enhancing user privacy and security.
+- **Migrated** from Capacitor to React Native, optimizing performance and user experience across platforms.
 
-###### **AI Research Engineer** – [h011yw00d](https://x.com/h011yw00dAgent/) (May 2025 – July 2025) | SF, US
+###### **AI Research Engineer** – [h011yw00d](https://x.com/h011yw00dAgent/) (May 2025 – Aug 2025) | SF, US
 - Built video-sharing platform (Next.js 15, Redis, Prisma) winning **World Builder Residency** at Edge Esmeralda. Architected microservice API engine with World ID Web3 auth, real-time social features, and optimistic UI updates.
 - Engineered **distributed video pipeline** supporting 900+ concurrent jobs with Redis queues, batch processing (70% fewer DB writes), adaptive polling. Achieved 3x faster loads via multi-tier caching.
 - **Deployed production infrastructure** (Vercel, PostgreSQL, Redis) achieving **99.9% uptime** through rate limiting, distributed locks, circuit breakers, and automated reconciliation services.
