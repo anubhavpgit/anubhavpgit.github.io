@@ -15,6 +15,7 @@ August 16 marks one whole year of my life in the US. Feels happy, nostalgic and 
 
 <figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
   <img alt='New York landscape' src="../assets/img/current/79.webp" style="max-width: 75%;">
+  <figcaption style="text-align: center; font-size: 0.8em;"> New York City skyline with the Empire State Building celebrating India's 79th Independence Day</figcaption>
 </figure>
 
 
