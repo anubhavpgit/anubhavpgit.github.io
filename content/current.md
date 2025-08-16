@@ -11,7 +11,14 @@ showImg: true
 
 ###### August
 
-Leaving for New York in mid-August. Happy to be finally back, properly, but I will miss Seoul. The last time I was living in New York for a while was back in April. These four months have been a whirlwind of experiences, from Healdsburg to Seoul, and now back to New York.
+August 16 marks one whole year of my life in the US. Feels happy, nostalgic and content; eudaimonic in ways, looking back at all that I have achieved so far, having made a whole year, alone as an adult in the US. Celebrated last year's independence day with a couple of friends from work and college playing paintball, eating out and watching patriotic movies. This year, on 15th August, spent the day roaming around in scorching 35 degrees in NY with friends, and sat down by the river to look at my tricolour on the Empire State and World Trade Center. Looking forward to another year.
+
+<figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
+  <img alt='New York landscape' src="../assets/img/current/79.webp" style="max-width: 75%;">
+</figure>
+
+
+Leaving for New York in mid-August. Happy to be finally back, properly, but I will miss Seoul. The last time I was living in New York was back in April. These four months have been a whirlwind of experiences, from Healdsburg to Seoul, and now back to New York.
 
 Life in Seoul is going amazing. Seoul is vibrant, rich in culture, and has a fantastic food scene. I spend most of my time working on Authentic and remaining focused on exploring the city. The weather is warm, with temperatures ranging from 28 to 40 degrees Celsius. 
 
@@ -29,7 +36,7 @@ Relocated to Seoul, South Korea, for a month. Authentic is currently operating o
 
 The worst part of all of this is the jet lag. I have been struggling with it for the past few months now. In the last 2 months, I have travelled across 3 continents, and the time zone changes have been brutal- more than 4 different time zones in the last 2 months. Still trying to adjust to the new time zone here in Seoul, which is 3.5 hours ahead of India, 13 hours ahead of New York, and 16 hours ahead of California. Hoping that spending some time in the sun and getting some fresh air will help adjust. The curse of living the *Jajabara* (nomadic) life! Crazy how life has always been it, for as long as I can remember now. Twenty-five years, packing up and moving to a new place every few years earlier, and now, months. Will write more about this in a [separate post](https://anubhavp.dev/blog/jajabara).
 
-July starts with a trip back home to India until the fall. *[Ratha Jaatra](https://en.wikipedia.org/wiki/Ratha_Yatra_(Puri))*, the chariot festival in Puri, is the one event I try hard to make it to every year. This month marks the end of a whole year of my life in the US. Feels happy, nostalgic and content; eudaimonic in ways, looking back at all that I have achieved so far, having made a whole year, alone as an adult in the US. I moved here back in August 2024, and it feels like all of that was a month ago.
+July starts with a trip back home to India until the fall. *[Ratha Jaatra](https://en.wikipedia.org/wiki/Ratha_Yatra_(Puri))*, the chariot festival in Puri, is the one event I try hard to make it to every year. 
 
 Taking a break from the project-building phase was a mindful call. I spend most of my energy on actual work, focusing on my internships. Currently working with distributed computing - scaling, maintaining, deploying, and managing the video generation app at h011yw00d. The aim would be to keep hunting for technical founding staff/ founding engineer roles for when I graduate, which will probably be at the end of this semester/ year. Excited for what's next.
 
