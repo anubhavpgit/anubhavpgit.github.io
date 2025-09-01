@@ -11,7 +11,7 @@ showImg: true
 
 ###### September
 
-Authentic is going well. App is ready for launch. The fall semester starts at NYU, and the back-to-school season is upon us. My schedule is packed since I plan on graduating early by December. 
+Authentic is going well, almost ready for launch. The fall semester starts at NYU, and the back-to-school season is upon us. My schedule is packed since I plan on graduating early by December. 
 
 Here's a fun little hack that I built for the Authentic Office in Korea: blink all the lights in the office on a PR merge to celebrate a new feature shipment. So, we had these 'Sunset Lamps' that would change colours and create a nice ambience during our late-night coding sessions. They operated either manually using the physical switch or through their proprietary app. The actual challenge here was to figure out the exact set of commands used for each action.
 
@@ -27,6 +27,17 @@ The rest of it was simple:
 Some optimisations that I added later were a rotating cron job for tracking and keeping connected devices, reconnecting disconnected devices, using various blinking patterns and using other commands to change colours. The final touch was a Siri Shortcut on all our laptops that just did a GET call to the Flask server via ngrok tunnel. Anyone could yell: “Hey Siri, Authentic Party!” → instant disco mode.
 
 Fun times.
+
+<figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
+  <img alt='Lights' src="../assets/img/current/aut1.webp" style="max-width: 75%;">
+  <div style="display: flex; flex-direction: row; justify-content: center; gap: 10px; width: 100%;">
+    <img alt='Office' src="../assets/img/current/aut2.webp" style="max-width: 35%;">
+    <img alt='Photobooth' src="../assets/img/current/aut3.webp" style="max-width: 35%;">
+  </div>
+  <figcaption style="text-align: center; font-size: 0.8em;">Some clicks from Authentic, South Korea</figcaption>
+</figure>
+
+
 
 ###### August
 
@@ -76,7 +87,21 @@ Here are the metrics after a day of launch :) -
 
 The rest of the time, when I am not working, I spend exploring California, visiting San Francisco, Redwood National Park, and the beautiful beaches along the coast. 
 
+<figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
+  <img alt='Edge Esmeralda' src="../assets/img/current/cali1.webp" style="max-width: 75%;">
+  <figcaption style="text-align: center; font-size: 0.8em;">Worldcoin builder residency, summer, Edge Esmeralda, 2025</figcaption>
+</figure>
+
 San Francisco is a vibrant, beautiful city, known for its diverse culture, tech scene, and absolutely stunning views. The weather is mild/ cold, with temperatures ranging from 12 to 20 degrees Celsius. California has microclimates, so the weather can vary significantly from one part of the city to another. I halted in Presidio for a couple of days, a Bay Area neighbourhood, also a former naval base turned into a national park. Worked out of the [House of Web3](https://houseofweb3.com/), with beautiful views of the Golden Gate Bridge and the bay, with hiking trails and picnic areas. Presidio also has this amazing amazing trail, Land's End, which offers breathtaking views of the Pacific Ocean from the cliffs. This is hands down my favourite place in SF, and my favourite hike so far. 
+
+<figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
+  <img alt='Lands End' src="../assets/img/current/cali3.webp" style="max-width: 75%;">
+  <div style="display: flex; flex-direction: row; justify-content: center; gap: 10px; width: 100%;">
+    <img alt='Redwood National Park' src="../assets/img/current/cali2.webp" style="max-width: 35%;">
+    <img alt='Lands End, sun over Pacific' src="../assets/img/current/cali4.webp" style="max-width: 35%;">
+  </div>
+  <figcaption style="text-align: center; font-size: 0.8em;">Cloudy San Francisco, hiking in the redwoods, and gazing at the Pacific from Lands End.</figcaption>
+</figure>
 
 The city has a rich cultural scene, with museums, galleries, theatres, and amazing culinary experiences. The food here is probably the best I have had in the US so far. I attended a few meetups and events and got to meet some amazing founders. SF inspires me to move here someday. If I ever do decide to move out of New York, I think SF would be the place.
 
