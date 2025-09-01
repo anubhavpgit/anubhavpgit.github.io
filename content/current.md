@@ -11,45 +11,21 @@ showImg: true
 
 ###### September
 
-Authentic is going well, almost ready for launch. The fall semester starts at NYU, and the back-to-school season is upon us. My schedule is packed since I plan on graduating early by December. 
+<!-- <figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
+  <img alt='New York landscape' src="../assets/img/current/ny.webp" style="max-width: 75%;">
+  <figcaption style="text-align: center; font-size: 0.8em;">  </figcaption>
+</figure> -->
 
-Here's a fun little hack that I built for the Authentic Office in Korea: blink all the lights in the office on a PR merge to celebrate a new feature shipment. So, we had these 'Sunset Lamps' that would change colours and create a nice ambience during our late-night coding sessions. They operated either manually using the physical switch or through their proprietary app. The actual challenge here was to figure out the exact set of commands used for each action.
-
-I installed a Bluetooth profile on the iOS device and used the packet logger on my Mac to track all the packets being sent out over a time frame of 10 seconds. Turns out some devices advertise UUIDs and manufacturer-specific data on a new connection. So, I spammed different light options in the app within ~10 seconds. On the packet logger, I added filters using the manufacturer-specific data and the time window to find a bunch of commands being sent out to one specific UUID.
-
-With Python + Bleak, I scanned for devices, matched the UUID, connected, and brute-forced until one command worked—the light turned off. Then GPT-4o helped me flip the hex command into the “ON” version. Success.
-
-The rest of it was simple:  
-
-1. GitHub PR webhook calls → local Flask server via ngrok
-2. On a merged PR for a new feature, the lights blinked
-
-Some optimisations that I added later were a rotating cron job for tracking and keeping connected devices, reconnecting disconnected devices, using various blinking patterns and using other commands to change colours. The final touch was a Siri Shortcut on all our laptops that just did a GET call to the Flask server via ngrok tunnel. Anyone could yell: “Hey Siri, Authentic Party!” → instant disco mode.
-
-Fun times.
-
-<figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
-  <img alt='Lights' src="../assets/img/current/aut1.webp" style="max-width: 75%;">
-  <div style="display: flex; flex-direction: row; justify-content: center; gap: 10px; width: 100%;">
-    <img alt='Office' src="../assets/img/current/aut2.webp" style="max-width: 35%;">
-    <img alt='Photobooth' src="../assets/img/current/aut3.webp" style="max-width: 35%;">
-  </div>
-  <figcaption style="text-align: center; font-size: 0.8em;">Some clicks from Authentic, South Korea</figcaption>
-</figure>
-
-
+Authentic is going well, almost ready for launch. The last week of August was all about helping friends pack, move, settle into new routines and preparing for the upcoming fall semester. Back to school now. The last ride; graduating this December.
 
 ###### August
-
-The last week of August is all about helping friends pack, move, settle into new routines and preparing for the upcoming semester.
 
 August 16 marks one whole year of my life in the US. Feels happy, nostalgic and content; eudaimonic in ways, looking back at all that I have achieved so far, having made a whole year, alone as an adult in the US. Celebrated last year's Independence Day with a couple of friends from work and college, playing paintball, eating out and watching patriotic movies. This year, on 15th August, spent the day roaming around in scorching 35 degrees in NY with friends, and sat down by the river to look at my tricolour on the Empire State and World Trade Centre. Looking forward to another year.
 
 <figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
   <img alt='New York landscape' src="../assets/img/current/79.webp" style="max-width: 75%;">
-  <figcaption style="text-align: center; font-size: 0.8em;"> New York City skyline with the Empire State Building celebrating India's 79th Independence Day</figcaption>
+  <figcaption style="text-align: center; font-size: 0.8em;"> New York City celebrating India's 79th Independence Day</figcaption>
 </figure>
-
 
 Leaving for New York in mid-August. Happy to be finally back, properly, but I will miss Seoul. The last time I was living in New York was back in April. These four months have been a whirlwind of experiences, from Healdsburg to Seoul, and now back to New York.
 
@@ -57,6 +33,23 @@ Life in Seoul is amazing. Seoul is vibrant, rich in culture, and has a fantastic
 
 Built on top of Next.js & Vercel (Migrating to Express + Railway), and React Native, Authentic is now live on the testflights on app stores. Think of it as a privacy-focused, ephemeral social media app- a Snapchat/ Instagram of sorts without ads or doomscrolling. The primary motivation behind the app is to create a non-infinite space where people can share their thoughts and experiences without having to apply filters to fit in or worrying about the permanence of their posts. We fight doomscrolling, ads targeting, and the constant pressure to curate a perfect online persona.
 
+Here's a fun little hack that I built for the Authentic Office in Korea: blink all the lights in the office on a PR merge to celebrate a new feature shipment. So, we had these 'Sunset Lamps' that would change colours and create a nice ambience during our late-night coding sessions. They operated either manually using the physical switch or through their proprietary app. The actual challenge here was to figure out the exact set of commands used for each action.
+
+I installed a Bluetooth profile on the iOS device and used the packet logger on my Mac to track all the packets being sent out over a time frame of 10 seconds. Turns out some devices advertise UUIDs and manufacturer-specific data on a new connection. So, I spammed different light options in the app within ~10 seconds. and added filters in the packet logger using the manufacturer-specific data and the time window to find a bunch of commands being sent out to that one specific UUID. Thus, created a flask server with bleak to scan for devices, match the UUID, connect, and brute-forced all recorded commands, until one command worked—the light turned off. Then GPT-4o helped me flip the hex command into the “ON” version. Success.
+
+The rest of it was simple; a Github webhook call to the Flask server via ngrok, and a trigger that blinked the lights thrice on a successful merge of a feature branch. Later, I added a cron job to periodically check the status of the lights and ensure they were responsive. and the final touch was a Siri Shortcut on all our laptops that just did a GET call to the Flask server via ngrok tunnel. Anyone could yell: “Hey Siri, Authentic Party!” → instant disco mode.
+
+Fun times.
+
+<figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
+  <img alt='Lights' src="../assets/img/current/aut1.webp" style="max-width: 75%;">
+  <figcaption style="text-align: center; font-size: 0.8em;">The office and disco lights</figcaption>
+  <div style="display: flex; flex-direction: row; justify-content: center; gap: 10px; width: 100%;">
+    <img alt='Office' src="../assets/img/current/aut2.webp" style="max-width: 35%;">
+    <img alt='Photobooth' src="../assets/img/current/aut3.webp" style="max-width: 35%;">
+  </div>
+  <figcaption style="text-align: center; font-size: 0.8em;">Office and photobooth</figcaption>
+</figure>
 
 We ultimately decided to build the app using React Native. Choosing a mobile framework just makes more sense as a developer and from a UX perspective. The first week of August would be spent doing Coffee Chats with end users, testing and gathering feedback on the app on the alpha build. The app will be out on beta soon. Migrating from Next.js to React Native was a challenge, but a week of toil and badgering Claude 4 Opus APIs and exhaustion later, we have a working app. The app, for all intents and purposes, is now a cute-looking, functional app that works on both iOS and Android. Excited to share more soon.
 
@@ -77,6 +70,11 @@ Taking a break from the project-building phase was a mindful call. I spend most 
 
 Won the [World Residency Buildathon](https://edgeesmeralda2025.substack.com/p/world-builder-residency-2025)! :) LFG
 
+<figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
+  <img alt='Edge Esmeralda' src="../assets/img/current/cali1.webp" style="max-width: 75%;">
+  <figcaption style="text-align: center; font-size: 0.8em;">Worldcoin builder residency, summer, Edge Esmeralda, 2025</figcaption>
+</figure>
+
 Summer in California is beautiful. Healdsburg is a small town in Sonoma County, known for its picturesque vineyards and wineries. The weather is warm, with temperatures ranging from 25 to 30 degrees Celsius. The town has a charming vibe with boutique shops, restaurants, and cafes. Currently, it's filled with tourists/ people attending Edge City, a tech pop-up village, which is more like a tech summer camp, where people can come together to share ideas and collaborate on projects. I am part of the [World Residency program](https://www.edgecity.live/world-builder-residency), where we build and deploy a mini app that runs on the World ecosystem. 
 
 Now, while I am here, I did decide to ship [fireside](https://anubhavp.dev/fireside/), a decentralised encrypted chat app I built some years ago, on [worldcoin](https://worldcoin.org/mini-app?app_id=app_7501435523cb7805cb06ca6918973726). I was anyway working on shipping h011yw00d, thought I might as well try to ship something of my own. This blew up! Acquired 500 users in a day and was in the top 10% of the apps without any marketing.
@@ -87,11 +85,6 @@ Here are the metrics after a day of launch :) -
 
 The rest of the time, when I am not working, I spend exploring California, visiting San Francisco, Redwood National Park, and the beautiful beaches along the coast. 
 
-<figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
-  <img alt='Edge Esmeralda' src="../assets/img/current/cali1.webp" style="max-width: 75%;">
-  <figcaption style="text-align: center; font-size: 0.8em;">Worldcoin builder residency, summer, Edge Esmeralda, 2025</figcaption>
-</figure>
-
 San Francisco is a vibrant, beautiful city, known for its diverse culture, tech scene, and absolutely stunning views. The weather is mild/ cold, with temperatures ranging from 12 to 20 degrees Celsius. California has microclimates, so the weather can vary significantly from one part of the city to another. I halted in Presidio for a couple of days, a Bay Area neighbourhood, also a former naval base turned into a national park. Worked out of the [House of Web3](https://houseofweb3.com/), with beautiful views of the Golden Gate Bridge and the bay, with hiking trails and picnic areas. Presidio also has this amazing amazing trail, Land's End, which offers breathtaking views of the Pacific Ocean from the cliffs. This is hands down my favourite place in SF, and my favourite hike so far. 
 
 <figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
@@ -100,7 +93,7 @@ San Francisco is a vibrant, beautiful city, known for its diverse culture, tech 
     <img alt='Redwood National Park' src="../assets/img/current/cali2.webp" style="max-width: 35%;">
     <img alt='Lands End, sun over Pacific' src="../assets/img/current/cali4.webp" style="max-width: 35%;">
   </div>
-  <figcaption style="text-align: center; font-size: 0.8em;">Cloudy San Francisco, hiking in the redwoods, and gazing at the Pacific from Lands End.</figcaption>
+  <figcaption style="text-align: center; font-size: 0.8em;">Scattered clouds over San Francisco, hiking in the redwoods, and gazing at the sun over the Pacific from Lands End.</figcaption>
 </figure>
 
 The city has a rich cultural scene, with museums, galleries, theatres, and amazing culinary experiences. The food here is probably the best I have had in the US so far. I attended a few meetups and events and got to meet some amazing founders. SF inspires me to move here someday. If I ever do decide to move out of New York, I think SF would be the place.
