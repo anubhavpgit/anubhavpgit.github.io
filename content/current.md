@@ -9,9 +9,30 @@ showImg: true
 
 <span class="update-date-time"></span>
 
+###### September
+
+Authentic is going well. App is ready for launch. The fall semester starts at NYU, and the back-to-school season is upon us. My schedule is packed since I plan on graduating early by December. 
+
+Here's a fun little hack that I built for the Authentic Office in Korea: blink all the lights in the office on a PR merge to celebrate a new feature shipment. So, we had these 'Sunset Lamps' that would change colours and create a nice ambience during our late-night coding sessions. They operated either manually using the physical switch or through their proprietary app. The actual challenge here was to figure out the exact set of commands used for each action.
+
+I installed a Bluetooth profile on the iOS device and used the packet logger on my Mac to track all the packets being sent out over a time frame of 10 seconds. Turns out some devices advertise UUIDs and manufacturer-specific data on a new connection. So, I spammed different light options in the app within ~10 seconds. On the packet logger, I added filters using the manufacturer-specific data and the time window to find a bunch of commands being sent out to one specific UUID.
+
+With Python + Bleak, I scanned for devices, matched the UUID, connected, and brute-forced until one command worked—the light turned off. Then GPT-4o helped me flip the hex command into the “ON” version. Success.
+
+The rest of it was simple:  
+
+1. GitHub PR webhook calls → local Flask server via ngrok
+2. On a merged PR for a new feature, the lights blinked
+
+Some optimisations that I added later were a rotating cron job for tracking and keeping connected devices, reconnecting disconnected devices, using various blinking patterns and using other commands to change colours. The final touch was a Siri Shortcut on all our laptops that just did a GET call to the Flask server via ngrok tunnel. Anyone could yell: “Hey Siri, Authentic Party!” → instant disco mode.
+
+Fun times.
+
 ###### August
 
-August 16 marks one whole year of my life in the US. Feels happy, nostalgic and content; eudaimonic in ways, looking back at all that I have achieved so far, having made a whole year, alone as an adult in the US. Celebrated last year's independence day with a couple of friends from work and college playing paintball, eating out and watching patriotic movies. This year, on 15th August, spent the day roaming around in scorching 35 degrees in NY with friends, and sat down by the river to look at my tricolour on the Empire State and World Trade Center. Looking forward to another year.
+The last week of August is all about helping friends pack, move, settle into new routines and preparing for the upcoming semester.
+
+August 16 marks one whole year of my life in the US. Feels happy, nostalgic and content; eudaimonic in ways, looking back at all that I have achieved so far, having made a whole year, alone as an adult in the US. Celebrated last year's Independence Day with a couple of friends from work and college, playing paintball, eating out and watching patriotic movies. This year, on 15th August, spent the day roaming around in scorching 35 degrees in NY with friends, and sat down by the river to look at my tricolour on the Empire State and World Trade Centre. Looking forward to another year.
 
 <figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
   <img alt='New York landscape' src="../assets/img/current/79.webp" style="max-width: 75%;">
@@ -23,7 +44,7 @@ Leaving for New York in mid-August. Happy to be finally back, properly, but I wi
 
 Life in Seoul is amazing. Seoul is vibrant, rich in culture, and has a fantastic food scene. I spend most of my time working on Authentic and remaining focused on exploring the city. The weather is warm, with temperatures ranging from 28 to 40 degrees Celsius. 
 
-Built on top of Next.js & Vercel (Migrating to Express + Railway), and React Native, Authentic is now live on the testflights on app stores. Think of it as a privacy-focused, ephemeral social media app- a Snapchat/ Instagram of sorts without ads or doomscrolling. The primary motivation behind the app is to create a non-infinite space where people can share their thoughts and experiences without having to apply filters to fit in, or worrying about the permanence of their posts. We fight doomscrolling, ads targeting, and the constant pressure to curate a perfect online persona.
+Built on top of Next.js & Vercel (Migrating to Express + Railway), and React Native, Authentic is now live on the testflights on app stores. Think of it as a privacy-focused, ephemeral social media app- a Snapchat/ Instagram of sorts without ads or doomscrolling. The primary motivation behind the app is to create a non-infinite space where people can share their thoughts and experiences without having to apply filters to fit in or worrying about the permanence of their posts. We fight doomscrolling, ads targeting, and the constant pressure to curate a perfect online persona.
 
 
 We ultimately decided to build the app using React Native. Choosing a mobile framework just makes more sense as a developer and from a UX perspective. The first week of August would be spent doing Coffee Chats with end users, testing and gathering feedback on the app on the alpha build. The app will be out on beta soon. Migrating from Next.js to React Native was a challenge, but a week of toil and badgering Claude 4 Opus APIs and exhaustion later, we have a working app. The app, for all intents and purposes, is now a cute-looking, functional app that works on both iOS and Android. Excited to share more soon.
@@ -31,11 +52,11 @@ We ultimately decided to build the app using React Native. Choosing a mobile fra
 
 ###### July
 
-A lot of updates this month. The h011yw00d internship comes to an end. Had an amazing experience in California building a user-centric social media app with tens of thousands of users. CA led me to some other awesome teams working in similar spaces. Thus, a new life update: spending the summer in Seoul, working for [Authentic](https://authentic.tech/) as a mobile software engineer. My aim here is to take the web-app mobile, building a capacitor app based on the Next.js app and ship it on the app stores as the first MVP version.
+A lot of updates this month. The h011yw00d internship comes to an end. Had an amazing experience in California building a user-centric social media app with tens of thousands of users. CA led me to some other awesome teams working in similar spaces. Thus, a new life update: spending the summer in Seoul, working for [Authentic](https://authentic.tech/) as a mobile software engineer. My aim here is to take the web-app mobile, building a Capacitor app based on the Next.js app and ship it on the app stores as the first MVP version.
 
 Relocated to Seoul, South Korea, for a month. Authentic is currently operating out of Seoul. Excited to be here, exploring the city, and working with an amazing team of engineers and designers. The culture is vibrant, the food is delicious, and the people are friendly. Looking forward to experiencing the local culture and learning more about the tech scene here.
 
-The worst part of all of this is the jet lag. I have been struggling with it for the past few months now. In the last 2 months, I have travelled across 3 continents, and the time zone changes have been brutal- more than 4 different time zones in the last 2 months. Still trying to adjust to the new time zone here in Seoul, which is 3.5 hours ahead of India, 13 hours ahead of New York, and 16 hours ahead of California. Hoping that spending some time in the sun and getting some fresh air will help adjust. The curse of living the *Jajabara* (nomadic) life! Crazy how life has always been it, for as long as I can remember now. Twenty-five years, packing up and moving to a new place every few years earlier, and now, months. Will write more about this in a [separate post](https://anubhavp.dev/blog/jajabara).
+The worst part of all of this is the jet lag. I have been struggling with it for the past few months now. In the last 2 months, I have travelled across 3 continents, and the time zone changes have been brutal- more than 4 different time zones in the last 2 months. Still trying to adjust to the new time zone here in Seoul, which is 3.5 hours ahead of India, 13 hours ahead of New York, and 16 hours ahead of California. Hoping that spending some time in the sun and getting some fresh air will help adjust. The curse of living the *Jajabara* (nomadic) life! Crazy how life has always been, for as long as I can remember now. Twenty-five years, packing up and moving to a new place every few years, and now, months. Will write more about this in a [separate post](https://anubhavp.dev/blog/jajabara).
 
 July starts with a trip back home to India until the fall. *[Ratha Jaatra](https://en.wikipedia.org/wiki/Ratha_Yatra_(Puri))*, the chariot festival in Puri, is the one event I try hard to make it to every year. 
 
@@ -65,7 +86,7 @@ Moving to SF for the summer. Summer internship as an AI Research Engineer at an 
 
 My speculations about the Web3 world aside, and the fact that crypto is 99% a scam, innovation and profitability are two separate things. Businesses don't need useful technology to make money. A few are financially successful businesses, although built on technically questionable foundations, not meaningful innovations solving real problems. Examples include Coinbase, OpenSea, etc. The bottom line is, **distribution trumps innovation**. Not that I see myself working in the web3 space, but this stint feels like a decent opportunity to network and explore more.
 
-The semester is over. I feel I am done with building projects now. They still excite me, but the monetary aspect of it is more appealing now. I'd like to focus on building and solving more business-oriented problems. Summer internship starts in a few days. At 24 °C, New York feels warmer now. People are out and about, and the city is alive. I'd like to save up for a few trips this summer, mostly exploring places around the Bay Area.
+The semester is over. I feel I am done with building projects now. They still excite me, but the monetary aspect of it is more appealing now. I'd like to focus on building and solving more business-oriented problems. The Summer internship starts in a few days. At 24 °C, New York feels warmer now. People are out and about, and the city is alive. I'd like to save up for a few trips this summer, mostly exploring places around the Bay Area.
 
 Orion is going well. The device is currently capable of recording various muscle signals based on activity, and the data shows distinguishable patterns between relaxed, fist, index, and index-middle finger positions. It conditions signals using moving average filtering, rectification and envelope signals with additional raw signals for improved accuracy. The challenge here is improving the deep learning model that has a terrible accuracy of around 60-70% for the current dataset. The annoying part about this is that the data is terrible. Primarily, because the jumper wires kept falling off, and the electrodes were not placed properly. Also, the muscles get fatigued after a while. 
 
@@ -91,7 +112,7 @@ College life is slow but more meaningful. Formal education and I seem to be done
 
 Helped out a friend this weekend build an [AI-accelerated hardware simulator](https://github.com/anubhavpgit/accelerator/) in 'C' and Verilog to demonstrate vector multiplications and speedup in hardware. The benchmarks show massive speedup in TPUs and NPUs: O(1) vs O(n) in CPUs by running the multiplication in parallel. 
 
-This weekend was productive. Decided to revisit an old decentralised encrypted chat app I built three years ago, and here is the v2: [https://anubhavp.dev/fireside/](https://anubhavp.dev/fireside/). Also, implemented a global search feature in this blog. Search for any content in the blog on any page, using the search icon, or `ctrl`/ `cmd` + `k` or `/`. The search is implemented using a custom prefix-matching plus a fuzzy search engine that uses the BM25 ranking algorithm. At times, there are these one or two out of a thousand scenarios where I sometimes contemplate that maybe Leetcode has had some value in my software engineering journey. 
+This weekend was productive. Decided to revisit an old decentralised, encrypted chat app I built three years ago, and here is the v2: [https://anubhavp.dev/fireside/](https://anubhavp.dev/fireside/). Also, implemented a global search feature in this blog. Search for any content in the blog on any page, using the search icon, or `ctrl`/ `cmd` + `k` or `/`. The search is implemented using a custom prefix-matching plus a fuzzy search engine that uses the BM25 ranking algorithm. At times, there are these one or two out of a thousand scenarios where I sometimes contemplate that maybe Leetcode has had some value in my software engineering journey. 
 
 F-ed up my pc for a day. Ferry is not programmed to handle malformed code, and the IR-assembly code generation missed adding `epilogue` to this one for-loop in a test.c file. Ferry uses `spike` to emulate the RISC-V assembly code, and it started an infinite loop with seg faults and stack overflows. I quit the emulator (`ctrl` + `c`) and was on my way, but `spike` was silently running in the background. A day later, my CPU Fan started roaring, and the laptop was heating up. Initially, I ignored it, but later, upon inspection, it was clear today why tests are important in your code. Spike was hogging 99.5% CPU usage. 
 
@@ -103,9 +124,9 @@ Currently, Ferry is riddled with bugs, primarily in the IR to Assembly space, ma
 
 Claude finally has a web search feature; I can finally let my ChatGPT+ rest in peace now. Well done, soldier. You did well. (*Immediately regrets after looking at the Ghibli art images everyone is generating*) :(
 
-Happy Holi folks! I had a lovely Holi celebration here this weekend. Currently wrapping up Ferry, [a C compiler in Rust](/blog/ferryman.html). The compiler is currently capable of parsing, tokenising, generating an AST and an optimised intermediate representation of the code for a subset of the C language. The following steps would be to compile IR to RISC-V assembly. 
+Happy Holi, folks! I had a lovely Holi celebration here this weekend. Currently wrapping up Ferry, [a C compiler in Rust](/blog/ferryman.html). The compiler is currently capable of parsing, tokenising, generating an AST and an optimised intermediate representation of the code for a subset of the C language. The following steps would be to compile IR to RISC-V assembly. 
 
-Compiled languages are always faster than interpreted languages, which is why ​Microsoft has also announced a [native port of the TypeScript compiler to Go](https://devblogs.microsoft.com/typescript/typescript-native-port/), which earlier was written in TypeScript.
+Compiled languages are always faster than interpreted languages, which is why ​Microsoft has also announced a [native port of the TypeScript compiler to Go](https://devblogs.microsoft.com/typescript/typescript-native-port/), which was earlier written in TypeScript.
 
 I am also contributing to a process isolation sandbox project, [LIND](https://github.com/Lind-Project), at the Secure Systems Lab at NYU and in some research about Meta's Orion Glasses, particularly focusing on hand-gestured controllers.
 
@@ -133,7 +154,7 @@ Currently reading [The Short Case for Nvidia Stock](https://youtubetranscriptopt
 
 Taking a break:
 
-I am going back home this month. If you're curious, I will be spending more time on my books, PS5, and Netflix in the next few weeks. Red Dead Redemption, Spiderman 2, Pulp Fiction, Godfather, and a long list await this new year. Hoping to gobble up good food for the rest of the year in this one-month break.
+I am going back home this month. If you're curious, I will be spending more time on my books, PS5, and Netflix in the next few weeks. Red Dead Redemption, Spiderman 2, Pulp Fiction, The Godfather, and a long list await this new year. Hoping to gobble up good food for the rest of the year in this one-month break.
 
 Here’s to new beginnings and new adventures! 🥂 I hope you have a great year ahead. Merry Christmas, and a happy New Year, everyone! Promise to be back soon. Keep checking :)
 
