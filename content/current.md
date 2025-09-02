@@ -20,7 +20,7 @@ Authentic is going well, almost ready for launch. The last week of August was al
 
 ###### August
 
-August 16 marks one whole year of my life in the US. Feels happy, nostalgic and content; eudaimonic in ways, looking back at all that I have achieved so far, having made a whole year, alone as an adult in the US. Celebrated last year's Independence Day with a couple of friends from work and college, playing paintball, eating out and watching patriotic movies. This year, on 15th August, spent the day roaming around in scorching 35 degrees in NY with friends, and sat down by the river to look at my tricolour on the Empire State and World Trade Centre. Looking forward to another year.
+August 16 marks one whole year of my life in the US. Feels happy, nostalgic and content; eudaimonic in ways, looking back at all that I have achieved so far in this past year, having made a whole year alone as an adult in a foreign land. Celebrated last year's Independence Day with a couple of friends from work and college, playing paintball, eating out and watching patriotic movies. This year, on 15th August, spent the day roaming around in scorching 35 degrees in NY with friends, and sat down by the river to look at my tricolour on the Empire State and World Trade Centre. Looking forward to another year.
 
 <figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
   <img alt='New York landscape' src="../assets/img/current/79.webp" style="max-width: 75%;">
