@@ -7,7 +7,7 @@ showImg: true
 
 ## 2025
 
-###### **Mobile Software Engineer** – [Authentic](https://authentic.tech) (July 2025 – Aug 2025) | Seoul, SK
+###### **Mobile Software Engineer** – [Authentic](https://authentic.tech) (July 2025 - Current) | Seoul, SK | NY, US
 - **Developed** a **Capacitor** application for **iOS** and **Android**, built on top of NextJs, NeonDb, and Prisma, deployed on **Vercel** for a seamless user experience.
 - **Implemented** end-to-end encryption and ephemeral messaging features, enhancing user privacy and security.
 - **Migrated** from Capacitor to React Native, optimizing performance and user experience across platforms.
