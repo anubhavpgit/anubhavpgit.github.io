@@ -7,12 +7,14 @@ showImg: true
 
 ## 2025
 
+<!-- **Graduated** with a `Master of Science in Computer Engineering` from New York University, Tandon School of Engineering, New York - *Sept 2024 - December 2025* -->
+
 ###### **Mobile Software Engineer** – [Authentic](https://authentic.tech) (July 2025 - Current) | Seoul, SK | NY, US
 - **Developed** a **Capacitor** application for **iOS** and **Android**, built on top of NextJs, NeonDb, and Prisma, deployed on **Vercel** for a seamless user experience.
 - **Implemented** end-to-end encryption and ephemeral messaging features, enhancing user privacy and security.
 - **Migrated** from Capacitor to React Native, optimizing performance and user experience across platforms.
 
-###### **AI Research Engineer** – [h011yw00d](https://x.com/h011yw00dAgent/) (May 2025 – Aug 2025) | SF, US
+###### **AI Research Engineer** – [h011yw00d](https://x.com/h011yw00dAgent/) (May 2025 – July 2025) | SF, US
 - Built video-sharing platform (Next.js 15, Redis, Prisma) winning **World Builder Residency** at Edge Esmeralda. Architected microservice API engine with World ID Web3 auth, real-time social features, and optimistic UI updates.
 - Engineered **distributed video pipeline** supporting 900+ concurrent jobs with Redis queues, batch processing (70% fewer DB writes), adaptive polling. Achieved 3x faster loads via multi-tier caching.
 - **Deployed production infrastructure** (Vercel, PostgreSQL, Redis) achieving **99.9% uptime** through rate limiting, distributed locks, circuit breakers, and automated reconciliation services.
@@ -22,7 +24,6 @@ showImg: true
 ## 2024
 
 Started `MS in Computer Engineering` – New York University, Tandon School of Engineering - *Sep 2024*  
-
 
 ###### **Product Engineer** – [DatingAI](https://datingai.pro) (July 2024 – Aug 2024) | BLR, IN
 - **Migrated** to **Node.js** and **Next.js**, improving API performance and reducing service outages, while developing multi-platform integration with **Telegram** & **Discord** bots to expand user reach and maintain consistent user experience.
