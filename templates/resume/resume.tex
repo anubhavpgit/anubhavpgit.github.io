@@ -22,25 +22,10 @@
 \input{glyphtounicode}
 \usepackage{amsmath}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
 \usepackage[sfdefault]{noto-sans}
-% \usepackage[light]{sourcesanspro} % Light font weight
-% \usepackage[regular]{sourcesanspro} % Regular font weight
-% \usepackage[semibold]{sourcesanspro} % Semi-bold font weight
-% \usepackage[bold]{sourcesanspro} % Bold font weight
-
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \rhead{\fontsize{8}{10}\selectfont{\today\hspace{-3cm}}}
 \renewcommand{\headrulewidth}{0pt}
@@ -64,7 +49,6 @@
   \vspace{-5pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
@@ -80,13 +64,6 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -109,7 +86,6 @@
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
 
 %----------HEADING-----------------
@@ -122,57 +98,49 @@
     \\
 \end{tabular*}
 
-
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {New York University}{New York, US}
-      {Master of Science in Computer Engineering}{Sept 2024 | Expected Dec 2025}
+      {Master of Science in Computer Engineering}{Sept 2024 -- Dec 2025}
     \resumeSubheading
       {Silicon Institute of Technology}{Bhubaneswar, IN}
-      {Bachelor of Technology in Computer Science \& Engineering}{July 2019 |  May 2023}
+      {Bachelor of Technology in Computer Science \& Engineering}{July 2019 -- May 2023}
   \resumeSubHeadingListEnd
-
-
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-    \resumeSubheading
-    {h011yw00d}{San Francisco, US}
-    {\textbf{AI Research Engineer Intern}}{ May 2025 | August 2025}
+  \resumeSubheading
+    {Authentic}{Seoul, SK $|$ New York, US}
+    {\textbf{Founding Engineer}}{Aug 2025 -- Present}
     \resumeItemListStart
-      \resumeItem
-        {Built full-stack video-sharing platform (Next.js 15, Vercel, Supabase) winning World Builder Residency
-   at Edge Esmeralda. Engineered distributed video pipeline with Redis job queue (900+ concurrent jobs), custom batch
-  processing reducing DB writes 70\%, and Web3 authentication via World ID MiniKit SDK. Achieved 3x faster loads
-  through multi-tier caching, adaptive polling, and SWR optimization.}
-    \resumeItem
-        {Deployed scalable microservices architecture (40+ APIs) on Vercel with PostgreSQL/Redis infrastructure achieving
-  99.9\% uptime. Implemented social features (follows, likes, reconciliation), rate limiting, distributed locks,
-  circuit breakers, and automated background services for cleanup/monitoring with graceful fallbacks and connection
-  pooling.}
-        
+      \resumeItem{Architected core app features (profile DAG, ephemeral content) with SWR+MMKV caching and distributed locks, cutting API latency and ensuring secure encrypted sharing.}
+      \resumeItem{Built cross-platform mobile app (Capacitor → React Native) with Next.js, NeonDB, Prisma; deployed via Vercel/Capgo with improved performance and UX across iOS/Android.}
     \resumeItemListEnd
-    \resumeSubheading
-      {RadiusAI}{Seattle, US}
-      {Software Engineer}{Jan 2024 | Aug 2024}
-      \resumeItemListStart
-        \resumeItem
-          {Designed a Rust/Kafka health monitoring service handling 5000 requests/10s with improved Python-to-Rust perf.}
-        \resumeItem
-          {Led Rust optimization of cart simulator with parallel processing and faster checkouts.}
-        \resumeItem
-          {Automated DB operations using AWS Lambda/Prefect with 99\% data consistency across distributed systems.}
-        \resumeItem
-          {Developed a native GUI application in Rust that highlights unknown objects during checkout in LCD counter-top POS systems, improving store security.}
-        \resumeItem
-          {Created a real-time analytics dashboard using Gradio to visualize annotation data, reducing labeling inaccuracies by more than 30\% and improving model training.}
+
+  \resumeSubheading
+    {h011yw00d}{San Francisco, US}
+    {\textbf{AI Research Engineer Intern}}{May 2025 -- Aug 2025}
+    \resumeItemListStart
+      \resumeItem{Decoupled video generative AI engine from AVB stack; designed distributed computing layer for production-scale deployment.}
+      \resumeItem{Engineered full-stack video platform (Next.js, Supabase) with Redis job queue handling 900+ concurrent jobs, reducing DB writes 70\% and achieving 3× faster load times.}
+      \resumeItem{Deployed 40+ API microservices with PostgreSQL/Redis infra (99.9\% uptime); implemented rate limiting, distributed locks, circuit breakers, and monitoring services.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {RadiusAI}{Seattle, US}
+    {\textbf{Software Engineer}}{Jan 2024 -- Aug 2024}
+    \resumeItemListStart
+      \resumeItem{Designed Rust/Kafka monitoring service processing 5K req/10s with 30\% lower latency than Python baseline.}
+      \resumeItem{Led Rust optimization of cart simulator with parallelism, enabling 2× faster checkouts across deployments.}
+      \resumeItem{Automated DB ops via AWS Lambda/Prefect, maintaining 99\%+ data consistency across distributed systems.}
+      \resumeItem{Built Rust-native POS GUI to detect anomalies; developed Gradio dashboard reducing annotation errors 30\% and improving ML training accuracy.}
       \resumeItemListEnd
   \resumeSubheading
       {StackIt (Superjoin)}{Bengaluru, IN}
-      {\textbf{Founding Engineer}}{ June 2023 | Dec 2023}
+      {\textbf{Founding Engineer}}{ June 2023 -- Dec 2023}
       \resumeItemListStart
         \resumeItem
         {Architected and implemented a resilient microservices ecosystem using Docker, Kubernetes, and GitHub Actions, ensuring 99.9\% uptime while integrating Chargebee, Hubspot, and Google Ads to increase user acquisition.}
@@ -180,25 +148,16 @@
           {Engineered an interactive Data-Preview component in React with advanced filtering, joins, and lookup capabilities, improving data visualization by 40\% and reducing import errors.}
         \resumeItem
         {Structured sustainable RAG pipelines using Python, LangChain, and LlamaIndex for natural language to SQL/NoSQL conversion, reducing user churn and improving query accuracy to 90\%.}
-      \resumeItemListEnd
-      
+    \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-%
-% --------TECHINCAL SKILLS ------------
-
+% --------TECHNICAL SKILLS ------------
 \section{Technical Skills}
 \resumeSubHeadingListStart
-  \resumeSubItem{\textbf{Systems Engineering}}
-    {Rust, C/C++ (Systems Programming), Parallel/Distributed Computing}
-  \resumeSubItem{\textbf{Web \& Cloud Technologies}}
-    {TypeScript/Node.js, React/Next.js, AWS, Docker, Kubernetes, Kafka, MongoDB, PostgreSQL}
-  \resumeSubItem{\textbf{AI/ML Integration}}
-    {RAG Pipelines, LangChain, LlamaIndex, Vector Embeddings, Python (Data Processing)}
+  \resumeSubItem{\textbf{Languages}}{Rust, Python, C++, TypeScript, SQL/NoSQL}
+  \resumeSubItem{\textbf{Frameworks/Infra}}{React, Next.js, Prisma, Supabase, AWS, Kubernetes, Docker, Redis, Kafka}
+  \resumeSubItem{\textbf{AI/ML}}{LangChain, LlamaIndex, RAG pipelines, Vector Embeddings}
 \resumeSubHeadingListEnd
-
-%-------------------------------------------
-
 
 %-----------PROJECTS-----------------
 \section{Projects}
@@ -215,10 +174,10 @@
     {\href{https://github.com/anubhavpgit/dough}{\textbf{DOUGH} - \faIcon{link}}}{Rust, Bash}
     \resumeSubItem
       {A high-performance CLI tool for rendering markdown presentations in the terminal with custom syntax highlighting $\rightarrow$ {\href{https://anubhavp.dev/blog/dough.html}{\textbf{Demo}}}}
-  \resumeProjectHeading
-    {\href{https://github.com/anubhavpgit/b}{{\textbf{BEE} - \faIcon{link} }}}{Python, BitTorrent}
-    \resumeSubItem
-      {A BitTorrent client with an item-based collaborative \href{https://github.com/anubhavpgit/Movie-recommendation}{\underline{\textbf{recommendation system}}} and a \href{https://github.com/anubhavpgit/Movie-rating-prediction}{\underline{\textbf{rating prediction system}}} with 95\% acc}
+  % \resumeProjectHeading
+  %   {\href{https://github.com/anubhavpgit/b}{{\textbf{BEE} - \faIcon{link} }}}{Python, BitTorrent}
+  %   \resumeSubItem
+  %     {A BitTorrent client with an item-based collaborative \href{https://github.com/anubhavpgit/Movie-recommendation}{\underline{\textbf{recommendation system}}} and a \href{https://github.com/anubhavpgit/Movie-rating-prediction}{\underline{\textbf{rating prediction system}}} with 95\% acc}
   \resumeProjectHeading
     {\href{https://github.com/anubhavpgit/resoc}{\textbf{RESOC} - \faIcon{link} }}{React, Firebase}
     \resumeSubItem
@@ -226,22 +185,15 @@
     \resumeProjectHeading
     {\href{https://github.com/anubhavpgit/fireside/}{\textbf{Fireside} - \faIcon{link}}}{GunJS, Svelte, Rust, Firebase}
     \resumeSubItem
-      {A decentralized chat app enabling low-latency, secure, and ephemeral messaging with more than \href{https://www.linkedin.com/posts/anubhabpatnaik_1000-users-in-a-week-checkout-the-main-activity-7342957210668253185-8Ot1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC4e4n4B5W43U8Ri0A4HEtOs405cdFxB448}{\underline{{20k active users}}}. {\href{https://anubhavp.dev/fireside/}{\textbf{Live°}}}}
+      {A decentralised chat app enabling low-latency, secure, and ephemeral messaging with more than \href{https://www.linkedin.com/posts/anubhabpatnaik_1000-users-in-a-week-checkout-the-main-activity-7342957210668253185-8Ot1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC4e4n4B5W43U8Ri0A4HEtOs405cdFxB448}{\underline{{20k active users}}}. {\href{https://anubhavp.dev/fireside/}{\textbf{Live°}}}}
   \resumeSubHeadingListEnd
-%-------------------------------------------
 
-%
 % --------VOLUNTEER EXPERIENCE ------------
-
 \section{Volunteer Experience}
   \resumeSubHeadingListStart
-  \resumeSubItem
-      {Member, \href{https://www.linkedin.com/company/gdsc-nyu-tandon/}{\underline{Google Developer Student club (GDSC)}}, New York University, Tandon.  2024|2025}
-    \resumeSubItem
-      {Member Secure Systems Lab, New York University, \href{https://ssl.engineering.nyu.edu/}{\underline{SSL, NYU Tandon}}. 2024|2025}
-    \resumeSubItem
-      {Chairperson (2022|23) \& Joint secretary (2021|2022) of the \href{https://www.instagram.com/ieeesitbbsr/}{\underline{IEEE Students' Chapter}}, Silicon Institute of Technology. }
+    \resumeSubItem{Member, Google Developer Student Club (NYU Tandon), 2024--2025}
+    \resumeSubItem{Member, Secure Systems Lab (NYU Tandon), 2024--2025}
+    \resumeSubItem{Chairperson (2022--23) \& Joint Secretary (2021--22), IEEE Students’ Chapter, SIT}
   \resumeSubHeadingListEnd
-%-------------------------------------------
 
 \end{document}
