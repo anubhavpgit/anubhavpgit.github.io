@@ -108,11 +108,18 @@ The semester is over. I feel I am done with building projects now. They still ex
 
 Orion is going well. The device is currently capable of recording various muscle signals based on activity, and the data shows distinguishable patterns between relaxed, fist, index, and index-middle finger positions. It conditions signals using moving average filtering, rectification and envelope signals with additional raw signals for improved accuracy. The challenge here is improving the deep learning model that has a terrible accuracy of around 60-70% for the current dataset. The annoying part about this is that the data is terrible. Primarily, because the jumper wires kept falling off, and the electrodes were not placed properly. Also, the muscles get fatigued after a while. 
 
+<figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
+<img alt='Orion EMG signal gif' src="../assets/img/current/orion_emg.gif" style="max-width: 75%;">
+</figure>
+<figcaption style="text-align: center; font-size: 0.8em;">Recording muscle data fluctuations which will be later used for analysis and model training.</figcaption>
+
+
 <figure style="justify-content: center; align-items: center; display: flex; flex-direction: row; gap: 10px;">
   <img alt='arm' src="../assets/img/current/arm_two.webp" style="max-width: 30%;">
   <img alt='arm' src="../assets/img/current/arm_two_mcu.webp" style="max-width: 30%;">
+  <!-- <img alt='arm' src="../assets/img/current/orion_mcu.webp" style="max-width: 30%;"> -->
 </figure>
-<figcaption style="text-align: center; font-size: 0.8em;">Left: Arm with electrodes and sensors, Right: MCU with electrodes and sensors live</figcaption>
+<figcaption style="text-align: center; font-size: 0.8em;">Left, Mid: Arm with electrodes and sensors, Right: MCU with electrodes and sensors live</figcaption>
 
 Further, in the next semester, I am planning to integrate a language recognition model that will be used to convert the signals into text. This has a lot of potential applications, including controlling devices, typing (air keyboard), and even hand-gesture-to-speech conversion. 
 
