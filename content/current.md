@@ -127,7 +127,7 @@ New York in spring is as beautiful as ever. The highs are around 20-24, and the 
 
 Currently watching *When Life Gives You Tangerines*, a Korean series that beautifully explores themes of love, loss, and self-discovery. The story follows a young woman as she navigates the complexities of relationships and personal growth. Stunning cinematography and heartfelt narrative. Also, *You*, a psychological thriller series that follows Joe Goldberg, a charming yet dangerous psychopath who becomes obsessed with the people he loves. 
 
-The last ten odd days were disturbing, and I was mostly glued to the news. The situation back home is heartbreaking. What is more annoying is that all of the news channels are too polarised; thus, instead of information, they spend more time on sensationalism. I have faith that India will have a response ready. [Vengeance is coming](https://x.com/adgpi/status/1919850036596199492). [Jai Hind](https://x.com/adgpi/status/1919850036596199492).
+The last ten odd days were disturbing and I was glued to the news. The situation back home is heartbreaking. What is more annoying is that all of the news channels are too polarised; thus, instead of information, they spend more time on sensationalism. I have faith that India will have a response ready. [Vengeance is coming](https://x.com/adgpi/status/1919850036596199492). [Jai Hind](https://x.com/adgpi/status/1919850036596199492).
 
 ###### April
 
