@@ -9,7 +9,7 @@ showImg: true
 
 <!-- **Graduated** with a `Master of Science in Computer Engineering` from New York University, Tandon School of Engineering, New York - *Sept 2024 - December 2025* -->
 
-###### **Mobile Software Engineer** – [Authentic](https://authentic.tech) (July 2025 - Current) | Seoul, SK | NY, US
+###### **Founding Engineer** – [Authentic](https://authentic.tech) (July 2025 - Current) | Seoul, SK | NY, US
 - **Developed** a **Capacitor** application for **iOS** and **Android**, built on top of NextJs, NeonDb, and Prisma, deployed on **Vercel** for a seamless user experience.
 - **Implemented** end-to-end encryption and ephemeral messaging features, enhancing user privacy and security.
 - **Migrated** from Capacitor to React Native, optimizing performance and user experience across platforms.
