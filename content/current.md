@@ -68,7 +68,7 @@ Taking a break from the project-building phase was a mindful call. I spend most 
 
 ###### June
 
-Won the [World Residency Buildathon](https://edgeesmeralda2025.substack.com/p/world-builder-residency-2025)! :) LFG
+Won the [World Builder Residency](https://edgeesmeralda2025.substack.com/p/world-builder-residency-2025)! :) LFG
 
 <figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
   <img alt='Edge Esmeralda' src="../assets/img/current/cali1.webp" style="max-width: 75%;">
