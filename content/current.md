@@ -11,7 +11,7 @@ showImg: true
 
 ###### September
 
-Authentic is going well and is almost ready for launch. The app is now a functional, Instagram-story-like app with ephemeral posts. Current versions focus on perfecting the iOS builds before moving on to Android. My current challenges involve optimising the runtime performance of the app, reducing the app size, improving the overall user experience- better error handling, reducing response times in posting, improving UI feedback on actionable items, handling edge cases, removing memory leaks, reducing loading times, and improving the overall stability of the app, among others. Currently, the app is invite-only, and we are working on building a waitlist for the app. [Email me here](mailto:anubhav@authentic.tech) if you want to try out the app.
+Authentic is going well and is almost ready for launch. The app is now a functional, Instagram-story-like app with ephemeral posts. Current versions focus on perfecting the iOS builds before moving on to Android. I am currently working on optimising the runtime performance of the app, reducing the bundle size, mostly improving the overall user experience - better error handling, reducing response times in posting, improving UI feedback on actionable items (*like animations, account transitions, etc.*), handling edge cases, etc. The aim here is make it ready for App Store submission. The app is invite-only for now, and we are working on building a waitlist for the app. [Email me here](mailto:anubhav@authentic.tech) if you want in.
 
 The last week of August was all about helping friends pack, move, settle into new routines and preparing for the upcoming fall semester. Back to school now. The last ride; graduating this December.
 
