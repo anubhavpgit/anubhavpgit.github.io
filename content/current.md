@@ -11,12 +11,9 @@ showImg: true
 
 ###### September
 
-<!-- <figure style="justify-content: center; align-items: center; display: flex; flex-direction: column; gap: 10px;">
-  <img alt='New York landscape' src="../assets/img/current/ny.webp" style="max-width: 75%;">
-  <figcaption style="text-align: center; font-size: 0.8em;">  </figcaption>
-</figure> -->
+Authentic is going well, almost ready for launch. The app is now a functional, instagram-story-like app with ephemeral posts. Current versions focus on perfecting the ios builds, before moving on to android. My current challenges involve optimising the runtime performance of the app, reducing the app size, improving the overall user experience- better error handling, reducing response times in posting, improved UI feedback on actionable items, handling edge cases, removing memory leaks, reducing loading times, and improving the overall stability of the app among others. Currently, the app is invite-only, and we are working on building a waitlist for the app. [Email me here](mailto:anubhav@authentic.tech) if you want to try out the app. 
 
-Authentic is going well, almost ready for launch. The last week of August was all about helping friends pack, move, settle into new routines and preparing for the upcoming fall semester. Back to school now. The last ride; graduating this December.
+The last week of August was all about helping friends pack, move, settle into new routines and preparing for the upcoming fall semester. Back to school now. The last ride; graduating this December.
 
 ###### August
 
